@@ -1,0 +1,252 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "section": "",
+    "text": "Preface",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#purpose-of-the-lecture-notes",
+    "href": "index.html#purpose-of-the-lecture-notes",
+    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "section": "Purpose of the Lecture Notes",
+    "text": "Purpose of the Lecture Notes\nThese lecture notes were prepared for the course Fundamentals in Solid State Physics – Thermal Properties, which will be taught for the first time in the summer semester 2026 at the Institute of Materials Science, Faculty of Mechanical Science and Engineering, TU Dresden. Their aim is to provide a clear and accessible introduction to the thermal properties of solids, with an emphasis on physical understanding and explicit derivations.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#target-audience",
+    "href": "index.html#target-audience",
+    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "section": "Target Audience",
+    "text": "Target Audience\nThese notes are intended for advanced undergraduate students, graduate students, and readers who wish to refresh their knowledge of the fundamentals of solid-state physics, with a particular focus on thermal properties.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#how-the-book-is-structured",
+    "href": "index.html#how-the-book-is-structured",
+    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "section": "How the Book Is Structured",
+    "text": "How the Book Is Structured\nEach chapter corresponds approximately to a 90-minute lecture. Taken together, the chapters are designed to provide a coherent introduction to the thermal properties of solids, progressing from fundamental concepts to more advanced topics.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#pedagogical-approach",
+    "href": "index.html#pedagogical-approach",
+    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "section": "Pedagogical Approach",
+    "text": "Pedagogical Approach\nThe notes aim to provide an accessible introduction to the subject while keeping the central physical results explicit and transparent. Key results are derived in detail whenever possible. Some derivations, remarks, or supplementary discussions are included as optional material in order to support readers who would like a deeper understanding without interrupting the main line of argument.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use-these-lecture-notes",
+    "href": "index.html#how-to-use-these-lecture-notes",
+    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "section": "How to Use These Lecture Notes",
+    "text": "How to Use These Lecture Notes\nThese lecture notes accompany a course that is taught in person, but they are also intended to be useful for self-study. Readers may work through the chapters sequentially as part of a lecture course or use them selectively to review specific topics in solid-state physics and thermal properties.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThese lecture notes were inspired in part by the following textbooks, but all text and figures are original.\n\nJ. Solyom, Fundamentals of the Physics of Solids, Volume 1: Structure and Dynamics https://doi.org/10.1007/978-3-540-72600-5\nJ. Solyom, Fundamentals of the Physics of Solids, Volume 2: Electronic Properties https://doi.org/10.1007/978-3-540-85316-9\nH. Ibach and H. Lüth, Festkörperphysik https://doi.org/10.1007/978-3-540-85795-2\nR. Gross and A. Marx, Festkörperphysik https://doi.org/10.1524/9783110358704",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#additional-resources",
+    "href": "index.html#additional-resources",
+    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "section": "Additional Resources",
+    "text": "Additional Resources\nWill be added later.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#license-information",
+    "href": "index.html#license-information",
+    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "section": "License Information",
+    "text": "License Information\nExcept where otherwise noted, the text and original figures in these lecture notes are licensed under CC BY 4.0. Third-party figures are not covered by this license unless explicitly stated; their source, author, and license are given in the figure captions.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#citation-information",
+    "href": "index.html#citation-information",
+    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "section": "Citation Information",
+    "text": "Citation Information\nWill be added later.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "Summary",
+    "section": "",
+    "text": "These lecture notes explain the thermal physics of solids from the microscopic foundations upward. Lecture 1  Fundamental Concepts of Solids begins with the basic question of what a solid is, distinguishing crystalline, polycrystalline, and amorphous matter and showing how thermal behaviour is rooted in atomic-scale correlations, bonding, and structure. Then Lecture 2  Interatomic Bonding establishes the link between cohesive forces, lattice stiffness, characteristic vibrational frequencies, and thermal energy scales. These first lectures make clear that the thermal properties of solids cannot be understood without first understanding how atoms are arranged, how they are bound, and which microscopic energy scales govern their motion.\nBuilding on this, the lecture notes introduce the structural language of solid-state physics in real and reciprocal space. The real-space description of crystal structures in Lecture 3  Fundamentals of Crystal Structure, the symmetry principles and reciprocal-space framework of periodic solids in Lecture 4  Symmetry and Reciprocal Space, and the diffraction methods that make lattice order experimentally visible in Lecture 5  Diffraction and Structure Factor together provide the conceptual and mathematical basis for everything that follows. These chapters establish that periodicity is not merely a structural feature: it organizes the allowed excitations of the system, determines how waves propagate through a crystal, and governs how structure becomes experimentally accessible.\nThe central part of the lecture notes develops lattice dynamics in a systematic way. Starting from the Born-Oppenheimer and harmonic approximation in Lecture 6  Lattice Dynamics I, they derive the vibrational modes of crystals, from the general dynamical-matrix description of three-dimensional solids to the explicit dispersions of monatomic and diatomic chains discussed in Lecture 7  Lattice Dynamics II. The quantization of these normal modes is performed in Lecture 8  Phonons I which leads naturally to phonons, whose statistics and density of states provide the bridge from microscopic motion to macroscopic thermodynamics. This framework is subsequently used in Lecture 9  Phonons II to explain the heat capacity of solids, including the Einstein and Debye models, the low-temperature \\(T^3\\) law, and the high-temperature Dulong-Petit limit.\nThe later chapters show how departures from perfect harmonicity give rise to the most characteristic thermal phenomena of real materials. Lecture 10  Anharmonicity and Thermal Expansion explains thermal expansion, connects phonon frequencies to volume through Grüneisen parameters, and gives phonons finite lifetimes. This, in turn, leads to a microscopic treatment of lattice thermal conductivity in Lecture 11  Thermal Transport by Phonons in terms of phonon heat capacity, group velocity, and mean free path, together with the roles of boundary, defect, alloy, and umklapp scattering. In Lecture 12  Electronic Contributions to Thermal Properties, this treatment is then extended beyond purely lattice contributions to include the electronic heat capacity of metals, thermoelectric effects, and the Wiedemann-Franz law. The role of electron-phonon coupling in resistivity, thermal transport, and phonon linewidths is discussed in Lecture 13  Electron–Phonon Coupling (optional).\nThe lectures aim to present a unified picture of thermal properties in solids: structure determines bonding, bonding determines vibrational scales, vibrations become phonons, and phonons govern the observable thermodynamic and transport behaviour of materials. The lecture notes close with Lecture 14  Experimental Methods for Thermal Properties (optional) by connecting the theoretical framework to experiments, showing how infrared, Raman, Brillouin, and neutron scattering reveal phonon energies, dispersions, occupations, and lifetimes.",
+    "crumbs": [
+      "Summary"
+    ]
+  },
+  {
+    "objectID": "lecture_01.html",
+    "href": "lecture_01.html",
+    "title": "1  Fundamental Concepts of Solids",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nDistinguish short-range and long-range order in solids using real-space correlations.\nClassify solids as crystalline, polycrystalline, or amorphous, and explain why this matters for thermal physics.\nWrite down the full many-particle Hamiltonian of a solid and identify the origin of its complexity.\nExplain, at a roadmap level, how bonding, lattice stiffness, vibrations, and phonons connect to thermal observables.\nIdentify which later approximations are needed to reach heat capacity, thermal expansion, and thermal conductivity.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Fundamental Concepts of Solids</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_02.html",
+    "href": "lecture_02.html",
+    "title": "2  Interatomic Bonding",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nRelate position in the periodic table to the dominant bonding mechanism in a solid.\nDistinguish covalent, ionic, metallic, hydrogen, and van der Waals bonding by their microscopic origin and characteristic energy scales.\nExplain how the shape of an interatomic potential determines equilibrium spacing and local stiffness.\nConnect bond stiffness and atomic mass to the characteristic vibrational frequency scale and to the qualitative scale of the Debye temperature.\nCompare, at a materials level, why ceramics, metals, and molecular crystals differ in their thermal behavior.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Interatomic Bonding</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_03.html",
+    "href": "lecture_03.html",
+    "title": "3  Fundamentals of Crystal Structure",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nDefine a Bravais lattice, a basis, and a crystal structure in a mathematically precise real-space language.\nDistinguish primitive, conventional, and Wigner–Seitz cells and explain why they are not interchangeable.\nRecognize the seven crystal systems and the idea of the 14 Bravais-lattice types without yet developing full symmetry theory.\nDescribe the real-space geometry of the common structure types SC, BCC, FCC, and HCP, as well as the simple binary prototypes CsCl, NaCl, fluorite, diamond, and zincblende.\nExplain why the basis matters physically, even when the underlying Bravais lattice is unchanged.\nPrepare for the next lecture by seeing how direct-lattice structure controls optical modes and later reciprocal-space selection rules.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamentals of Crystal Structure</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_04.html",
+    "href": "lecture_04.html",
+    "title": "4  Symmetry and Reciprocal Space",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nDefine symmetry operations, point groups, and the crystallographic restriction in a way that connects directly to crystal physics.\nExplain why point symmetry constrains macroscopic tensors and leads to selection rules for allowed processes.\nConstruct the reciprocal lattice from the direct lattice and interpret reciprocal vectors geometrically.\nRelate Miller planes, reciprocal-lattice vectors, and interplanar spacings.\nDefine the first Brillouin zone and explain why physically distinct dispersions are plotted in \\(\\mathbf k\\)-space.\nPrepare for later lectures on phonon branches and the density of states by understanding why reciprocal space is the natural language of lattice-periodic excitations.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Symmetry and Reciprocal Space</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_05.html",
+    "href": "lecture_05.html",
+    "title": "5  Diffraction and Structure Factor",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nDerive the elastic diffraction condition in both its Bragg and Laue forms and connect it to reciprocal space.\nExplain how the Bravais lattice fixes where Bragg peaks may occur, while the basis fixes how strong they are.\nDefine the atomic form factor and the cell structure factor, and relate them to measured diffraction intensities.\nWork out systematic extinctions for common structures and interpret them as reciprocal-space selection rules.\nExplain what a diffraction experiment measures in practice, including the role of the Ewald construction and the phase problem.\nPreview why inelastic scattering, rather than elastic diffraction alone, is needed to determine phonon dispersions.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Diffraction and Structure Factor</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_06.html",
+    "href": "lecture_06.html",
+    "title": "6  Lattice Dynamics I",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nDerive the Born–Oppenheimer approximation in the form relevant for lattice dynamics and explain why it yields an effective potential for the nuclei.\nSet up the displacement field for a crystal with a basis and derive the harmonic expansion of the potential energy.\nDefine force constants, state their key symmetry and sum-rule properties, and write the coupled equations of motion.\nDerive the plane-wave reduction of the lattice-dynamics problem and formulate the dynamical-matrix eigenvalue problem.\nCount the vibrational branches of a crystal with \\(p\\) atoms in the primitive cell and distinguish acoustic from optical modes.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lattice Dynamics I</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_07.html",
+    "href": "lecture_07.html",
+    "title": "7  Lattice Dynamics II",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nDerive the dispersion relation of the monatomic linear chain and interpret the role of the first Brillouin zone.\nCompute the group velocity and identify the long-wavelength sound limit.\nDerive the acoustic and optical branches of the diatomic linear chain.\nInterpret zone-center and zone-boundary eigenvectors in terms of in-phase and out-of-phase motion.\nBuild the bridge from discrete allowed \\(q\\)-values to the continuum limit and the vibrational density of states.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lattice Dynamics II</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_08.html",
+    "href": "lecture_08.html",
+    "title": "8  Phonons I",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nExplain why each harmonic normal mode of a crystal becomes a quantum harmonic oscillator.\nDefine phonons as bosonic quanta of lattice vibration and interpret the meaning of zero-point motion.\nDerive the Bose–Einstein occupation factor and the mean energy of a phonon mode.\nConstruct the phonon density of states from mode counting in \\(\\mathbf q\\)-space and interpret the Debye approximation.\nWrite the lattice internal energy as an integral over the phonon DOS and prepare the route to heat capacity.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Phonons I</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_09.html",
+    "href": "lecture_09.html",
+    "title": "9  Phonons II",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nUse the phonon density of states from Lecture 8 to write the lattice internal energy and heat capacity.\nDerive the Einstein heat capacity and explain why it reproduces the Dulong–Petit limit but fails at low temperature.\nDerive the Debye heat capacity and obtain its low-temperature \\(T^{3}\\) law and high-temperature limit.\nInterpret the Debye temperature as a physically meaningful energy scale rather than a sharp transition temperature.\nRead low-temperature heat-capacity data and extract \\(\\beta_{\\mathrm{LT}}\\), \\(\\Theta_D\\), and the metallic \\(\\gamma T\\) term.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Phonons II</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_10.html",
+    "href": "lecture_10.html",
+    "title": "10  Anharmonicity and Thermal Expansion",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nExplain why a strictly harmonic crystal has no thermal expansion.\nIntroduce the quasi-harmonic picture and define the mode and average Grüneisen parameters.\nDerive the Grüneisen relation for the thermal expansion coefficient \\(\\alpha(T)\\).\nInterpret the difference between \\(C_P\\) and \\(C_V\\) in a solid and connect it to thermal expansion.\nExplain qualitatively how anharmonicity gives phonons finite lifetimes and thereby produces thermal resistance.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Anharmonicity and Thermal Expansion</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_11.html",
+    "href": "lecture_11.html",
+    "title": "11  Thermal Transport by Phonons",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nState Fourier’s law for heat transport in solids and define thermal diffusivity.\nDerive the kinetic-theory expression for lattice thermal conductivity from a phonon picture.\nDistinguish boundary, defect, isotope/alloy, normal, and umklapp scattering mechanisms.\nUse Matthiessen’s rule to discuss regimes and crossover scales in \\(\\kappa(T)\\).\nExplain why crystalline insulators typically show a low-temperature peak in \\(\\kappa(T)\\), whereas glasses often show a plateau.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Thermal Transport by Phonons</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_12.html",
+    "href": "lecture_12.html",
+    "title": "12  Electronic Contributions to Thermal Properties",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\nBy the end of this lecture, you should be able to:\n\nexplain why the classical Drude model fails for the electronic heat capacity of metals;\nderive the linear-in-\\(T\\) electronic heat capacity in the Sommerfeld model and interpret the Sommerfeld coefficient \\(\\gamma\\);\ncombine the electronic and phononic low-temperature contributions into \\(C = \\gamma T + \\beta T^{3}\\);\ndistinguish energy current from heat current and write the coupled transport equations for charge and heat;\nderive the Sommerfeld form of the Wiedemann–Franz law and summarize the Seebeck, Peltier, and Thomson effects;\nidentify the main thermal limitations of the free-electron model and motivate the transition to Bloch electrons.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Electronic Contributions to Thermal Properties</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_13.html",
+    "href": "lecture_13.html",
+    "title": "13  Electron–Phonon Coupling (optional)",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\nBy the end of this lecture, you should be able to:\n\nexplain why lattice vibrations modulate the electronic potential and therefore scatter Bloch electrons;\nderive the linearized form of the electron–phonon perturbation from small ionic displacements;\nstate the crystal-momentum and energy selection rules for phonon absorption and emission;\nexplain the deformation-potential picture for long-wavelength longitudinal acoustic phonons;\nconnect electron–phonon scattering to electrical resistivity, electronic thermal conductivity, and finite phonon lifetimes;\ninterpret phonon broadening and softening as observable consequences of electron–phonon coupling.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Electron–Phonon Coupling (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_14.html",
+    "href": "lecture_14.html",
+    "title": "14  Experimental Methods for Thermal Properties (optional)",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nExplain how phonon information is extracted from absorption and inelastic scattering experiments.\nDistinguish what infrared absorption, Raman scattering, Brillouin scattering, and neutron scattering can measure.\nUse energy and crystal-momentum conservation to understand which phonons are experimentally accessible.\nDerive the Brillouin frequency shift and interpret Stokes and anti-Stokes processes.\nRead the one-phonon neutron-scattering cross section and identify what sets peak position, intensity, and width.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Experimental Methods for Thermal Properties (optional)</span>"
+    ]
+  }
+]
