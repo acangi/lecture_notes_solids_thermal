@@ -270,13 +270,13 @@ window.Quarto = {
   <li><a href="#why-this-problem-is-hard" id="toc-why-this-problem-is-hard" class="nav-link" data-scroll-target="#why-this-problem-is-hard"><span class="header-section-number">1.5.2</span> Why This Problem is Hard</a></li>
   <li><a href="#the-first-simplification" id="toc-the-first-simplification" class="nav-link" data-scroll-target="#the-first-simplification"><span class="header-section-number">1.5.3</span> The First Simplification</a></li>
   </ul></li>
-  <li><a href="#where-thermal-properties-live" id="toc-where-thermal-properties-live" class="nav-link" data-scroll-target="#where-thermal-properties-live"><span class="header-section-number">1.6</span> Where Thermal Properties Live</a>
+  <li><a href="#thermal-properties" id="toc-thermal-properties" class="nav-link" data-scroll-target="#thermal-properties"><span class="header-section-number">1.6</span> Thermal Properties</a>
   <ul class="collapse">
-  <li><a href="#formal-answer-in-the-spectrum-and-in-statistical-mechanics" id="toc-formal-answer-in-the-spectrum-and-in-statistical-mechanics" class="nav-link" data-scroll-target="#formal-answer-in-the-spectrum-and-in-statistical-mechanics"><span class="header-section-number">1.6.1</span> Formal Answer: in the Spectrum and in Statistical Mechanics</a></li>
-  <li><a href="#physical-answer-in-the-hierarchy-of-approximations" id="toc-physical-answer-in-the-hierarchy-of-approximations" class="nav-link" data-scroll-target="#physical-answer-in-the-hierarchy-of-approximations"><span class="header-section-number">1.6.2</span> Physical Answer: in the Hierarchy of Approximations</a></li>
+  <li><a href="#spectrum-and-statistical-mechanics" id="toc-spectrum-and-statistical-mechanics" class="nav-link" data-scroll-target="#spectrum-and-statistical-mechanics"><span class="header-section-number">1.6.1</span> Spectrum and Statistical Mechanics</a></li>
+  <li><a href="#roadmap-to-thermal-properties" id="toc-roadmap-to-thermal-properties" class="nav-link" data-scroll-target="#roadmap-to-thermal-properties"><span class="header-section-number">1.6.2</span> Roadmap to Thermal Properties</a></li>
   <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">1.6.3</span> Interpretation</a></li>
   </ul></li>
-  <li><a href="#outlook-on-the-next-lectures-from-structure-to-phonons" id="toc-outlook-on-the-next-lectures-from-structure-to-phonons" class="nav-link" data-scroll-target="#outlook-on-the-next-lectures-from-structure-to-phonons"><span class="header-section-number">1.7</span> Outlook on the Next Lectures: From structure to Phonons</a></li>
+  <li><a href="#outlook-on-the-next-lectures-from-structure-to-phonons" id="toc-outlook-on-the-next-lectures-from-structure-to-phonons" class="nav-link" data-scroll-target="#outlook-on-the-next-lectures-from-structure-to-phonons"><span class="header-section-number">1.7</span> Outlook on the Next Lectures: From Structure to Phonons</a></li>
   <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">1.8</span> Problem Set</a></li>
   </ul>
 </nav>
@@ -518,7 +518,7 @@ Figure&nbsp;1.2: Radial distribution function <span class="math inline">\(g(r)\)
 </figcaption>
 </figure>
 </div>
-<p>The liquid-argon example in <a href="#fig-liquid-argon" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> is useful even in a course on solids: it shows very clearly what short-range order looks like in practice. The first-neighbor shell is well defined, but periodic order does not persist indefinitely. <!-- [Sólyom–Piróth I, Sec. 2.2.2, Fig. 2.1, pp. 22–23] --></p>
+<p>The liquid-argon example in <a href="#fig-liquid-argon" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> shows very clearly what short-range order looks like in practice. The first-neighbor shell is well defined, but periodic order does not persist indefinitely. <!-- [Sólyom–Piróth I, Sec. 2.2.2, Fig. 2.1, pp. 22–23] --></p>
 </section>
 </section>
 <section id="structural-types-of-solids" class="level2" data-number="1.4">
@@ -526,7 +526,7 @@ Figure&nbsp;1.2: Radial distribution function <span class="math inline">\(g(r)\)
 <section id="crystalline-solids" class="level3" data-number="1.4.1">
 <h3 data-number="1.4.1" class="anchored" data-anchor-id="crystalline-solids"><span class="header-section-number">1.4.1</span> Crystalline Solids</h3>
 <p>A crystalline solid is characterized by long-range positional order. In an ideal crystal, atoms occupy a strictly periodic array, so equivalent atoms have identical neighborhoods no matter how far apart they are. <!-- [Sólyom–Piróth I, Sec. 2.1.1, p. 14; Sec. 2.2.1, p. 20] --></p>
-<p>If the crystallographic axes have the same orientation throughout the sample, the sample is a <strong>single crystal</strong> <!-- [Sólyom–Piróth I, Sec. 2.2.1, p. 20] --></p>
+<p>If the crystallographic axes have the same orientation throughout the sample, the sample is a <strong>single crystal</strong>. <!-- [Sólyom–Piróth I, Sec. 2.2.1, p. 20] --></p>
 </section>
 <section id="polycrystalline-solids" class="level3" data-number="1.4.2">
 <h3 data-number="1.4.2" class="anchored" data-anchor-id="polycrystalline-solids"><span class="header-section-number">1.4.2</span> Polycrystalline Solids</h3>
@@ -541,7 +541,7 @@ Figure&nbsp;1.2: Radial distribution function <span class="math inline">\(g(r)\)
 <section id="why-this-classification-matters-for-thermal-physics" class="level3" data-number="1.4.4">
 <h3 data-number="1.4.4" class="anchored" data-anchor-id="why-this-classification-matters-for-thermal-physics"><span class="header-section-number">1.4.4</span> Why This Classification Matters for Thermal Physics</h3>
 <p>This structural classification is not merely descriptive; it determines what kinds of excitations and transport pictures are appropriate.</p>
-<p>For thermal physics, the first-pass intuition is:</p>
+<p>For thermal physics, the intuition is:</p>
 <ul>
 <li><strong>Crystals</strong> support well-defined lattice periodicity, so collective vibrational modes can be labeled by wavevector and branch.</li>
 <li><strong>Polycrystals</strong> retain crystalline physics on the scale of a grain, but grain boundaries add scattering and reduce ideal directional behavior.</li>
@@ -616,20 +616,20 @@ U_{\mathrm{n}}(\mathbf r)
 <p>This is not yet the Born–Oppenheimer approximation, but it points toward it. Later we will exploit the large mass difference between electrons and nuclei to construct an effective potential-energy surface for atomic motion.</p>
 </section>
 </section>
-<section id="where-thermal-properties-live" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="where-thermal-properties-live"><span class="header-section-number">1.6</span> Where Thermal Properties Live</h2>
-<section id="formal-answer-in-the-spectrum-and-in-statistical-mechanics" class="level3" data-number="1.6.1">
-<h3 data-number="1.6.1" class="anchored" data-anchor-id="formal-answer-in-the-spectrum-and-in-statistical-mechanics"><span class="header-section-number">1.6.1</span> Formal Answer: in the Spectrum and in Statistical Mechanics</h3>
+<section id="thermal-properties" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="thermal-properties"><span class="header-section-number">1.6</span> Thermal Properties</h2>
+<section id="spectrum-and-statistical-mechanics" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="spectrum-and-statistical-mechanics"><span class="header-section-number">1.6.1</span> Spectrum and Statistical Mechanics</h3>
 <p>Once the energy spectrum is known, the methods of statistical physics determine thermal equilibrium properties in principle. <!-- [Sólyom–Piróth I, Sec. 3.1, p. 32] --></p>
 <p>At the most abstract level, thermal physics is built from the chain <span class="math display">\[
 H \longrightarrow {E_n} \longrightarrow Z=\sum_n e^{-\beta E_n}
 \longrightarrow F=-k_B T\ln Z ,
-\]</span> where <span class="math inline">\(T\)</span> denotes temperature, <span class="math inline">\(F\)</span> …, <span class="math inline">\(Z\)</span> the partition function, <span class="math inline">\(k_B\)</span> the Boltzmann constant, and <span class="math inline">\(\beta=(k_B T)^{-1}\)</span>.</p>
+\]</span> where <span class="math inline">\(T\)</span> denotes temperature, <span class="math inline">\(Z\)</span> the partition function, <span class="math inline">\(F\)</span> the free energy, <span class="math inline">\(k_B\)</span> the Boltzmann constant, and <span class="math inline">\(\beta=(k_B T)^{-1}\)</span>.</p>
 <p>For equilibrium thermal observables, this is where the information lives. Heat capacity, for example, is controlled by how the internal energy changes with temperature; thermal expansion is controlled by how the free energy shifts with volume or pressure.</p>
 <p>However, this formal statement is not yet useful until we identify the physically relevant excitations in a solid.</p>
 </section>
-<section id="physical-answer-in-the-hierarchy-of-approximations" class="level3" data-number="1.6.2">
-<h3 data-number="1.6.2" class="anchored" data-anchor-id="physical-answer-in-the-hierarchy-of-approximations"><span class="header-section-number">1.6.2</span> Physical Answer: in the Hierarchy of Approximations</h3>
+<section id="roadmap-to-thermal-properties" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="roadmap-to-thermal-properties"><span class="header-section-number">1.6.2</span> Roadmap to Thermal Properties</h3>
 <p>For the present course, the roadmap is:</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -674,8 +674,8 @@ C_V
 <li>The curvature of the energy around equilibrium defines the effective stiffness.</li>
 <li>That stiffness determines the normal vibrational modes.</li>
 <li>Quantization of those modes leads to phonons.</li>
-<li>The phonon spectrum produces the dominant lattice contribution to <span class="math inline">\(C_V\)</span>.</li>
-<li>To obtain <span class="math inline">\(\alpha\)</span> and realistic <span class="math inline">\(\kappa\)</span>, the strictly harmonic picture is not enough.</li>
+<li>The phonon spectrum produces the dominant lattice contribution to the heat capacity <span class="math inline">\(C_V\)</span>.</li>
+<li>To describe thermal expansion <span class="math inline">\(\alpha\)</span> and thermal conductivity <span class="math inline">\(\kappa\)</span>, the strictly harmonic picture is not enough.</li>
 </ul>
 </section>
 <section id="interpretation" class="level3" data-number="1.6.3">
@@ -685,22 +685,22 @@ C_V
 <p>Second, a purely harmonic crystal already goes a long way: it gives well-defined normal modes and is the correct starting point for the phonon contribution to <span class="math inline">\(C_V\)</span>.</p>
 <p>Third, not every thermal observable is of the same kind.</p>
 <ul>
-<li><span class="math inline">\(C_V\)</span> is primarily an equilibrium counting problem: how many modes are thermally occupied?</li>
-<li><span class="math inline">\(\alpha\)</span> is already more subtle, because exact harmonicity would not produce thermal expansion.</li>
-<li><span class="math inline">\(\kappa\)</span> is subtler still: it is a transport coefficient, so one must understand both carriers and scattering.</li>
+<li><strong>Heat capacity</strong> is primarily an equilibrium counting problem: how many modes are thermally occupied?</li>
+<li><strong>Thermal expansion</strong> is already more subtle, because exact harmonicity would not produce thermal expansion.</li>
+<li><strong>Thermal conductivity</strong> is subtler still: it is a transport coefficient, so one must understand both carriers and scattering.</li>
 </ul>
 </section>
 </section>
 <section id="outlook-on-the-next-lectures-from-structure-to-phonons" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="outlook-on-the-next-lectures-from-structure-to-phonons"><span class="header-section-number">1.7</span> Outlook on the Next Lectures: From structure to Phonons</h2>
+<h2 data-number="1.7" class="anchored" data-anchor-id="outlook-on-the-next-lectures-from-structure-to-phonons"><span class="header-section-number">1.7</span> Outlook on the Next Lectures: From Structure to Phonons</h2>
 <p>The present lecture has intentionally stopped before any detailed derivation of lattice dynamics. The reason is conceptual: before one writes down displacement fields, force constants, and dispersion relations, one should understand what assumptions make those objects meaningful.</p>
 <p>The connection to what follows in the course is:</p>
 <ol type="1">
-<li><p><strong>From structure to equilibrium positions.</strong> Crystals are special because long-range order allows us to define reference positions for all atoms.</p></li>
-<li><p><strong>From the many-particle Hamiltonian to an effective ionic problem.</strong> We will not solve the full Coulomb problem directly. Instead, we will use controlled approximations to reduce it to nuclear motion in an effective energy landscape.</p></li>
-<li><p><strong>From bonding to stiffness.</strong> The second derivatives of that energy landscape with respect to atomic displacements define the force constants.</p></li>
-<li><p><strong>From stiffness to vibrations.</strong> Small oscillations about equilibrium produce collective normal modes.</p></li>
-<li><p><strong>From vibrations to thermal properties.</strong> After quantization, these modes become phonons. Their spectrum is the microscopic input for the lattice contribution to thermal observables.</p></li>
+<li><p><strong>From structure to equilibrium positions:</strong> Crystals are special because long-range order allows us to define reference positions for all atoms.</p></li>
+<li><p><strong>From the many-particle Hamiltonian to an effective ionic problem:</strong> We will not solve the full Coulomb problem of interacting electrons and nuclei directly. Instead, we will use controlled approximations to reduce it to nuclear motion in an effective energy landscape.</p></li>
+<li><p><strong>From bonding to stiffness:</strong> The second derivatives of that energy landscape with respect to atomic displacements define the force constants.</p></li>
+<li><p><strong>From stiffness to vibrations:</strong> Small oscillations about equilibrium produce collective normal modes.</p></li>
+<li><p><strong>From vibrations to thermal properties:</strong> After quantization, these modes become phonons. Their spectrum is the microscopic input for the lattice contribution to thermal observables.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
