@@ -329,7 +329,7 @@ window.Quarto = {
 <li>Structural types of solids: crystal, polycrystal, amorphous solid.</li>
 <li>The microscopic starting point: the many-particle Hamiltonian of electrons and nuclei.</li>
 <li>Where thermal properties “live”: spectrum, statistics, and the hierarchy of approximations used in solid-state physics.</li>
-<li>Bridge to the next lectures: bonding <span class="math inline">\(\rightarrow\)</span> stiffness <span class="math inline">\(\rightarrow\)</span> vibrations <span class="math inline">\(\rightarrow\)</span> phonons <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(C_V\)</span>, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\kappa\)</span>.</li>
+<li>Outlook on the next lectures: bonding <span class="math inline">\(\rightarrow\)</span> stiffness <span class="math inline">\(\rightarrow\)</span> vibrations <span class="math inline">\(\rightarrow\)</span> phonons <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(C_V\)</span>, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\kappa\)</span>.</li>
 </ul>
 <table class="caption-top table">
 <colgroup>
@@ -389,7 +389,7 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>Which microscopic degrees of freedom carry thermal energy in a solid, and how do they produce measurable quantities such as <span class="math inline">\(C_V\)</span>, <span class="math inline">\(\alpha\)</span>, and <span class="math inline">\(\kappa\)</span>?</p>
 </blockquote>
-<p>Today’s lecture sets up the language needed to answer that question.</p>
+<p>This lecture sets up the language needed to answer that question.</p>
 </section>
 <section id="short-range-and-long-range-order" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="short-range-and-long-range-order"><span class="header-section-number">1.3</span> Short-Range and Long-Range Order</h2>
@@ -469,6 +469,16 @@ g(r)\to 1
 c(\mathbf r)=g(\mathbf r)-1,
 \]</span> which vanishes at large distance if only short-range order is present. <!-- [Sólyom–Piróth I, Sec. 2.1.1, Eq. (2.1.15), p. 17] --></p>
 <p>By contrast, in a crystal the correlations do not decay away at large separation: the pair correlations retain the periodicity of the underlying lattice. That is the operational meaning of long-range positional order. <!-- [Sólyom–Piróth I, Sec. 2.1.1, pp. 14–18] --></p>
+<div id="fig-rdf-comparison" class="figure lightbox quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rdf-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/lecture_01_rdf_crystal_liquid_amorphous.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1.1: Comparison of the pair correlation functions g(r) for a crystal, liquid, and amorphous solid."><img src="images/lecture_01_rdf_crystal_liquid_amorphous.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rdf-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: Comparison of the pair correlation functions <span class="math inline">\(g(r)\)</span> for a crystal, liquid, and amorphous solid.
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="interpretation-and-limiting-cases" class="level3" data-number="1.3.3">
 <h3 data-number="1.3.3" class="anchored" data-anchor-id="interpretation-and-limiting-cases"><span class="header-section-number">1.3.3</span> Interpretation and Limiting Cases</h3>
@@ -478,6 +488,7 @@ c(\mathbf r)=g(\mathbf r)-1,
 <li><strong>Amorphous solid or liquid:</strong> <span class="math inline">\(g(r)\)</span> shows a few pronounced peaks at near-neighbor distances, but those oscillations decay and eventually approach <span class="math inline">\(1\)</span>.</li>
 <li><strong>Crystal:</strong> correlations remain ordered at arbitrarily large distance; the structure is not described by a few local peaks only.</li>
 </ul>
+<p>The pair correlation functions of crystal, liquid, and amorphous solid are schematically illustrated in <a href="#fig-rdf-comparison" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>.</p>
 <p>In isotropic systems, the average number of neighbors in a spherical shell of radius <span class="math inline">\(r\)</span> and thickness <span class="math inline">\(dr\)</span> is <span class="math display">\[
 dn(r)=4\pi n g(r) r^2 dr,
 \]</span> which gives a direct physical meaning to the radial distribution function. <!-- [Sólyom–Piróth I, Sec. 2.1.1, Eq. (2.1.14), p. 17] --></p>
@@ -496,16 +507,16 @@ S(\mathbf K)
 <!-- Placeholder: insert figure from [Sólyom–Piróth I, Sec. 2.2.2, Fig. 2.1, p. 22] -->
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="images/lecture_01_rdf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1.1: Radial distribution function g(r) and structure factor S(K) of liquid argon. The figure illustrates strong short-range positional correlations, visible through the first few peaks, and the absence of long-range order, visible through the approach g(r)\to 1 at large r."><img src="images/lecture_01_rdf.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%"></a></p>
+<p><a href="images/lecture_01_rdf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1.2: Radial distribution function g(r) and structure factor S(K) of liquid argon. The figure illustrates strong short-range positional correlations, visible through the first few peaks, and the absence of long-range order, visible through the approach g(r)\to 1 at large r."><img src="images/lecture_01_rdf.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-liquid-argon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: Radial distribution function <span class="math inline">\(g(r)\)</span> and structure factor <span class="math inline">\(S(K)\)</span> of liquid argon. The figure illustrates strong short-range positional correlations, visible through the first few peaks, and the absence of long-range order, visible through the approach <span class="math inline">\(g(r)\to 1\)</span> at large <span class="math inline">\(r\)</span>.
+Figure&nbsp;1.2: Radial distribution function <span class="math inline">\(g(r)\)</span> and structure factor <span class="math inline">\(S(K)\)</span> of liquid argon. The figure illustrates strong short-range positional correlations, visible through the first few peaks, and the absence of long-range order, visible through the approach <span class="math inline">\(g(r)\to 1\)</span> at large <span class="math inline">\(r\)</span>.
 </figcaption>
 </figure>
 </div>
-<p>The liquid-argon example in <a href="#fig-liquid-argon" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> is useful even in a course on solids: it shows very clearly what short-range order looks like in practice. The first-neighbor shell is well defined, but periodic order does not persist indefinitely. <!-- [Sólyom–Piróth I, Sec. 2.2.2, Fig. 2.1, pp. 22–23] --></p>
+<p>The liquid-argon example in <a href="#fig-liquid-argon" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> is useful even in a course on solids: it shows very clearly what short-range order looks like in practice. The first-neighbor shell is well defined, but periodic order does not persist indefinitely. <!-- [Sólyom–Piróth I, Sec. 2.2.2, Fig. 2.1, pp. 22–23] --></p>
 </section>
 </section>
 <section id="structural-types-of-solids" class="level2" data-number="1.4">
