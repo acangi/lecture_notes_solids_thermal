@@ -39,10 +39,13 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-95f147d06fdb9f8ce149f95e323965f4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9c50916d60d090ebff2a56275c345c42.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -211,8 +243,43 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">1.1</span> Roadmap</a></li>
+  <li><a href="#why-begin-a-course-on-thermal-properties-with-structure" id="toc-why-begin-a-course-on-thermal-properties-with-structure" class="nav-link" data-scroll-target="#why-begin-a-course-on-thermal-properties-with-structure"><span class="header-section-number">1.2</span> Why Begin a Course on Thermal Properties with Structure?</a></li>
+  <li><a href="#short-range-and-long-range-order" id="toc-short-range-and-long-range-order" class="nav-link" data-scroll-target="#short-range-and-long-range-order"><span class="header-section-number">1.3</span> Short-Range and Long-Range Order</a>
+  <ul class="collapse">
+  <li><a href="#positional-order-as-a-correlation-problem" id="toc-positional-order-as-a-correlation-problem" class="nav-link" data-scroll-target="#positional-order-as-a-correlation-problem"><span class="header-section-number">1.3.1</span> Positional Order as a Correlation Problem</a></li>
+  <li><a href="#short-range-versus-long-range-order" id="toc-short-range-versus-long-range-order" class="nav-link" data-scroll-target="#short-range-versus-long-range-order"><span class="header-section-number">1.3.2</span> Short-Range versus Long-Range Order</a></li>
+  <li><a href="#interpretation-and-limiting-cases" id="toc-interpretation-and-limiting-cases" class="nav-link" data-scroll-target="#interpretation-and-limiting-cases"><span class="header-section-number">1.3.3</span> Interpretation and Limiting Cases</a></li>
+  <li><a href="#reciprocal-space-view-the-structure-factor" id="toc-reciprocal-space-view-the-structure-factor" class="nav-link" data-scroll-target="#reciprocal-space-view-the-structure-factor"><span class="header-section-number">1.3.4</span> Reciprocal-Space View: the Structure Factor</a></li>
+  </ul></li>
+  <li><a href="#structural-types-of-solids" id="toc-structural-types-of-solids" class="nav-link" data-scroll-target="#structural-types-of-solids"><span class="header-section-number">1.4</span> Structural Types of Solids</a>
+  <ul class="collapse">
+  <li><a href="#crystalline-solids" id="toc-crystalline-solids" class="nav-link" data-scroll-target="#crystalline-solids"><span class="header-section-number">1.4.1</span> Crystalline Solids</a></li>
+  <li><a href="#polycrystalline-solids" id="toc-polycrystalline-solids" class="nav-link" data-scroll-target="#polycrystalline-solids"><span class="header-section-number">1.4.2</span> Polycrystalline Solids</a></li>
+  <li><a href="#amorphous-solids" id="toc-amorphous-solids" class="nav-link" data-scroll-target="#amorphous-solids"><span class="header-section-number">1.4.3</span> Amorphous Solids</a></li>
+  <li><a href="#why-this-classification-matters-for-thermal-physics" id="toc-why-this-classification-matters-for-thermal-physics" class="nav-link" data-scroll-target="#why-this-classification-matters-for-thermal-physics"><span class="header-section-number">1.4.4</span> Why This Classification Matters for Thermal Physics</a></li>
+  </ul></li>
+  <li><a href="#the-many-particle-hamiltonian-of-a-solid" id="toc-the-many-particle-hamiltonian-of-a-solid" class="nav-link" data-scroll-target="#the-many-particle-hamiltonian-of-a-solid"><span class="header-section-number">1.5</span> The Many-Particle Hamiltonian of a Solid</a>
+  <ul class="collapse">
+  <li><a href="#formal-microscopic-starting-point" id="toc-formal-microscopic-starting-point" class="nav-link" data-scroll-target="#formal-microscopic-starting-point"><span class="header-section-number">1.5.1</span> Formal Microscopic Starting Point</a></li>
+  <li><a href="#why-this-problem-is-hard" id="toc-why-this-problem-is-hard" class="nav-link" data-scroll-target="#why-this-problem-is-hard"><span class="header-section-number">1.5.2</span> Why This Problem is Hard</a></li>
+  <li><a href="#the-first-simplification" id="toc-the-first-simplification" class="nav-link" data-scroll-target="#the-first-simplification"><span class="header-section-number">1.5.3</span> The First Simplification</a></li>
+  </ul></li>
+  <li><a href="#where-thermal-properties-live" id="toc-where-thermal-properties-live" class="nav-link" data-scroll-target="#where-thermal-properties-live"><span class="header-section-number">1.6</span> Where Thermal Properties Live</a>
+  <ul class="collapse">
+  <li><a href="#formal-answer-in-the-spectrum-and-in-statistical-mechanics" id="toc-formal-answer-in-the-spectrum-and-in-statistical-mechanics" class="nav-link" data-scroll-target="#formal-answer-in-the-spectrum-and-in-statistical-mechanics"><span class="header-section-number">1.6.1</span> Formal Answer: in the Spectrum and in Statistical Mechanics</a></li>
+  <li><a href="#physical-answer-in-the-hierarchy-of-approximations" id="toc-physical-answer-in-the-hierarchy-of-approximations" class="nav-link" data-scroll-target="#physical-answer-in-the-hierarchy-of-approximations"><span class="header-section-number">1.6.2</span> Physical Answer: in the Hierarchy of Approximations</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">1.6.3</span> Interpretation</a></li>
+  </ul></li>
+  <li><a href="#outlook-on-the-next-lectures-from-structure-to-phonons" id="toc-outlook-on-the-next-lectures-from-structure-to-phonons" class="nav-link" data-scroll-target="#outlook-on-the-next-lectures-from-structure-to-phonons"><span class="header-section-number">1.7</span> Outlook on the Next Lectures: From structure to Phonons</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">1.8</span> Problem Set</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -255,8 +322,426 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </div>
 </div>
+<section id="roadmap" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="roadmap"><span class="header-section-number">1.1</span> Roadmap</h2>
+<ul>
+<li>Order in condensed matter: what is meant by short-range and long-range order.</li>
+<li>Structural types of solids: crystal, polycrystal, amorphous solid.</li>
+<li>The microscopic starting point: the many-particle Hamiltonian of electrons and nuclei.</li>
+<li>Where thermal properties “live”: spectrum, statistics, and the hierarchy of approximations used in solid-state physics.</li>
+<li>Bridge to the next lectures: bonding <span class="math inline">\(\rightarrow\)</span> stiffness <span class="math inline">\(\rightarrow\)</span> vibrations <span class="math inline">\(\rightarrow\)</span> phonons <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(C_V\)</span>, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\kappa\)</span>.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 74%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf R_i\)</span></td>
+<td>position of nucleus / ion <span class="math inline">\(i\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf r_j\)</span></td>
+<td>position of electron <span class="math inline">\(j\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\rho(\mathbf r)\)</span></td>
+<td>one-particle density</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P(\mathbf r_1,\mathbf r_2)\)</span></td>
+<td>two-particle density</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(g(\mathbf r)\)</span></td>
+<td>pair-distribution function (or radial distribution function in isotropic systems)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(S(\mathbf K)\)</span></td>
+<td>structure factor</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf K\)</span></td>
+<td>Fourier mode</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(H\)</span></td>
+<td>many-particle Hamiltonian</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C_V\)</span>, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\kappa\)</span></td>
+<td>heat capacity, thermal expansion coefficient, thermal conductivity</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="why-begin-a-course-on-thermal-properties-with-structure" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="why-begin-a-course-on-thermal-properties-with-structure"><span class="header-section-number">1.2</span> Why Begin a Course on Thermal Properties with Structure?</h2>
+<p>A first description of thermal, mechanical, electric, or magnetic behavior can often be given at a phenomenological level, using thermodynamics or continuum theories. However, a deeper understanding requires an atomic picture: solids are many-particle quantum systems made of interacting nuclei and electrons. This is the microscopic starting point of solid-state physics. <!-- [Sólyom–Piróth I, Sec. 3.1, p. 31] --></p>
+<p>For thermal physics, this point is especially important. A solid is not merely a rigid arrangement of atoms. At finite temperature, the atoms fluctuate about their equilibrium positions, and these collective motions dominate much of the thermal behavior that we measure macroscopically. The central question of the course is therefore:</p>
+<blockquote class="blockquote">
+<p>Which microscopic degrees of freedom carry thermal energy in a solid, and how do they produce measurable quantities such as <span class="math inline">\(C_V\)</span>, <span class="math inline">\(\alpha\)</span>, and <span class="math inline">\(\kappa\)</span>?</p>
+</blockquote>
+<p>Today’s lecture sets up the language needed to answer that question.</p>
+</section>
+<section id="short-range-and-long-range-order" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="short-range-and-long-range-order"><span class="header-section-number">1.3</span> Short-Range and Long-Range Order</h2>
+<section id="positional-order-as-a-correlation-problem" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="positional-order-as-a-correlation-problem"><span class="header-section-number">1.3.1</span> Positional Order as a Correlation Problem</h3>
+<p>In condensed matter, atomic positions are usually not completely random. Interatomic forces produce correlations, and these correlations may persist either only locally or over arbitrarily large distances. <!-- [Sólyom–Piróth I, Sec. 2.1.1, pp. 14–15] --></p>
+<p>A convenient formal language is provided by distribution functions. The one-particle density is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\rho(\mathbf r)
+=
+\left\langle
+\sum_{i=1}^{N}
+\delta(\mathbf r-\mathbf R_i)
+\right\rangle ,
+\]</span></p>
+</div>
+</div>
+</div>
+<p>and the two-particle density is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+P(\mathbf r_1,\mathbf r_2)
+=
+\left\langle
+\sum_{i=1}^N
+\sum_{j\neq i}^N
+\delta(\mathbf r_1-\mathbf R_i)
+\delta(\mathbf r_2-\mathbf R_j)
+\right\rangle .
+\]</span></p>
+</div>
+</div>
+</div>
+<p>The corresponding two-particle distribution function is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+g(\mathbf r_1,\mathbf r_2)
+=
+\frac{P(\mathbf r_1,\mathbf r_2)}
+{\rho(\mathbf r_1)\rho(\mathbf r_2)} .
+\]</span></p>
+</div>
+</div>
+</div>
+<p>These definitions are the standard statistical characterization of structure in disordered matter. <!-- [Sólyom–Piróth I, Sec. 2.1.1, Eqs. (2.1.1)–(2.1.10), pp. 15–16] --></p>
+<p>For a homogeneous system, <span class="math inline">\(\rho(\mathbf r)=n\)</span> is constant, and <span class="math inline">\(g\)</span> depends only on the difference of its arguments: <span class="math display">\[
+g(\mathbf r_1,\mathbf r_2)=g(\mathbf r_1-\mathbf r_2).
+\]</span> If the system is also isotropic, then <span class="math inline">\(g\)</span> depends only on <span class="math inline">\(r=|\mathbf r|\)</span>, so one writes simply <span class="math inline">\(g(r)\)</span>. <!-- [Sólyom–Piróth I, Sec. 2.1.1, Eqs. (2.1.11)–(2.1.14), pp. 16–17] --></p>
+</section>
+<section id="short-range-versus-long-range-order" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="short-range-versus-long-range-order"><span class="header-section-number">1.3.2</span> Short-Range versus Long-Range Order</h3>
+<p>The key distinction is encoded in the large-distance behavior of correlations.</p>
+<p>If no long-range order is present, then distant atomic positions become uncorrelated: <span class="math display">\[
+P(\mathbf r_1,\mathbf r_2)\to \rho(\mathbf r_1)\rho(\mathbf r_2)
+\qquad \text{for } |\mathbf r_1-\mathbf r_2|\to\infty.
+\]</span> Equivalently, <span class="math display">\[
+g(r)\to 1
+\qquad \text{for } r\to\infty.
+\]</span> <!-- [Sólyom–Piróth I, Sec. 2.1.1, Eq. (2.1.8), Eq. (2.1.15), pp. 16–17] --></p>
+<p>This motivates the pair-correlation function <span class="math display">\[
+c(\mathbf r)=g(\mathbf r)-1,
+\]</span> which vanishes at large distance if only short-range order is present. <!-- [Sólyom–Piróth I, Sec. 2.1.1, Eq. (2.1.15), p. 17] --></p>
+<p>By contrast, in a crystal the correlations do not decay away at large separation: the pair correlations retain the periodicity of the underlying lattice. That is the operational meaning of long-range positional order. <!-- [Sólyom–Piróth I, Sec. 2.1.1, pp. 14–18] --></p>
+</section>
+<section id="interpretation-and-limiting-cases" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="interpretation-and-limiting-cases"><span class="header-section-number">1.3.3</span> Interpretation and Limiting Cases</h3>
+<p>A few limiting cases are worth keeping in mind.</p>
+<ul>
+<li><strong>Completely random arrangement:</strong> <span class="math inline">\(g(r)=1\)</span> at all <span class="math inline">\(r\)</span>, so the presence of one atom tells us nothing about where another one is.</li>
+<li><strong>Amorphous solid or liquid:</strong> <span class="math inline">\(g(r)\)</span> shows a few pronounced peaks at near-neighbor distances, but those oscillations decay and eventually approach <span class="math inline">\(1\)</span>.</li>
+<li><strong>Crystal:</strong> correlations remain ordered at arbitrarily large distance; the structure is not described by a few local peaks only.</li>
+</ul>
+<p>In isotropic systems, the average number of neighbors in a spherical shell of radius <span class="math inline">\(r\)</span> and thickness <span class="math inline">\(dr\)</span> is <span class="math display">\[
+dn(r)=4\pi n g(r) r^2 dr,
+\]</span> which gives a direct physical meaning to the radial distribution function. <!-- [Sólyom–Piróth I, Sec. 2.1.1, Eq. (2.1.14), p. 17] --></p>
+</section>
+<section id="reciprocal-space-view-the-structure-factor" class="level3" data-number="1.3.4">
+<h3 data-number="1.3.4" class="anchored" data-anchor-id="reciprocal-space-view-the-structure-factor"><span class="header-section-number">1.3.4</span> Reciprocal-Space View: the Structure Factor</h3>
+<p>The same information can be expressed in reciprocal space through the <strong>structure factor</strong>: <span class="math display">\[
+S(\mathbf K)
+=
+1+n\int [g(\mathbf r)-1]e^{-i\mathbf K\cdot\mathbf r} d\mathbf r .
+\]</span> <!-- [Sólyom–Piróth I, Sec. 2.1.1, Eq. (2.1.21), p. 18] --></p>
+<p>This equation matters because diffraction experiments measure <span class="math inline">\(S(\mathbf K)\)</span>, and from it one infers spatial correlations among atoms. <!-- [Sólyom–Piróth I, Sec. 2.1.1, p. 18] --></p>
+<div id="fig-liquid-argon" class="figure quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-liquid-argon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Sec. 2.2.2, Fig. 2.1, p. 22] -->
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="images/lecture_01_rdf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1.1: Radial distribution function g(r) and structure factor S(K) of liquid argon. The figure illustrates strong short-range positional correlations, visible through the first few peaks, and the absence of long-range order, visible through the approach g(r)\to 1 at large r."><img src="images/lecture_01_rdf.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-liquid-argon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: Radial distribution function <span class="math inline">\(g(r)\)</span> and structure factor <span class="math inline">\(S(K)\)</span> of liquid argon. The figure illustrates strong short-range positional correlations, visible through the first few peaks, and the absence of long-range order, visible through the approach <span class="math inline">\(g(r)\to 1\)</span> at large <span class="math inline">\(r\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>The liquid-argon example in <a href="#fig-liquid-argon" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> is useful even in a course on solids: it shows very clearly what short-range order looks like in practice. The first-neighbor shell is well defined, but periodic order does not persist indefinitely. <!-- [Sólyom–Piróth I, Sec. 2.2.2, Fig. 2.1, pp. 22–23] --></p>
+</section>
+</section>
+<section id="structural-types-of-solids" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="structural-types-of-solids"><span class="header-section-number">1.4</span> Structural Types of Solids</h2>
+<section id="crystalline-solids" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="crystalline-solids"><span class="header-section-number">1.4.1</span> Crystalline Solids</h3>
+<p>A crystalline solid is characterized by long-range positional order. In an ideal crystal, atoms occupy a strictly periodic array, so equivalent atoms have identical neighborhoods no matter how far apart they are. <!-- [Sólyom–Piróth I, Sec. 2.1.1, p. 14; Sec. 2.2.1, p. 20] --></p>
+<p>If the crystallographic axes have the same orientation throughout the sample, the sample is a <strong>single crystal</strong> <!-- [Sólyom–Piróth I, Sec. 2.2.1, p. 20] --></p>
+</section>
+<section id="polycrystalline-solids" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="polycrystalline-solids"><span class="header-section-number">1.4.2</span> Polycrystalline Solids</h3>
+<p>Real materials often consist of many crystalline grains, or crystallites, with different orientations. Such a sample is <strong>polycrystalline</strong>. <!-- [Sólyom–Piróth I, Sec. 2.2.1, p. 21] --></p>
+<p>Locally, each grain is crystalline. Globally, the sample no longer has a single orientation. This distinction is important because many bulk thermal measurements average over grain directions and over grain boundaries.</p>
+</section>
+<section id="amorphous-solids" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="amorphous-solids"><span class="header-section-number">1.4.3</span> Amorphous Solids</h3>
+<p>A solid can also be mechanically rigid without having long-range positional order. In an <strong>amorphous</strong> solid, atoms are frozen in disordered positions. Correlations between distant atoms are lost, but short-range order may still survive. <!-- [Sólyom–Piróth I, Sec. 2.2.1, pp. 21–22] --></p>
+<p>The essential difference from a liquid is temporal: in an amorphous solid the disordered arrangement is frozen in place on experimental timescales. <!-- [Sólyom–Piróth I, Sec. 2.2.1, p. 21] --></p>
+</section>
+<section id="why-this-classification-matters-for-thermal-physics" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="why-this-classification-matters-for-thermal-physics"><span class="header-section-number">1.4.4</span> Why This Classification Matters for Thermal Physics</h3>
+<p>This structural classification is not merely descriptive; it determines what kinds of excitations and transport pictures are appropriate.</p>
+<p>For thermal physics, the first-pass intuition is:</p>
+<ul>
+<li><strong>Crystals</strong> support well-defined lattice periodicity, so collective vibrational modes can be labeled by wavevector and branch.</li>
+<li><strong>Polycrystals</strong> retain crystalline physics on the scale of a grain, but grain boundaries add scattering and reduce ideal directional behavior.</li>
+<li><strong>Amorphous solids</strong> still vibrate and store thermal energy, but the language of perfectly periodic normal modes becomes less exact.</li>
+</ul>
+<!-- [Sólyom–Piróth I, Sec. 2.2.1, pp. 21–22] -->
+</section>
+</section>
+<section id="the-many-particle-hamiltonian-of-a-solid" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="the-many-particle-hamiltonian-of-a-solid"><span class="header-section-number">1.5</span> The Many-Particle Hamiltonian of a Solid</h2>
+<section id="formal-microscopic-starting-point" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="formal-microscopic-starting-point"><span class="header-section-number">1.5.1</span> Formal Microscopic Starting Point</h3>
+<p>The theoretical problem is easy to state and hard to solve. A solid consists of nuclei and electrons interacting through Coulomb forces. In principle, one should solve the many-body Schrödinger equation <span class="math display">\[
+H\Psi = E\Psi ,
+\]</span> for the full system. <!-- [Sólyom–Piróth I, Sec. 3.1, Eq. (3.1.1), p. 32] --></p>
+<p>The Hamiltonian is decomposed into nuclear, electronic, and electron–nuclear parts:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+H = H_{\mathrm{n}} + H_{\mathrm{e}} + H_{\mathrm{en}}
+\]</span></p>
+</div>
+</div>
+</div>
+<p>which are explicitly defined as</p>
+<p><span class="math display">\[
+H_{\mathrm{n}}
+=
+-\sum_{i=1}^{N_\mathrm{n}}\frac{\hbar^2}{2M_i}\nabla_{\mathbf R_i}^2
++
+\sum_{i&lt;j}^{N_\mathrm{n}}\frac{Z_i Z_j e^2}{4\pi\varepsilon_0 |\mathbf R_i-\mathbf R_j|},
+\]</span></p>
+<p><span class="math display">\[
+H_{\mathrm{e}}
+=
+-\sum_{i=1}^{N_\mathrm{e}}\frac{\hbar^2}{2m_e}\nabla_{\mathbf r_i}^2
++
+\sum_{i&lt;j}^{N_\mathrm{e}}\frac{e^2}{4\pi\varepsilon_0 |\mathbf r_i-\mathbf r_j|},
+\]</span></p>
+<p><span class="math display">\[
+H_{\mathrm{en}}
+=
+-\sum_{i=1}^{N_\mathrm{n}}\sum_{j=1}^{N_\mathrm{e}}
+\frac{Z_i e^2}{4\pi\varepsilon_0 |\mathbf R_i-\mathbf r_j|}.
+\]</span></p>
+<p>These are the kinetic energies of nuclei and electrons together with the three Coulomb interaction terms. <!-- [Sólyom–Piróth I, Sec. 3.1.1, Eqs. (3.1.2)–(3.1.5), pp. 32–33] --></p>
+</section>
+<section id="why-this-problem-is-hard" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="why-this-problem-is-hard"><span class="header-section-number">1.5.2</span> Why This Problem is Hard</h3>
+<p>The exact solution is impossible in practice for two separate reasons:</p>
+<ol type="1">
+<li>the number of particles is macroscopically large;</li>
+<li>the Coulomb interaction is strong and long-ranged.</li>
+</ol>
+<!--
+This is stated explicitly in the textbook and is the basic justification for the hierarchy of approximations used throughout solid-state physics [Sólyom–Piróth I, Sec. 3.1.1, p. 33].
+-->
+<p>If all interactions were absent, the problem would reduce to independent particles and would be easy. If the number of particles were small, one could still attempt a controlled many-body solution. In a solid, neither of these simplifications holds.</p>
+</section>
+<section id="the-first-simplification" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="the-first-simplification"><span class="header-section-number">1.5.3</span> The First Simplification</h3>
+<p>If the nuclei can be regarded as essentially localized, then their positions define a potential landscape for the electrons, <span class="math display">\[
+U_{\mathrm{n}}(\mathbf r)
+=
+-\sum_{i=1}^{N_\mathrm{n}}
+\frac{Z_i e^2}{4\pi\varepsilon_0 |\mathbf R_i-\mathbf r|},
+\]</span> and one may begin to separate the electronic and ionic aspects of the problem. <!-- [Sólyom–Piróth I, Sec. 3.1.1, Eq. (3.1.11), p. 34] --></p>
+<p>This is not yet the Born–Oppenheimer approximation, but it points toward it. Later we will exploit the large mass difference between electrons and nuclei to construct an effective potential-energy surface for atomic motion.</p>
+</section>
+</section>
+<section id="where-thermal-properties-live" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="where-thermal-properties-live"><span class="header-section-number">1.6</span> Where Thermal Properties Live</h2>
+<section id="formal-answer-in-the-spectrum-and-in-statistical-mechanics" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="formal-answer-in-the-spectrum-and-in-statistical-mechanics"><span class="header-section-number">1.6.1</span> Formal Answer: in the Spectrum and in Statistical Mechanics</h3>
+<p>Once the energy spectrum is known, the methods of statistical physics determine thermal equilibrium properties in principle. <!-- [Sólyom–Piróth I, Sec. 3.1, p. 32] --></p>
+<p>At the most abstract level, thermal physics is built from the chain <span class="math display">\[
+H \longrightarrow {E_n} \longrightarrow Z=\sum_n e^{-\beta E_n}
+\longrightarrow F=-k_B T\ln Z ,
+\]</span> where <span class="math inline">\(T\)</span> denotes temperature, <span class="math inline">\(F\)</span> …, <span class="math inline">\(Z\)</span> the partition function, <span class="math inline">\(k_B\)</span> the Boltzmann constant, and <span class="math inline">\(\beta=(k_B T)^{-1}\)</span>.</p>
+<p>For equilibrium thermal observables, this is where the information lives. Heat capacity, for example, is controlled by how the internal energy changes with temperature; thermal expansion is controlled by how the free energy shifts with volume or pressure.</p>
+<p>However, this formal statement is not yet useful until we identify the physically relevant excitations in a solid.</p>
+</section>
+<section id="physical-answer-in-the-hierarchy-of-approximations" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="physical-answer-in-the-hierarchy-of-approximations"><span class="header-section-number">1.6.2</span> Physical Answer: in the Hierarchy of Approximations</h3>
+<p>For the present course, the roadmap is:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\text{bonding}
+\rightarrow
+\text{equilibrium structure}
+\rightarrow
+\text{stiffness of the energy landscape}
+\rightarrow
+\text{lattice vibrations}
+\]</span></p>
+<p><span class="math display">\[
+\text{lattice vibrations}
+\rightarrow
+\omega_\nu(\mathbf q)
+\rightarrow
+D(\omega)
+\rightarrow
+C_V
+\]</span></p>
+<p><span class="math display">\[
+\text{anharmonicity}
+\rightarrow
+\alpha,
+\qquad
+\text{carriers + scattering + transport}
+\rightarrow
+\kappa .
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This roadmap should be read as a sequence of increasingly specialized approximations.</p>
+<ul>
+<li><strong>Bonding</strong> determines which structure is stable.</li>
+<li>The stable structure defines equilibrium atomic positions.</li>
+<li>The curvature of the energy around equilibrium defines the effective stiffness.</li>
+<li>That stiffness determines the normal vibrational modes.</li>
+<li>Quantization of those modes leads to phonons.</li>
+<li>The phonon spectrum produces the dominant lattice contribution to <span class="math inline">\(C_V\)</span>.</li>
+<li>To obtain <span class="math inline">\(\alpha\)</span> and realistic <span class="math inline">\(\kappa\)</span>, the strictly harmonic picture is not enough.</li>
+</ul>
+</section>
+<section id="interpretation" class="level3" data-number="1.6.3">
+<h3 data-number="1.6.3" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">1.6.3</span> Interpretation</h3>
+<p>A few remarks help orient the rest of the course.</p>
+<p>First, a perfectly rigid lattice would have no lattice heat capacity at all. Thermal physics becomes interesting precisely because atoms move.</p>
+<p>Second, a purely harmonic crystal already goes a long way: it gives well-defined normal modes and is the correct starting point for the phonon contribution to <span class="math inline">\(C_V\)</span>.</p>
+<p>Third, not every thermal observable is of the same kind.</p>
+<ul>
+<li><span class="math inline">\(C_V\)</span> is primarily an equilibrium counting problem: how many modes are thermally occupied?</li>
+<li><span class="math inline">\(\alpha\)</span> is already more subtle, because exact harmonicity would not produce thermal expansion.</li>
+<li><span class="math inline">\(\kappa\)</span> is subtler still: it is a transport coefficient, so one must understand both carriers and scattering.</li>
+</ul>
+</section>
+</section>
+<section id="outlook-on-the-next-lectures-from-structure-to-phonons" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="outlook-on-the-next-lectures-from-structure-to-phonons"><span class="header-section-number">1.7</span> Outlook on the Next Lectures: From structure to Phonons</h2>
+<p>The present lecture has intentionally stopped before any detailed derivation of lattice dynamics. The reason is conceptual: before one writes down displacement fields, force constants, and dispersion relations, one should understand what assumptions make those objects meaningful.</p>
+<p>The connection to what follows in the course is:</p>
+<ol type="1">
+<li><p><strong>From structure to equilibrium positions.</strong> Crystals are special because long-range order allows us to define reference positions for all atoms.</p></li>
+<li><p><strong>From the many-particle Hamiltonian to an effective ionic problem.</strong> We will not solve the full Coulomb problem directly. Instead, we will use controlled approximations to reduce it to nuclear motion in an effective energy landscape.</p></li>
+<li><p><strong>From bonding to stiffness.</strong> The second derivatives of that energy landscape with respect to atomic displacements define the force constants.</p></li>
+<li><p><strong>From stiffness to vibrations.</strong> Small oscillations about equilibrium produce collective normal modes.</p></li>
+<li><p><strong>From vibrations to thermal properties.</strong> After quantization, these modes become phonons. Their spectrum is the microscopic input for the lattice contribution to thermal observables.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Take-Home Messages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The distinction between short-range and long-range order is a distinction about correlations, not only about visual appearance.</li>
+<li>Crystalline, polycrystalline, and amorphous solids are all mechanically solid, but they are not microscopically equivalent.</li>
+<li>The fundamental microscopic model of a solid is a coupled many-particle quantum problem of nuclei and electrons interacting through Coulomb forces.</li>
+<li>That exact problem is too hard to solve directly because the particle number is huge and the interactions are strong and long-ranged.</li>
+<li>Thermal properties are ultimately tied to the spectrum of accessible excitations and their statistical occupation.</li>
+<li>In solids, lattice vibrations provide the central microscopic route from structure to thermal behavior.</li>
+<li>Heat capacity, thermal expansion, and thermal conductivity do not all require the same level of approximation.</li>
+<li>The next lectures will replace the formal many-particle starting point by a tractable vibrational description.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="problem-set" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">1.8</span> Problem Set</h2>
+<ol type="1">
+<li><p><strong>Short-range versus long-range order.</strong> Explain, in words and with sketches, how the function <span class="math inline">\(g(r)\)</span> should look for (i) an ideal crystal, (ii) an amorphous solid, and (iii) a completely random arrangement of atoms. What is the corresponding qualitative behavior of <span class="math inline">\(S(\mathbf K)\)</span> in each case?</p></li>
+<li><p><strong>From two-particle density to pair-distribution function.</strong> Starting from the definition <span class="math display">\[
+g(\mathbf r_1,\mathbf r_2)=\frac{P(\mathbf r_1,\mathbf r_2)}{\rho(\mathbf r_1)\rho(\mathbf r_2)},
+\]</span> show that for a homogeneous isotropic system the expected number of atoms in a spherical shell of radius <span class="math inline">\(r\)</span> and thickness <span class="math inline">\(dr\)</span> around a chosen atom is <span class="math display">\[
+dn(r)=4\pi n\,g(r)\,r^2\,dr.
+\]</span></p></li>
+<li><p><strong>Classifying solids.</strong> A sample is built from many micron-sized grains, each internally periodic, but the grain orientations are random. Is the sample crystalline, polycrystalline, or amorphous? Which parts of the sample would you expect to scatter heat-carrying excitations most strongly?</p></li>
+<li><p><strong>Dissecting the Hamiltonian.</strong> In the full Hamiltonian of coupled electrons and nuclei <span class="math display">\[
+H = H_{\mathrm{n}} + H_{\mathrm{e}} + H_{\mathrm{en}},
+\]</span> identify which terms describe:</p>
+<ol type="a">
+<li>nuclear motion,</li>
+<li>electron motion,</li>
+<li>interactions among nuclei,</li>
+<li>interactions among electrons,</li>
+<li>interactions between nuclei and electrons, and write out their explicit definitions. Then explain why fixing the nuclei does not yet solve the electronic many-body problem.</li>
+</ol></li>
+<li><p><strong>Roadmap to thermal observables.</strong> For each observable <span class="math inline">\(C_V\)</span>, <span class="math inline">\(\alpha\)</span>, and <span class="math inline">\(\kappa\)</span>, state which additional physical ingredient is essential beyond “a solid is made of atoms”:</p>
+<ol type="i">
+<li>lattice vibrations,</li>
+<li>anharmonicity,</li>
+<li>scattering and transport. Give a one- or two-sentence justification for each choice.</li>
+</ol></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -672,6 +1157,38 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
