@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "title": "Fundamentals of Solid-State Physics: Thermal Properties",
     "section": "",
     "text": "Preface",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "index.html#purpose-of-the-lecture-notes",
     "href": "index.html#purpose-of-the-lecture-notes",
-    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "title": "Fundamentals of Solid-State Physics: Thermal Properties",
     "section": "Purpose of the Lecture Notes",
     "text": "Purpose of the Lecture Notes\nThese lecture notes were prepared for the course Fundamentals in Solid State Physics – Thermal Properties, which will be taught for the first time in the summer semester 2026 at the Institute of Materials Science, Faculty of Mechanical Science and Engineering, TU Dresden. Their aim is to provide a clear and accessible introduction to the thermal properties of solids, with an emphasis on physical understanding and explicit derivations.",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "index.html#target-audience",
     "href": "index.html#target-audience",
-    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "title": "Fundamentals of Solid-State Physics: Thermal Properties",
     "section": "Target Audience",
     "text": "Target Audience\nThese notes are intended for advanced undergraduate students, graduate students, and readers who wish to refresh their knowledge of the fundamentals of solid-state physics, with a particular focus on thermal properties.",
     "crumbs": [
@@ -32,7 +32,7 @@
   {
     "objectID": "index.html#how-the-book-is-structured",
     "href": "index.html#how-the-book-is-structured",
-    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "title": "Fundamentals of Solid-State Physics: Thermal Properties",
     "section": "How the Book Is Structured",
     "text": "How the Book Is Structured\nEach chapter corresponds approximately to a 90-minute lecture. Taken together, the chapters are designed to provide a coherent introduction to the thermal properties of solids, progressing from fundamental concepts to more advanced topics.",
     "crumbs": [
@@ -42,7 +42,7 @@
   {
     "objectID": "index.html#pedagogical-approach",
     "href": "index.html#pedagogical-approach",
-    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "title": "Fundamentals of Solid-State Physics: Thermal Properties",
     "section": "Pedagogical Approach",
     "text": "Pedagogical Approach\nThe notes aim to provide an accessible introduction to the subject while keeping the central physical results explicit and transparent. Key results are derived in detail whenever possible. Some derivations, remarks, or supplementary discussions are included as optional material in order to support readers who would like a deeper understanding without interrupting the main line of argument.",
     "crumbs": [
@@ -52,7 +52,7 @@
   {
     "objectID": "index.html#how-to-use-these-lecture-notes",
     "href": "index.html#how-to-use-these-lecture-notes",
-    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "title": "Fundamentals of Solid-State Physics: Thermal Properties",
     "section": "How to Use These Lecture Notes",
     "text": "How to Use These Lecture Notes\nThese lecture notes accompany a course that is taught in person, but they are also intended to be useful for self-study. Readers may work through the chapters sequentially as part of a lecture course or use them selectively to review specific topics in solid-state physics and thermal properties.",
     "crumbs": [
@@ -62,7 +62,7 @@
   {
     "objectID": "index.html#acknowledgments",
     "href": "index.html#acknowledgments",
-    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "title": "Fundamentals of Solid-State Physics: Thermal Properties",
     "section": "Acknowledgments",
     "text": "Acknowledgments\nThese lecture notes were inspired in part by the following textbooks, but all text and figures are original.\n\nJ. Solyom, Fundamentals of the Physics of Solids, Volume 1: Structure and Dynamics https://doi.org/10.1007/978-3-540-72600-5\nJ. Solyom, Fundamentals of the Physics of Solids, Volume 2: Electronic Properties https://doi.org/10.1007/978-3-540-85316-9\nH. Ibach and H. Lüth, Festkörperphysik https://doi.org/10.1007/978-3-540-85795-2\nR. Gross and A. Marx, Festkörperphysik https://doi.org/10.1524/9783110358704",
     "crumbs": [
@@ -72,7 +72,7 @@
   {
     "objectID": "index.html#additional-resources",
     "href": "index.html#additional-resources",
-    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "title": "Fundamentals of Solid-State Physics: Thermal Properties",
     "section": "Additional Resources",
     "text": "Additional Resources\nWill be added later.",
     "crumbs": [
@@ -82,7 +82,7 @@
   {
     "objectID": "index.html#license-information",
     "href": "index.html#license-information",
-    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "title": "Fundamentals of Solid-State Physics: Thermal Properties",
     "section": "License Information",
     "text": "License Information\nExcept where otherwise noted, the text and original figures in these lecture notes are licensed under CC BY 4.0. Third-party figures are not covered by this license unless explicitly stated; their source, author, and license are given in the figure captions.",
     "crumbs": [
@@ -92,7 +92,7 @@
   {
     "objectID": "index.html#citation-information",
     "href": "index.html#citation-information",
-    "title": "Basics of Solid-State Physics: Thermal Properties",
+    "title": "Fundamentals of Solid-State Physics: Thermal Properties",
     "section": "Citation Information",
     "text": "Citation Information\nWill be added later.",
     "crumbs": [
@@ -204,7 +204,97 @@
     "href": "lecture_02.html",
     "title": "2  Interatomic Bonding",
     "section": "",
-    "text": "NoteLearning Objectives\n\n\n\n\nRelate position in the periodic table to the dominant bonding mechanism in a solid.\nDistinguish covalent, ionic, metallic, hydrogen, and van der Waals bonding by their microscopic origin and characteristic energy scales.\nExplain how the shape of an interatomic potential determines equilibrium spacing and local stiffness.\nConnect bond stiffness and atomic mass to the characteristic vibrational frequency scale and to the qualitative scale of the Debye temperature.\nCompare, at a materials level, why ceramics, metals, and molecular crystals differ in their thermal behavior.",
+    "text": "2.1 Roadmap",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Interatomic Bonding</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_02.html#roadmap",
+    "href": "lecture_02.html#roadmap",
+    "title": "2  Interatomic Bonding",
+    "section": "",
+    "text": "Periodic-table trends that favor different kinds of bonding.\nTypical bonding energies and what they already tell us about thermal scales.\nFrom the bonding curve \\(U(r)\\) to equilibrium spacing, curvature, and local stiffness.\nFrom local stiffness to characteristic vibrational frequencies and the Debye scale.\nMaterials emphasis: ceramics versus metals versus molecular crystals.\nBridge to the next lecture: stiffness \\(\\rightarrow\\) lattice vibrations \\(\\rightarrow\\) phonon spectrum.\n\n\n\n\n\n\n\n\nSymbol\nMeaning\n\n\n\n\n\\(E_{\\mathrm{coh}}\\)\ncohesive energy\n\n\n\\(U(r)\\)\neffective interatomic potential as a function of separation \\(r\\)\n\n\n\\(r_0\\)\nequilibrium separation, defined by \\(U'(r_0)=0\\)\n\n\n\\(K_{\\mathrm{bond}}\\)\nlocal bond stiffness, \\(K_{\\mathrm{bond}} = U''(r_0)\\)\n\n\n\\(\\mu\\)\nreduced mass of a bonded pair\n\n\n\\(\\omega_0\\)\ncharacteristic local vibrational angular frequency\n\n\n\\(\\omega_D\\)\nDebye cutoff angular frequency\n\n\n\\(\\Theta_D\\)\nDebye temperature, defined by \\(k_B \\Theta_D = \\hbar \\omega_D\\)\n\n\n\\(\\Delta \\chi\\)\nelectronegativity difference of two bonded atoms",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Interatomic Bonding</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_02.html#why-bonding-enters-thermal-physics",
+    "href": "lecture_02.html#why-bonding-enters-thermal-physics",
+    "title": "2  Interatomic Bonding",
+    "section": "2.2 Why Bonding Enters Thermal Physics",
+    "text": "2.2 Why Bonding Enters Thermal Physics\nElectrons are the “glue” that holds atomic cores together in solids. Depending on how valence electrons are redistributed, localized, or delocalized, the solid acquires a different type of bond and therefore a different cohesive energy and mechanical rigidity.\n\nA solid exists because the total energy has a minimum at a finite interatomic distance. The cohesive energy is the energy by which the solid state lies below the energy of the separated free atoms or molecules:\n\n\n\n\n\n\n\\[\nE_{\\mathrm{coh}}\n=\nE_{\\mathrm{free\\ atoms}} - E_{\\mathrm{solid}}\n&gt; 0 .\n\\]\n\n\n\nA larger \\(E_{\\mathrm{coh}}\\) usually signals stronger bonding, but for thermal physics the shape of the minimum matters just as much as its depth. A broad, shallow minimum and a narrow, steep minimum may have similar depths while leading to very different vibrational frequencies.\nFor van der Waals bonded solids, a common model is the Lennard-Jones potential,\n\\[\nU_{\\mathrm{LJ}}(r)\n=\n4\\varepsilon\n\\left[\n\\left(\\frac{\\sigma}{r}\\right)^{12}\n-\n\\left(\\frac{\\sigma}{r}\\right)^6\n\\right] ,\n\\]\nwhich makes the competition between attraction and short-range repulsion explicit.\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.1: Lennard-Jones potential as a function of separation, showing the attractive tail, the steep short-range repulsion, and the existence of an equilibrium distance at a finite minimum.\n\n\n\nFor ionic crystals, the natural starting point is instead the long-range Coulomb energy of the entire ionic lattice. If site \\(\\mathbf R_i\\) is occupied by an ion of charge \\(Z_i e\\), the electrostatic contribution is\n\n\n\n\n\n\n\\[\nE_{\\mathrm M}\n=\n\\frac{1}{2}\n\\sum_{i\\neq j}\n\\frac{Z_i Z_j e^2}{4\\pi \\varepsilon_0 |\\mathbf R_i-\\mathbf R_j|} .\n\\]\n\n\n\nThis lattice sum is called the Madelung energy. It is not a nearest-neighbor model: because the Coulomb interaction decays only as \\(1/r\\), distant ions contribute appreciably, and the geometry of the entire crystal enters through the Madelung constant \\(\\alpha\\). For a binary ionic crystal, the electrostatic energy per chemical unit is commonly written as\n\n\n\n\n\n\n\\[\n\\frac{E_{\\mathrm M}}{N}\n=\n-\\alpha\n\\frac{Z_1 Z_2 e^2}{4\\pi \\varepsilon_0 r} ,\n\\]\n\n\n\nwhere \\(r\\) is the nearest-neighbor cation–anion distance. The value of \\(\\alpha\\) depends on the structure; for example, the rock-salt and cesium-chloride lattices have different Madelung constants.\n\n\n\n\n\n\n\nFigure 2.2: Figure placeholder. NaCl and CsCl crystal structures with first-, second-, third-, and further-neighbor distances, illustrating that the ionic binding energy is a lattice sum rather than a purely local bond.\n\n\n\nThe Madelung term captures the dominant attraction, but it cannot by itself explain the stability of an ionic crystal. Since it scales as \\(-1/r\\), it would favor an unphysical collapse of the ions toward one another. A second ingredient is therefore required: short-range repulsion when closed electron shells begin to overlap. Microscopically this is tied to the Pauli principle and the rapid increase of energy when the electronic clouds are compressed.\n\nFor ionic solids, this repulsive part is often modeled by the Born-Mayer approximation, which replaces the Lennard-Jones-type hard-core term by an exponential:\n\n\n\n\n\n\n\\[\nU_{\\mathrm{ion}}(r)\n=\n\\alpha\n\\frac{Z_1 Z_2 e^2}{4\\pi \\varepsilon_0 r}\n-\nB \\exp\\left(-\\frac{r}{\\rho}\\right) .\n\\]\n\n\n\nHere \\(B\\) sets the scale of the repulsion and \\(\\rho\\) its range. The equilibrium spacing \\(r_0\\) follows from the minimum condition\n\n\n\n\n\n\n\\[\n\\left.\\frac{dU_{\\mathrm{ion}}}{dr}\\right|_{r=r_0}\n=\n\\alpha\n\\frac{Z_1 Z_2 e^2}{4\\pi \\varepsilon_0 r_0^2}\n-\n\\frac{B}{\\rho}\\exp\\left(-\\frac{r_0}{\\rho}\\right)\n=\n0 .\n\\]\n\n\n\nThis is the point at which the long-range Coulomb attraction and the short-range core repulsion balance.\n\nThis form is already enough to see why bonding matters for thermal physics. Once a minimum exists at \\(r_0\\), the local curvature\n\n\n\n\n\n\n\\[\nK_{\\mathrm{bond}}\n=\n\\left.\n\\frac{d^2 U_{\\mathrm{ion}}}{dr^2}\n\\right|_{r=r_0}\n\\]\n\n\n\ndefines the stiffness of the bond against small displacements. A steeper minimum means a larger restoring force, a larger characteristic vibrational frequency, and therefore a larger vibrational energy scale. In ionic crystals, the balance of Madelung attraction and Born-Mayer repulsion is thus the microscopic origin of both the equilibrium spacing and the stiffness that later enters lattice dynamics and the Debye temperature.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Interatomic Bonding</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_02.html#periodic-table-trends-and-the-main-bond-types",
+    "href": "lecture_02.html#periodic-table-trends-and-the-main-bond-types",
+    "title": "2  Interatomic Bonding",
+    "section": "2.3 Periodic Table Trends and the Main Bond Types",
+    "text": "2.3 Periodic Table Trends and the Main Bond Types\n\n2.3.1 Reading the Periodic Table for Bonding\nAs atoms are brought together, their electronic levels split and broaden. Deep core levels remain nearly atomic, while the outer valence states overlap strongly and are responsible for bonding. The nature of that overlap determines the bond type.\n\n\n\n\n\n\n\nFigure 2.3: Figure placeholder. Schematic splitting of atomic levels into bands as many atoms approach one another. The figure highlights that the outer valence levels broaden strongly, while deep core levels remain nearly atomic.\n\n\n\nThe periodic table already suggests the dominant bonding mechanism:\n\nsimilar electronegativities + local orbital overlap \\(\\rightarrow\\) often covalent bonding,\nlarge electronegativity difference \\(\\rightarrow\\) often ionic bonding,\nspatially extended valence states and partially filled bands \\(\\rightarrow\\) metallic bonding,\nclosed shells or saturated molecules \\(\\rightarrow\\) only weak van der Waals attraction remains,\nhydrogen bound to strongly electronegative atoms can produce hydrogen bonding.\n\n\n\n\n2.3.2 Covalent Bonding\nIn covalent bonding, electrons are concentrated between neighboring atoms. This gives a strongly directional bond, so bond angles matter in addition to bond lengths. Examples are diamond, Si, and Ge, where directional bonding is associated with tetrahedral coordination and, for group-IV elements, with \\(sp^3\\) hybridization.\n\nA useful periodic trend appears already within group IV: the bond energies decrease from C to Si to Ge, reflecting reduced overlap and increasing atomic size down the group.\n\n\n\n2.3.3 Ionic Bonding\nIonic bonding is favored when one atom gives up electrons relatively easily and another gains them relatively easily. In practice, a large electronegativity difference \\(\\Delta \\chi\\) is the relevant indicator. The resulting crystal is held together primarily by Coulomb attraction between oppositely charged ions, stabilized at short distance by strong repulsion of overlapping closed shells.\n\nThe key energetic quantity for ideal ionic crystals is the Madelung energy, which sums the long-range Coulomb interactions over the whole crystal.\n\n\n\n2.3.4 Metallic Bonding\nIn metals, the valence electrons are not localized in individual two-center bonds. Instead, they are spread over many atoms. Because the valence states are spatially extended, the bond is much less directional than in covalent solids, and dense packing becomes structurally important.\n\nThis delocalization is also why metallic solids are not only bonded, but electrically and thermally conductive in a way that covalent and ionic insulators are not.\n\n\n\n2.3.5 Hydrogen Bonding\nA hydrogen bond forms when hydrogen, already bound to one atom, also interacts attractively with a second atom, typically one that is strongly electronegative. It is weaker than ordinary covalent or ionic bonding, but much stronger than a typical van der Waals interaction.\n\nIn solids, hydrogen bonds are especially important in ice and in biological materials.\n\n\n\n2.3.6 Van der Waals Bonding\nVan der Waals bonding is the weak attraction between closed-shell atoms or saturated molecules caused by fluctuating and induced dipoles. Its attractive part decays rapidly with distance, as \\(r^{-6}\\).\n\nThis is the characteristic bond of noble-gas solids and many molecular crystals.\n\n\n\n2.3.7 Typical Energy Scales\nThe following table is intentionally coarse-grained: the source values are quoted in mixed units (per atom, per bond, or per molecule), so the goal is order of magnitude, not one-to-one numerical comparison.\n\n\n\n\n\n\n\n\n\nBond Type\nEnergy Scale\nMicroscopic Picture\nFirst Thermal Consequence\n\n\n\n\nvan der Waals\ntypically \\(\\sim 0.02\\)–\\(0.2,\\mathrm{eV}\\) per atom or molecule\ninduced dipoles between closed shells / saturated molecules\nvery soft lattice, low vibrational frequencies\n\n\nhydrogen\ntypically \\(\\sim 0.1\\)–\\(0.3,\\mathrm{eV}\\) per bond\nproton-mediated directional bond between electronegative partners\nsofter than covalent / ionic networks\n\n\nmetallic\ntypically \\(\\sim 1\\)–\\(5,\\mathrm{eV}\\) per atom\ndelocalized valence electrons shared by many atoms\nmoderate stiffness; electrons matter strongly for transport\n\n\ncovalent\ntypically a few eV per bond or several eV per atom\ndirectional charge buildup between neighbors\nhigh stiffness, often high vibrational scales\n\n\nionic\ntypically several eV per molecule\nlong-range Coulomb attraction plus short-range repulsion\nhigh stiffness and high characteristic phonon scales\n\n\n\n\nSome useful trends in cohesive energies:\n\ndiamond: about \\(7.35,\\mathrm{eV}\\) per atom,\nSi: about \\(4.66,\\mathrm{eV}\\) per atom,\nGe: about \\(1.95,\\mathrm{eV}\\) per atom,\nNaCl: about \\(8.15,\\mathrm{eV}\\) per molecule,\nnoble-gas solids: only about \\(0.1,\\mathrm{eV}\\) per atom in order of magnitude.\n\n\nThese numbers already tell us that molecular crystals should be much softer and have much lower vibrational energy scales than covalent or ionic solids.\n\n\n\n\n\n\nFigure 2.4: Figure placeholder. Electron-density contours comparing a typical ionic crystal (NaCl) with a typical covalent crystal (Si). The figure emphasizes that ionic bonding keeps charge concentrated around ions, while covalent bonding builds up charge density along the bond direction.\n\n\n\nThe contrast in Figure 2.4 is directly relevant for stiffness: charge concentrated along the bond direction usually makes the restoring force highly directional and comparatively strong.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Interatomic Bonding</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_02.html#from-the-bonding-curve-to-stiffness",
+    "href": "lecture_02.html#from-the-bonding-curve-to-stiffness",
+    "title": "2  Interatomic Bonding",
+    "section": "2.4 From the Bonding Curve to Stiffness",
+    "text": "2.4 From the Bonding Curve to Stiffness\n\n2.4.1 Equilibrium Distance and Curvature\nLet \\(U(r)\\) be an effective interatomic potential for a given bond. The equilibrium distance \\(r_0\\) is defined by\n\n\n\n\n\n\n\\[\n\\left.\\frac{dU}{dr}\\right|_{r=r_0}=0 .\n\\]\n\n\n\nNear equilibrium, the Taylor expansion is\n\n\n\n\n\n\n\\[\nU(r)\n=\nU(r_0)\n+\n\\frac{1}{2}\nK_{\\mathrm{bond}}(r-r_0)^2\n+\n\\mathcal O\\left((r-r_0)^3\\right),\n\\]\n\\[\nK_{\\mathrm{bond}}\n=\n\\left.\\frac{d^2U}{dr^2}\\right|_{r=r_0}.\n\\]\n\n\n\nThis second derivative is the local bond stiffness. It is the simplest quantitative bridge from bonding to vibrations.\n\n\n\n2.4.2 Why Curvature, Not Only Depth, Matters\nThe depth \\(|U(r_0)|\\) and the curvature \\(K_{\\mathrm{bond}}\\) are related but not identical.\n\nA deep minimum means that it costs a lot of energy to separate atoms completely.\nA steep minimum means that even a small displacement away from equilibrium costs a lot of energy.\n\nThermal vibrations probe the local shape of the minimum, so they depend more directly on \\(K_{\\mathrm{bond}}\\) than on the full dissociation energy alone.\nThis is the reason a thermal-physics course must go beyond “strong bond versus weak bond.” For vibrations, what matters first is the restoring force for small displacements.\n\n\n2.4.3 Local Vibrational Frequency Scale\nFor two atoms with reduced mass \\(\\mu\\), define the relative displacement\n\\[\nx = r-r_0 .\n\\]\nIn the harmonic approximation,\n\\[\nU(r) \\approx U(r_0) + \\frac{1}{2}K_{\\mathrm{bond}} x^2 .\n\\]\nThe equation of motion for the relative coordinate is then\n\n\n\n\n\n\n\\[\n\\mu \\ddot x = -K_{\\mathrm{bond}} x ,\n\\]\n\\[\n\\omega_0 = \\sqrt{\\frac{K_{\\mathrm{bond}}}{\\mu}} .\n\\]\n\n\n\nThus the characteristic vibrational scale increases with:\n\nlarger curvature \\(K_{\\mathrm{bond}}\\),\nsmaller mass \\(\\mu\\).\n\nThis is the central physical message of the lecture.\n\n\n\n2.4.4 Interpretation\nThe formula\n\\[\n\\omega_0 = \\sqrt{\\frac{K_{\\mathrm{bond}}}{\\mu}}\n\\]\npasses two immediate checks:\n\nWeak molecular crystal: small \\(K_{\\mathrm{bond}}\\) and often heavy molecules \\(\\rightarrow\\) low-frequency vibrations.\nLight-element covalent network: large \\(K_{\\mathrm{bond}}\\) and small mass \\(\\rightarrow\\) high-frequency vibrations.\n\nThis is why light, strongly covalent solids are natural candidates for large phonon energies, while van der Waals solids are not.\nWithin the group-IV series, both trends work in the same direction: going from C to Si to Ge, the bond energy decreases while the mass increases, so the vibrational scale should decrease strongly down the group.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Interatomic Bonding</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_02.html#from-local-stiffness-to-the-debye-scale",
+    "href": "lecture_02.html#from-local-stiffness-to-the-debye-scale",
+    "title": "2  Interatomic Bonding",
+    "section": "2.5 From Local Stiffness to the Debye Scale",
+    "text": "2.5 From Local Stiffness to the Debye Scale\nA crystal does not vibrate as isolated pairs; it vibrates collectively. Still, the pair picture captures the right scaling. In a lattice, the second derivatives of the total energy with respect to atomic displacements become the force constants. These determine the normal-mode frequencies of the crystal.\nFor an acoustic branch, the long-wavelength modes are characterized by a sound velocity \\(v_s\\). Dimensional reasoning gives\n\\[\nv_s \\sim a \\sqrt{\\frac{K_{\\mathrm{bond}}}{M}},\n\\]\nwhere \\(a\\) is a characteristic spacing and \\(M\\) is an atomic mass scale. Since the Debye cutoff frequency scales like\n\\[\n\\omega_D \\sim \\frac{v_s}{a},\n\\]\none obtains the qualitative relation\n\n\n\n\n\n\n\\[\nk_B \\Theta_D = \\hbar \\omega_D,\n\\qquad\n\\Theta_D \\propto \\sqrt{\\frac{K_{\\mathrm{bond}}}{M}} .\n\\]\n\n\n\nThe omitted prefactors depend on structure and dimensionality, but the trend is robust: stiffer bonds and lighter atoms push the Debye temperature upward.\n\n2.5.1 Interpretation\nThis scaling explains, at a qualitative level, why:\n\nlight covalent solids tend to have high Debye temperatures,\nmany ionic and partly covalent ceramics also have comparatively high vibrational scales,\nheavy metals often have lower Debye temperatures than light covalent semiconductors,\nmolecular crystals have low Debye temperatures because their intermolecular forces are weak.\n\nIt is important not to over-interpret this. A high \\(\\Theta_D\\) signals high characteristic phonon energies, but it does not by itself determine the thermal conductivity. That requires scattering physics, and in metals electronic carriers contribute in addition to phonons.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Interatomic Bonding</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_02.html#materials-emphasis-why-ceramics-metals-and-molecular-crystals-differ-thermally",
+    "href": "lecture_02.html#materials-emphasis-why-ceramics-metals-and-molecular-crystals-differ-thermally",
+    "title": "2  Interatomic Bonding",
+    "section": "2.6 Materials Emphasis: Why Ceramics, Metals, and Molecular Crystals Differ Thermally",
+    "text": "2.6 Materials Emphasis: Why Ceramics, Metals, and Molecular Crystals Differ Thermally\n\n2.6.1 Ceramics\nMany ceramics are dominantly ionic or mixed ionic-covalent solids. Because their bonds are strong, their equilibrium potentials are usually steep near the minimum. As a result, they often have large elastic moduli and comparatively high phonon energy scales.\n\nFrom a thermal viewpoint, this means:\n\nhigh characteristic vibrational frequencies,\noften relatively high Debye temperatures,\nbut not automatically high thermal conductivity, because complex structures and disorder can still scatter phonons strongly.\n\n\n\n2.6.2 Metals\nMetals are bonded by delocalized electrons. Their vibrational stiffness is often moderate rather than extreme, but their thermal behavior is special because electrons carry both charge and heat.\n\nTherefore:\n\nthe lattice part of the thermal scale is not necessarily exceptional,\nyet the total thermal conductivity can be large because of electronic transport,\nand the specific heat acquires both lattice and electronic contributions.\n\n\n\n2.6.3 Molecular Crystals\nMolecular crystals are held together mainly by van der Waals forces and sometimes supplemented by hydrogen bonds. Their cohesive energies are much smaller than those of ionic or covalent solids.\n\nHence they are typically:\n\nsoft,\nlow-melting,\nrich in low-frequency vibrations,\nlow in Debye temperature,\npoor thermal conductors.\n\n\n\n2.6.4 A Useful Mixed Case: Graphite\nBonding can differ strongly by direction. In graphite, the bonding is covalent within the layers but only van der Waals between layers.\n\nThis immediately implies strong thermal anisotropy:\n\nstiff, high-frequency motion and efficient heat flow are favored in-plane,\nmuch softer response is expected perpendicular to the layers.\n\nThis example is a good warning against speaking of “the” stiffness of a solid without specifying direction.\n\n\nOptional / Appendix: Microscopic Models\n\nFor ionic solids, the important deeper result is that the Coulomb energy must be summed over the whole crystal, leading to the Madelung constant.\n\nFor covalent solids, the Heitler-London and LCAO pictures are often useful for interpretation, where bonding and antibonding states emerge from combining atomic orbitals. The key thermal takeaway is simply that the bonding state concentrates charge between atoms and thereby creates a strong, directional restoring force.\n\nFor hybridization, especially \\(sp^3\\) in diamond-like solids, the main point is structural: bond directionality is built into the electronic wavefunctions themselves.\n\nThese microscopic constructions will become useful again later when we discuss why some crystals are especially stiff, anisotropic, or semiconducting.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Interatomic Bonding</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_02.html#bridge-to-lattice-dynamics-and-the-next-lecture",
+    "href": "lecture_02.html#bridge-to-lattice-dynamics-and-the-next-lecture",
+    "title": "2  Interatomic Bonding",
+    "section": "2.7 Bridge to Lattice Dynamics and the Next Lecture",
+    "text": "2.7 Bridge to Lattice Dynamics and the Next Lecture\nToday we stayed at the level of bonding curves and characteristic scales. The next lecture replaces the single-coordinate picture \\(U(r)\\) by the many-atom displacement field of a crystal.\nThe logical chain is:\n\nChoose equilibrium atomic positions.\nExpand the total crystal energy for small displacements.\nKeep the quadratic terms: these are the force constants.\nSolve for the collective normal modes.\nInterpret the resulting spectrum as phonons.\nBuild from that spectrum the density of states and, later, the heat capacity.\n\nIn compact form,\n\\[\nU({ \\mathbf u_\\ell })\n;\\longrightarrow;\n\\frac{\\partial^2 U}{\\partial u_{\\ell \\alpha},\\partial u_{\\ell' \\beta}}\n;\\longrightarrow;\n\\omega_\\nu(\\mathbf q)\n;\\longrightarrow;\nD(\\omega)\n;\\longrightarrow;\nC_V .\n\\]\nThe point of today’s lecture is that the entire chain begins with chemistry: bond type sets stiffness, stiffness sets vibrational scales, and vibrational scales set thermal scales.\n\n\n\n\n\n\n\nNoteTake-Home Messages\n\n\n\n\nThe periodic table already contains strong clues about which bonding mechanism a solid will prefer.\nCovalent bonds are directional, ionic bonds are dominated by Coulomb attraction, metallic bonds are delocalized, and van der Waals bonds are weak induced-dipole attractions.\nTypical bonding energies span orders of magnitude, from molecular-crystal scales of order \\(0.1,\\mathrm{eV}\\) to several eV for ionic and covalent solids.\nThe thermal relevance of a bond is not set only by the depth of the energy minimum, but also by its curvature near equilibrium.\nThe local bond stiffness is the second derivative of the interatomic potential at the minimum.\nCharacteristic vibrational frequencies increase with increasing stiffness and decreasing atomic mass.\nThe Debye temperature is a vibrational energy scale, so it tends to be high in light, stiff solids and low in soft, weakly bonded solids.\nThermal conductivity is not determined by stiffness alone: scattering and, in metals, electronic heat transport matter as well.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Interatomic Bonding</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_02.html#problem-set",
+    "href": "lecture_02.html#problem-set",
+    "title": "2  Interatomic Bonding",
+    "section": "2.8 Problem Set",
+    "text": "2.8 Problem Set\n\nBond Classification from the Periodic Table. For each of the following solids, identify the dominant bonding type: solid Ar, ice, NaCl, Cu, and Si. Then rank them qualitatively from lowest to highest expected characteristic vibrational scale.\nFrom the Potential Minimum to a Vibrational Frequency. Let \\(U(r)\\) have a minimum at \\(r_0\\). Show that the harmonic expansion around \\(r_0\\) leads to a simple-harmonic-oscillator equation for the relative displacement \\(x=r-r_0\\), and derive the corresponding angular frequency in terms of \\(K_{\\mathrm{bond}}\\) and the reduced mass \\(\\mu\\).\nTrend Within Group IV. Assuming representative cohesive energies of about \\(7.3,\\mathrm{eV}\\) per atom for diamond, \\(4.64,\\mathrm{eV}\\) per atom for Si, and \\(3.87,\\mathrm{eV}\\) per atom for Ge. Use these data together with periodic-table trends to explain why the characteristic phonon scale decreases from C to Si to Ge.\nDirectional Bonding and Thermal Anisotropy. Graphite has strong covalent bonding within the layers and weak van der Waals bonding between layers. Explain qualitatively how this should affect the elastic response and the thermal transport parallel and perpendicular to the layers.\nWhy Metals Are Thermally Special. A metal and an ionic crystal may have comparable order-of-magnitude cohesive energies. Explain why their thermal conductivities can nevertheless be very different.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Interatomic Bonding</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_02.html#solutions-to-problem-set",
+    "href": "lecture_02.html#solutions-to-problem-set",
+    "title": "2  Interatomic Bonding",
+    "section": "2.9 Solutions to Problem Set",
+    "text": "2.9 Solutions to Problem Set\n\nBond Classification from the Periodic Table.\n\nsolid Ar: van der Waals,\nice: hydrogen-bond dominated,\nNaCl: ionic,\nCu: metallic,\nSi: covalent.\n\nA qualitative ranking from lowest to highest vibrational scale is \\[\n\\text{solid Ar}\n;&lt;;\n\\text{ice}\n;&lt;;\n\\text{Cu}\n;\\lesssim;\n\\text{NaCl, Si}.\n\\] The first two are weakly bonded and therefore soft. Cu is more strongly bound, but its metallic bonding is less directionally stiff than the covalent network of Si. NaCl and Si both lie at the strong-bond end compared with molecular solids. A finer ranking between NaCl and Si requires more detailed force-constant information.\nFrom the Potential Minimum to a Vibrational Frequency. Since \\(U(r)\\) has a minimum at \\(r_0\\), \\[\nU'(r_0)=0.\n\\] Expanding around \\(r_0\\) gives \\[\nU(r)=U(r_0)+\\frac{1}{2}K_{\\mathrm{bond}}(r-r_0)^2+\\cdots,\n\\qquad\nK_{\\mathrm{bond}}=U''(r_0).\n\\] With \\(x=r-r_0\\), the restoring force is \\[\nF=-\\frac{dU}{dr}\\approx -K_{\\mathrm{bond}}x.\n\\] For the relative motion of two atoms, \\[\n\\mu \\ddot x = -K_{\\mathrm{bond}}x,\n\\] which is the simple-harmonic-oscillator equation. Therefore \\[\n\\omega_0=\\sqrt{\\frac{K_{\\mathrm{bond}}}{\\mu}}.\n\\]\nTrend Within Group IV. Two effects act in the same direction from C to Si to Ge:\n\nthe bonding becomes weaker, as seen in the decreasing cohesive energies,\nthe atomic mass increases down the group.\n\nSince the local vibrational scale obeys \\[\n\\omega_0 \\sim \\sqrt{\\frac{K_{\\mathrm{bond}}}{M}},\n\\] both a smaller stiffness and a larger mass reduce the characteristic phonon frequency. Therefore the phonon scale, and with it the qualitative Debye scale, decreases from diamond to Si to Ge.\nDirectional Bonding and Thermal Anisotropy. In graphite, the in-plane covalent bonds are strong and directional, so the restoring forces for distortions inside the planes are large. Between planes, only weak van der Waals bonding is present, so the restoring forces are much smaller. Therefore:\n\nthe crystal is elastically much stiffer in-plane than out-of-plane,\nvibrational frequencies for in-plane distortions are generally higher,\nheat transport is favored along the planes and hindered perpendicular to them.\n\nThe anisotropy comes directly from the anisotropy of the bonding.\nWhy Metals Are Thermally Special. Cohesive energy mainly tells us how strongly the atoms are bound, not how heat is transported. In an ionic crystal, heat is carried mostly by lattice vibrations, so the thermal conductivity depends strongly on phonon scattering. In a metal, electrons are mobile and carry heat in addition to phonons. As a result, a metal can have a much larger thermal conductivity than an ionic crystal even if the overall bonding energies are of similar order of magnitude.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Interatomic Bonding</span>"
     ]
