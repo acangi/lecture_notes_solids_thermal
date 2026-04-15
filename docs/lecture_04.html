@@ -256,8 +256,58 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">4.1</span> Roadmap</a></li>
+  <li><a href="#from-lecture-3-to-symmetry" id="toc-from-lecture-3-to-symmetry" class="nav-link" data-scroll-target="#from-lecture-3-to-symmetry"><span class="header-section-number">4.2</span> From Lecture 3 to Symmetry</a></li>
+  <li><a href="#point-symmetries-and-the-crystallographic-restriction" id="toc-point-symmetries-and-the-crystallographic-restriction" class="nav-link" data-scroll-target="#point-symmetries-and-the-crystallographic-restriction"><span class="header-section-number">4.3</span> Point Symmetries and the Crystallographic Restriction</a>
+  <ul class="collapse">
+  <li><a href="#point-groups-in-crystals" id="toc-point-groups-in-crystals" class="nav-link" data-scroll-target="#point-groups-in-crystals"><span class="header-section-number">4.3.1</span> Point Groups in Crystals</a></li>
+  <li><a href="#derivation-why-only-1--2--3--4--and-6-fold-rotations-survive" id="toc-derivation-why-only-1--2--3--4--and-6-fold-rotations-survive" class="nav-link" data-scroll-target="#derivation-why-only-1--2--3--4--and-6-fold-rotations-survive"><span class="header-section-number">4.3.2</span> Derivation: Why Only <span class="math inline">\(1\)</span>-, <span class="math inline">\(2\)</span>-, <span class="math inline">\(3\)</span>-, <span class="math inline">\(4\)</span>-, and <span class="math inline">\(6\)</span>-Fold Rotations Survive</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">4.3.3</span> Interpretation</a></li>
+  </ul></li>
+  <li><a href="#why-point-symmetry-matters-physically" id="toc-why-point-symmetry-matters-physically" class="nav-link" data-scroll-target="#why-point-symmetry-matters-physically"><span class="header-section-number">4.4</span> Why Point Symmetry Matters Physically</a>
+  <ul class="collapse">
+  <li><a href="#neumanns-principle" id="toc-neumanns-principle" class="nav-link" data-scroll-target="#neumanns-principle"><span class="header-section-number">4.4.1</span> Neumann’s Principle</a></li>
+  <li><a href="#consequence-for-tensors" id="toc-consequence-for-tensors" class="nav-link" data-scroll-target="#consequence-for-tensors"><span class="header-section-number">4.4.2</span> Consequence for Tensors</a></li>
+  <li><a href="#consequence-for-selection-rules" id="toc-consequence-for-selection-rules" class="nav-link" data-scroll-target="#consequence-for-selection-rules"><span class="header-section-number">4.4.3</span> Consequence for Selection Rules</a></li>
+  </ul></li>
+  <li><a href="#the-reciprocal-lattice" id="toc-the-reciprocal-lattice" class="nav-link" data-scroll-target="#the-reciprocal-lattice"><span class="header-section-number">4.5</span> The Reciprocal Lattice</a>
+  <ul class="collapse">
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition"><span class="header-section-number">4.5.1</span> Definition</a></li>
+  <li><a href="#immediate-properties" id="toc-immediate-properties" class="nav-link" data-scroll-target="#immediate-properties"><span class="header-section-number">4.5.2</span> Immediate Properties</a></li>
+  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters"><span class="header-section-number">4.5.3</span> Why This Matters</a></li>
+  <li><a href="#sanity-check-simple-cubic-lattice" id="toc-sanity-check-simple-cubic-lattice" class="nav-link" data-scroll-target="#sanity-check-simple-cubic-lattice"><span class="header-section-number">4.5.4</span> Sanity Check: Simple Cubic Lattice</a></li>
+  </ul></li>
+  <li><a href="#reciprocal-space-and-crystal-planes" id="toc-reciprocal-space-and-crystal-planes" class="nav-link" data-scroll-target="#reciprocal-space-and-crystal-planes"><span class="header-section-number">4.6</span> Reciprocal Space and Crystal Planes</a>
+  <ul class="collapse">
+  <li><a href="#reciprocal-vectors-as-normals-to-lattice-planes" id="toc-reciprocal-vectors-as-normals-to-lattice-planes" class="nav-link" data-scroll-target="#reciprocal-vectors-as-normals-to-lattice-planes"><span class="header-section-number">4.6.1</span> Reciprocal Vectors as Normals to Lattice Planes</a></li>
+  <li><a href="#derivation-of-the-plane-spacing-formula" id="toc-derivation-of-the-plane-spacing-formula" class="nav-link" data-scroll-target="#derivation-of-the-plane-spacing-formula"><span class="header-section-number">4.6.2</span> Derivation of the Plane Spacing Formula</a></li>
+  <li><a href="#interpretation-1" id="toc-interpretation-1" class="nav-link" data-scroll-target="#interpretation-1"><span class="header-section-number">4.6.3</span> Interpretation</a></li>
+  <li><a href="#example-simple-cubic-interplanar-spacing" id="toc-example-simple-cubic-interplanar-spacing" class="nav-link" data-scroll-target="#example-simple-cubic-interplanar-spacing"><span class="header-section-number">4.6.4</span> Example: Simple Cubic Interplanar Spacing</a></li>
+  </ul></li>
+  <li><a href="#brillouin-zones-and-equivalent-wave-vectors" id="toc-brillouin-zones-and-equivalent-wave-vectors" class="nav-link" data-scroll-target="#brillouin-zones-and-equivalent-wave-vectors"><span class="header-section-number">4.7</span> Brillouin Zones and Equivalent Wave Vectors</a>
+  <ul class="collapse">
+  <li><a href="#the-first-brillouin-zone" id="toc-the-first-brillouin-zone" class="nav-link" data-scroll-target="#the-first-brillouin-zone"><span class="header-section-number">4.7.1</span> The First Brillouin Zone</a></li>
+  <li><a href="#bloch-labeling" id="toc-bloch-labeling" class="nav-link" data-scroll-target="#bloch-labeling"><span class="header-section-number">4.7.2</span> Bloch Labeling</a></li>
+  <li><a href="#symmetry-of-the-dispersion" id="toc-symmetry-of-the-dispersion" class="nav-link" data-scroll-target="#symmetry-of-the-dispersion"><span class="header-section-number">4.7.3</span> Symmetry of the Dispersion</a></li>
+  <li><a href="#why-dispersion-is-plotted-in-mathbf-k-space" id="toc-why-dispersion-is-plotted-in-mathbf-k-space" class="nav-link" data-scroll-target="#why-dispersion-is-plotted-in-mathbf-k-space"><span class="header-section-number">4.7.4</span> Why Dispersion Is Plotted in <span class="math inline">\(\mathbf k\)</span>-Space</a></li>
+  </ul></li>
+  <li><a href="#translational-selection-rules-in-reciprocal-space" id="toc-translational-selection-rules-in-reciprocal-space" class="nav-link" data-scroll-target="#translational-selection-rules-in-reciprocal-space"><span class="header-section-number">4.8</span> Translational Selection Rules in Reciprocal Space</a></li>
+  <li><a href="#bridge-to-later-lectures-phonon-branches-and-density-of-states" id="toc-bridge-to-later-lectures-phonon-branches-and-density-of-states" class="nav-link" data-scroll-target="#bridge-to-later-lectures-phonon-branches-and-density-of-states"><span class="header-section-number">4.9</span> Bridge to Later Lectures: Phonon Branches and Density of States</a>
+  <ul class="collapse">
+  <li><a href="#why-branches-live-in-mathbf-k-space" id="toc-why-branches-live-in-mathbf-k-space" class="nav-link" data-scroll-target="#why-branches-live-in-mathbf-k-space"><span class="header-section-number">4.9.1</span> Why Branches Live in <span class="math inline">\(\mathbf k\)</span>-Space</a></li>
+  <li><a href="#why-the-first-brillouin-zone-is-enough" id="toc-why-the-first-brillouin-zone-is-enough" class="nav-link" data-scroll-target="#why-the-first-brillouin-zone-is-enough"><span class="header-section-number">4.9.2</span> Why the First Brillouin Zone Is Enough</a></li>
+  <li><a href="#why-the-density-of-states-is-also-a-reciprocal-space-object" id="toc-why-the-density-of-states-is-also-a-reciprocal-space-object" class="nav-link" data-scroll-target="#why-the-density-of-states-is-also-a-reciprocal-space-object"><span class="header-section-number">4.9.3</span> Why the Density of States Is Also a Reciprocal-Space Object</a></li>
+  <li><a href="#conceptual-summary-of-the-bridge" id="toc-conceptual-summary-of-the-bridge" class="nav-link" data-scroll-target="#conceptual-summary-of-the-bridge"><span class="header-section-number">4.9.4</span> Conceptual Summary of the Bridge</a></li>
+  </ul></li>
+  <li><a href="#take-home-messages" id="toc-take-home-messages" class="nav-link" data-scroll-target="#take-home-messages"><span class="header-section-number">4.10</span> Take-Home Messages</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">4.11</span> Problem Set</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -286,8 +336,760 @@ window.Quarto = {
 </ul>
 </div>
 </div>
+<section id="roadmap" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="roadmap"><span class="header-section-number">4.1</span> Roadmap</h2>
+<ul>
+<li>From the direct lattice of <a href="lecture_03.html" class="quarto-xref">Lecture&nbsp;<span>3</span></a> to point symmetries of crystals.</li>
+<li>Crystallographic restriction and point groups.</li>
+<li>Why symmetry matters for tensors and selection rules.</li>
+<li>Reciprocal-lattice construction and its geometric meaning.</li>
+<li>Brillouin zones, Bloch labeling, and why dispersion is plotted in <span class="math inline">\(\mathbf k\)</span>-space.</li>
+<li>Bridge to later lectures: phonon branches and density of states.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 71%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathcal R\)</span></td>
+<td>point-group operation (rotation, reflection, inversion, etc.)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf a_i\)</span></td>
+<td>primitive translation vectors of the direct lattice</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf b_i\)</span></td>
+<td>primitive translation vectors of the reciprocal lattice</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf R_n\)</span></td>
+<td>direct-lattice vector</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf G\)</span></td>
+<td>reciprocal-lattice vector</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((hkl)\)</span></td>
+<td>Miller indices of a family of lattice planes</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(d_{hkl}\)</span></td>
+<td>spacing of neighboring planes in the <span class="math inline">\((hkl)\)</span> family</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf k\)</span></td>
+<td>Bloch wave vector (crystal wave vector)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\varepsilon(\mathbf k)\)</span></td>
+<td>energy or dispersion written as a function of <span class="math inline">\(\mathbf k\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\omega_s(\mathbf k)\)</span></td>
+<td>phonon frequency of branch <span class="math inline">\(s\)</span> at wave vector <span class="math inline">\(\mathbf k\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="from-lecture-3-to-symmetry" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="from-lecture-3-to-symmetry"><span class="header-section-number">4.2</span> From Lecture 3 to Symmetry</h2>
+<p>In <a href="lecture_03.html" class="quarto-xref">Lecture&nbsp;<span>3</span></a> we described a crystal in real space as a <strong>Bravais lattice plus basis</strong>. Today we add the next layer: beyond translations, crystals may also be invariant under rotations, reflections, inversion, or combinations of these.</p>
+<p>A <strong>symmetry operation</strong> is a geometrical transformation that leaves the crystal indistinguishable from itself. If at least one point remains fixed, the allowed symmetry operations form a <strong>point group</strong>.</p>
+<p>For crystal physics this distinction is essential:</p>
+<ul>
+<li>the <strong>Bravais lattice</strong> captures translational symmetry,</li>
+<li>the <strong>point group</strong> captures rotational and reflection symmetry,</li>
+<li>the <strong>basis</strong> may reduce the symmetry of the decorated crystal relative to the empty Bravais lattice.</li>
+</ul>
+<p>Thus observable properties are constrained by the actual point group of the crystal, not just by the translational skeleton.</p>
+<!-- [Sólyom–Piróth I, Secs. 5.3.1–5.3.2, pp. 124–133; Ch. 6 opening, pp. 171–172] -->
+</section>
+<section id="point-symmetries-and-the-crystallographic-restriction" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="point-symmetries-and-the-crystallographic-restriction"><span class="header-section-number">4.3</span> Point Symmetries and the Crystallographic Restriction</h2>
+<section id="point-groups-in-crystals" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="point-groups-in-crystals"><span class="header-section-number">4.3.1</span> Point Groups in Crystals</h3>
+<p>For finite figures, many rotational symmetries are possible. For periodic crystals, translational symmetry imposes a strong additional restriction: not every rotation can coexist with a lattice.</p>
+<p>In Hermann–Mauguin notation, examples of crystallographic point groups are</p>
+<ul>
+<li><span class="math inline">\(m\bar 3m\)</span> for cubic symmetry,</li>
+<li><span class="math inline">\(4/mmm\)</span> for tetragonal symmetry,</li>
+<li><span class="math inline">\(6/mmm\)</span> for hexagonal symmetry,</li>
+<li><span class="math inline">\(2/m\)</span> for monoclinic symmetry.</li>
+</ul>
+<p>There are <span class="math inline">\(32\)</span> crystallographic point groups in three dimensions, but we do not need their full catalog today. What matters first is <strong>why only certain rotation orders are allowed</strong>.</p>
+<!-- [Sólyom–Piróth I, Sec. 5.4.2, Table 5.5, pp. 138–139] -->
+</section>
+<section id="derivation-why-only-1--2--3--4--and-6-fold-rotations-survive" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="derivation-why-only-1--2--3--4--and-6-fold-rotations-survive"><span class="header-section-number">4.3.2</span> Derivation: Why Only <span class="math inline">\(1\)</span>-, <span class="math inline">\(2\)</span>-, <span class="math inline">\(3\)</span>-, <span class="math inline">\(4\)</span>-, and <span class="math inline">\(6\)</span>-Fold Rotations Survive</h3>
+<p>Consider first a two-dimensional lattice, or equivalently a plane perpendicular to a candidate rotation axis in three dimensions. Let <span class="math inline">\(\mathbf a\)</span> be the shortest lattice vector in that plane, and suppose rotation by an angle <span class="math inline">\(\phi\)</span> is a lattice symmetry.</p>
+<p>Then the rotated vectors <span class="math inline">\(\mathcal R(\phi)\mathbf a\)</span> and <span class="math inline">\(\mathcal R(-\phi)\mathbf a\)</span> are also lattice vectors. Their sum is therefore a lattice vector as well:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathcal R(\phi)\mathbf a + \mathcal R(-\phi)\mathbf a
+=
+2 \cos\phi \mathbf a .
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Because this vector is parallel to the shortest lattice vector <span class="math inline">\(\mathbf a\)</span>, the coefficient <span class="math inline">\(2\cos\phi\)</span> must be an integer compatible with a lattice vector parallel to <span class="math inline">\(\mathbf a\)</span>:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+2\cos\phi \in {2,1,0,-1,-2}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Hence the only allowed angles are</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\phi = 0,\ \pm \frac{\pi}{3},\ \pm \frac{\pi}{2},\ \pm \frac{2\pi}{3},\ \pi .
+\]</span></p>
+</div>
+</div>
+</div>
+<p>So periodic crystals allow only rotation orders</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+n = 1,2,3,4,6 .
+\]</span></p>
+</div>
+</div>
+</div>
+<!-- [Sólyom–Piróth I, Sec. 5.4.1, Eqs. (5.4.1)–(5.4.4), pp. 136–138] -->
+<p>This is the <strong>crystallographic restriction</strong>.</p>
+</section>
+<section id="interpretation" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">4.3.3</span> Interpretation</h3>
+<ol type="1">
+<li><p><strong>Fivefold symmetry is excluded in periodic crystals.</strong> This is why ordinary Bravais lattices cannot have a fivefold axis.</p></li>
+<li><p><strong>The restriction comes from compatibility with translation, not from rotation alone.</strong> A regular pentagon is perfectly symmetric as a finite figure, but periodic repetition with exact lattice translations fails.</p></li>
+<li><p><strong>The same logic underlies the organization into crystal systems.</strong> Cubic, tetragonal, trigonal, hexagonal, orthorhombic, monoclinic, and triclinic systems are distinguished by which crystallographic symmetries are present.</p></li>
+</ol>
+<div id="fig-crystallographic-restriction" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-crystallographic-restriction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Sec. 5.4.1, Fig. 5.15, p. 136] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-crystallographic-restriction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: <strong>Figure placeholder.</strong> Rotation of the shortest lattice vector by <span class="math inline">\(\pm\phi\)</span> in the plane perpendicular to a candidate rotation axis; the vector sum yields the crystallographic restriction on allowed rotation angles.
+</figcaption>
+</figure>
+</div>
+<div id="fig-planar-point-groups" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-planar-point-groups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Sec. 5.4.2, Fig. 5.16, p. 138] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-planar-point-groups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: <strong>Figure placeholder.</strong> Representative finite plane figures illustrating the crystallographic point groups in two dimensions.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="why-point-symmetry-matters-physically" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="why-point-symmetry-matters-physically"><span class="header-section-number">4.4</span> Why Point Symmetry Matters Physically</h2>
+<section id="neumanns-principle" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="neumanns-principle"><span class="header-section-number">4.4.1</span> Neumann’s Principle</h3>
+<p>A foundational statement of crystal physics is <strong>Neumann’s principle</strong>:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The symmetry elements of any observable physical property of a crystal must include the symmetry elements of the crystal’s point group.</p>
+</div>
+</div>
+</div>
+<p>Equivalently, any tensor describing a macroscopic property must be invariant under the crystal’s point-group operations.</p>
+<!-- [Sólyom–Piróth I, Ch. 6 opening, p. 171] -->
+</section>
+<section id="consequence-for-tensors" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="consequence-for-tensors"><span class="header-section-number">4.4.2</span> Consequence for Tensors</h3>
+<p>This immediately reduces the number of independent tensor components.</p>
+<p>For a second-rank tensor <span class="math inline">\(T_{ij}\)</span>:</p>
+<ul>
+<li>in a <strong>cubic</strong> crystal, symmetry forces the three diagonal entries to be equal and the off-diagonal entries to vanish, so <span class="math display">\[
+T_{ij} = T \delta_{ij} ;
+\]</span></li>
+<li>in a <strong>tetragonal</strong> crystal, the basal plane is equivalent but the <span class="math inline">\(c\)</span> axis is distinct, so the most general diagonal form is <span class="math display">\[
+T_{ij}
+=
+\begin{pmatrix}
+T_\perp &amp; 0 &amp; 0 \\
+0 &amp; T_\perp &amp; 0 \\
+0 &amp; 0 &amp; T_\parallel
+\end{pmatrix}.
+\]</span></li>
+</ul>
+<p>Thus cubic symmetry makes a second-rank property effectively isotropic, while tetragonal symmetry still allows anisotropy between in-plane and out-of-plane directions.</p>
+<!-- [Sólyom–Piróth I, Ch. 6 opening, pp. 171–172] -->
+</section>
+<section id="consequence-for-selection-rules" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="consequence-for-selection-rules"><span class="header-section-number">4.4.3</span> Consequence for Selection Rules</h3>
+<p>Symmetry also constrains transitions. If an external perturbation does not transform compatibly with the initial and final states, the corresponding matrix element vanishes. This is the origin of <strong>selection rules</strong>.</p>
+<p>At the level needed today:</p>
+<ul>
+<li>point symmetry constrains which tensor couplings or optical transitions are allowed,</li>
+<li>translational symmetry constrains how wave vectors may change in scattering processes.</li>
+</ul>
+<p>The translational version will reappear below in reciprocal space.</p>
+<!-- [Sólyom–Piróth I, Sec. 6.1.5, p. 184] -->
+</section>
+</section>
+<section id="the-reciprocal-lattice" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="the-reciprocal-lattice"><span class="header-section-number">4.5</span> The Reciprocal Lattice</h2>
+<section id="definition" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="definition"><span class="header-section-number">4.5.1</span> Definition</h3>
+<p>The direct lattice is generated by the primitive vectors <span class="math inline">\(\mathbf a_1\)</span>, <span class="math inline">\(\mathbf a_2\)</span>, and <span class="math inline">\(\mathbf a_3\)</span>. The <strong>reciprocal lattice</strong> is generated by vectors <span class="math inline">\(\mathbf b_1\)</span>, <span class="math inline">\(\mathbf b_2\)</span>, and <span class="math inline">\(\mathbf b_3\)</span> defined by</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf b_i \cdot \mathbf a_j = 2\pi \delta_{ij}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>From this definition one obtains</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf b_1
+=
+2\pi
+\frac{\mathbf a_2 \times \mathbf a_3}
+{\mathbf a_1 \cdot (\mathbf a_2 \times \mathbf a_3)},
+\qquad
+\mathbf b_2
+=
+2\pi
+\frac{\mathbf a_3 \times \mathbf a_1}
+{\mathbf a_1 \cdot (\mathbf a_2 \times \mathbf a_3)},
+\qquad
+\mathbf b_3
+=
+2\pi
+\frac{\mathbf a_1 \times \mathbf a_2}
+{\mathbf a_1 \cdot (\mathbf a_2 \times \mathbf a_3)}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Any reciprocal-lattice vector is then</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf G = h \mathbf b_1 + k \mathbf b_2 + l \mathbf b_3,
+\qquad
+h,k,l \in \mathbb Z.
+\]</span></p>
+</div>
+</div>
+</div>
+<!-- [Sólyom–Piróth I, Sec. 5.2.1, Eqs. (5.2.12)–(5.2.14), pp. 121–122] -->
+</section>
+<section id="immediate-properties" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="immediate-properties"><span class="header-section-number">4.5.2</span> Immediate Properties</h3>
+<p>If <span class="math inline">\(\mathbf R_n = n_1 \mathbf a_1 + n_2 \mathbf a_2 + n_3 \mathbf a_3\)</span> is a direct-lattice vector, then</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf G \cdot \mathbf R_n = 2\pi (n_1 h + n_2 k + n_3 l),
+\]</span></p>
+</div>
+</div>
+</div>
+<p>so</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+e^{i\mathbf G \cdot \mathbf R_n}=1.
+\]</span></p>
+</div>
+</div>
+</div>
+<!-- [Sólyom–Piróth I, Sec. 5.2.2, Eqs. (5.2.20)–(5.2.21), p. 123] -->
+<p>This simple identity is one of the most useful relations in solid-state physics.</p>
+</section>
+<section id="why-this-matters" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="why-this-matters"><span class="header-section-number">4.5.3</span> Why This Matters</h3>
+<p>If a function is lattice periodic,</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+F(\mathbf r + \mathbf R_n)=F(\mathbf r),
+\]</span></p>
+</div>
+</div>
+</div>
+<p>then its Fourier expansion contains only reciprocal-lattice vectors:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+F(\mathbf r)=\sum_{\mathbf G} F_{\mathbf G} e^{i\mathbf G\cdot \mathbf r}.
+\]</span></p>
+</div>
+</div>
+</div>
+<!-- [Sólyom–Piróth I, Sec. 5.2.2, Eqs. (5.2.22)–(5.2.23), p. 123] -->
+<p>So the reciprocal lattice is not a mathematical curiosity. It is the natural index set for any lattice-periodic quantity.</p>
+</section>
+<section id="sanity-check-simple-cubic-lattice" class="level3" data-number="4.5.4">
+<h3 data-number="4.5.4" class="anchored" data-anchor-id="sanity-check-simple-cubic-lattice"><span class="header-section-number">4.5.4</span> Sanity Check: Simple Cubic Lattice</h3>
+<p>For a simple cubic direct lattice,</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf a_1 = a \hat{\mathbf x},
+\qquad
+\mathbf a_2 = a \hat{\mathbf y},
+\qquad
+\mathbf a_3 = a \hat{\mathbf z},
+\]</span></p>
+</div>
+</div>
+</div>
+<p>the reciprocal vectors are</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf b_1 = \frac{2\pi}{a}\hat{\mathbf x},
+\qquad
+\mathbf b_2 = \frac{2\pi}{a}\hat{\mathbf y},
+\qquad
+\mathbf b_3 = \frac{2\pi}{a}\hat{\mathbf z}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>So a simple cubic lattice maps to another simple cubic lattice, but with lattice constant <span class="math inline">\(2\pi/a\)</span> in reciprocal space.</p>
+<p>This is a useful check on dimensions and normalization.</p>
+</section>
+</section>
+<section id="reciprocal-space-and-crystal-planes" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="reciprocal-space-and-crystal-planes"><span class="header-section-number">4.6</span> Reciprocal Space and Crystal Planes</h2>
+<section id="reciprocal-vectors-as-normals-to-lattice-planes" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="reciprocal-vectors-as-normals-to-lattice-planes"><span class="header-section-number">4.6.1</span> Reciprocal Vectors as Normals to Lattice Planes</h3>
+<p>For the family of direct-lattice planes with Miller indices <span class="math inline">\((hkl)\)</span>, define</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf G_{hkl}=h\mathbf b_1 + k\mathbf b_2 + l\mathbf b_3.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This vector is normal to the planes labeled by <span class="math inline">\((hkl)\)</span>.</p>
+<!-- [Sólyom–Piróth I, Sec. 5.2.2, Eq. (5.2.24), pp. 123–124] -->
+<p>This is one of the main reasons reciprocal space is so useful: crystallographic planes, which are awkward to describe directly in a non-orthogonal basis, become simple normal vectors in reciprocal space.</p>
+</section>
+<section id="derivation-of-the-plane-spacing-formula" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="derivation-of-the-plane-spacing-formula"><span class="header-section-number">4.6.2</span> Derivation of the Plane Spacing Formula</h3>
+<p>Let <span class="math inline">\(d_{hkl}\)</span> be the spacing between neighboring planes in the <span class="math inline">\((hkl)\)</span> family. Since <span class="math inline">\(\mathbf G_{hkl}\)</span> is normal to these planes, the plane spacing is the projection of the displacement between two adjacent planes onto the normal direction. The result is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+d_{hkl} = \frac{2\pi}{|\mathbf G_{hkl}|}.
+\]</span></p>
+</div>
+</div>
+</div>
+<!-- [Sólyom–Piróth I, Sec. 5.2.2, Eq. (5.2.26), p. 124] -->
+</section>
+<section id="interpretation-1" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="interpretation-1"><span class="header-section-number">4.6.3</span> Interpretation</h3>
+<ol type="1">
+<li><p><strong>Large Miller indices mean closely spaced planes.</strong> Increasing <span class="math inline">\(|\mathbf G_{hkl}|\)</span> decreases <span class="math inline">\(d_{hkl}\)</span>.</p></li>
+<li><p><strong>The reciprocal lattice is the natural language for diffraction.</strong> Plane spacings and plane normals become simple vector statements.</p></li>
+<li><p><strong>The same geometry later controls phonon and electron dispersions.</strong> High-symmetry directions in the Brillouin zone are reciprocal-space descendants of real-space crystal symmetry.</p></li>
+</ol>
+</section>
+<section id="example-simple-cubic-interplanar-spacing" class="level3" data-number="4.6.4">
+<h3 data-number="4.6.4" class="anchored" data-anchor-id="example-simple-cubic-interplanar-spacing"><span class="header-section-number">4.6.4</span> Example: Simple Cubic Interplanar Spacing</h3>
+<p>For the simple cubic case,</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf G_{hkl}
+=
+\frac{2\pi}{a}
+\left(
+h\hat{\mathbf x}
++
+k\hat{\mathbf y}
++
+l\hat{\mathbf z}
+\right),
+\]</span></p>
+</div>
+</div>
+</div>
+<p>so</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+|\mathbf G_{hkl}|
+=
+\frac{2\pi}{a}\sqrt{h^2+k^2+l^2},
+\]</span></p>
+</div>
+</div>
+</div>
+<p>and therefore</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+d_{hkl}
+=
+\frac{a}{\sqrt{h^2+k^2+l^2}}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This familiar formula is just the special cubic version of the general reciprocal-space relation.</p>
+<div id="fig-miller-planes" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-miller-planes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Sec. 5.1.5, Figs. 5.10–5.11, pp. 119–120] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-miller-planes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3: <strong>Figure placeholder.</strong> Families of direct-lattice planes labeled by Miller indices, illustrating how plane orientation and spacing are encoded.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="brillouin-zones-and-equivalent-wave-vectors" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="brillouin-zones-and-equivalent-wave-vectors"><span class="header-section-number">4.7</span> Brillouin Zones and Equivalent Wave Vectors</h2>
+<section id="the-first-brillouin-zone" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="the-first-brillouin-zone"><span class="header-section-number">4.7.1</span> The First Brillouin Zone</h3>
+<p>The <strong>first Brillouin zone</strong> is the Wigner–Seitz cell of the reciprocal lattice.</p>
+<!-- [Sólyom–Piróth I, Sec. 5.2.2, p. 123; Sec. 6.2.3, pp. 189–191] -->
+<p>This definition mirrors the Wigner–Seitz construction in direct space:</p>
+<ul>
+<li>direct lattice <span class="math inline">\(\rightarrow\)</span> Wigner–Seitz cell around a lattice point,</li>
+<li>reciprocal lattice <span class="math inline">\(\rightarrow\)</span> Brillouin zone around <span class="math inline">\(\mathbf G=\mathbf 0\)</span>.</li>
+</ul>
+<p>The first Brillouin zone is preferred over an arbitrary reciprocal primitive parallelepiped because it makes the symmetry of the crystal manifest.</p>
+</section>
+<section id="bloch-labeling" class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="bloch-labeling"><span class="header-section-number">4.7.2</span> Bloch Labeling</h3>
+<p>For a lattice-periodic Hamiltonian, eigenstates can be labeled by a wave vector <span class="math inline">\(\mathbf k\)</span> such that</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\psi_{\mathbf k}(\mathbf r + \mathbf R_n)
+=
+e^{i\mathbf k\cdot \mathbf R_n}
+\psi_{\mathbf k}(\mathbf r).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This is the essential content of Bloch’s theorem.</p>
+<!-- [Sólyom–Piróth I, Sec. 6.2.2, Eq. (6.2.5), pp. 186–189] -->
+<p>Because</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+e^{i(\mathbf k+\mathbf G)\cdot \mathbf R_n}
+= e^{i\mathbf k\cdot \mathbf R_n} e^{i\mathbf G\cdot \mathbf R_n}
+= e^{i\mathbf k\cdot \mathbf R_n},
+\]</span></p>
+</div>
+</div>
+</div>
+<p>the wave vectors <span class="math inline">\(\mathbf k\)</span> and <span class="math inline">\(\mathbf k+\mathbf G\)</span> are equivalent. Therefore physically distinct states may be labeled by choosing <span class="math inline">\(\mathbf k\)</span> inside a single primitive region, conventionally the first Brillouin zone.</p>
+<!-- [Sólyom–Piróth I, Sec. 6.2.3, Eqs. (6.2.27)–(6.2.29), pp. 189–190] -->
+</section>
+<section id="symmetry-of-the-dispersion" class="level3" data-number="4.7.3">
+<h3 data-number="4.7.3" class="anchored" data-anchor-id="symmetry-of-the-dispersion"><span class="header-section-number">4.7.3</span> Symmetry of the Dispersion</h3>
+<p>If the crystal has a point-group operation <span class="math inline">\(\mathcal R\)</span>, then the dispersion satisfies</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\varepsilon(\mathcal R \mathbf k)=\varepsilon(\mathbf k).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>In addition, reciprocal-lattice periodicity gives</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\varepsilon(\mathbf k+\mathbf G)=\varepsilon(\mathbf k).
+\]</span></p>
+</div>
+</div>
+</div>
+<!-- [Sólyom–Piróth I, Sec. 6.2.5, Eq. (6.2.53), pp. 195–196; Sec. 6.2.3, pp. 189–191] -->
+<p>So the full dispersion is determined by two facts:</p>
+<ol type="1">
+<li>it is periodic in reciprocal space;</li>
+<li>it inherits the crystal’s point-group symmetry.</li>
+</ol>
+<p>This is why one usually plots only:</p>
+<ul>
+<li>the <strong>first Brillouin zone</strong>, and often even only</li>
+<li>an <strong>irreducible wedge</strong> or a <strong>high-symmetry path</strong> inside it.</li>
+</ul>
+</section>
+<section id="why-dispersion-is-plotted-in-mathbf-k-space" class="level3" data-number="4.7.4">
+<h3 data-number="4.7.4" class="anchored" data-anchor-id="why-dispersion-is-plotted-in-mathbf-k-space"><span class="header-section-number">4.7.4</span> Why Dispersion Is Plotted in <span class="math inline">\(\mathbf k\)</span>-Space</h3>
+<p>For a lattice-periodic system, <span class="math inline">\(\mathbf k\)</span> is the natural label of translational behavior. Writing the dispersion as <span class="math inline">\(\varepsilon(\mathbf k)\)</span> or <span class="math inline">\(\omega(\mathbf k)\)</span> is not merely conventional; it is the most compact way of encoding:</p>
+<ul>
+<li>lattice periodicity,</li>
+<li>crystal symmetry,</li>
+<li>degeneracies at symmetry-related points,</li>
+<li>and how modes vary from one translational pattern to another.</li>
+</ul>
+<p>In contrast, plotting directly in real space would hide the translational classification entirely.</p>
+<div id="fig-bz-equivalence" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bz-equivalence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Sec. 6.2.3, Fig. 6.4, p. 190] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bz-equivalence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.4: <strong>Figure placeholder.</strong> A primitive cell of the reciprocal lattice and the first Brillouin zone, showing how equivalent <span class="math inline">\(\mathbf k\)</span> points related by reciprocal-lattice vectors are folded into one symmetric region.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="translational-selection-rules-in-reciprocal-space" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="translational-selection-rules-in-reciprocal-space"><span class="header-section-number">4.8</span> Translational Selection Rules in Reciprocal Space</h2>
+<p>If an elementary process occurs in a perfect crystal, the crystal wave vector is conserved only <strong>modulo a reciprocal-lattice vector</strong>.</p>
+<p>For example, when an electron absorbs a phonon of wave vector <span class="math inline">\(\mathbf q\)</span>,</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf k' = \mathbf k + \mathbf q + \mathbf G.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>For phonon emission,</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf k = \mathbf k' + \mathbf q + \mathbf G.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Processes with <span class="math inline">\(\mathbf G=\mathbf 0\)</span> are called <strong>normal processes</strong>, and those with <span class="math inline">\(\mathbf G\neq \mathbf 0\)</span> are <strong>umklapp processes</strong>.</p>
+<!-- [Sólyom–Piróth I, Sec. 6.2.4, Eqs. (6.2.43)–(6.2.44), pp. 193–194] -->
+<p>This is the translational version of a selection rule. It is one of the main reasons reciprocal space is indispensable once we discuss phonons, transport, and scattering.</p>
+</section>
+<section id="bridge-to-later-lectures-phonon-branches-and-density-of-states" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="bridge-to-later-lectures-phonon-branches-and-density-of-states"><span class="header-section-number">4.9</span> Bridge to Later Lectures: Phonon Branches and Density of States</h2>
+<p>The reciprocal-space language developed today is exactly what later lattice dynamics requires.</p>
+<section id="why-branches-live-in-mathbf-k-space" class="level3" data-number="4.9.1">
+<h3 data-number="4.9.1" class="anchored" data-anchor-id="why-branches-live-in-mathbf-k-space"><span class="header-section-number">4.9.1</span> Why Branches Live in <span class="math inline">\(\mathbf k\)</span>-Space</h3>
+<p>If the primitive cell contains <span class="math inline">\(p\)</span> atoms, then each <span class="math inline">\(\mathbf k\)</span> carries <span class="math inline">\(3p\)</span> vibrational degrees of freedom. Later these will appear as branches</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\omega_s(\mathbf k),
+\qquad
+s=1,\dots,3p.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>For every <span class="math inline">\(\mathbf k\)</span> in the first Brillouin zone, the crystal can support a finite set of normal modes. Plotting the frequencies against <span class="math inline">\(\mathbf k\)</span> therefore produces the <strong>phonon dispersion relation</strong>.</p>
+<!-- [Course bridge from today’s reciprocal-space formalism to later phonon lectures] -->
+</section>
+<section id="why-the-first-brillouin-zone-is-enough" class="level3" data-number="4.9.2">
+<h3 data-number="4.9.2" class="anchored" data-anchor-id="why-the-first-brillouin-zone-is-enough"><span class="header-section-number">4.9.2</span> Why the First Brillouin Zone Is Enough</h3>
+<p>Because <span class="math inline">\(\mathbf k\)</span> and <span class="math inline">\(\mathbf k+\mathbf G\)</span> are equivalent, one needs only the first Brillouin zone to represent all distinct translational patterns. High-symmetry lines inside that zone are chosen because they reveal degeneracies, splittings, and branch connectivity most clearly.</p>
+</section>
+<section id="why-the-density-of-states-is-also-a-reciprocal-space-object" class="level3" data-number="4.9.3">
+<h3 data-number="4.9.3" class="anchored" data-anchor-id="why-the-density-of-states-is-also-a-reciprocal-space-object"><span class="header-section-number">4.9.3</span> Why the Density of States Is Also a Reciprocal-Space Object</h3>
+<p>The phonon density of states is obtained by counting how many states in the full Brillouin zone fall into a small frequency interval. Thus:</p>
+<ul>
+<li>the dispersion tells us <strong>which frequencies occur</strong>,</li>
+<li>the Brillouin-zone counting tells us <strong>how many states occur at each frequency</strong>.</li>
+</ul>
+<p>Flat regions of a dispersion contribute strongly because many nearby <span class="math inline">\(\mathbf k\)</span> values correspond to nearly the same frequency.</p>
+<!-- [Course bridge: conceptual connection to later DOS calculations] -->
+</section>
+<section id="conceptual-summary-of-the-bridge" class="level3" data-number="4.9.4">
+<h3 data-number="4.9.4" class="anchored" data-anchor-id="conceptual-summary-of-the-bridge"><span class="header-section-number">4.9.4</span> Conceptual Summary of the Bridge</h3>
+<p>Today’s logic is the prerequisite for later phonon lectures:</p>
+<ol type="1">
+<li>direct lattice <span class="math inline">\(\rightarrow\)</span> reciprocal lattice,</li>
+<li>reciprocal lattice <span class="math inline">\(\rightarrow\)</span> Brillouin zone,</li>
+<li>Brillouin zone <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(\mathbf k\)</span>-dependent branches,</li>
+<li>full zone counting <span class="math inline">\(\rightarrow\)</span> density of states.</li>
+</ol>
+<p>Without the reciprocal-space framework, neither phonon dispersions nor density-of-states arguments can be formulated cleanly.</p>
+</section>
+</section>
+<section id="take-home-messages" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="take-home-messages"><span class="header-section-number">4.10</span> Take-Home Messages</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Take-Home Messages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Periodic crystals admit only the rotation orders compatible with translational symmetry, namely one-, two-, three-, four-, and sixfold rotations.</li>
+<li>The point group of a crystal is the symmetry structure relevant for physical tensors and selection rules.</li>
+<li>Neumann’s principle explains why symmetry reduces the number of independent material parameters.</li>
+<li>The reciprocal lattice is defined so that lattice periodicity becomes simple in Fourier space.</li>
+<li>Reciprocal-lattice vectors encode plane normals and interplanar spacings in a compact geometric form.</li>
+<li>The first Brillouin zone is the symmetric fundamental region of reciprocal space.</li>
+<li>Bloch states are naturally labeled by wave vectors that are equivalent up to reciprocal-lattice translations.</li>
+<li>Dispersion relations are plotted in <span class="math inline">\(\mathbf k\)</span>-space because <span class="math inline">\(\mathbf k\)</span> is the natural label of lattice-periodic eigenstates.</li>
+<li>Later phonon branches and density-of-states calculations are direct consequences of the reciprocal-space viewpoint introduced today.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="problem-set" class="level2" data-number="4.11">
+<h2 data-number="4.11" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">4.11</span> Problem Set</h2>
+<ol type="1">
+<li><p><strong>Crystallographic Restriction.</strong> Starting from the shortest lattice vector <span class="math inline">\(\mathbf a\)</span> in a plane, reproduce the argument showing that only rotation orders <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(4\)</span>, and <span class="math inline">\(6\)</span> are compatible with periodic translational symmetry.</p></li>
+<li><p><strong>Reciprocal Basis of a Simple Cubic Lattice.</strong> Let <span class="math display">\[
+\mathbf a_1=a \hat{\mathbf x},
+\qquad
+\mathbf a_2=a \hat{\mathbf y},
+\qquad
+\mathbf a_3=a \hat{\mathbf z}.
+\]</span> Compute <span class="math inline">\(\mathbf b_1\)</span>, <span class="math inline">\(\mathbf b_2\)</span>, and <span class="math inline">\(\mathbf b_3\)</span> from the reciprocal-lattice definition.</p></li>
+<li><p><strong>Planes and Spacings.</strong> For the same simple cubic lattice, compute <span class="math inline">\(\mathbf G_{100}\)</span>, <span class="math inline">\(\mathbf G_{110}\)</span>, and <span class="math inline">\(\mathbf G_{111}\)</span>, and determine <span class="math inline">\(d_{100}\)</span>, <span class="math inline">\(d_{110}\)</span>, and <span class="math inline">\(d_{111}\)</span>.</p></li>
+<li><p><strong>Why One Brillouin Zone Suffices.</strong> Explain why <span class="math inline">\(\mathbf k\)</span> and <span class="math inline">\(\mathbf k+\mathbf G\)</span> describe the same translational behavior. Then state why dispersion plots are usually restricted to the first Brillouin zone.</p></li>
+<li><p><strong>Two Basic Symmetry Constraints.</strong></p>
+<ol type="a">
+<li>Write the most general symmetry-allowed form of a second-rank tensor in a cubic crystal and in a tetragonal crystal.</li>
+<li>State the translational selection rule for absorption of a phonon by an electron in a perfect crystal, and explain the role of the reciprocal-lattice vector <span class="math inline">\(\mathbf G\)</span>.</li>
+</ol></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

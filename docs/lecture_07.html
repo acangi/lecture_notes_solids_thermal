@@ -256,8 +256,45 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">7.1</span> Roadmap</a></li>
+  <li><a href="#from-general-formalism-to-explicit-chains" id="toc-from-general-formalism-to-explicit-chains" class="nav-link" data-scroll-target="#from-general-formalism-to-explicit-chains"><span class="header-section-number">7.2</span> From General Formalism to Explicit Chains</a></li>
+  <li><a href="#monatomic-linear-chain" id="toc-monatomic-linear-chain" class="nav-link" data-scroll-target="#monatomic-linear-chain"><span class="header-section-number">7.3</span> Monatomic Linear Chain</a>
+  <ul class="collapse">
+  <li><a href="#model-and-harmonic-energy" id="toc-model-and-harmonic-energy" class="nav-link" data-scroll-target="#model-and-harmonic-energy"><span class="header-section-number">7.3.1</span> Model and Harmonic Energy</a></li>
+  <li><a href="#equation-of-motion" id="toc-equation-of-motion" class="nav-link" data-scroll-target="#equation-of-motion"><span class="header-section-number">7.3.2</span> Equation of Motion</a></li>
+  <li><a href="#bornvon-kármán-boundary-conditions-and-allowed-q-values" id="toc-bornvon-kármán-boundary-conditions-and-allowed-q-values" class="nav-link" data-scroll-target="#bornvon-kármán-boundary-conditions-and-allowed-q-values"><span class="header-section-number">7.3.3</span> Born–von Kármán Boundary Conditions and Allowed <span class="math inline">\(q\)</span>-Values</a></li>
+  <li><a href="#dispersion-relation" id="toc-dispersion-relation" class="nav-link" data-scroll-target="#dispersion-relation"><span class="header-section-number">7.3.4</span> Dispersion Relation</a></li>
+  <li><a href="#long-wavelength-limit-and-sound-speed" id="toc-long-wavelength-limit-and-sound-speed" class="nav-link" data-scroll-target="#long-wavelength-limit-and-sound-speed"><span class="header-section-number">7.3.5</span> Long-Wavelength Limit and Sound Speed</a></li>
+  <li><a href="#group-velocity" id="toc-group-velocity" class="nav-link" data-scroll-target="#group-velocity"><span class="header-section-number">7.3.6</span> Group Velocity</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">7.3.7</span> Interpretation</a></li>
+  </ul></li>
+  <li><a href="#diatomic-linear-chain" id="toc-diatomic-linear-chain" class="nav-link" data-scroll-target="#diatomic-linear-chain"><span class="header-section-number">7.4</span> Diatomic Linear Chain</a>
+  <ul class="collapse">
+  <li><a href="#harmonic-energy-and-equations-of-motion" id="toc-harmonic-energy-and-equations-of-motion" class="nav-link" data-scroll-target="#harmonic-energy-and-equations-of-motion"><span class="header-section-number">7.4.1</span> Harmonic Energy and Equations of Motion</a></li>
+  <li><a href="#plane-wave-ansatz-and-2times-2-eigenvalue-problem" id="toc-plane-wave-ansatz-and-2times-2-eigenvalue-problem" class="nav-link" data-scroll-target="#plane-wave-ansatz-and-2times-2-eigenvalue-problem"><span class="header-section-number">7.4.2</span> Plane-Wave Ansatz and <span class="math inline">\(2\times 2\)</span> Eigenvalue Problem</a></li>
+  <li><a href="#acoustic-and-optical-branches" id="toc-acoustic-and-optical-branches" class="nav-link" data-scroll-target="#acoustic-and-optical-branches"><span class="header-section-number">7.4.3</span> Acoustic and Optical Branches</a></li>
+  <li><a href="#zone-center-in-phase-and-out-of-phase-motion" id="toc-zone-center-in-phase-and-out-of-phase-motion" class="nav-link" data-scroll-target="#zone-center-in-phase-and-out-of-phase-motion"><span class="header-section-number">7.4.4</span> Zone Center: In-Phase and Out-of-Phase Motion</a></li>
+  <li><a href="#long-wavelength-acoustic-limit" id="toc-long-wavelength-acoustic-limit" class="nav-link" data-scroll-target="#long-wavelength-acoustic-limit"><span class="header-section-number">7.4.5</span> Long-Wavelength Acoustic Limit</a></li>
+  <li><a href="#zone-boundary-sublattice-selective-motion" id="toc-zone-boundary-sublattice-selective-motion" class="nav-link" data-scroll-target="#zone-boundary-sublattice-selective-motion"><span class="header-section-number">7.4.6</span> Zone Boundary: Sublattice-Selective Motion</a></li>
+  <li><a href="#why-the-terms-acoustic-and-optical-make-sense" id="toc-why-the-terms-acoustic-and-optical-make-sense" class="nav-link" data-scroll-target="#why-the-terms-acoustic-and-optical-make-sense"><span class="header-section-number">7.4.7</span> Why the Terms “Acoustic” and “Optical” Make Sense</a></li>
+  <li><a href="#interpretation-1" id="toc-interpretation-1" class="nav-link" data-scroll-target="#interpretation-1"><span class="header-section-number">7.4.8</span> Interpretation</a></li>
+  </ul></li>
+  <li><a href="#bridge-to-the-next-lecture-from-allowed-q-values-to-a-density-of-states" id="toc-bridge-to-the-next-lecture-from-allowed-q-values-to-a-density-of-states" class="nav-link" data-scroll-target="#bridge-to-the-next-lecture-from-allowed-q-values-to-a-density-of-states"><span class="header-section-number">7.5</span> Bridge to the Next Lecture: From Allowed <span class="math inline">\(q\)</span>-Values to a Density of States</a>
+  <ul class="collapse">
+  <li><a href="#step-1-count-the-allowed-q-values" id="toc-step-1-count-the-allowed-q-values" class="nav-link" data-scroll-target="#step-1-count-the-allowed-q-values"><span class="header-section-number">7.5.1</span> Step 1: Count the Allowed <span class="math inline">\(q\)</span>-Values</a></li>
+  <li><a href="#step-2-convert-mode-counting-from-q-to-omega" id="toc-step-2-convert-mode-counting-from-q-to-omega" class="nav-link" data-scroll-target="#step-2-convert-mode-counting-from-q-to-omega"><span class="header-section-number">7.5.2</span> Step 2: Convert Mode Counting from <span class="math inline">\(q\)</span> to <span class="math inline">\(\omega\)</span></a></li>
+  <li><a href="#step-3-monatomic-chain-example" id="toc-step-3-monatomic-chain-example" class="nav-link" data-scroll-target="#step-3-monatomic-chain-example"><span class="header-section-number">7.5.3</span> Step 3: Monatomic-Chain Example</a></li>
+  <li><a href="#what-carries-over-to-more-general-lattices" id="toc-what-carries-over-to-more-general-lattices" class="nav-link" data-scroll-target="#what-carries-over-to-more-general-lattices"><span class="header-section-number">7.5.4</span> What Carries Over to More General Lattices?</a></li>
+  </ul></li>
+  <li><a href="#optional-appendix-equal-mass-limit-and-band-folding" id="toc-optional-appendix-equal-mass-limit-and-band-folding" class="nav-link" data-scroll-target="#optional-appendix-equal-mass-limit-and-band-folding"><span class="header-section-number">7.6</span> Optional / Appendix: Equal-Mass Limit and Band Folding</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">7.7</span> Problem Set</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -285,8 +322,630 @@ window.Quarto = {
 </ul>
 </div>
 </div>
+<section id="roadmap" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="roadmap"><span class="header-section-number">7.1</span> Roadmap</h2>
+<ul>
+<li>Apply the general harmonic formalism of <a href="lecture_06.html" class="quarto-xref">Lecture&nbsp;<span>6</span></a> in explicit one-dimensional models.</li>
+<li>Monatomic chain: equations of motion, allowed <span class="math inline">\(q\)</span>-values, dispersion, and group velocity.</li>
+<li>Diatomic chain: coupled equations, acoustic/optical branches, and mode character.</li>
+<li>Bridge: <span class="math inline">\(q\)</span>-counting <span class="math inline">\(\rightarrow\)</span> continuum limit <span class="math inline">\(\rightarrow\)</span> dispersion <span class="math inline">\(\rightarrow\)</span> density of states.</li>
+<li>Optional appendix: equal-mass limit and band folding.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 91%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(n\)</span></td>
+<td>primitive-cell index in the 1D chain</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(N\)</span></td>
+<td>number of primitive cells</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(a\)</span></td>
+<td>primitive-cell length of the 1D chain</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(L=Na\)</span></td>
+<td>total chain length</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(u_n(t)\)</span></td>
+<td>displacement of the atom in cell <span class="math inline">\(n\)</span> for the monatomic chain</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(u_n(t),,v_n(t)\)</span></td>
+<td>displacements of the two basis atoms in cell <span class="math inline">\(n\)</span> for the diatomic chain</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(M\)</span></td>
+<td>atomic mass in the monatomic chain</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(M_1,,M_2\)</span></td>
+<td>masses of the two atoms in the diatomic chain</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(K\)</span></td>
+<td>nearest-neighbor force constant</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(q\)</span></td>
+<td>1D wavevector</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega(q)\)</span></td>
+<td>angular frequency of a normal mode</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(v_g(q)\)</span></td>
+<td>group velocity, <span class="math inline">\(d\omega/dq\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(g(\omega)\)</span></td>
+<td>vibrational density of states</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="from-general-formalism-to-explicit-chains" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="from-general-formalism-to-explicit-chains"><span class="header-section-number">7.2</span> From General Formalism to Explicit Chains</h2>
+<p>In <a href="lecture_06.html" class="quarto-xref">Lecture&nbsp;<span>6</span></a> we reduced harmonic lattice dynamics to an eigenvalue problem for the dynamical matrix. Based on this, we work through the simplest explicit models analytically. The reward is that several abstract concepts from the previous lecture become concrete:</p>
+<ul>
+<li>Brillouin-zone restriction,</li>
+<li>dispersion relations,</li>
+<li>group velocity,</li>
+<li>acoustic versus optical branches,</li>
+<li>and the counting argument that leads directly to a density of states.</li>
+</ul>
+<!-- [Lecture 6 connection; explicit models based primarily on Sólyom, Ch. 11.2, pp. 337–345; Ibach–Lüth, Ch. 4.3, pp. 85–88] -->
+</section>
+<section id="monatomic-linear-chain" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="monatomic-linear-chain"><span class="header-section-number">7.3</span> Monatomic Linear Chain</h2>
+<p>We begin with a one-dimensional chain of identical atoms of mass <span class="math inline">\(M\)</span>, equally spaced by the lattice constant <span class="math inline">\(a\)</span>. Only longitudinal displacements are kept, and only nearest-neighbor couplings are retained.</p>
+<!-- [Sólyom, Ch. 11.2.1, pp. 337–340; Ibach–Lüth, Ch. 4.3, pp. 84–86] -->
+<div id="fig-monatomic-chain" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-monatomic-chain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Ch. 11.2.1, Fig. 11.1, p. 337] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-monatomic-chain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.1: <strong>Figure placeholder.</strong> Geometry of the monatomic linear chain: equilibrium positions, longitudinal displacements, and nearest-neighbor elastic couplings.
+</figcaption>
+</figure>
+</div>
+<section id="model-and-harmonic-energy" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="model-and-harmonic-energy"><span class="header-section-number">7.3.1</span> Model and Harmonic Energy</h3>
+<p>Let the equilibrium position of atom <span class="math inline">\(n\)</span> be <span class="math display">\[
+x_n^{(0)} = n a,
+\]</span> and let <span class="math inline">\(u_n(t)\)</span> denote its displacement from equilibrium. The harmonic potential energy is <span class="math display">\[
+U = \frac{K}{2}\sum_n \left(u_{n+1}-u_n\right)^2.
+\]</span></p>
+<p>This is the one-dimensional specialization of the harmonic lattice energy from Lecture 6: only relative displacements matter, and only nearest neighbors are coupled.</p>
+<!-- [Sólyom, Ch. 11.2.1, Eq. (11.2.2), p. 338] -->
+</section>
+<section id="equation-of-motion" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="equation-of-motion"><span class="header-section-number">7.3.2</span> Equation of Motion</h3>
+<p>Differentiating the potential with respect to <span class="math inline">\(u_n\)</span> gives <span class="math display">\[
+M\ddot u_n = -K\left(2u_n-u_{n-1}-u_{n+1}\right).
+\]</span></p>
+<p>This is the discrete wave equation for the monatomic chain.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+M\ddot u_n + K\left(2u_n-u_{n-1}-u_{n+1}\right)=0.
+\]</span></p>
+</div>
+</div>
+</div>
+<!-- [Sólyom, Ch. 11.2.1, Eq. (11.2.3), p. 338] -->
+</section>
+<section id="bornvon-kármán-boundary-conditions-and-allowed-q-values" class="level3" data-number="7.3.3">
+<h3 data-number="7.3.3" class="anchored" data-anchor-id="bornvon-kármán-boundary-conditions-and-allowed-q-values"><span class="header-section-number">7.3.3</span> Born–von Kármán Boundary Conditions and Allowed <span class="math inline">\(q\)</span>-Values</h3>
+<p>To keep the algebra simple, we impose periodic boundary conditions: <span class="math display">\[
+u_{n+N}(t)=u_n(t).
+\]</span></p>
+<p>We then seek plane-wave solutions of the form <span class="math display">\[
+u_n(t)=u(q)e^{i(qna-\omega t)}.
+\]</span></p>
+<p>The boundary condition gives <span class="math display">\[
+e^{iqNa}=1,
+\]</span> hence <span class="math display">\[
+q = \frac{2\pi j}{Na},
+\qquad
+j\in\mathbb Z.
+\]</span></p>
+<p>However, <span class="math inline">\(q\)</span> and <span class="math inline">\(q+G\)</span> with reciprocal-lattice vector <span class="math display">\[
+G=\frac{2\pi}{a}
+\]</span> describe the same displacement pattern on the discrete lattice sites, since <span class="math display">\[
+e^{i(q+G)na}=e^{iqna}e^{i2\pi n}=e^{iqna}.
+\]</span></p>
+<p>Therefore only <span class="math inline">\(N\)</span> distinct wavevectors exist, and they may be chosen inside the first Brillouin zone: <span class="math display">\[
+-\frac{\pi}{a}&lt;q\le \frac{\pi}{a}.
+\]</span></p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+q_j=\frac{2\pi j}{L},
+\qquad
+L=Na,
+\qquad
+-\frac{\pi}{a}&lt;q\le \frac{\pi}{a}.
+\]</span></p>
+</div>
+</div>
+</div>
+<!-- [Sólyom, Ch. 11.2.1, Eq. (11.2.4)–(11.2.7), pp. 338–339; Ibach–Lüth, Ch. 4.3, Eq. (4.16)–(4.19), pp. 85–86] -->
+<div id="fig-q-equivalence" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-q-equivalence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Ch. 11.2.1, Fig. 11.2, p. 339] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-q-equivalence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.2: <strong>Figure placeholder.</strong> Equivalence of the Fourier components with wavevectors <span class="math inline">\(q\)</span> and <span class="math inline">\(q+G\)</span> on a discrete lattice, illustrating why the vibrational spectrum can be restricted to the first Brillouin zone.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="dispersion-relation" class="level3" data-number="7.3.4">
+<h3 data-number="7.3.4" class="anchored" data-anchor-id="dispersion-relation"><span class="header-section-number">7.3.4</span> Dispersion Relation</h3>
+<p>Substituting the plane-wave ansatz into the equation of motion yields <span class="math display">\[
+-M\omega^2 u(q)
+=
+-K\left(2-e^{-iqa}-e^{iqa}\right)u(q)
+=
+-2K\left(1-\cos qa\right)u(q).
+\]</span></p>
+<p>For nonzero amplitude, <span class="math display">\[
+\omega^2(q)=\frac{2K}{M}\left(1-\cos qa\right).
+\]</span></p>
+<p>Equivalently,</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\omega(q)=2\sqrt{\frac{K}{M}}\left|\sin\frac{qa}{2}\right|.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This is the dispersion relation of the monatomic linear chain.</p>
+<!-- [Sólyom, Ch. 11.2.1, Eq. (11.2.8)–(11.2.9), p. 339; Ibach–Lüth, Ch. 4.3, monatomic-chain exercise as comparison point] -->
+</section>
+<section id="long-wavelength-limit-and-sound-speed" class="level3" data-number="7.3.5">
+<h3 data-number="7.3.5" class="anchored" data-anchor-id="long-wavelength-limit-and-sound-speed"><span class="header-section-number">7.3.5</span> Long-Wavelength Limit and Sound Speed</h3>
+<p>For <span class="math inline">\(|qa|\ll 1\)</span>, <span class="math display">\[
+\sin\frac{qa}{2}\approx \frac{qa}{2},
+\]</span> so the dispersion becomes linear: <span class="math display">\[
+\omega(q)\approx a\sqrt{\frac{K}{M}} |q|.
+\]</span></p>
+<p>Thus the chain behaves as an elastic continuum in the long-wavelength limit. The slope at the zone center is the sound speed, <span class="math display">\[
+v_s = a\sqrt{\frac{K}{M}}.
+\]</span></p>
+<p>This is why the branch is called <strong>acoustic</strong>.</p>
+<!-- [Sólyom, Ch. 11.2.1, Eq. (11.2.10), p. 339; Ibach–Lüth, Ch. 4.3, p. 86] -->
+</section>
+<section id="group-velocity" class="level3" data-number="7.3.6">
+<h3 data-number="7.3.6" class="anchored" data-anchor-id="group-velocity"><span class="header-section-number">7.3.6</span> Group Velocity</h3>
+<p>The group velocity of a wave packet is <span class="math display">\[
+v_g(q)=\frac{d\omega}{dq}.
+\]</span></p>
+<p>For <span class="math inline">\(0\le q\le \pi/a\)</span>, where the absolute value may be dropped, <span class="math display">\[
+\omega(q)=2\sqrt{\frac{K}{M}}\sin\frac{qa}{2},
+\]</span> so <span class="math display">\[
+v_g(q)=a\sqrt{\frac{K}{M}}\cos\frac{qa}{2}.
+\]</span></p>
+<p>Hence <span class="math display">\[
+v_g(0)=v_s,
+\qquad
+v_g \left(\frac{\pi}{a}\right)=0.
+\]</span></p>
+<p>The vanishing of <span class="math inline">\(v_g\)</span> at the zone boundary means that the dispersion flattens there: zone-edge modes do not transport energy through the chain as a wave packet.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+v_g(q)=\frac{d\omega}{dq}
+=
+a\sqrt{\frac{K}{M}}\cos\frac{qa}{2}
+\qquad
+(0\le q\le \pi/a).
+\]</span></p>
+</div>
+</div>
+</div>
+<!-- [Sólyom, Ch. 11.2.1, Eq. (11.2.11), p. 340] -->
+<div id="fig-monatomic-dispersion" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-monatomic-dispersion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Ch. 11.2.1, Fig. 11.3, p. 340] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-monatomic-dispersion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.3: <strong>Figure placeholder.</strong> Dispersion relation <span class="math inline">\(\omega(q)\)</span> of the monatomic linear chain, showing linear acoustic behavior near <span class="math inline">\(q=0\)</span> and zero group velocity at the Brillouin-zone edge.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="interpretation" class="level3" data-number="7.3.7">
+<h3 data-number="7.3.7" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">7.3.7</span> Interpretation</h3>
+<ul>
+<li><span class="math inline">\(\omega(q)=\omega(-q)\)</span>, as expected from left-right symmetry and time-reversal invariance.</li>
+<li><span class="math inline">\(\omega(0)=0\)</span>: a rigid translation of the chain costs no energy.</li>
+<li>The maximum frequency occurs at <span class="math inline">\(|q|=\pi/a\)</span>: <span class="math display">\[
+\omega_{\max}=2\sqrt{\frac{K}{M}}.
+\]</span></li>
+<li>In the ideal 1D chain, only longitudinal modes are supported in the harmonic approximation; transverse restoring forces are absent in this model.</li>
+</ul>
+<!-- [Sólyom, Ch. 11.2.1, Eq. (11.2.14)–(11.2.15), pp. 340–341; Sólyom, Ch. 11.2.1 discussion of longitudinal/transverse modes, p. 341] -->
+</section>
+</section>
+<section id="diatomic-linear-chain" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="diatomic-linear-chain"><span class="header-section-number">7.4</span> Diatomic Linear Chain</h2>
+<p>We now place two atoms in each primitive cell: one of mass <span class="math inline">\(M_1\)</span> at position <span class="math inline">\(na\)</span>, and one of mass <span class="math inline">\(M_2\)</span> at position <span class="math inline">\(na+a/2\)</span>. Let their displacements in cell <span class="math inline">\(n\)</span> be <span class="math inline">\(u_n(t)\)</span> and <span class="math inline">\(v_n(t)\)</span>, respectively. As before, only nearest-neighbor couplings and longitudinal motion are retained.</p>
+<!-- [Sólyom, Ch. 11.2.2, pp. 341–345; Ibach–Lüth, Ch. 4.3, pp. 85–88] -->
+<div id="fig-diatomic-chain" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diatomic-chain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Ch. 11.2.2, Fig. 11.4, p. 341] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diatomic-chain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.4: <strong>Figure placeholder.</strong> Primitive cell and displacements of the diatomic linear chain, with masses <span class="math inline">\(M_1\)</span> and <span class="math inline">\(M_2\)</span> alternating along the chain.
+</figcaption>
+</figure>
+</div>
+<section id="harmonic-energy-and-equations-of-motion" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="harmonic-energy-and-equations-of-motion"><span class="header-section-number">7.4.1</span> Harmonic Energy and Equations of Motion</h3>
+<p>The harmonic potential energy is <span class="math display">\[
+U
+=
+\frac{K}{2}\sum_n (u_n-v_n)^2
++
+\frac{K}{2}\sum_n (v_n-u_{n+1})^2.
+\]</span></p>
+<p>The equations of motion are therefore <span class="math display">\[
+M_1\ddot u_n = -K(2u_n-v_n-v_{n-1}),
+\]</span> <span class="math display">\[
+M_2\ddot v_n = -K(2v_n-u_n-u_{n+1}).
+\]</span></p>
+<!-- [Sólyom, Ch. 11.2.2, Eq. (11.2.16)–(11.2.17), p. 342; Ibach–Lüth, Ch. 4.3, Eq. (4.9)–(4.11), pp. 84–85] -->
+</section>
+<section id="plane-wave-ansatz-and-2times-2-eigenvalue-problem" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="plane-wave-ansatz-and-2times-2-eigenvalue-problem"><span class="header-section-number">7.4.2</span> Plane-Wave Ansatz and <span class="math inline">\(2\times 2\)</span> Eigenvalue Problem</h3>
+<p>We use <span class="math display">\[
+u_n(t)=u(q)e^{i(qna-\omega t)},
+\qquad
+v_n(t)=v(q)e^{i(qna-\omega t)}.
+\]</span></p>
+<p>This gives <span class="math display">\[
+-\omega^2 M_1 u = -2Ku + K(1+e^{-iqa})v,
+\]</span> <span class="math display">\[
+-\omega^2 M_2 v = -2Kv + K(1+e^{iqa})u.
+\]</span></p>
+<p>Equivalently, <span class="math display">\[
+\begin{pmatrix}
+2K-M_1\omega^2 &amp; -K(1+e^{-iqa}) \\
+-K(1+e^{iqa}) &amp; 2K-M_2\omega^2
+\end{pmatrix}
+\begin{pmatrix}
+u\\
+v
+\end{pmatrix}
+=
+\begin{pmatrix}
+0\\
+0
+\end{pmatrix}.
+\]</span></p>
+<p>Nontrivial solutions exist only if the determinant vanishes.</p>
+<!-- [Sólyom, Ch. 11.2.2, Eq. (11.2.18)–(11.2.21), pp. 342–343] -->
+</section>
+<section id="acoustic-and-optical-branches" class="level3" data-number="7.4.3">
+<h3 data-number="7.4.3" class="anchored" data-anchor-id="acoustic-and-optical-branches"><span class="header-section-number">7.4.3</span> Acoustic and Optical Branches</h3>
+<p>Setting the determinant to zero yields two branches:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\omega_\pm^2(q)
+=
+\frac{K}{M_1M_2}
+\left[
+(M_1+M_2)
+\pm
+\sqrt{(M_1+M_2)^2-4M_1M_2\sin^2\frac{qa}{2}}
+\right].
+\]</span></p>
+</div>
+</div>
+</div>
+<p>There are now <strong>two</strong> frequencies for each allowed <span class="math inline">\(q\)</span>, because the primitive cell contains two dynamical degrees of freedom along the chain.</p>
+<!-- [Sólyom, Ch. 11.2.2, Eq. (11.2.22)–(11.2.24), p. 343; Ibach–Lüth, Ch. 4.3, Eq. (4.13)–(4.15), pp. 85–86] -->
+</section>
+<section id="zone-center-in-phase-and-out-of-phase-motion" class="level3" data-number="7.4.4">
+<h3 data-number="7.4.4" class="anchored" data-anchor-id="zone-center-in-phase-and-out-of-phase-motion"><span class="header-section-number">7.4.4</span> Zone Center: In-Phase and Out-of-Phase Motion</h3>
+<p>At <span class="math inline">\(q=0\)</span>, the off-diagonal coupling is maximal because <span class="math inline">\(1+e^{iqa}=2\)</span>. The amplitude ratio becomes <span class="math display">\[
+\frac{v(0)}{u(0)}
+=
+\begin{cases}
++1, &amp; \text{acoustic branch } \omega_-(q),\\
+-\dfrac{M_1}{M_2}, &amp; \text{optical branch } \omega_+(q).
+\end{cases}
+\]</span></p>
+<p>So:</p>
+<ul>
+<li>in the <strong>acoustic</strong> branch, the two atoms move in phase and the whole primitive cell is translated;</li>
+<li>in the <strong>optical</strong> branch, the two atoms move against each other and the center of mass remains fixed.</li>
+</ul>
+<p>Indeed, for the optical mode at <span class="math inline">\(q=0\)</span>, <span class="math display">\[
+M_1 u + M_2 v = 0.
+\]</span></p>
+<p>The zone-center optical frequency is <span class="math display">\[
+\omega_+(0)=\sqrt{2K\left(\frac{1}{M_1}+\frac{1}{M_2}\right)}.
+\]</span></p>
+<!-- [Sólyom, Ch. 11.2.2, Eq. (11.2.25)–(11.2.27), p. 343; Ibach–Lüth, Ch. 4.3, p. 86] -->
+</section>
+<section id="long-wavelength-acoustic-limit" class="level3" data-number="7.4.5">
+<h3 data-number="7.4.5" class="anchored" data-anchor-id="long-wavelength-acoustic-limit"><span class="header-section-number">7.4.5</span> Long-Wavelength Acoustic Limit</h3>
+<p>Expanding the lower branch for <span class="math inline">\(|qa|\ll 1\)</span> gives <span class="math display">\[
+\omega_-(q)\approx a|q|\sqrt{\frac{K}{2(M_1+M_2)}}.
+\]</span></p>
+<p>Thus the acoustic branch is again linear near <span class="math inline">\(q=0\)</span>, but the effective inertia is now set by the total mass in the primitive cell.</p>
+<!-- [Sólyom, Ch. 11.2.2, Eq. (11.2.25), p. 343] -->
+</section>
+<section id="zone-boundary-sublattice-selective-motion" class="level3" data-number="7.4.6">
+<h3 data-number="7.4.6" class="anchored" data-anchor-id="zone-boundary-sublattice-selective-motion"><span class="header-section-number">7.4.6</span> Zone Boundary: Sublattice-Selective Motion</h3>
+<p>At the Brillouin-zone boundary, <span class="math inline">\(q=\pi/a\)</span>, one has <span class="math display">\[
+1+e^{iqa}=1+e^{i\pi}=0,
+\]</span> so the two amplitudes decouple. The allowed frequencies are therefore <span class="math display">\[
+\omega^2=\frac{2K}{M_1}
+\qquad\text{or}\qquad
+\omega^2=\frac{2K}{M_2}.
+\]</span></p>
+<p>If <span class="math inline">\(M_1&gt;M_2\)</span>, then</p>
+<ul>
+<li>the lower-frequency branch is <span class="math display">\[
+\omega_-\left(\frac{\pi}{a}\right)=\sqrt{\frac{2K}{M_1}},
+\]</span> and only the heavier sublattice moves;</li>
+<li>the higher-frequency branch is <span class="math display">\[
+\omega_+\left(\frac{\pi}{a}\right)=\sqrt{\frac{2K}{M_2}},
+\]</span> and only the lighter sublattice moves.</li>
+</ul>
+<p>This is a very useful physical picture: at the zone edge, the normal modes can become localized on one sublattice.</p>
+<!-- [Sólyom, Ch. 11.2.2, Eq. (11.2.28), pp. 343–344; Sólyom, Ch. 11.2.2 discussion, p. 344; Ibach–Lüth, Ch. 4.3, p. 86] -->
+</section>
+<section id="why-the-terms-acoustic-and-optical-make-sense" class="level3" data-number="7.4.7">
+<h3 data-number="7.4.7" class="anchored" data-anchor-id="why-the-terms-acoustic-and-optical-make-sense"><span class="header-section-number">7.4.7</span> Why the Terms “Acoustic” and “Optical” Make Sense</h3>
+<p>The lower branch is called <strong>acoustic</strong> because it behaves like a sound wave in the long-wavelength limit: neighboring cells oscillate almost in phase and <span class="math inline">\(\omega_-(q)\to 0\)</span> as <span class="math inline">\(q\to 0\)</span>.</p>
+<p>The upper branch is called <strong>optical</strong> because its frequency remains finite at <span class="math inline">\(q=0\)</span> and, in ionic chains, the relative motion of oppositely charged sublattices produces a dipole moment that can couple to light.</p>
+<!-- [Sólyom, Ch. 11.2.2, pp. 343–344; Ibach–Lüth, Ch. 4.3, p. 86] -->
+<div id="fig-diatomic-dispersion" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diatomic-dispersion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Ch. 11.2.2, Fig. 11.5, p. 343] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diatomic-dispersion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.5: <strong>Figure placeholder.</strong> Acoustic and optical branches of the diatomic linear chain, showing the linear acoustic branch near <span class="math inline">\(q=0\)</span> and the finite optical frequency at the zone center.
+</figcaption>
+</figure>
+</div>
+<div id="fig-diatomic-mode-character" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diatomic-mode-character-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Ch. 11.2.2, Fig. 11.6, p. 344] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diatomic-mode-character-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.6: <strong>Figure placeholder.</strong> Mode character of the diatomic chain at the Brillouin-zone center and boundary: in-phase acoustic motion, out-of-phase optical motion, and the sublattice-selective zone-edge modes.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="interpretation-1" class="level3" data-number="7.4.8">
+<h3 data-number="7.4.8" class="anchored" data-anchor-id="interpretation-1"><span class="header-section-number">7.4.8</span> Interpretation</h3>
+<ul>
+<li>Two atoms per primitive cell <span class="math inline">\(\rightarrow\)</span> two longitudinal branches in this 1D model.</li>
+<li>The acoustic branch always lies below the optical branch for unequal masses.</li>
+<li>In the long-wavelength limit, the acoustic mode translates each cell almost rigidly.</li>
+<li>The optical mode describes internal motion of the basis.</li>
+</ul>
+</section>
+</section>
+<section id="bridge-to-the-next-lecture-from-allowed-q-values-to-a-density-of-states" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="bridge-to-the-next-lecture-from-allowed-q-values-to-a-density-of-states"><span class="header-section-number">7.5</span> Bridge to the Next Lecture: From Allowed <span class="math inline">\(q\)</span>-Values to a Density of States</h2>
+<p>The worked chains above do more than provide explicit dispersions. They also show how one passes from a discrete crystal to a continuum description in reciprocal space, which is the starting point for thermal calculations.</p>
+<!-- [Mode counting from Sólyom, Ch. 11.2.1–11.2.2, pp. 338–344; forward connection to Ibach–Lüth, Ch. 5.1, p. 112] -->
+<section id="step-1-count-the-allowed-q-values" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="step-1-count-the-allowed-q-values"><span class="header-section-number">7.5.1</span> Step 1: Count the Allowed <span class="math inline">\(q\)</span>-Values</h3>
+<p>For a chain of length <span class="math inline">\(L=Na\)</span> with periodic boundary conditions, <span class="math display">\[
+q_j=\frac{2\pi j}{L}.
+\]</span></p>
+<p>Hence the spacing between neighboring wavevectors is <span class="math display">\[
+\Delta q = \frac{2\pi}{L}.
+\]</span></p>
+<p>So in the large-<span class="math inline">\(N\)</span> limit, the number of states in an interval <span class="math inline">\(dq\)</span> is <span class="math display">\[
+\frac{dq}{\Delta q}=\frac{L}{2\pi},dq.
+\]</span></p>
+<p>For each branch, this is the fundamental counting rule that converts sums over discrete <span class="math inline">\(q\)</span> into integrals: <span class="math display">\[
+\sum_q f(q)
+\longrightarrow
+\frac{L}{2\pi}\int_{\mathrm{BZ}} f(q),dq.
+\]</span></p>
+<p>For an even dispersion, one often writes instead <span class="math display">\[
+\sum_q f(q)
+\longrightarrow
+\frac{L}{\pi}\int_{0}^{\pi/a} f(q),dq.
+\]</span></p>
+</section>
+<section id="step-2-convert-mode-counting-from-q-to-omega" class="level3" data-number="7.5.2">
+<h3 data-number="7.5.2" class="anchored" data-anchor-id="step-2-convert-mode-counting-from-q-to-omega"><span class="header-section-number">7.5.2</span> Step 2: Convert Mode Counting from <span class="math inline">\(q\)</span> to <span class="math inline">\(\omega\)</span></h3>
+<p>Suppose a branch <span class="math inline">\(\lambda\)</span> has dispersion <span class="math inline">\(\omega_\lambda(q)\)</span>. Then the density of states of that branch is defined by <span class="math display">\[
+g_\lambda(\omega)=\sum_q \delta \left(\omega-\omega_\lambda(q)\right).
+\]</span></p>
+<p>In the continuum limit, <span class="math display">\[
+g_\lambda(\omega)
+=
+\frac{L}{2\pi}
+\sum_{q_i(\omega)}
+\left|
+\frac{d\omega_\lambda}{dq}
+\right|_{q_i}^{-1},
+\]</span> where the sum runs over all wavevectors <span class="math inline">\(q_i\)</span> that satisfy <span class="math inline">\(\omega_\lambda(q_i)=\omega\)</span>.</p>
+<p>Thus the density of states is controlled by the <strong>inverse slope</strong> of the dispersion. Equivalently, <span class="math display">\[
+g_\lambda(\omega)\propto \left|\frac{dq}{d\omega}\right|.
+\]</span></p>
+<p>This is the central logic: <span class="math display">\[
+\boxed{\text{mode counting in }q}
+\rightarrow
+\boxed{\omega(q)}
+\rightarrow
+\boxed{g(\omega)}.
+\]</span></p>
+</section>
+<section id="step-3-monatomic-chain-example" class="level3" data-number="7.5.3">
+<h3 data-number="7.5.3" class="anchored" data-anchor-id="step-3-monatomic-chain-example"><span class="header-section-number">7.5.3</span> Step 3: Monatomic-Chain Example</h3>
+<p>For the monatomic chain, <span class="math display">\[
+\omega(q)=2\sqrt{\frac{K}{M}}\left|\sin\frac{qa}{2}\right|,
+\qquad
+\omega_{\max}=2\sqrt{\frac{K}{M}}.
+\]</span></p>
+<p>For <span class="math inline">\(0&lt;\omega&lt;\omega_{\max}\)</span> there are two solutions, <span class="math inline">\(\pm q\)</span>, with <span class="math display">\[
+q(\omega)=\frac{2}{a}\arcsin!\left(\frac{\omega}{\omega_{\max}}\right).
+\]</span></p>
+<p>Therefore <span class="math display">\[
+\left|\frac{dq}{d\omega}\right|
+=
+\frac{2}{a\omega_{\max}}
+\frac{1}{\sqrt{1-(\omega/\omega_{\max})^2}},
+\]</span> and the density of states becomes</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+g(\omega)
+=
+\frac{2L}{\pi a\omega_{\max}}
+\frac{1}{\sqrt{1-(\omega/\omega_{\max})^2}}
+\qquad
+(0&lt;\omega&lt;\omega_{\max}).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>The divergence at <span class="math inline">\(\omega=\omega_{\max}\)</span> occurs because <span class="math display">\[
+v_g=\frac{d\omega}{dq}\to 0
+\]</span> at the Brillouin-zone edge. In one dimension this is the simplest example of a <strong>van Hove singularity</strong>.</p>
+</section>
+<section id="what-carries-over-to-more-general-lattices" class="level3" data-number="7.5.4">
+<h3 data-number="7.5.4" class="anchored" data-anchor-id="what-carries-over-to-more-general-lattices"><span class="header-section-number">7.5.4</span> What Carries Over to More General Lattices?</h3>
+<p>The same logic survives in higher dimensions and with multiple branches:</p>
+<ol type="1">
+<li>count the allowed <span class="math inline">\(\mathbf q\)</span> values,</li>
+<li>determine the dispersion <span class="math inline">\(\omega_\lambda(\mathbf q)\)</span>,</li>
+<li>convert the counting measure in <span class="math inline">\(\mathbf q\)</span>-space into a density in frequency space,</li>
+<li>sum over branches.</li>
+</ol>
+<p>This is the handoff to the next stage of the course: once the normal modes are quantized and a density of states is known, thermal quantities such as internal energy and heat capacity can be computed systematically.</p>
+</section>
+</section>
+<section id="optional-appendix-equal-mass-limit-and-band-folding" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="optional-appendix-equal-mass-limit-and-band-folding"><span class="header-section-number">7.6</span> Optional / Appendix: Equal-Mass Limit and Band Folding</h2>
+<details>
+<summary>
+Open optional appendix
+</summary>
+<p>If the two masses become equal, <span class="math inline">\(M_1=M_2=M\)</span>, the diatomic-chain result reduces to <span class="math display">\[
+\omega_\pm^2(q)=\frac{2K}{M}\left[1\pm \cos\frac{qa}{2}\right].
+\]</span></p>
+<p>Thus one may write <span class="math display">\[
+\omega_{\mathrm{ac}}(q)=2\sqrt{\frac{K}{M}}\left|\sin\frac{qa}{4}\right|,
+\qquad
+\omega_{\mathrm{op}}(q)=2\sqrt{\frac{K}{M}}\left|\cos\frac{qa}{4}\right|.
+\]</span></p>
+<p>The apparent “optical” branch is then not a genuinely new branch. The true primitive cell has length <span class="math inline">\(a/2\)</span>, so the true Brillouin-zone edge is at <span class="math inline">\(2\pi/a\)</span>, not <span class="math inline">\(\pi/a\)</span>. In the smaller Brillouin zone associated with period <span class="math inline">\(a\)</span>, the monatomic dispersion is simply <strong>folded back</strong> and appears as two branches.</p>
+<p>This is a useful reminder that branch counting must always be done with the <strong>smallest primitive cell</strong>.</p>
+<!-- [Sólyom, Ch. 11.2.2, Eq. (11.2.29)–(11.2.30), pp. 344–345; Sólyom, Ch. 11.2.2 discussion of the true primitive cell, p. 345] -->
+</details>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Take-Home Messages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The monatomic linear chain has one longitudinal acoustic branch with a finite Brillouin-zone cutoff.</li>
+<li>Restricting <span class="math inline">\(q\)</span> to the first Brillouin zone is not a loss of information; wavevectors that differ by a reciprocal-lattice vector represent the same lattice displacement pattern.</li>
+<li>The long-wavelength part of the monatomic dispersion is linear and defines the sound speed.</li>
+<li>The group velocity is the slope of the dispersion and vanishes at the zone boundary.</li>
+<li>A diatomic primitive cell produces two branches: one acoustic and one optical.</li>
+<li>At the zone center, the acoustic mode translates the cell, whereas the optical mode describes internal motion of the basis.</li>
+<li>At the zone boundary of the diatomic chain, the normal modes can become confined to one sublattice.</li>
+<li>The density of states follows from counting allowed <span class="math inline">\(q\)</span>-values and transforming that counting through the dispersion relation.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="problem-set" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">7.7</span> Problem Set</h2>
+<ol type="1">
+<li><p><strong>Monatomic chain: dispersion and sound speed.</strong> Starting from <span class="math display">\[
+U=\frac{K}{2}\sum_n (u_{n+1}-u_n)^2,
+\]</span> derive the equation of motion of the monatomic chain, insert the plane-wave ansatz <span class="math display">\[
+u_n(t)=u(q)e^{i(qna-\omega t)},
+\]</span> and obtain the dispersion relation. Then determine the sound speed from the long-wavelength limit.</p></li>
+<li><p><strong>Allowed wavevectors and Brillouin-zone restriction.</strong> For a monatomic chain of length <span class="math inline">\(L=Na\)</span> with periodic boundary conditions, derive the allowed values of <span class="math inline">\(q\)</span>. Show explicitly that <span class="math inline">\(q\)</span> and <span class="math inline">\(q+2\pi/a\)</span> generate the same displacement pattern on the lattice sites, and explain why one may restrict <span class="math inline">\(q\)</span> to the first Brillouin zone.</p></li>
+<li><p><strong>Diatomic chain: branch structure and mode character.</strong> Starting from <span class="math display">\[
+U
+=
+\frac{K}{2}\sum_n (u_n-v_n)^2
++
+\frac{K}{2}\sum_n (v_n-u_{n+1})^2,
+\]</span> derive the coupled equations of motion and the two branches <span class="math inline">\(\omega_\pm(q)\)</span>. Then determine the amplitude ratio <span class="math inline">\(v/u\)</span> at <span class="math inline">\(q=0\)</span> and explain the physical meaning of each branch.</p></li>
+<li><p><strong>From dispersion to density of states.</strong> Use the allowed-<span class="math inline">\(q\)</span> counting for the monatomic chain to derive the density of states <span class="math display">\[
+g(\omega)
+=
+\frac{L}{2\pi}
+\sum_{q_i(\omega)}
+\left|
+\frac{d\omega}{dq}
+\right|^{-1}_{q_i}.
+\]</span> Evaluate this explicitly for the monatomic-chain dispersion and identify the frequency at which the density of states diverges.</p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

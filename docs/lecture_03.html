@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -227,8 +256,47 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">3.1</span> Roadmap</a></li>
+  <li><a href="#from-translational-order-to-crystal-structure" id="toc-from-translational-order-to-crystal-structure" class="nav-link" data-scroll-target="#from-translational-order-to-crystal-structure"><span class="header-section-number">3.2</span> From Translational Order to Crystal Structure</a>
+  <ul class="collapse">
+  <li><a href="#basis-and-atomic-positions" id="toc-basis-and-atomic-positions" class="nav-link" data-scroll-target="#basis-and-atomic-positions"><span class="header-section-number">3.2.1</span> Basis and Atomic Positions</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">3.2.2</span> Interpretation</a></li>
+  </ul></li>
+  <li><a href="#primitive-conventional-and-wignerseitz-cells" id="toc-primitive-conventional-and-wignerseitz-cells" class="nav-link" data-scroll-target="#primitive-conventional-and-wignerseitz-cells"><span class="header-section-number">3.3</span> Primitive, Conventional, and Wigner–Seitz Cells</a>
+  <ul class="collapse">
+  <li><a href="#primitive-cell" id="toc-primitive-cell" class="nav-link" data-scroll-target="#primitive-cell"><span class="header-section-number">3.3.1</span> Primitive Cell</a></li>
+  <li><a href="#wignerseitz-cell" id="toc-wignerseitz-cell" class="nav-link" data-scroll-target="#wignerseitz-cell"><span class="header-section-number">3.3.2</span> Wigner–Seitz Cell</a></li>
+  <li><a href="#conventional-cell" id="toc-conventional-cell" class="nav-link" data-scroll-target="#conventional-cell"><span class="header-section-number">3.3.3</span> Conventional Cell</a></li>
+  <li><a href="#counting-lattice-points-in-cubic-conventional-cells" id="toc-counting-lattice-points-in-cubic-conventional-cells" class="nav-link" data-scroll-target="#counting-lattice-points-in-cubic-conventional-cells"><span class="header-section-number">3.3.4</span> Counting Lattice Points in Cubic Conventional Cells</a></li>
+  </ul></li>
+  <li><a href="#crystal-systems-and-the-14-bravais-lattice-types" id="toc-crystal-systems-and-the-14-bravais-lattice-types" class="nav-link" data-scroll-target="#crystal-systems-and-the-14-bravais-lattice-types"><span class="header-section-number">3.4</span> Crystal Systems and the 14 Bravais-Lattice Types</a></li>
+  <li><a href="#common-elemental-structure-types-in-real-space" id="toc-common-elemental-structure-types-in-real-space" class="nav-link" data-scroll-target="#common-elemental-structure-types-in-real-space"><span class="header-section-number">3.5</span> Common Elemental Structure Types in Real Space</a>
+  <ul class="collapse">
+  <li><a href="#simple-cubic-body-centered-cubic-and-face-centered-cubic" id="toc-simple-cubic-body-centered-cubic-and-face-centered-cubic" class="nav-link" data-scroll-target="#simple-cubic-body-centered-cubic-and-face-centered-cubic"><span class="header-section-number">3.5.1</span> Simple Cubic, Body-Centered Cubic, and Face-Centered Cubic</a></li>
+  <li><a href="#hexagonal-close-packed" id="toc-hexagonal-close-packed" class="nav-link" data-scroll-target="#hexagonal-close-packed"><span class="header-section-number">3.5.2</span> Hexagonal Close Packed</a></li>
+  </ul></li>
+  <li><a href="#common-binary-prototypes-why-chemistry-does-not-fix-the-structure" id="toc-common-binary-prototypes-why-chemistry-does-not-fix-the-structure" class="nav-link" data-scroll-target="#common-binary-prototypes-why-chemistry-does-not-fix-the-structure"><span class="header-section-number">3.6</span> Common Binary Prototypes: Why Chemistry Does Not Fix the Structure</a>
+  <ul class="collapse">
+  <li><a href="#a-comparison-table" id="toc-a-comparison-table" class="nav-link" data-scroll-target="#a-comparison-table"><span class="header-section-number">3.6.1</span> A Comparison Table</a></li>
+  <li><a href="#cesium-chloride" id="toc-cesium-chloride" class="nav-link" data-scroll-target="#cesium-chloride"><span class="header-section-number">3.6.2</span> Cesium Chloride</a></li>
+  <li><a href="#rock-salt-and-fluorite" id="toc-rock-salt-and-fluorite" class="nav-link" data-scroll-target="#rock-salt-and-fluorite"><span class="header-section-number">3.6.3</span> Rock-Salt and Fluorite</a></li>
+  <li><a href="#diamond-and-zincblende" id="toc-diamond-and-zincblende" class="nav-link" data-scroll-target="#diamond-and-zincblende"><span class="header-section-number">3.6.4</span> Diamond and Zincblende</a></li>
+  </ul></li>
+  <li><a href="#why-the-basis-matters-prelude-to-optical-modes-and-selection-rules" id="toc-why-the-basis-matters-prelude-to-optical-modes-and-selection-rules" class="nav-link" data-scroll-target="#why-the-basis-matters-prelude-to-optical-modes-and-selection-rules"><span class="header-section-number">3.7</span> Why the Basis Matters: Prelude to Optical Modes and Selection Rules</a>
+  <ul class="collapse">
+  <li><a href="#basis-and-degrees-of-freedom" id="toc-basis-and-degrees-of-freedom" class="nav-link" data-scroll-target="#basis-and-degrees-of-freedom"><span class="header-section-number">3.7.1</span> Basis and Degrees of Freedom</a></li>
+  <li><a href="#basis-diffraction-and-selection-rules" id="toc-basis-diffraction-and-selection-rules" class="nav-link" data-scroll-target="#basis-diffraction-and-selection-rules"><span class="header-section-number">3.7.2</span> Basis, Diffraction, and Selection Rules</a></li>
+  <li><a href="#why-todays-cell-choices-matter-for-the-next-lecture" id="toc-why-todays-cell-choices-matter-for-the-next-lecture" class="nav-link" data-scroll-target="#why-todays-cell-choices-matter-for-the-next-lecture"><span class="header-section-number">3.7.3</span> Why Today’s Cell Choices Matter for the Next Lecture</a></li>
+  </ul></li>
+  <li><a href="#bridge-to-the-next-lecture" id="toc-bridge-to-the-next-lecture" class="nav-link" data-scroll-target="#bridge-to-the-next-lecture"><span class="header-section-number">3.8</span> Bridge to the Next Lecture</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">3.9</span> Problem Set</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -257,8 +325,677 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </div>
 </div>
+<section id="roadmap" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="roadmap"><span class="header-section-number">3.1</span> Roadmap</h2>
+<ul>
+<li>From translational order to the Bravais lattice.</li>
+<li>Basis and atomic coordinates: what a crystal structure really is.</li>
+<li>Primitive versus conventional versus Wigner–Seitz cells.</li>
+<li>Crystal systems and Bravais-lattice types in three dimensions.</li>
+<li>Common elemental and binary structure types in real space.</li>
+<li>Bridge to the next lecture: why the basis matters for optical modes and selection rules.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 78%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf a_i\)</span></td>
+<td>primitive translation vectors of the direct lattice</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf R_n\)</span></td>
+<td>Bravais-lattice vector</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf r_\mu\)</span></td>
+<td>position of atom <span class="math inline">\(\mu\)</span> within the basis</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf r_{n\mu}\)</span></td>
+<td>position of atom <span class="math inline">\(\mu\)</span> in cell <span class="math inline">\(n\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(p\)</span></td>
+<td>number of atoms in the basis (atoms per primitive cell)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(a,b,c\)</span></td>
+<td>edge lengths of the conventional cell</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\alpha,\beta,\gamma\)</span></td>
+<td>conventional-cell angles</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(c/a\)</span></td>
+<td>axial ratio in hexagonal structures</td>
+</tr>
+<tr class="odd">
+<td>SC, BCC, FCC, HCP</td>
+<td>simple cubic, body-centered cubic, face-centered cubic, hexagonal close packed</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="from-translational-order-to-crystal-structure" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="from-translational-order-to-crystal-structure"><span class="header-section-number">3.2</span> From Translational Order to Crystal Structure</h2>
+<p>A crystalline solid is characterized by <strong>discrete translational symmetry</strong> in three linearly independent directions. Choosing primitive vectors <span class="math inline">\(\mathbf a_1\)</span>, <span class="math inline">\(\mathbf a_2\)</span>, and <span class="math inline">\(\mathbf a_3\)</span>, every lattice translation is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf R_n
+=
+n_1 \mathbf a_1 + n_2 \mathbf a_2 + n_3 \mathbf a_3,
+\qquad
+n_1,n_2,n_3 \in \mathbb Z .
+\]</span></p>
+</div>
+</div>
+</div>
+<p>The set of all points <span class="math inline">\(\mathbf R_n\)</span> is the <strong>Bravais lattice</strong>.</p>
+<!-- [Sólyom–Piróth I, Sec. 5.1.1, Eq. (5.1.1), p. 110; Sec. 5.1.3, Eq. (5.1.4), p. 113] -->
+<p>The Bravais lattice is deliberately empty: it records only the translational skeleton. To obtain the actual crystal, we must attach a repeating group of atoms to every lattice point.</p>
+<section id="basis-and-atomic-positions" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="basis-and-atomic-positions"><span class="header-section-number">3.2.1</span> Basis and Atomic Positions</h3>
+<p>If the basis contains <span class="math inline">\(p\)</span> atoms at internal positions <span class="math inline">\(\mathbf r_\mu\)</span> with <span class="math inline">\(\mu=1,\dots,p\)</span>, then the actual atomic positions are</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf r_{n\mu}
+=
+\mathbf R_n + \mathbf r_\mu,
+\qquad
+\mu = 1,\dots,p .
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Thus:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Crystal structure</strong> <span class="math inline">\(=\)</span> <strong>Bravais lattice</strong> <span class="math inline">\(+\)</span> <strong>basis</strong>.</p>
+</div>
+</div>
+</div>
+<!-- [Sólyom–Piróth I, Sec. 5.1.3, pp. 113–114] -->
+<p>This distinction is fundamental.</p>
+<ul>
+<li>A <strong>monatomic Bravais lattice</strong> has <span class="math inline">\(p=1\)</span>.</li>
+<li>A <strong>polyatomic crystal</strong> has <span class="math inline">\(p&gt;1\)</span>.</li>
+<li>A crystal can be made of a single chemical element and still require <span class="math inline">\(p&gt;1\)</span>; diamond is the standard example.</li>
+</ul>
+</section>
+<section id="interpretation" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">3.2.2</span> Interpretation</h3>
+<ol type="1">
+<li><p><strong>Same Bravais lattice, different basis <span class="math inline">\(\rightarrow\)</span> different structures.</strong> The translational symmetry may be identical while the local geometry changes completely.</p></li>
+<li><p><strong>Not every visually regular net is a Bravais lattice.</strong> The honeycomb arrangement is not a Bravais lattice; it is a triangular Bravais lattice plus a two-point basis.</p></li>
+<li><p><strong>Chemistry alone does not determine the Bravais lattice.</strong> The same stoichiometry <span class="math inline">\(AB\)</span> can appear in different prototype structures.</p></li>
+</ol>
+<div id="fig-bravais-basis" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bravais-basis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Sec. 5.1.3, Figs. 5.4–5.5, pp. 114–115] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bravais-basis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: <strong>Figure placeholder.</strong> Examples showing that honeycomb and kagome nets require a basis, and that different crystal structures may share the same underlying Bravais lattice.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="primitive-conventional-and-wignerseitz-cells" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="primitive-conventional-and-wignerseitz-cells"><span class="header-section-number">3.3</span> Primitive, Conventional, and Wigner–Seitz Cells</h2>
+<section id="primitive-cell" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="primitive-cell"><span class="header-section-number">3.3.1</span> Primitive Cell</h3>
+<p>A <strong>primitive cell</strong> is any region of space that contains exactly one lattice point and tiles all space by translation through the Bravais-lattice vectors.</p>
+<!-- [Sólyom–Piróth I, Sec. 5.1.4, pp. 115–117] -->
+<p>The primitive cell is not unique. The simplest algebraic choice is often the parallelepiped spanned by <span class="math inline">\(\mathbf a_1\)</span>, <span class="math inline">\(\mathbf a_2\)</span>, and <span class="math inline">\(\mathbf a_3\)</span>.</p>
+</section>
+<section id="wignerseitz-cell" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="wignerseitz-cell"><span class="header-section-number">3.3.2</span> Wigner–Seitz Cell</h3>
+<p>A particularly symmetric primitive cell is obtained by Dirichlet construction: the region closer to a given lattice point than to any other. This is the <strong>Wigner–Seitz cell</strong>.</p>
+<!-- [Sólyom–Piróth I, Sec. 5.1.4, pp. 116–117] -->
+<p>It is often the best cell for visualizing local coordination, even though it is geometrically less simple than the primitive parallelepiped.</p>
+</section>
+<section id="conventional-cell" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="conventional-cell"><span class="header-section-number">3.3.3</span> Conventional Cell</h3>
+<p>A <strong>conventional cell</strong> is chosen to make the visible symmetry of the lattice manifest. It may contain more than one lattice point and therefore need not be primitive.</p>
+<!-- [Sólyom–Piróth I, Sec. 5.1.4, pp. 117–118] -->
+<p>This is why BCC and FCC are routinely drawn as cubes, even though their primitive cells are not cubic.</p>
+</section>
+<section id="counting-lattice-points-in-cubic-conventional-cells" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="counting-lattice-points-in-cubic-conventional-cells"><span class="header-section-number">3.3.4</span> Counting Lattice Points in Cubic Conventional Cells</h3>
+<p>For the cubic conventional cells, the counting is immediate:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+N_{\mathrm{lp}}^{\mathrm{SC}}
+=8 \times \frac18
+=1,
+\]</span></p>
+<p><span class="math display">\[
+N_{\mathrm{lp}}^{\mathrm{BCC}}
+=8 \times \frac18 + 1
+=2,
+\]</span></p>
+<p><span class="math display">\[
+N_{\mathrm{lp}}^{\mathrm{FCC}}
+=
+8 \times \frac18 + 6 \times \frac12
+=4.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(N_{\mathrm{lp}}\)</span> is the number of lattice points in the conventional cell.</p>
+<p>This is the geometric reason for the Pearson symbols</p>
+<ul>
+<li>SC: <span class="math inline">\(cP1\)</span> for a monatomic structure,</li>
+<li>BCC: <span class="math inline">\(cI2\)</span> for a monatomic structure,</li>
+<li>FCC: <span class="math inline">\(cF4\)</span> for a monatomic structure.</li>
+</ul>
+<!-- [Sólyom–Piróth I, Sec. 7.1, Table 7.1, pp. 204–205; Secs. 7.2.1–7.2.3, pp. 206–216] -->
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Important Distinction.</strong> A BCC crystal with one atom type is a Bravais lattice. The CsCl structure is <strong>not</strong> that Bravais lattice: once the corner and body-center sites are occupied by different species, the translation by half the body diagonal is no longer a symmetry of the decorated crystal.</p>
+</div>
+</div>
+<div id="fig-cells" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cells-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Sec. 5.1.4, Fig. 5.8, p. 117; Sec. 7.2.2, Fig. 7.6, p. 211; Sec. 7.2.3, Fig. 7.10, p. 215] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cells-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: <strong>Figure placeholder.</strong> Primitive, conventional, and Wigner–Seitz cells in representative two- and three-dimensional cases, including BCC and FCC where the conventional cubic cell is not primitive.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="crystal-systems-and-the-14-bravais-lattice-types" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="crystal-systems-and-the-14-bravais-lattice-types"><span class="header-section-number">3.4</span> Crystal Systems and the 14 Bravais-Lattice Types</h2>
+<p>Today we organize three-dimensional lattices by the <strong>metric relations</strong> of the conventional cell. The full symmetry classification will be developed in the next lecture.</p>
+<!-- [Sólyom–Piróth I, Secs. 5.4.3–5.4.5, Table 5.7 and Fig. 5.23, pp. 140–151] -->
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Crystal System</th>
+<th>Metric Relations of the Conventional Cell</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>triclinic</td>
+<td><span class="math inline">\(a \neq b \neq c\)</span>, <span class="math inline">\(\alpha \neq \beta \neq \gamma\)</span></td>
+</tr>
+<tr class="even">
+<td>monoclinic</td>
+<td><span class="math inline">\(a \neq b \neq c\)</span>, <span class="math inline">\(\alpha = \gamma = 90^\circ \neq \beta\)</span></td>
+</tr>
+<tr class="odd">
+<td>orthorhombic</td>
+<td><span class="math inline">\(a \neq b \neq c\)</span>, <span class="math inline">\(\alpha = \beta = \gamma = 90^\circ\)</span></td>
+</tr>
+<tr class="even">
+<td>tetragonal</td>
+<td><span class="math inline">\(a=b\neq c\)</span>, <span class="math inline">\(\alpha = \beta = \gamma = 90^\circ\)</span></td>
+</tr>
+<tr class="odd">
+<td>rhombohedral</td>
+<td><span class="math inline">\(a=b=c\)</span>, <span class="math inline">\(\alpha = \beta = \gamma \neq 90^\circ\)</span></td>
+</tr>
+<tr class="even">
+<td>hexagonal</td>
+<td><span class="math inline">\(a=b\neq c\)</span>, <span class="math inline">\(\alpha = \beta = 90^\circ\)</span>, <span class="math inline">\(\gamma = 120^\circ\)</span></td>
+</tr>
+<tr class="odd">
+<td>cubic</td>
+<td><span class="math inline">\(a=b=c\)</span>, <span class="math inline">\(\alpha = \beta = \gamma = 90^\circ\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The seven crystal systems support the 14 Bravais-lattice types once the allowed centerings are included. The centering symbols are:</p>
+<ul>
+<li><span class="math inline">\(P\)</span>: primitive,</li>
+<li><span class="math inline">\(C\)</span>: base-centered,</li>
+<li><span class="math inline">\(I\)</span>: body-centered,</li>
+<li><span class="math inline">\(F\)</span>: face-centered,</li>
+<li><span class="math inline">\(R\)</span>: rhombohedral.</li>
+</ul>
+<p>The physically important point for this lecture is that the <strong>same crystal system does not imply the same Bravais lattice</strong>, and the <strong>same Bravais lattice does not imply the same crystal structure</strong>.</p>
+<div id="fig-bravais-14" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bravais-14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Sec. 5.4.5, Fig. 5.23, pp. 150–151] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bravais-14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.3: <strong>Figure placeholder.</strong> The 14 three-dimensional Bravais-lattice types arranged by crystal system.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="common-elemental-structure-types-in-real-space" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="common-elemental-structure-types-in-real-space"><span class="header-section-number">3.5</span> Common Elemental Structure Types in Real Space</h2>
+<p>The most common elemental structures are a small subset of all possibilities. In particular, the cubic structures <span class="math inline">\(cI2\)</span> and <span class="math inline">\(cF4\)</span> and the hexagonal close-packed structures <span class="math inline">\(hP2\)</span> and <span class="math inline">\(hP4\)</span> dominate among the elements.</p>
+<!-- [Sólyom–Piróth I, Sec. 7.1, pp. 203–205] -->
+<section id="simple-cubic-body-centered-cubic-and-face-centered-cubic" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="simple-cubic-body-centered-cubic-and-face-centered-cubic"><span class="header-section-number">3.5.1</span> Simple Cubic, Body-Centered Cubic, and Face-Centered Cubic</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 36%">
+<col style="width: 12%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Structure</th>
+<th>Pearson Symbol</th>
+<th>Real-Space Description</th>
+<th>Coordination Number</th>
+<th>Typical Lesson</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SC</td>
+<td><span class="math inline">\(cP1\)</span></td>
+<td>simple cubic Bravais lattice with one-atom basis</td>
+<td><span class="math inline">\(6\)</span></td>
+<td>pedagogically simple but relatively open packing</td>
+</tr>
+<tr class="even">
+<td>BCC</td>
+<td><span class="math inline">\(cI2\)</span></td>
+<td>body-centered cubic Bravais lattice with one-atom basis</td>
+<td><span class="math inline">\(8\)</span></td>
+<td>conventional cubic cell is nonprimitive</td>
+</tr>
+<tr class="odd">
+<td>FCC</td>
+<td><span class="math inline">\(cF4\)</span></td>
+<td>face-centered cubic Bravais lattice with one-atom basis</td>
+<td><span class="math inline">\(12\)</span></td>
+<td>close packed; conventional cubic cell is nonprimitive</td>
+</tr>
+</tbody>
+</table>
+<!-- [Sólyom–Piróth I, Secs. 7.2.1–7.2.3, pp. 206–218] -->
+<p>A few essential geometric facts:</p>
+<ul>
+<li><strong>SC</strong> is the simplest translational arrangement, but it packs poorly.</li>
+<li><strong>BCC</strong> can be viewed as two interpenetrating simple-cubic sublattices displaced by half the body diagonal. For the monatomic case this is still a Bravais lattice.</li>
+<li><strong>FCC</strong> can be viewed as close-packed <span class="math inline">\((111)\)</span> planes stacked in the sequence <span class="math inline">\(ABCABC\ldots\)</span>.</li>
+</ul>
+<!-- [Sólyom–Piróth I, Sec. 7.2.2, pp. 211–213; Sec. 7.2.3, pp. 215–217] -->
+</section>
+<section id="hexagonal-close-packed" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="hexagonal-close-packed"><span class="header-section-number">3.5.2</span> Hexagonal Close Packed</h3>
+<p>The hexagonal close-packed structure is different in an important way: it is <strong>not</strong> a Bravais lattice by itself. Rather, it is a <strong>hexagonal Bravais lattice plus a two-atom basis</strong>.</p>
+<p>A convenient description uses fractional coordinates in the hexagonal cell:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\left(\frac23,\frac13,0\right),
+\qquad
+\left(\frac13,\frac23,\frac12\right).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Its close-packed layers stack as</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+ABAB\ldots
+\]</span></p>
+</div>
+</div>
+</div>
+<p>and the ideal close-packing ratio is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\frac{c}{a}
+=
+\sqrt{\frac{8}{3}}
+\approx 1.633 .
+\]</span></p>
+</div>
+</div>
+</div>
+<!-- [Sólyom–Piróth I, Sec. 7.3, Eqs. (7.3.7)–(7.3.8), pp. 224–227] -->
+<p>HCP and FCC therefore share two conspicuous real-space features:</p>
+<ul>
+<li>coordination number <span class="math inline">\(12\)</span>,</li>
+<li>equal close-packing efficiency for equal hard spheres.</li>
+</ul>
+<p>But they differ in their <strong>stacking sequence</strong> and hence in their translational symmetry.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Another Important Distinction.</strong> FCC is a Bravais lattice. HCP has the same local close packing, but it requires a two-atom basis and therefore is not a Bravais lattice.</p>
+</div>
+</div>
+<div id="fig-close-packing" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-close-packing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Sec. 7.2.3, Fig. 7.12, p. 217; Sec. 7.3, Figs. 7.18 and 7.20, pp. 224–227] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-close-packing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.4: <strong>Figure placeholder.</strong> Close-packed stacking in FCC and HCP, emphasizing the difference between <span class="math inline">\(ABCABC\ldots\)</span> and <span class="math inline">\(ABAB\ldots\)</span> sequences.
+</figcaption>
+</figure>
+</div>
+<details>
+<summary>
+Optional / Appendix: Ideal Geometry of the HCP Ratio
+</summary>
+<p>Treat the atoms as touching spheres of radius <span class="math inline">\(r\)</span>. In the close-packed basal plane the nearest-neighbor spacing is</p>
+<p><span class="math display">\[
+a = 2r.
+\]</span></p>
+<p>The atom in the next layer sits above the center of an equilateral triangle of side <span class="math inline">\(2r\)</span>. The four centers form a regular tetrahedron of edge <span class="math inline">\(2r\)</span>, so the layer spacing is the tetrahedron height,</p>
+<p><span class="math display">\[
+h = \sqrt{\frac{2}{3}}(2r)=\sqrt{\frac{8}{3}} r.
+\]</span></p>
+<p>Since the hexagonal repeat contains two such spacings,</p>
+<p><span class="math display">\[
+c = 2h = 2\sqrt{\frac{8}{3}} r.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\frac{c}{a}
+= \frac{2\sqrt{\frac{8}{3}} r}{2r}
+= \sqrt{\frac{8}{3}} .
+\]</span></p>
+<!-- [Sólyom–Piróth I, Sec. 7.3, pp. 225–226] -->
+</details>
+</section>
+</section>
+<section id="common-binary-prototypes-why-chemistry-does-not-fix-the-structure" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="common-binary-prototypes-why-chemistry-does-not-fix-the-structure"><span class="header-section-number">3.6</span> Common Binary Prototypes: Why Chemistry Does Not Fix the Structure</h2>
+<p>The same idea now becomes more interesting: once different species occupy different internal positions, the basis becomes physically decisive.</p>
+<section id="a-comparison-table" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="a-comparison-table"><span class="header-section-number">3.6.1</span> A Comparison Table</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 6%">
+<col style="width: 11%">
+<col style="width: 31%">
+<col style="width: 12%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Prototype</th>
+<th>Pearson Symbol</th>
+<th>Underlying Bravais Lattice</th>
+<th>Real-Space Occupancy</th>
+<th>Coordination</th>
+<th>Structural Lesson</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CsCl</td>
+<td><span class="math inline">\(cP2\)</span></td>
+<td>simple cubic</td>
+<td>one species at corners, the other at body center</td>
+<td><span class="math inline">\(8\)</span> and <span class="math inline">\(8\)</span></td>
+<td>different species can turn a would-be BCC geometry into SC + basis</td>
+</tr>
+<tr class="even">
+<td>NaCl</td>
+<td><span class="math inline">\(cF8\)</span></td>
+<td>FCC</td>
+<td>one species on FCC sites, the other on octahedral sites</td>
+<td><span class="math inline">\(6\)</span> and <span class="math inline">\(6\)</span></td>
+<td>same Bravais lattice as FCC, different basis and coordination</td>
+</tr>
+<tr class="odd">
+<td>fluorite</td>
+<td><span class="math inline">\(cF12\)</span></td>
+<td>FCC</td>
+<td>cations on FCC sites, anions on tetrahedral sites</td>
+<td><span class="math inline">\(8\)</span> for cation, <span class="math inline">\(4\)</span> for anion</td>
+<td>basis determines which interstices are occupied</td>
+</tr>
+<tr class="even">
+<td>diamond</td>
+<td><span class="math inline">\(cF8\)</span></td>
+<td>FCC</td>
+<td>identical atoms on two sublattices shifted by <span class="math inline">\(\tfrac14(1,1,1)\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+<td>monatomic chemistry does not imply a one-atom basis</td>
+</tr>
+<tr class="odd">
+<td>zincblende (sphalerite)</td>
+<td><span class="math inline">\(cF8\)</span></td>
+<td>FCC</td>
+<td>same geometry as diamond, but two different species on the two sublattices</td>
+<td><span class="math inline">\(4\)</span> and <span class="math inline">\(4\)</span></td>
+<td>same translational skeleton, different chemistry and lower symmetry</td>
+</tr>
+</tbody>
+</table>
+<!-- [Sólyom–Piróth I, Sec. 7.1, Table 7.1, pp. 204–205; Secs. 7.2.1, 7.2.3, and 7.2.4, pp. 208–223] -->
+</section>
+<section id="cesium-chloride" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="cesium-chloride"><span class="header-section-number">3.6.2</span> Cesium Chloride</h3>
+<p>In the CsCl prototype, the primitive cell is simple cubic with a two-point basis:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+(0,0,0),
+\qquad
+\left(\frac12,\frac12,\frac12\right).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Each ion is surrounded by eight oppositely charged neighbors.</p>
+<!-- [Sólyom–Piróth I, Sec. 7.2.1, pp. 208–209] -->
+<p>The key lesson is conceptual: the body-center site is <strong>not</strong> a Bravais-lattice point of the decorated crystal, because translating by <span class="math inline">\(\tfrac12(1,1,1)\)</span> exchanges Cs and Cl.</p>
+</section>
+<section id="rock-salt-and-fluorite" class="level3" data-number="3.6.3">
+<h3 data-number="3.6.3" class="anchored" data-anchor-id="rock-salt-and-fluorite"><span class="header-section-number">3.6.3</span> Rock-Salt and Fluorite</h3>
+<p>In <strong>rock-salt</strong> (NaCl), the cations and anions form two interpenetrating FCC sublattices displaced relative to one another. In the conventional cubic cell, one species occupies corners and face centers, while the other occupies the octahedral sites. The coordination number is <span class="math inline">\(6\)</span>.</p>
+<p>In <strong>fluorite</strong> (CaF<span class="math inline">\(_2\)</span>), the cations again define the FCC Bravais lattice, but the anions occupy tetrahedral rather than octahedral sites. The cations are eightfold coordinated, while the anions are fourfold coordinated.</p>
+<!-- [Sólyom–Piróth I, Sec. 7.2.3, Fig. 7.14 and surrounding text, pp. 219–220] -->
+<p>These two structures are especially useful pedagogically because they show that <strong>keeping the Bravais lattice fixed while changing the occupied interstitial sites already produces a different structure type</strong>.</p>
+<div id="fig-ionic-prototypes" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ionic-prototypes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Sec. 7.2.3, Fig. 7.14, pp. 219–220] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ionic-prototypes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.5: <strong>Figure placeholder.</strong> Real-space comparison of the NaCl and fluorite prototypes, showing octahedral versus tetrahedral site occupancy within the same FCC Bravais-lattice framework.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="diamond-and-zincblende" class="level3" data-number="3.6.4">
+<h3 data-number="3.6.4" class="anchored" data-anchor-id="diamond-and-zincblende"><span class="header-section-number">3.6.4</span> Diamond and Zincblende</h3>
+<p>Diamond and zincblende are among the clearest illustrations of why the basis matters.</p>
+<p>For <strong>diamond</strong>, the underlying Bravais lattice is FCC, but the crystal requires a two-point basis shifted by <span class="math inline">\(\tfrac14 a(1,1,1)\)</span>. Every atom is tetrahedrally coordinated, with coordination number <span class="math inline">\(4\)</span>.</p>
+<p>For <strong>zincblende</strong> (ZnS), the same geometry is retained, but the two sublattices carry different atomic species.</p>
+<!-- [Sólyom–Piróth I, Sec. 7.2.4, Fig. 7.16 and surrounding text, pp. 221–223] -->
+<p>The two key messages are:</p>
+<ol type="1">
+<li>A monatomic crystal may still require <span class="math inline">\(p=2\)</span>.</li>
+<li>Replacing the second atom by a different species changes the physical content of the basis without changing the underlying FCC translational scaffold.</li>
+</ol>
+<div id="fig-diamond-sphalerite" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diamond-sphalerite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Sec. 7.2.4, Fig. 7.16, pp. 221–222] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diamond-sphalerite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.6: <strong>Figure placeholder.</strong> Diamond and zincblende as FCC-based structures with a two-point basis shifted by one quarter of the body diagonal of the conventional cubic cell.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="why-the-basis-matters-prelude-to-optical-modes-and-selection-rules" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="why-the-basis-matters-prelude-to-optical-modes-and-selection-rules"><span class="header-section-number">3.7</span> Why the Basis Matters: Prelude to Optical Modes and Selection Rules</h2>
+<p>Up to this point the basis may look like a bookkeeping device. It is not. It changes the physics.</p>
+<section id="basis-and-degrees-of-freedom" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="basis-and-degrees-of-freedom"><span class="header-section-number">3.7.1</span> Basis and Degrees of Freedom</h3>
+<p>If there are <span class="math inline">\(p\)</span> atoms in the primitive cell, then at each crystal wave vector the lattice has <span class="math inline">\(3p\)</span> displacement degrees of freedom. Later, in lattice dynamics, these organize into</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+3p = 3 + 3(p-1),
+\]</span></p>
+</div>
+</div>
+</div>
+<p>that is:</p>
+<ul>
+<li><span class="math inline">\(3\)</span> <strong>acoustic</strong> branches,</li>
+<li><span class="math inline">\(3(p-1)\)</span> <strong>optical</strong> branches.</li>
+</ul>
+<!-- [Course bridge beyond the uploaded chapters: lattice-dynamical consequence of a multi-atom basis] -->
+<p>This immediately explains why the basis matters so much:</p>
+<ul>
+<li>SC, BCC, and FCC with a one-atom basis are the simplest monoatomic cases.</li>
+<li>HCP, NaCl, diamond, and ZnS all have <span class="math inline">\(p&gt;1\)</span>, so additional relative motions of the atoms inside one primitive cell become possible.</li>
+<li>Diamond therefore supports optical phonons even though it contains only one chemical element.</li>
+</ul>
+</section>
+<section id="basis-diffraction-and-selection-rules" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="basis-diffraction-and-selection-rules"><span class="header-section-number">3.7.2</span> Basis, Diffraction, and Selection Rules</h3>
+<p>The basis also controls how different atoms within the same cell interfere in scattering experiments. Even when two structures share the same Bravais lattice, their reflections need not have the same strengths, and some reflections may cancel altogether.</p>
+<p>That is the real-space origin of the <strong>selection rules</strong> and <strong>systematic extinctions</strong> that will be formulated more precisely once we introduce the reciprocal lattice and structure factors.</p>
+<!-- [Course bridge: reciprocal-space formulation deferred to the next lecture] -->
+</section>
+<section id="why-todays-cell-choices-matter-for-the-next-lecture" class="level3" data-number="3.7.3">
+<h3 data-number="3.7.3" class="anchored" data-anchor-id="why-todays-cell-choices-matter-for-the-next-lecture"><span class="header-section-number">3.7.3</span> Why Today’s Cell Choices Matter for the Next Lecture</h3>
+<p>The direct lattice that we defined today is the input for the reciprocal lattice tomorrow. The basis that we introduced today is the input for the structure factor tomorrow. And the number of atoms in the primitive cell that we counted today is the input for optical branches later in lattice dynamics.</p>
+<p>So the logic is:</p>
+<ol type="1">
+<li>choose the Bravais lattice,</li>
+<li>specify the basis,</li>
+<li>identify the primitive cell,</li>
+<li>only then move to reciprocal space, diffraction, and phonons.</li>
+</ol>
+</section>
+</section>
+<section id="bridge-to-the-next-lecture" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="bridge-to-the-next-lecture"><span class="header-section-number">3.8</span> Bridge to the Next Lecture</h2>
+<p>Today’s lecture was intentionally kept in <strong>real space</strong>. We defined the direct lattice, clarified what belongs to the lattice and what belongs to the basis, and learned why conventional cells are often visually useful even when they are not primitive.</p>
+<p>In the next lecture we will keep the same structures but change viewpoint:</p>
+<ul>
+<li>from direct lattice to reciprocal lattice,</li>
+<li>from planes and spacings to diffraction conditions,</li>
+<li>from basis positions to interference and structure factors,</li>
+<li>from translational geometry to symmetry classification.</li>
+</ul>
+<p>That shift of viewpoint is precisely why today’s distinctions were necessary. Without a clean real-space description, the reciprocal-space description becomes opaque.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Take-Home Messages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>A crystal structure is not just a repeating set of atoms; it is a Bravais lattice decorated by a basis.</li>
+<li>The Bravais lattice captures translational order, while the basis captures what sits inside each primitive repeat unit.</li>
+<li>Primitive, conventional, and Wigner–Seitz cells describe the same lattice in different ways and should not be confused.</li>
+<li>BCC and FCC are Bravais lattices, but the cubic cells used to draw them are conventional rather than primitive.</li>
+<li>HCP has the same close packing as FCC locally, but it is not itself a Bravais lattice; it requires a two-atom basis.</li>
+<li>The same stoichiometry can occur in different prototype structures, and the same Bravais lattice can support very different crystal structures.</li>
+<li>Diamond is the canonical example showing that even a monatomic crystal can require a multi-atom basis.</li>
+<li>The number and arrangement of atoms in the basis control later topics such as optical phonons, diffraction intensities, and reciprocal-space selection rules.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="problem-set" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">3.9</span> Problem Set</h2>
+<ol type="1">
+<li><p><strong>Bravais Lattice or Not?</strong> Decide whether each of the following is a Bravais lattice or a Bravais lattice plus basis: honeycomb net, monatomic FCC crystal, HCP crystal, diamond crystal.</p></li>
+<li><p><strong>Counting Lattice Points.</strong> Count the number of lattice points in the conventional SC, BCC, and FCC cubic cells.</p></li>
+<li><p><strong>CsCl Versus BCC.</strong> Explain why a monatomic BCC crystal is a Bravais lattice, but CsCl is better described as a simple-cubic Bravais lattice with a two-point basis.</p></li>
+<li><p><strong>FCC Versus HCP.</strong> Compare FCC and HCP in terms of stacking sequence, coordination number, and the role of the basis.</p></li>
+<li><p><strong>Basis and Optical Modes.</strong> For primitive cells containing <span class="math inline">\(p=1\)</span>, <span class="math inline">\(p=2\)</span>, and <span class="math inline">\(p=3\)</span> atoms, determine the number of acoustic and optical branches expected later in lattice dynamics.</p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

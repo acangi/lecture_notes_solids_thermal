@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -227,8 +256,47 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">5.1</span> Roadmap</a></li>
+  <li><a href="#from-symmetry-and-reciprocal-space-to-diffraction" id="toc-from-symmetry-and-reciprocal-space-to-diffraction" class="nav-link" data-scroll-target="#from-symmetry-and-reciprocal-space-to-diffraction"><span class="header-section-number">5.2</span> From Symmetry and Reciprocal Space to Diffraction</a></li>
+  <li><a href="#elastic-diffraction-from-a-periodic-lattice" id="toc-elastic-diffraction-from-a-periodic-lattice" class="nav-link" data-scroll-target="#elastic-diffraction-from-a-periodic-lattice"><span class="header-section-number">5.3</span> Elastic Diffraction from a Periodic Lattice</a>
+  <ul class="collapse">
+  <li><a href="#braggs-geometric-picture" id="toc-braggs-geometric-picture" class="nav-link" data-scroll-target="#braggs-geometric-picture"><span class="header-section-number">5.3.1</span> Bragg’s Geometric Picture</a></li>
+  <li><a href="#laues-reciprocal-space-picture" id="toc-laues-reciprocal-space-picture" class="nav-link" data-scroll-target="#laues-reciprocal-space-picture"><span class="header-section-number">5.3.2</span> Laue’s Reciprocal-Space Picture</a></li>
+  <li><a href="#equivalent-elastic-form" id="toc-equivalent-elastic-form" class="nav-link" data-scroll-target="#equivalent-elastic-form"><span class="header-section-number">5.3.3</span> Equivalent Elastic Form</a></li>
+  <li><a href="#why-bragg-and-laue-are-the-same-statement" id="toc-why-bragg-and-laue-are-the-same-statement" class="nav-link" data-scroll-target="#why-bragg-and-laue-are-the-same-statement"><span class="header-section-number">5.3.4</span> Why Bragg and Laue Are the Same Statement</a></li>
+  <li><a href="#sanity-check" id="toc-sanity-check" class="nav-link" data-scroll-target="#sanity-check"><span class="header-section-number">5.3.5</span> Sanity Check</a></li>
+  </ul></li>
+  <li><a href="#from-bravais-lattice-to-basis-structure-factor" id="toc-from-bravais-lattice-to-basis-structure-factor" class="nav-link" data-scroll-target="#from-bravais-lattice-to-basis-structure-factor"><span class="header-section-number">5.4</span> From Bravais Lattice to Basis: Structure Factor</a>
+  <ul class="collapse">
+  <li><a href="#total-scattering-amplitude" id="toc-total-scattering-amplitude" class="nav-link" data-scroll-target="#total-scattering-amplitude"><span class="header-section-number">5.4.1</span> Total Scattering Amplitude</a></li>
+  <li><a href="#what-the-two-factors-mean" id="toc-what-the-two-factors-mean" class="nav-link" data-scroll-target="#what-the-two-factors-mean"><span class="header-section-number">5.4.2</span> What the Two Factors Mean</a></li>
+  <li><a href="#atomic-form-factor" id="toc-atomic-form-factor" class="nav-link" data-scroll-target="#atomic-form-factor"><span class="header-section-number">5.4.3</span> Atomic Form Factor</a></li>
+  <li><a href="#what-if-the-basis-is-monatomic" id="toc-what-if-the-basis-is-monatomic" class="nav-link" data-scroll-target="#what-if-the-basis-is-monatomic"><span class="header-section-number">5.4.4</span> What If the Basis Is Monatomic?</a></li>
+  </ul></li>
+  <li><a href="#reciprocal-space-selection-rules-and-systematic-extinctions" id="toc-reciprocal-space-selection-rules-and-systematic-extinctions" class="nav-link" data-scroll-target="#reciprocal-space-selection-rules-and-systematic-extinctions"><span class="header-section-number">5.5</span> Reciprocal-Space Selection Rules and Systematic Extinctions</a>
+  <ul class="collapse">
+  <li><a href="#worked-example-face-centered-cubic-lattice" id="toc-worked-example-face-centered-cubic-lattice" class="nav-link" data-scroll-target="#worked-example-face-centered-cubic-lattice"><span class="header-section-number">5.5.1</span> Worked Example: Face-Centered Cubic Lattice</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">5.5.2</span> Interpretation</a></li>
+  <li><a href="#optional-extension-diamond-structure" id="toc-optional-extension-diamond-structure" class="nav-link" data-scroll-target="#optional-extension-diamond-structure"><span class="header-section-number">5.5.3</span> Optional Extension: Diamond Structure</a></li>
+  </ul></li>
+  <li><a href="#what-experiments-actually-measure" id="toc-what-experiments-actually-measure" class="nav-link" data-scroll-target="#what-experiments-actually-measure"><span class="header-section-number">5.6</span> What Experiments Actually Measure</a>
+  <ul class="collapse">
+  <li><a href="#the-ewald-construction" id="toc-the-ewald-construction" class="nav-link" data-scroll-target="#the-ewald-construction"><span class="header-section-number">5.6.1</span> The Ewald Construction</a></li>
+  <li><a href="#the-detector-does-not-see-the-crystal-directly" id="toc-the-detector-does-not-see-the-crystal-directly" class="nav-link" data-scroll-target="#the-detector-does-not-see-the-crystal-directly"><span class="header-section-number">5.6.2</span> The Detector Does Not See the Crystal Directly</a></li>
+  <li><a href="#the-phase-problem" id="toc-the-phase-problem" class="nav-link" data-scroll-target="#the-phase-problem"><span class="header-section-number">5.6.3</span> The Phase Problem</a></li>
+  <li><a href="#experimental-geometries-in-a-nutshell" id="toc-experimental-geometries-in-a-nutshell" class="nav-link" data-scroll-target="#experimental-geometries-in-a-nutshell"><span class="header-section-number">5.6.4</span> Experimental Geometries in a Nutshell</a></li>
+  <li><a href="#which-probe-tells-you-what" id="toc-which-probe-tells-you-what" class="nav-link" data-scroll-target="#which-probe-tells-you-what"><span class="header-section-number">5.6.5</span> Which Probe Tells You What?</a></li>
+  </ul></li>
+  <li><a href="#bridge-to-the-next-lecture-from-elastic-diffraction-to-inelastic-scattering" id="toc-bridge-to-the-next-lecture-from-elastic-diffraction-to-inelastic-scattering" class="nav-link" data-scroll-target="#bridge-to-the-next-lecture-from-elastic-diffraction-to-inelastic-scattering"><span class="header-section-number">5.7</span> Bridge to the Next Lecture: From Elastic Diffraction to Inelastic Scattering</a></li>
+  <li><a href="#take-home-messages" id="toc-take-home-messages" class="nav-link" data-scroll-target="#take-home-messages"><span class="header-section-number">5.8</span> Take-Home Messages</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">5.9</span> Problem Set</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -257,8 +325,670 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </div>
 </div>
+<section id="roadmap" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="roadmap"><span class="header-section-number">5.1</span> Roadmap</h2>
+<ul>
+<li>From <a href="lecture_04.html" class="quarto-xref">Lecture&nbsp;<span>4</span></a>: reciprocal space becomes experimentally observable.</li>
+<li>Elastic diffraction: Bragg condition, Laue condition, and their equivalence.</li>
+<li>Structure factor and basis effects: why intensities carry structural information.</li>
+<li>Systematic extinctions and reciprocal-space selection rules.</li>
+<li>What experiments actually measure: peak positions, peak intensities, and what is missing.</li>
+<li>Bridge to the next lecture: from elastic diffraction to inelastic probes of phonons.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 74%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf R_n\)</span></td>
+<td>direct-lattice vector</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf r_j\)</span></td>
+<td>position of atom <span class="math inline">\(j\)</span> inside the primitive cell</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf b_i\)</span></td>
+<td>primitive vectors of the reciprocal lattice</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf G\)</span></td>
+<td>reciprocal-lattice vector</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((hkl)\)</span></td>
+<td>Miller indices of a family of lattice planes</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(d_{hkl}\)</span></td>
+<td>spacing of neighboring <span class="math inline">\((hkl)\)</span> planes</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\lambda\)</span></td>
+<td>wavelength of the incident radiation</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\theta\)</span></td>
+<td>Bragg angle</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf k,\mathbf k'\)</span></td>
+<td>incident and scattered wave vectors of the probe beam</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf Q\)</span></td>
+<td>scattering vector</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(f_j(\mathbf Q)\)</span></td>
+<td>atomic form factor or scattering amplitude of atom <span class="math inline">\(j\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(F(\mathbf G)\)</span></td>
+<td>structure factor of one primitive cell</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(I(\mathbf G)\)</span></td>
+<td>Bragg-peak intensity</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\omega_s(\mathbf q)\)</span></td>
+<td>phonon frequency of branch <span class="math inline">\(s\)</span> at reduced wave vector <span class="math inline">\(\mathbf q\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="from-symmetry-and-reciprocal-space-to-diffraction" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="from-symmetry-and-reciprocal-space-to-diffraction"><span class="header-section-number">5.2</span> From Symmetry and Reciprocal Space to Diffraction</h2>
+<p>In <a href="lecture_04.html" class="quarto-xref">Lecture&nbsp;<span>4</span></a> we introduced the reciprocal lattice, reciprocal-lattice vectors <span class="math inline">\(\mathbf G\)</span>, plane spacings <span class="math inline">\(d_{hkl}\)</span>, and the first Brillouin zone. Today these objects stop being purely geometrical and become directly measurable.</p>
+<p>The central idea is simple:</p>
+<ul>
+<li>the <strong>periodicity of the lattice</strong> selects special momentum transfers;</li>
+<li>the <strong>basis inside the primitive cell</strong> weights those allowed transfers;</li>
+<li>the measured diffraction pattern is therefore a reciprocal-space image of the crystal.</li>
+</ul>
+<p>This is why diffraction is the experimental counterpart of the reciprocal-space formalism introduced in the previous lecture.</p>
+<!-- [Sólyom–Piróth I, Ch. 8 opening, pp. 241–242; build on Lecture 4 reciprocal-space formalism] -->
+</section>
+<section id="elastic-diffraction-from-a-periodic-lattice" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="elastic-diffraction-from-a-periodic-lattice"><span class="header-section-number">5.3</span> Elastic Diffraction from a Periodic Lattice</h2>
+<section id="braggs-geometric-picture" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="braggs-geometric-picture"><span class="header-section-number">5.3.1</span> Bragg’s Geometric Picture</h3>
+<p>Suppose radiation of wavelength <span class="math inline">\(\lambda\)</span> is reflected from a family of parallel lattice planes of spacing <span class="math inline">\(d_{hkl}\)</span>. Constructive interference occurs when the path difference between rays reflected from neighboring planes is an integer multiple of <span class="math inline">\(\lambda\)</span>.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+2 d_{hkl}\sin\theta = m\lambda,
+\qquad
+m\in\mathbb Z.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This is the <strong>Bragg condition</strong>.</p>
+<!-- [Sólyom–Piróth I, Sec. 8.1.1, Eq. (8.1.1), p. 243] -->
+<p>Interpretation:</p>
+<ol type="1">
+<li>only certain scattering angles are allowed for a given wavelength;</li>
+<li>smaller plane spacing means larger scattering angle;</li>
+<li>higher-order peaks correspond to larger reciprocal vectors, or equivalently to larger integers <span class="math inline">\(m\)</span>.</li>
+</ol>
+<div id="fig-bragg-geometry" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bragg-geometry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Ch. 8, Fig. 8.1, p. 243] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bragg-geometry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: <strong>Figure placeholder.</strong> Reflection geometry for diffraction from a family of lattice planes with spacing <span class="math inline">\(d_{hkl}\)</span>, showing the path difference that leads to the Bragg condition.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="laues-reciprocal-space-picture" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="laues-reciprocal-space-picture"><span class="header-section-number">5.3.2</span> Laue’s Reciprocal-Space Picture</h3>
+<p>Now describe the same process atom by atom. Let the incident beam have wave vector <span class="math inline">\(\mathbf k\)</span> and the scattered beam <span class="math inline">\(\mathbf k'\)</span>. For two equivalent atoms separated by a lattice vector <span class="math inline">\(\mathbf R_n\)</span>, the phase difference is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\Delta \phi
+=
+(\mathbf k-\mathbf k')\cdot \mathbf R_n.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Constructive interference must hold for <strong>every</strong> lattice vector <span class="math inline">\(\mathbf R_n\)</span>. Since reciprocal-lattice vectors satisfy <span class="math inline">\(\mathbf G\cdot \mathbf R_n = 2\pi \times \text{integer}\)</span>, the diffraction condition is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf k-\mathbf k'=\mathbf G.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This is the <strong>Laue condition</strong>.</p>
+<!-- [Sólyom–Piróth I, Sec. 8.1.1, Eqs. (8.1.2)–(8.1.5), pp. 244–245] -->
+<p>So the lattice does not allow arbitrary momentum transfer. In elastic diffraction, the scattering vector must be a reciprocal-lattice vector.</p>
+</section>
+<section id="equivalent-elastic-form" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="equivalent-elastic-form"><span class="header-section-number">5.3.3</span> Equivalent Elastic Form</h3>
+<p>Because elastic scattering does not change the wavelength,</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+|\mathbf k| = |\mathbf k'| = \frac{2\pi}{\lambda}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Squaring the Laue condition gives a useful reciprocal-space criterion:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf k\cdot \mathbf G = \frac{1}{2} |\mathbf G|^2.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This says that diffraction occurs when the tip of the incident wave vector lies on a Bragg plane in reciprocal space.</p>
+<!-- [Sólyom–Piróth I, Sec. 8.1.1, Eqs. (8.1.6)–(8.1.7), p. 245] -->
+</section>
+<section id="why-bragg-and-laue-are-the-same-statement" class="level3" data-number="5.3.4">
+<h3 data-number="5.3.4" class="anchored" data-anchor-id="why-bragg-and-laue-are-the-same-statement"><span class="header-section-number">5.3.4</span> Why Bragg and Laue Are the Same Statement</h3>
+<p>From Lecture 4 we know that reciprocal-lattice vectors normal to the <span class="math inline">\((hkl)\)</span> planes satisfy</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+|\mathbf G_{hkl}| = \frac{2\pi}{d_{hkl}}
+\]</span></p>
+</div>
+</div>
+</div>
+<p>for the primitive reciprocal vector normal to that plane family. More generally, order <span class="math inline">\(m\)</span> corresponds to the reciprocal vector <span class="math inline">\(m\mathbf G_{hkl}\)</span>. Combining this with <span class="math inline">\(|\mathbf G| = 2|\mathbf k|\sin\theta\)</span> yields the Bragg condition again:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+2 d_{hkl}\sin\theta = m\lambda.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>So Bragg’s construction in direct space and Laue’s construction in reciprocal space are mathematically equivalent.</p>
+<!-- [Sólyom–Piróth I, Sec. 8.1.1, Eqs. (8.1.8)–(8.1.11), pp. 245–246; uses Lecture 4 relation between $d_{hkl}$ and $|\mathbf G_{hkl}|$] -->
+</section>
+<section id="sanity-check" class="level3" data-number="5.3.5">
+<h3 data-number="5.3.5" class="anchored" data-anchor-id="sanity-check"><span class="header-section-number">5.3.5</span> Sanity Check</h3>
+<p>The Bravais lattice determines <strong>which</strong> momentum transfers are allowed:</p>
+<ul>
+<li>if <span class="math inline">\(\mathbf Q \equiv \mathbf k-\mathbf k'\)</span> is not a reciprocal-lattice vector, the scattered amplitudes cancel almost completely;</li>
+<li>if <span class="math inline">\(\mathbf Q=\mathbf G\)</span>, a Bragg peak may appear.</li>
+</ul>
+<p>At this stage we have located the allowed peaks, but we have not yet explained why some are strong, weak, or absent. That information comes from the basis.</p>
+</section>
+</section>
+<section id="from-bravais-lattice-to-basis-structure-factor" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="from-bravais-lattice-to-basis-structure-factor"><span class="header-section-number">5.4</span> From Bravais Lattice to Basis: Structure Factor</h2>
+<section id="total-scattering-amplitude" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="total-scattering-amplitude"><span class="header-section-number">5.4.1</span> Total Scattering Amplitude</h3>
+<p>Let the primitive cell contain <span class="math inline">\(p\)</span> atoms at positions <span class="math inline">\(\mathbf r_j\)</span>, and let atom <span class="math inline">\(j\)</span> scatter with amplitude <span class="math inline">\(f_j(\mathbf Q)\)</span>. Then the total elastic scattering amplitude from the crystal is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+A(\mathbf Q)
+=
+\sum_n \sum_{j=1}^{p}
+f_j(\mathbf Q)
+e^{-i\mathbf Q\cdot(\mathbf R_n+\mathbf r_j)}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>The sum naturally factorizes into a lattice part and a basis part:</p>
+<p><span class="math display">\[
+A(\mathbf Q)
+=
+\left(
+\sum_n e^{-i\mathbf Q\cdot \mathbf R_n}
+\right)
+\left(
+\sum_{j=1}^{p} f_j(\mathbf Q)e^{-i\mathbf Q\cdot \mathbf r_j}
+\right).
+\]</span></p>
+<p>Define the <strong>structure factor of one primitive cell</strong> by</p>
+<p><span class="math display">\[
+F(\mathbf Q)
+=
+\sum_{j=1}^{p} f_j(\mathbf Q)e^{-i\mathbf Q\cdot \mathbf r_j}.
+\]</span></p>
+<p>Then</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+A(\mathbf Q)
+=
+\left(
+\sum_n e^{-i\mathbf Q\cdot \mathbf R_n}
+\right)
+F(\mathbf Q).
+\]</span></p>
+</div>
+</div>
+</div>
+<!-- [Sólyom–Piróth I, Sec. 8.1.2, Eqs. (8.1.24)–(8.1.30), pp. 248–249; Sec. 8.1.3, Eq. (8.1.40), pp. 250–251] -->
+</section>
+<section id="what-the-two-factors-mean" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="what-the-two-factors-mean"><span class="header-section-number">5.4.2</span> What the Two Factors Mean</h3>
+<p>The factorization is physically decisive:</p>
+<ul>
+<li><span class="math inline">\(\sum_n e^{-i\mathbf Q\cdot \mathbf R_n}\)</span> encodes the <strong>Bravais lattice</strong> and produces the Laue selection rule <span class="math inline">\(\mathbf Q=\mathbf G\)</span>;</li>
+<li><span class="math inline">\(F(\mathbf G)\)</span> encodes the <strong>basis</strong> and determines the intensity of the allowed Bragg peak.</li>
+</ul>
+<p>For an ideal large crystal, the lattice sum is nonzero only at reciprocal-lattice vectors, so the measured Bragg intensity scales as</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+I(\mathbf G)\propto |F(\mathbf G)|^2.
+\]</span></p>
+</div>
+</div>
+</div>
+<!-- [Sólyom–Piróth I, Sec. 8.1.3, Eqs. (8.1.37)–(8.1.40), pp. 250–251] -->
+<p>This is the single most important equation of the lecture: <strong>peak positions come from the lattice; peak intensities come from the basis.</strong></p>
+</section>
+<section id="atomic-form-factor" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="atomic-form-factor"><span class="header-section-number">5.4.3</span> Atomic Form Factor</h3>
+<p>For X-ray scattering, the single-atom amplitude is the Fourier transform of the electronic charge distribution of that atom. In course notation we write</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+f_j(\mathbf Q)
+\propto
+\int \rho_{e,j}(\mathbf r),e^{-i\mathbf Q\cdot \mathbf r},d^3r.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This is the <strong>atomic form factor</strong>.</p>
+<!-- [Sólyom–Piróth I, Sec. 8.1.2, Eqs. (8.1.27)–(8.1.28), p. 249] -->
+<p>Consequences:</p>
+<ol type="1">
+<li>X-rays and electrons primarily probe electron density.</li>
+<li>Heavier atoms often scatter more strongly in X-ray diffraction.</li>
+<li>The basis weights are not just geometrical phase factors; they also depend on atomic species.</li>
+</ol>
+<p>For nonmagnetic neutron scattering, the role of <span class="math inline">\(f_j\)</span> is played by the nuclear scattering length, which is much less directly tied to atomic number.</p>
+<!-- [Sólyom–Piróth I, Sec. 8.1.2, p. 249; Sec. 8.2.1, p. 263] -->
+</section>
+<section id="what-if-the-basis-is-monatomic" class="level3" data-number="5.4.4">
+<h3 data-number="5.4.4" class="anchored" data-anchor-id="what-if-the-basis-is-monatomic"><span class="header-section-number">5.4.4</span> What If the Basis Is Monatomic?</h3>
+<p>If there is only one atom in the primitive cell at the origin, then</p>
+<p><span class="math display">\[
+F(\mathbf G)=f(\mathbf G).
+\]</span></p>
+<p>All allowed peaks are then weighted only by the single-atom form factor. No extra phase cancellations occur inside the cell.</p>
+<p>This is the baseline case against which basis effects are measured.</p>
+</section>
+</section>
+<section id="reciprocal-space-selection-rules-and-systematic-extinctions" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="reciprocal-space-selection-rules-and-systematic-extinctions"><span class="header-section-number">5.5</span> Reciprocal-Space Selection Rules and Systematic Extinctions</h2>
+<p>A reciprocal-lattice vector may satisfy the Laue condition and still give zero intensity because the basis contributions cancel. These are <strong>systematic extinctions</strong>.</p>
+<section id="worked-example-face-centered-cubic-lattice" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="worked-example-face-centered-cubic-lattice"><span class="header-section-number">5.5.1</span> Worked Example: Face-Centered Cubic Lattice</h3>
+<p>Index the structure with the conventional cubic cell of edge length <span class="math inline">\(a\)</span>. The four equivalent atomic positions are</p>
+<p><span class="math display">\[
+(0,0,0),
+\qquad
+\left(\frac12,\frac12,0\right),
+\qquad
+\left(\frac12,0,\frac12\right),
+\qquad
+\left(0,\frac12,\frac12\right).
+\]</span></p>
+<p>For identical atoms, the structure factor is</p>
+<p><span class="math display">\[
+F_{\mathrm{fcc}}(hkl)
+=
+f
+\left[
+1
++
+e^{-i\pi(h+k)}
++
+e^{-i\pi(h+l)}
++
+e^{-i\pi(k+l)}
+\right].
+\]</span></p>
+<!-- [Sólyom–Piróth I, Sec. 8.1.5, Eq. (8.1.68), pp. 257–258] -->
+<p>Now evaluate the parity cases:</p>
+<ul>
+<li>if <span class="math inline">\(h,k,l\)</span> are <strong>all even</strong> or <strong>all odd</strong>, every exponential equals <span class="math inline">\(+1\)</span>, so <span class="math display">\[
+F_{\mathrm{fcc}}(hkl)=4f;
+\]</span></li>
+<li>if even and odd indices are mixed, the terms cancel and <span class="math display">\[
+F_{\mathrm{fcc}}(hkl)=0.
+\]</span></li>
+</ul>
+<p>Thus the selection rule is:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>For fcc diffraction, only reflections with Miller indices all even or all odd are allowed.</p>
+</div>
+</div>
+</div>
+<p>This is a genuine structural fingerprint.</p>
+</section>
+<section id="interpretation" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">5.5.2</span> Interpretation</h3>
+<p>It is tempting to say that certain reciprocal-lattice points are “missing.” The deeper statement is subtler:</p>
+<ul>
+<li>if one works with the <strong>true primitive cell</strong>, the reciprocal lattice is the correct one from the start;</li>
+<li>if one indexes with the <strong>conventional cubic cell</strong>, the extinction appears as cancellation inside a larger nonprimitive cell.</li>
+</ul>
+<p>So systematic extinctions are not arbitrary missing data. They encode the translational arrangement of the basis.</p>
+<!-- [Sólyom–Piróth I, Sec. 8.1.5, discussion around Fig. 8.6, pp. 257–258] -->
+<div id="fig-fcc-selection-rules" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fcc-selection-rules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Ch. 8, Fig. 8.6, pp. 257–258] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fcc-selection-rules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.2: <strong>Figure placeholder.</strong> Primitive and conventional cells for the face-centered cubic lattice together with the reciprocal-space construction showing which indexed reciprocal points are allowed and which are extinguished.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="optional-extension-diamond-structure" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="optional-extension-diamond-structure"><span class="header-section-number">5.5.3</span> Optional Extension: Diamond Structure</h3>
+<p>Diamond may be viewed as an fcc Bravais lattice plus a two-atom basis at</p>
+<p><span class="math display">\[
+\mathbf r_1 = \mathbf 0,
+\qquad
+\mathbf r_2 = \frac14(\mathbf a_1+\mathbf a_2+\mathbf a_3).
+\]</span></p>
+<p>Then the extra basis factor is</p>
+<p><span class="math display">\[
+F_{\mathrm{diamond}}(hkl)
+=
+F_{\mathrm{fcc}}(hkl)
+\left[
+1+e^{-i\pi(h+k+l)/2}
+\right].
+\]</span></p>
+<!-- [Sólyom–Piróth I, Sec. 8.1.5, Eq. (8.1.66), pp. 255–256] -->
+<p>Hence:</p>
+<ul>
+<li>mixed parity is already forbidden by the fcc rule;</li>
+<li>among all-even reflections, those with <span class="math inline">\(h+k+l = 4m+2\)</span> are extinguished;</li>
+<li>among all-odd reflections, the intensity is reduced relative to the strongest all-even family.</li>
+</ul>
+<p>This is how diffraction distinguishes diamond from monatomic fcc structures.</p>
+<div id="fig-diamond-basis-effects" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diamond-basis-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Ch. 8, Fig. 8.5, pp. 255–256] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diamond-basis-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.3: <strong>Figure placeholder.</strong> Reciprocal-space points of the diamond structure grouped by strong, weak, and extinguished reflections due to interference between the two atoms of the basis.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="what-experiments-actually-measure" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="what-experiments-actually-measure"><span class="header-section-number">5.6</span> What Experiments Actually Measure</h2>
+<section id="the-ewald-construction" class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="the-ewald-construction"><span class="header-section-number">5.6.1</span> The Ewald Construction</h3>
+<p>The reciprocal-space condition becomes visually transparent in the Ewald construction. Draw the incident wave vector <span class="math inline">\(\mathbf k\)</span> with its tip on one reciprocal-lattice point, then draw a sphere of radius <span class="math inline">\(|\mathbf k|\)</span> centered at the tail of <span class="math inline">\(\mathbf k\)</span>.</p>
+<p>If another reciprocal-lattice point lies on that sphere, then a diffracted beam exists in the direction <span class="math inline">\(\mathbf k'\)</span> from the sphere center to that point. Equivalently,</p>
+<p><span class="math display">\[
+\mathbf k-\mathbf k'=\mathbf G,
+\qquad
+|\mathbf k|=|\mathbf k'|.
+\]</span></p>
+<!-- [Sólyom–Piróth I, Sec. 8.2.2, pp. 264–265] -->
+<p>So diffraction is experimentally observed when the Ewald sphere intersects the reciprocal lattice.</p>
+<div id="fig-ewald-construction" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ewald-construction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Ch. 8, Fig. 8.10, pp. 264–265] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ewald-construction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.4: <strong>Figure placeholder.</strong> Ewald construction showing how intersections of the Ewald sphere with reciprocal-lattice points determine elastic diffraction directions.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="the-detector-does-not-see-the-crystal-directly" class="level3" data-number="5.6.2">
+<h3 data-number="5.6.2" class="anchored" data-anchor-id="the-detector-does-not-see-the-crystal-directly"><span class="header-section-number">5.6.2</span> The Detector Does Not See the Crystal Directly</h3>
+<p>A diffraction experiment measures <strong>intensity as a function of scattering direction</strong>, and sometimes as a function of wavelength or sample orientation. In the simplest elastic setting:</p>
+<ul>
+<li>the <strong>location</strong> of a Bragg peak determines the reciprocal-lattice vector <span class="math inline">\(\mathbf G\)</span> and therefore the lattice geometry;</li>
+<li>the <strong>intensity</strong> of that peak determines <span class="math inline">\(|F(\mathbf G)|^2\)</span> and therefore constrains the basis;</li>
+<li>the <strong>absence</strong> of a peak may be as informative as its presence.</li>
+</ul>
+<!-- [Sólyom–Piróth I, Sec. 8.2 opening, pp. 261–265] -->
+</section>
+<section id="the-phase-problem" class="level3" data-number="5.6.3">
+<h3 data-number="5.6.3" class="anchored" data-anchor-id="the-phase-problem"><span class="header-section-number">5.6.3</span> The Phase Problem</h3>
+<p>If the complex amplitudes <span class="math inline">\(F(\mathbf G)\)</span> were known, the lattice-periodic density could in principle be reconstructed by inverse Fourier transformation. In practice, standard diffraction measures intensities, not complex phases. Therefore one obtains</p>
+<p><span class="math display">\[
+I(\mathbf G)\propto |F(\mathbf G)|^2,
+\]</span></p>
+<p>but not the phase of <span class="math inline">\(F(\mathbf G)\)</span>.</p>
+<p>This is the <strong>phase problem</strong> of diffraction.</p>
+<!-- [Sólyom–Piróth I, Sec. 8.1.3, discussion after Eq. (8.1.48), p. 252] -->
+<p>Interpretation:</p>
+<ol type="1">
+<li>diffraction data strongly constrain the structure;</li>
+<li>they do not uniquely reveal it without additional assumptions or refinement methods;</li>
+<li>“what experiments actually measure” is therefore more limited than “the full microscopic density.”</li>
+</ol>
+</section>
+<section id="experimental-geometries-in-a-nutshell" class="level3" data-number="5.6.4">
+<h3 data-number="5.6.4" class="anchored" data-anchor-id="experimental-geometries-in-a-nutshell"><span class="header-section-number">5.6.4</span> Experimental Geometries in a Nutshell</h3>
+<p>There are the following classical ways to satisfy the diffraction condition:</p>
+<ul>
+<li>the <strong>Laue method</strong>, using many wavelengths at fixed incident direction;</li>
+<li>the <strong>rotating-crystal method</strong>, using a single crystal whose orientation is varied;</li>
+<li>the <strong>powder method</strong>, using many grain orientations at once, which turns Bragg conditions into rings.</li>
+</ul>
+<p>For this lecture’s purposes, all three are practical ways of sampling the same reciprocal-space condition.</p>
+<!-- [Sólyom–Piróth I, Sec. 8.2.3, pp. 265–268] -->
+<div id="fig-diffraction-setup" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diffraction-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Ch. 8, Fig. 8.9, p. 261] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diffraction-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.5: <strong>Figure placeholder.</strong> Schematic diffraction setup with source, collimation, monochromator, sample, and detector, emphasizing that the experiment records scattered intensity versus angle.
+</figcaption>
+</figure>
+</div>
+<div id="fig-powder-pattern" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-powder-pattern-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom–Piróth I, Ch. 8, Figs. 8.15–8.16, pp. 267–268] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-powder-pattern-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.6: <strong>Figure placeholder.</strong> Powder-diffraction geometry and the resulting ring or peak pattern, illustrating how a polycrystalline sample encodes reciprocal-lattice spacings.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="which-probe-tells-you-what" class="level3" data-number="5.6.5">
+<h3 data-number="5.6.5" class="anchored" data-anchor-id="which-probe-tells-you-what"><span class="header-section-number">5.6.5</span> Which Probe Tells You What?</h3>
+<p>The diffraction condition depends only on wavelength, but the <strong>probe–matter interaction</strong> determines what structural information is emphasized.</p>
+<ul>
+<li>X-rays and electrons couple primarily to electron density.</li>
+<li>Neutrons couple to nuclei and, when relevant, to magnetic moments.</li>
+<li>Thermal neutrons naturally have wavelengths of order ångströms and energies of order <span class="math inline">\(0.1\ \mathrm{eV}\)</span>, which makes them especially useful once energy-resolved scattering is considered.</li>
+</ul>
+<!-- [Sólyom–Piróth I, Sec. 8.2.1, Eqs. (8.2.1)–(8.2.3), pp. 261–263] -->
+</section>
+</section>
+<section id="bridge-to-the-next-lecture-from-elastic-diffraction-to-inelastic-scattering" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="bridge-to-the-next-lecture-from-elastic-diffraction-to-inelastic-scattering"><span class="header-section-number">5.7</span> Bridge to the Next Lecture: From Elastic Diffraction to Inelastic Scattering</h2>
+<p>Elastic diffraction is powerful, but it is fundamentally a probe of the <strong>static periodic structure</strong>. In elastic scattering,</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\Delta E = 0,
+\qquad
+\mathbf Q = \mathbf k-\mathbf k'=\mathbf G.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>So elastic Bragg peaks tell us about lattice periodicity and basis interference, but not directly about the excitation spectrum of the solid.</p>
+<p>By contrast, in <strong>inelastic scattering</strong> one measures both momentum transfer and energy transfer:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf Q = \mathbf k-\mathbf k',
+\qquad
+\hbar\omega = E-E'.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Now the scattered probe can create or absorb an excitation of the crystal. For lattice vibrations, the measured momentum transfer is decomposed as</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf Q = \mathbf G + \mathbf q,
+\]</span></p>
+</div>
+</div>
+</div>
+<p>where <span class="math inline">\(\mathbf q\)</span> is the reduced wave vector in the first Brillouin zone. The corresponding energy transfer reveals the phonon frequency <span class="math inline">\(\omega_s(\mathbf q)\)</span>.</p>
+<p>This is the route from reciprocal-space diffraction geometry to experimentally measured phonon dispersions: elastic diffraction identifies the reciprocal lattice, while inelastic scattering maps how excitations disperse around it.</p>
+<p>Thermal neutrons are especially well suited to this task because their wavelengths match lattice spacings and their energies are comparable to typical solid-state excitation energies.</p>
+<!-- [Sólyom–Piróth I, Ch. 8 opening, pp. 241–242; Sec. 8.2.1, pp. 262–263; course bridge to later phonon lectures] -->
+</section>
+<section id="take-home-messages" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="take-home-messages"><span class="header-section-number">5.8</span> Take-Home Messages</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Take-Home Messages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Bragg’s law and the Laue condition are two equivalent ways of expressing elastic diffraction in a crystal.</li>
+<li>The Bravais lattice determines the allowed peak positions in reciprocal space.</li>
+<li>The basis determines the relative intensities of those peaks through the structure factor.</li>
+<li>Systematic extinctions are structural information, not experimental accidents.</li>
+<li>Reciprocal space becomes experimentally visible through the Ewald construction.</li>
+<li>Standard diffraction measures intensities and angles, but not the phase of the complex scattering amplitude.</li>
+<li>Different probes emphasize different microscopic constituents of the solid.</li>
+<li>Elastic diffraction reveals static structure, while inelastic scattering is needed to determine phonon dispersions.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="problem-set" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">5.9</span> Problem Set</h2>
+<ol type="1">
+<li><p><strong>Laue to Bragg.</strong> Starting from the phase difference between waves scattered by two equivalent atoms separated by a lattice vector <span class="math inline">\(\mathbf R_n\)</span>, derive the Laue condition. Then show how elastic scattering turns it into Bragg’s law for planes of spacing <span class="math inline">\(d_{hkl}\)</span>.</p></li>
+<li><p><strong>Lattice Versus Basis.</strong> For a crystal with basis positions <span class="math inline">\(\mathbf r_j\)</span> and atomic amplitudes <span class="math inline">\(f_j(\mathbf Q)\)</span>, derive the factorized scattering amplitude <span class="math display">\[
+A(\mathbf Q)
+=
+\left(\sum_n e^{-i\mathbf Q\cdot \mathbf R_n}\right)
+F(\mathbf Q).
+\]</span> Explain clearly which factor determines peak positions and which factor determines peak intensities.</p></li>
+<li><p><strong>fcc Extinction Rule.</strong> Using the four conventional-cell positions of an fcc lattice, derive <span class="math display">\[
+F_{\mathrm{fcc}}(hkl)
+=
+f
+\left[
+1
++
+e^{-i\pi(h+k)}
++
+e^{-i\pi(h+l)}
++
+e^{-i\pi(k+l)}
+\right].
+\]</span> Show that reflections occur only when <span class="math inline">\(h,k,l\)</span> are all even or all odd.</p></li>
+<li><p><strong>Diamond as an fcc Lattice Plus Basis.</strong> Starting from the fcc rule, add a second identical atom at <span class="math inline">\(\frac14(\mathbf a_1+\mathbf a_2+\mathbf a_3)\)</span> and derive the extra factor for diamond. Which all-even reflections are extinguished?</p></li>
+<li><p><strong>What Diffraction Does and Does Not Measure.</strong> State precisely what information is obtained from (a) Bragg-peak positions and (b) Bragg-peak intensities. Then explain the phase problem in one paragraph.</p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

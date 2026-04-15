@@ -256,8 +256,20 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">10.1</span> Roadmap</a></li>
+  <li><a href="#why-a-harmonic-crystal-does-not-expand" id="toc-why-a-harmonic-crystal-does-not-expand" class="nav-link" data-scroll-target="#why-a-harmonic-crystal-does-not-expand"><span class="header-section-number">10.2</span> Why a Harmonic Crystal Does Not Expand</a></li>
+  <li><a href="#from-anharmonicity-to-the-quasi-harmonic-idea" id="toc-from-anharmonicity-to-the-quasi-harmonic-idea" class="nav-link" data-scroll-target="#from-anharmonicity-to-the-quasi-harmonic-idea"><span class="header-section-number">10.3</span> From Anharmonicity to the Quasi-Harmonic Idea</a></li>
+  <li><a href="#grüneisen-parameter-and-the-thermal-expansion-coefficient" id="toc-grüneisen-parameter-and-the-thermal-expansion-coefficient" class="nav-link" data-scroll-target="#grüneisen-parameter-and-the-thermal-expansion-coefficient"><span class="header-section-number">10.4</span> Grüneisen Parameter and the Thermal Expansion Coefficient</a></li>
+  <li><a href="#why-c_p-and-c_v-differ-in-a-real-crystal" id="toc-why-c_p-and-c_v-differ-in-a-real-crystal" class="nav-link" data-scroll-target="#why-c_p-and-c_v-differ-in-a-real-crystal"><span class="header-section-number">10.5</span> Why <span class="math inline">\(C_P\)</span> and <span class="math inline">\(C_V\)</span> Differ in a Real Crystal</a></li>
+  <li><a href="#outlook-on-the-next-lecture-anharmonicity-phonon-lifetimes-and-thermal-resistance" id="toc-outlook-on-the-next-lecture-anharmonicity-phonon-lifetimes-and-thermal-resistance" class="nav-link" data-scroll-target="#outlook-on-the-next-lecture-anharmonicity-phonon-lifetimes-and-thermal-resistance"><span class="header-section-number">10.6</span> Outlook on the Next Lecture: Anharmonicity, Phonon Lifetimes, and Thermal Resistance</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">10.7</span> Problem Set</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -285,8 +297,464 @@ window.Quarto = {
 </ul>
 </div>
 </div>
+<section id="roadmap" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="roadmap"><span class="header-section-number">10.1</span> Roadmap</h2>
+<ul>
+<li>Start from the harmonic crystal and show why it cannot expand with temperature.</li>
+<li>Introduce anharmonic terms in the lattice potential and motivate the quasi-harmonic approximation.</li>
+<li>Derive the Grüneisen relation and discuss the physical meaning of the Grüneisen parameter.</li>
+<li>Relate thermal expansion to the difference <span class="math inline">\(C_P-C_V\)</span>.</li>
+<li>Outlook: anharmonicity also causes phonon decay and thermal resistance.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(V\)</span></td>
+<td>crystal volume</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(p\)</span></td>
+<td>pressure</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(K\)</span></td>
+<td>bulk modulus, <span class="math inline">\(K=-V(\partial p/\partial V)_T\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\alpha\)</span></td>
+<td>linear thermal expansion coefficient, <span class="math inline">\(\alpha=(1/3V)(\partial V/\partial T)_p\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(F(T,V)\)</span></td>
+<td>Helmholtz free energy</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\omega_\lambda(q)\)</span></td>
+<td>phonon frequency of branch <span class="math inline">\(\lambda\)</span> and wave vector <span class="math inline">\(q\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(n_\lambda(q)\)</span></td>
+<td>Bose occupation number of phonon mode <span class="math inline">\((q,\lambda)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\gamma_\lambda(q)\)</span></td>
+<td>mode Grüneisen parameter</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\gamma_G\)</span></td>
+<td>heat-capacity-weighted Grüneisen parameter</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(C_V,\ C_P\)</span></td>
+<td>constant-volume and constant-pressure heat capacities</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(c_V,\ c_P\)</span></td>
+<td>corresponding heat capacities per unit volume, with <span class="math inline">\(c_V=C_V/V\)</span> and <span class="math inline">\(c_P=C_P/V\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\beta\)</span></td>
+<td>inverse temperature, <span class="math inline">\(\beta=1/(k_B T)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(G\)</span></td>
+<td>reciprocal-lattice vector in momentum-conservation relations</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="why-a-harmonic-crystal-does-not-expand" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="why-a-harmonic-crystal-does-not-expand"><span class="header-section-number">10.2</span> Why a Harmonic Crystal Does Not Expand</h2>
+<p>We now leave the strictly harmonic crystal of <a href="lecture_09.html" class="quarto-xref">Lecture&nbsp;<span>9</span></a> and ask a new question: why do real solids expand when heated, whereas the harmonic model does not?</p>
+<p>For a harmonic crystal, the Helmholtz free energy can be written as <span class="math display">\[
+F(T,V)
+=
+E_0(V)
++
+k_B T \sum_{q,\lambda}
+\ln \left[
+2\sinh \left(\frac{\beta \hbar \omega_\lambda(q)}{2}\right)
+\right].
+\]</span></p>
+<!-- Check notation: $E_0$ should be $U$ or $U_0$    -->
+<p>Here <span class="math inline">\(E_0(V)\)</span> is the zero-temperature reference energy, <span class="math inline">\(\omega_\lambda(q)\)</span> is the phonon frequency of mode <span class="math inline">\((q,\lambda)\)</span>, and <span class="math inline">\(\beta=1/(k_B T)\)</span> is the inverse temperature.</p>
+<!-- [Sólyom, Sec. 12.3.2, Eq. (12.3.20), pp. 413–414; Sec. 12.3.3, pp. 418–420] -->
+<p>The key statement of the strict harmonic approximation is that the phonon frequencies do <strong>not</strong> change when the equilibrium volume changes: <span class="math display">\[
+\left(\frac{\partial \omega_\lambda(q)}{\partial V}\right)=0.
+\]</span></p>
+<p>This means that the temperature-dependent phonon part of <span class="math inline">\(F(T,V)\)</span> carries no explicit volume dependence. Therefore <span class="math display">\[
+p
+=-\left(\frac{\partial F}{\partial V}\right)_T
+-\frac{\partial E_0}{\partial V},
+\]</span> so the pressure is independent of temperature at fixed volume: <span class="math display">\[
+\left(\frac{\partial p}{\partial T}\right)_V=0.
+\]</span></p>
+<p>Here <span class="math inline">\(p\)</span> is the pressure and the derivative is taken at constant volume.</p>
+<!-- [Sólyom, Sec. 12.3.3, Eqs. (12.3.47)–(12.3.48), p. 420] -->
+<p>Now define the linear thermal expansion coefficient and bulk modulus as <span class="math display">\[
+\alpha
+=
+\frac{1}{3V}\left(\frac{\partial V}{\partial T}\right)_p,
+\qquad
+K=-V\left(\frac{\partial p}{\partial V}\right)_T.
+\]</span></p>
+<p>Here <span class="math inline">\(\alpha\)</span> measures the relative change of a linear dimension with temperature in an isotropic solid, and <span class="math inline">\(K\)</span> measures the resistance to compression.</p>
+<p>Using the cyclic thermodynamic identity, one obtains <span class="math display">\[
+\alpha
+=
+\frac{1}{3K}\left(\frac{\partial p}{\partial T}\right)_V.
+\]</span></p>
+<p>Therefore, in the harmonic approximation,</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\alpha=0.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This is the formal reason why a harmonic crystal does not expand.</p>
+<!-- [Sólyom, Sec. 12.3.3, Eqs. (12.3.50)–(12.3.53), p. 420] :contentReference[oaicite:2]{index=2} -->
+<p>A simple sanity check comes from a single harmonic oscillator. In a purely harmonic potential <span class="math display">\[
+U(u)=\frac{1}{2} f u^2,
+\]</span> the potential is symmetric about its minimum. Here <span class="math inline">\(u\)</span> is the displacement and <span class="math inline">\(f\)</span> is the spring constant. A thermal distribution in such a symmetric well has <span class="math inline">\(\langle u\rangle=0\)</span> at every temperature, so the average position does not shift. Thermal expansion therefore requires <strong>asymmetry</strong> of the potential, not just larger vibration amplitudes.</p>
+<!-- [Ibach–Lüth, Sec. 5.5, discussion around Eqs. (5.29)–(5.32), pp. 120–121] :contentReference[oaicite:3]{index=3} -->
+</section>
+<section id="from-anharmonicity-to-the-quasi-harmonic-idea" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="from-anharmonicity-to-the-quasi-harmonic-idea"><span class="header-section-number">10.3</span> From Anharmonicity to the Quasi-Harmonic Idea</h2>
+<p>To go beyond the harmonic model, the lattice potential energy must be expanded beyond second order around the equilibrium structure: <span class="math display">\[
+\begin{aligned}
+U(\{u\})
+&amp;=
+U_0
++
+\frac{1}{2!}
+\sum_{l\kappa\alpha}
+\sum_{l'\kappa'\beta}
+\Phi^{(2)}_{\alpha\beta}(l\kappa,l'\kappa')
+\,u_{\alpha}(l,\kappa)\,u_{\beta}(l',\kappa')
+\\[4pt]
+&amp;\quad+
+\frac{1}{3!}
+\sum_{l\kappa\alpha}
+\sum_{l'\kappa'\beta}
+\sum_{l''\kappa''\gamma}
+\Phi^{(3)}_{\alpha\beta\gamma}(l\kappa,l'\kappa',l''\kappa'')
+\,u_{\alpha}(l,\kappa)\,u_{\beta}(l',\kappa')\,u_{\gamma}(l'',\kappa'')
+\\[4pt]
+&amp;\quad+
+\frac{1}{4!}
+\sum_{l\kappa\alpha}
+\sum_{l'\kappa'\beta}
+\sum_{l''\kappa''\gamma}
+\sum_{l'''\kappa'''\delta}
+\Phi^{(4)}_{\alpha\beta\gamma\delta}(l\kappa,l'\kappa',l''\kappa'',l'''\kappa''')
+\,u_{\alpha}(l,\kappa)\,u_{\beta}(l',\kappa')\,u_{\gamma}(l'',\kappa'')\,u_{\delta}(l''',\kappa''')\\[4pt]
+&amp;\quad+\cdots
+\end{aligned}
+\]</span></p>
+<p>Here <span class="math inline">\(U(\{u\})\)</span> is the crystal potential energy as a function of the full set of ionic displacements <span class="math inline">\(\{u\}\)</span>, and <span class="math inline">\(U_0\)</span> is the potential energy of the equilibrium crystal, that is, the value at <span class="math inline">\(\{u\}=0\)</span>. The quantity <span class="math inline">\(u_{\alpha}(l,\kappa)\)</span> denotes the displacement of atom <span class="math inline">\(\kappa\)</span> in primitive cell <span class="math inline">\(l\)</span> along Cartesian direction <span class="math inline">\(\alpha\in\{x,y,z\}\)</span> from its equilibrium position. The indices <span class="math inline">\(l,l',l'',\dots\)</span> run over primitive cells, <span class="math inline">\(\kappa,\kappa',\kappa'',\dots\)</span> run over the atoms in the primitive basis, and <span class="math inline">\(\alpha,\beta,\gamma,\delta\)</span> denote Cartesian components.</p>
+<p>The expansion coefficients are the interatomic force constants evaluated at equilibrium: <span class="math display">\[
+\Phi^{(2)}_{\alpha\beta}(l\kappa,l'\kappa')
+=
+\left.
+\frac{\partial^2 U}{\partial u_{\alpha}(l,\kappa)\,\partial u_{\beta}(l',\kappa')}
+\right|_{\{u\}=0},
+\]</span></p>
+<p><span class="math display">\[
+\Phi^{(3)}_{\alpha\beta\gamma}(l\kappa,l'\kappa',l''\kappa'')
+=
+\left.
+\frac{\partial^3 U}{\partial u_{\alpha}(l,\kappa)\,\partial u_{\beta}(l',\kappa')\,\partial u_{\gamma}(l'',\kappa'')}
+\right|_{\{u\}=0},
+\]</span></p>
+<p><span class="math display">\[
+\Phi^{(4)}_{\alpha\beta\gamma\delta}(l\kappa,l'\kappa',l''\kappa'',l'''\kappa''')
+=
+\left.
+\frac{\partial^4 U}{\partial u_{\alpha}(l,\kappa)\,\partial u_{\beta}(l',\kappa')\,\partial u_{\gamma}(l'',\kappa'')\,\partial u_{\delta}(l''',\kappa''')}
+\right|_{\{u\}=0}.
+\]</span></p>
+<p>The factorial prefactors <span class="math inline">\(1/2!\)</span>, <span class="math inline">\(1/3!\)</span>, and <span class="math inline">\(1/4!\)</span> are the usual Taylor-series coefficients. The second-order term is the harmonic contribution, while the third- and fourth-order terms are the leading anharmonic corrections. The cubic term introduces asymmetry of the potential and enables three-phonon processes; the quartic term is the next correction and helps stabilize the potential for larger displacements.</p>
+<p>For a monatomic basis, the basis index <span class="math inline">\(\kappa\)</span> may be dropped, and one simply writes <span class="math inline">\(u_{\alpha}(l)\)</span>.</p>
+<!-- [Sólyom, Sec. 12.4.1, Eq. (12.4.1), pp. 421–422; displacement notation from Sec. 12.1.5, Eq. (12.1.39), pp. 394–395] -->
+<p>Interpretation:</p>
+<ul>
+<li>the cubic term introduces asymmetry of the potential;</li>
+<li>the quartic term stabilizes the energy for large displacements;</li>
+<li>once these terms matter, the exact decoupling into independent normal modes is lost.</li>
+</ul>
+<p>That last point is crucial: in a truly anharmonic crystal, phonons are no longer exact eigenstates of the full Hamiltonian.</p>
+<p>A very useful intermediate step is the <strong>quasi-harmonic approximation</strong>. In this picture, the crystal is still treated as a gas of noninteracting phonons at any fixed volume, but the phonon frequencies are allowed to depend on the equilibrium volume: <span class="math display">\[
+\omega_\lambda(q) \rightarrow \omega_\lambda(q,V).
+\]</span></p>
+<p>The free energy then becomes <span class="math display">\[
+F(T,V)
+=
+U_0(V)
++
+k_B T \sum_{q,\lambda}
+\ln \left[
+2\sinh \left(\frac{\beta\hbar\omega_\lambda(q,V)}{2}\right)
+\right].
+\]</span></p>
+<p>Here the phonons remain harmonic <strong>at fixed <span class="math inline">\(V\)</span></strong>, but the spectrum shifts when <span class="math inline">\(V\)</span> changes. This is the simplest controlled way to encode thermal expansion in phonon thermodynamics.</p>
+<!-- [Ibach–Lüth, Sec. 5.5, discussion of the quasi-harmonic approximation, pp. 120–121; Sólyom, Sec. 12.4.3, Eq. (12.4.15), p. 426] :contentReference[oaicite:5]{index=5} :contentReference[oaicite:6]{index=6} -->
+<p>The natural quantity that measures this volume sensitivity is the mode Grüneisen parameter: <span class="math display">\[
+\gamma_\lambda(q)
+= - \frac{\partial \ln \omega_\lambda(q)}{\partial \ln V}
+= -\frac{V}{\omega_\lambda(q)}
+\left(\frac{\partial \omega_\lambda(q)}{\partial V}\right).
+\]</span></p>
+<p>Here <span class="math inline">\(\gamma_\lambda(q)\)</span> is dimensionless. It tells us how strongly a given phonon mode softens or stiffens when the crystal is expanded.</p>
+<!-- [Sólyom, Sec. 12.4.3, Eq. (12.4.18), p. 426; Ibach–Lüth, Sec. 5.5, Eq. (5.34), p. 122] :contentReference[oaicite:7]{index=7} :contentReference[oaicite:8]{index=8} -->
+<p>Physical meaning:</p>
+<ul>
+<li>if <span class="math inline">\(\gamma_\lambda(q)&gt;0\)</span>, the mode frequency decreases upon expansion, so heating tends to favor larger volume;</li>
+<li>if <span class="math inline">\(\gamma_\lambda(q)&lt;0\)</span>, the mode frequency increases upon expansion, so that mode tends to oppose expansion;</li>
+<li>the observed expansion is therefore a weighted average over all thermally populated modes.</li>
+</ul>
+</section>
+<section id="grüneisen-parameter-and-the-thermal-expansion-coefficient" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="grüneisen-parameter-and-the-thermal-expansion-coefficient"><span class="header-section-number">10.4</span> Grüneisen Parameter and the Thermal Expansion Coefficient</h2>
+<p>The Bose occupation number of mode <span class="math inline">\((q,\lambda)\)</span> is <span class="math display">\[
+n_\lambda(q)
+=
+\frac{1}{e^{\beta\hbar\omega_\lambda(q)}-1}.
+\]</span></p>
+<p>Here <span class="math inline">\(n_\lambda(q)\)</span> is the thermal mean occupation number of the phonon mode.</p>
+<p>Using the quasi-harmonic free energy, one finds that the temperature derivative of the pressure at fixed volume is <span class="math display">\[
+\left(\frac{\partial p}{\partial T}\right)_V
+=
+\frac{1}{V}
+\sum_{q,\lambda}
+\gamma_\lambda(q)
+\hbar\omega_\lambda(q)
+\frac{\partial n_\lambda(q)}{\partial T}.
+\]</span></p>
+<p>The factor <span class="math inline">\(\hbar\omega_\lambda(q)\partial n_\lambda(q)/\partial T\)</span> is the heat-capacity weight carried by that mode.</p>
+<!-- [Sólyom, Sec. 12.4.3, Eqs. (12.4.15)–(12.4.18), pp. 426–427] :contentReference[oaicite:9]{index=9} -->
+<p>Define the modal contribution to the heat capacity per unit volume as <span class="math display">\[
+c_{V,\lambda}(q)
+=
+\frac{1}{V}
+\hbar\omega_\lambda(q)
+\frac{\partial n_\lambda(q)}{\partial T},
+\]</span> and the total volume heat capacity as <span class="math display">\[
+c_V
+=
+\sum_{q,\lambda} c_{V,\lambda}(q).
+\]</span></p>
+<p>Then <span class="math display">\[
+\left(\frac{\partial p}{\partial T}\right)_V
+=
+\sum_{q,\lambda}\gamma_\lambda(q)c_{V,\lambda}(q).
+\]</span></p>
+<p>This motivates the heat-capacity-weighted Grüneisen parameter <span class="math display">\[
+\gamma_G
+=
+\frac{\sum_{q,\lambda}\gamma_\lambda(q)c_{V,\lambda}(q)}
+{\sum_{q,\lambda}c_{V,\lambda}(q)}.
+\]</span></p>
+<p>By construction, <span class="math inline">\(\gamma_G\)</span> is the average Grüneisen parameter of the modes that actually contribute thermally at temperature <span class="math inline">\(T\)</span>.</p>
+<!-- [Sólyom, Sec. 12.4.3, Eq. (12.4.19), p. 427] :contentReference[oaicite:10]{index=10} -->
+<p>Substituting this into expression for the coefficient of thermal expansion <span class="math display">\[
+\alpha
+=
+\frac{1}{3K}\left(\frac{\partial p}{\partial T}\right)_V
+\]</span> gives the <strong>Grüneisen relation</strong></p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\alpha(T)
+=
+\frac{\gamma_G(T) c_V(T)}{3K(T)}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(\alpha(T)\)</span> is the linear thermal expansion coefficient, <span class="math inline">\(c_V(T)\)</span> is the constant-volume heat capacity per unit volume, <span class="math inline">\(K(T)\)</span> is the bulk modulus, and <span class="math inline">\(\gamma_G(T)\)</span> is the weighted Grüneisen parameter.</p>
+<!-- [Sólyom, Sec. 12.4.3, Eqs. (12.4.9)–(12.4.11), p. 425; Eq. (12.4.19), p. 427; Ibach–Lüth, Sec. 5.5, Eq. (5.33), p. 122] :contentReference[oaicite:11]{index=11} :contentReference[oaicite:12]{index=12} -->
+<p>This formula is the central thermodynamic result of the lecture.</p>
+<p>Interpretation:</p>
+<ul>
+<li>if <span class="math inline">\(K\)</span> and <span class="math inline">\(\gamma_G\)</span> vary only weakly with temperature, then <span class="math inline">\(\alpha(T)\)</span> follows the same temperature dependence as <span class="math inline">\(c_V(T)\)</span>;</li>
+<li>at low temperature, where acoustic phonons dominate and <span class="math inline">\(c_V\propto T^3\)</span>, one expects <span class="math inline">\(\alpha\propto T^3\)</span>;</li>
+<li>at high temperature, once the phonon heat capacity is nearly constant, <span class="math inline">\(\alpha\)</span> is also approximately constant;</li>
+<li>negative thermal expansion is possible if modes with negative <span class="math inline">\(\gamma_\lambda(q)\)</span> dominate the weighted average over some temperature range.</li>
+</ul>
+<div id="fig-silicon-expansion" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-silicon-expansion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Ibach–Lüth, Sec. 5.6, Fig. 5.4, p. 123] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-silicon-expansion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.1: <strong>Figure placeholder.</strong> Temperature dependence of the linear thermal expansion coefficient of silicon, including the low-temperature sign change that illustrates that not all phonon modes contribute with the same sign.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="why-c_p-and-c_v-differ-in-a-real-crystal" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="why-c_p-and-c_v-differ-in-a-real-crystal"><span class="header-section-number">10.5</span> Why <span class="math inline">\(C_P\)</span> and <span class="math inline">\(C_V\)</span> Differ in a Real Crystal</h2>
+<p>In <a href="lecture_09.html" class="quarto-xref">Lecture&nbsp;<span>9</span></a> we could treat the measured heat capacity of a harmonic solid as essentially <span class="math inline">\(C_V\)</span>. Anharmonicity changes that.</p>
+<p>A useful thermodynamic identity is <span class="math display">\[
+C_P
+= C_V
+- T
+\frac{\left[(\partial p/\partial T)_V\right]^2}
+{(\partial p/\partial V)_T}.
+\]</span></p>
+<p>Here <span class="math inline">\(C_P\)</span> is the heat capacity at constant pressure and <span class="math inline">\(C_V\)</span> is the heat capacity at constant volume.</p>
+<!-- [Sólyom, Sec. 12.3.3, Eq. (12.3.49), p. 420] :contentReference[oaicite:13]{index=13} -->
+<p>Now use <span class="math display">\[
+K=-V\left(\frac{\partial p}{\partial V}\right)_T,
+\qquad
+\alpha=\frac{1}{3K}\left(\frac{\partial p}{\partial T}\right)_V.
+\]</span></p>
+<p>Eliminating the derivatives gives</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+C_P-C_V
+=
+9\alpha^2 K T V.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Equivalently, per unit volume, <span class="math display">\[
+c_P-c_V = 9\alpha^2 K T.
+\]</span></p>
+<p>Here <span class="math inline">\(V\)</span> is the crystal volume, <span class="math inline">\(\alpha\)</span> is the linear thermal expansion coefficient, and <span class="math inline">\(K\)</span> is the bulk modulus.</p>
+<!-- [Derived from Sólyom, Sec. 12.3.3, Eqs. (12.3.49)–(12.3.53), p. 420] :contentReference[oaicite:14]{index=14} -->
+<p>Interpretation:</p>
+<ul>
+<li>at constant volume, all supplied heat goes into raising the internal energy;</li>
+<li>at constant pressure, part of the supplied heat also goes into the mechanical work associated with expansion;</li>
+<li>therefore <span class="math inline">\(C_P&gt;C_V\)</span> whenever <span class="math inline">\(\alpha\neq 0\)</span>.</li>
+</ul>
+<p>Sanity checks:</p>
+<ul>
+<li>in the harmonic limit, <span class="math inline">\(\alpha=0\)</span>, so <span class="math inline">\(C_P=C_V\)</span>;</li>
+<li>the difference is usually modest in solids because <span class="math inline">\(\alpha\)</span> is small;</li>
+<li>the difference grows with temperature and with the ease of expansion.</li>
+</ul>
+<p>This is the clean thermodynamic signature of anharmonicity in calorimetry.</p>
+</section>
+<section id="outlook-on-the-next-lecture-anharmonicity-phonon-lifetimes-and-thermal-resistance" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="outlook-on-the-next-lecture-anharmonicity-phonon-lifetimes-and-thermal-resistance"><span class="header-section-number">10.6</span> Outlook on the Next Lecture: Anharmonicity, Phonon Lifetimes, and Thermal Resistance</h2>
+<p>Thermal expansion is not the only consequence of anharmonicity. The same cubic and quartic terms that make <span class="math inline">\(\omega_\lambda(q)\)</span> volume dependent also make phonons interact with one another.</p>
+<p>In the cubic term, the relevant three-phonon processes obey crystal-momentum conservation modulo a reciprocal-lattice vector: <span class="math display">\[
+q_1+q_2=q_3+G,
+\]</span> together with energy conservation <span class="math display">\[
+\hbar\omega_1+\hbar\omega_2=\hbar\omega_3.
+\]</span></p>
+<p>Here <span class="math inline">\(G=0\)</span> corresponds to a <strong>normal</strong> process, while <span class="math inline">\(G\neq 0\)</span> corresponds to an <strong>umklapp</strong> process.</p>
+<!-- [Sólyom, Sec. 12.4.2, Eqs. (12.4.7)–(12.4.8), pp. 423–424] :contentReference[oaicite:15]{index=15} -->
+<p>Why this matters:</p>
+<ul>
+<li>in a harmonic crystal, phonons have infinite lifetime;</li>
+<li>in an anharmonic crystal, one phonon can decay into others or merge with them;</li>
+<li>phonons therefore acquire a finite lifetime <span class="math inline">\(\tau\)</span> and a finite mean free path <span class="math inline">\(\Lambda\)</span>.</li>
+</ul>
+<p>That is the microscopic origin of a finite lattice thermal conductivity.</p>
+<p>A kinetic picture then gives <span class="math display">\[
+\kappa_{ph}
+\sim
+\frac{1}{3} c_V v_g \Lambda,
+\qquad
+\Lambda=v_g\tau,
+\]</span> where <span class="math inline">\(\kappa_{ph}\)</span> is the phonon thermal conductivity, <span class="math inline">\(v_g\)</span> is a characteristic group velocity, and <span class="math inline">\(\Lambda\)</span> is the phonon mean free path.</p>
+<!-- [Sólyom, Sec. 12.4.3, Eq. (12.4.20), p. 427; Ibach–Lüth, Sec. 5.6, Eq. (5.43), pp. 124–125] :contentReference[oaicite:16]{index=16} :contentReference[oaicite:17]{index=17} -->
+<p>The forward link is therefore direct:</p>
+<ul>
+<li><strong>thermal expansion</strong> comes from the volume dependence of phonon frequencies;</li>
+<li><strong>thermal resistance</strong> comes from phonon-phonon scattering and finite phonon lifetime.</li>
+</ul>
+<p>The next lecture will build on this second point and focus on phonon transport, especially the role of normal and umklapp processes.</p>
+<div id="fig-three-phonon-processes" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-three-phonon-processes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Sec. 12.4.2, Figs. 12.10–12.11, pp. 423–424; alternatively Ibach–Lüth, Sec. 5.6, Fig. 5.6, p. 126] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-three-phonon-processes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.2: <strong>Figure placeholder.</strong> Schematic representation of three-phonon normal and umklapp processes, highlighting that umklapp scattering can reverse the direction of net heat current and is therefore central for thermal resistance.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Take-Home Messages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>A strictly harmonic crystal does not thermally expand.</li>
+<li>Thermal expansion requires anharmonicity, because only an asymmetric potential can shift the thermal average position.</li>
+<li>The quasi-harmonic approximation keeps phonons as useful degrees of freedom while allowing their frequencies to depend on volume.</li>
+<li>The Grüneisen parameter measures how strongly a phonon mode responds to expansion or compression.</li>
+<li>The thermal expansion coefficient is controlled by the heat-capacity-weighted Grüneisen parameter, the heat capacity, and the bulk modulus.</li>
+<li>The difference between constant-pressure and constant-volume heat capacities is another direct consequence of thermal expansion.</li>
+<li>The same anharmonicity that causes expansion also gives phonons finite lifetimes and finite thermal conductivity.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="problem-set" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">10.7</span> Problem Set</h2>
+<ol type="1">
+<li><p><strong>Harmonic Limit and Thermal Expansion.</strong> Starting from <span class="math display">\[
+\alpha=\frac{1}{3K}\left(\frac{\partial p}{\partial T}\right)_V,
+\]</span> show that a strictly harmonic crystal has <span class="math inline">\(\alpha=0\)</span> if its phonon frequencies are volume independent.</p></li>
+<li><p><strong>Mode Grüneisen Parameter.</strong> Suppose one phonon mode obeys <span class="math display">\[
+\omega(V)=\omega_0\left(\frac{V}{V_0}\right)^{-2}.
+\]</span> Compute the mode Grüneisen parameter <span class="math inline">\(\gamma_\lambda(q)\)</span> for this mode and state whether this mode favors positive or negative thermal expansion.</p></li>
+<li><p><strong>Low-Temperature Behavior of <span class="math inline">\(\alpha(T)\)</span>.</strong> Assume that at low temperature <span class="math display">\[
+c_V(T)=A T^3,
+\]</span> while <span class="math inline">\(\gamma_G\)</span> and <span class="math inline">\(K\)</span> may be treated as constants. Use the Grüneisen relation to find the low-temperature scaling of <span class="math inline">\(\alpha(T)\)</span>.</p></li>
+<li><p><strong>Deriving <span class="math inline">\(C_P-C_V\)</span>.</strong> Starting from <span class="math display">\[
+C_P
+=
+C_V
+- T \frac{\left[(\partial p/\partial T)_V\right]^2}{(\partial p/\partial V)_T},
+\]</span> together with <span class="math display">\[
+K=-V\left(\frac{\partial p}{\partial V}\right)_T,
+\qquad
+\alpha=\frac{1}{3K}\left(\frac{\partial p}{\partial T}\right)_V,
+\]</span> derive the relation <span class="math display">\[
+C_P-C_V=9\alpha^2KVT.
+\]</span></p></li>
+<li><p><strong>Normal Versus Umklapp Processes.</strong> Explain the difference between normal and umklapp three-phonon processes. Why are umklapp processes especially important for thermal resistance?</p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

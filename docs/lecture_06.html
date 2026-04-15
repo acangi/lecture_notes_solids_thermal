@@ -256,8 +256,51 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">6.1</span> Roadmap</a></li>
+  <li><a href="#why-lattice-dynamics-matters-for-thermal-physics" id="toc-why-lattice-dynamics-matters-for-thermal-physics" class="nav-link" data-scroll-target="#why-lattice-dynamics-matters-for-thermal-physics"><span class="header-section-number">6.2</span> Why Lattice Dynamics Matters for Thermal Physics</a></li>
+  <li><a href="#bornoppenheimer-approximation-and-effective-potential-for-the-nuclei" id="toc-bornoppenheimer-approximation-and-effective-potential-for-the-nuclei" class="nav-link" data-scroll-target="#bornoppenheimer-approximation-and-effective-potential-for-the-nuclei"><span class="header-section-number">6.3</span> Born–Oppenheimer Approximation and Effective Potential for the Nuclei</a>
+  <ul class="collapse">
+  <li><a href="#full-electronnucleus-hamiltonian" id="toc-full-electronnucleus-hamiltonian" class="nav-link" data-scroll-target="#full-electronnucleus-hamiltonian"><span class="header-section-number">6.3.1</span> Full electron–nucleus Hamiltonian</a></li>
+  <li><a href="#electronic-problem-at-fixed-nuclei" id="toc-electronic-problem-at-fixed-nuclei" class="nav-link" data-scroll-target="#electronic-problem-at-fixed-nuclei"><span class="header-section-number">6.3.2</span> Electronic problem at fixed nuclei</a></li>
+  <li><a href="#expansion-of-the-full-wavefunction" id="toc-expansion-of-the-full-wavefunction" class="nav-link" data-scroll-target="#expansion-of-the-full-wavefunction"><span class="header-section-number">6.3.3</span> Expansion of the full wavefunction</a></li>
+  <li><a href="#bornoppenheimer-approximation" id="toc-bornoppenheimer-approximation" class="nav-link" data-scroll-target="#bornoppenheimer-approximation"><span class="header-section-number">6.3.4</span> Born–Oppenheimer approximation</a></li>
+  <li><a href="#transition-to-the-harmonic-approximation" id="toc-transition-to-the-harmonic-approximation" class="nav-link" data-scroll-target="#transition-to-the-harmonic-approximation"><span class="header-section-number">6.3.5</span> Transition to the Harmonic Approximation</a></li>
+  </ul></li>
+  <li><a href="#geometry-and-indexing-of-a-crystal-with-a-basis" id="toc-geometry-and-indexing-of-a-crystal-with-a-basis" class="nav-link" data-scroll-target="#geometry-and-indexing-of-a-crystal-with-a-basis"><span class="header-section-number">6.4</span> Geometry and Indexing of a Crystal with a Basis</a>
+  <ul class="collapse">
+  <li><a href="#sanity-check" id="toc-sanity-check" class="nav-link" data-scroll-target="#sanity-check"><span class="header-section-number">6.4.1</span> Sanity Check</a></li>
+  </ul></li>
+  <li><a href="#harmonic-approximation-and-force-constants" id="toc-harmonic-approximation-and-force-constants" class="nav-link" data-scroll-target="#harmonic-approximation-and-force-constants"><span class="header-section-number">6.5</span> Harmonic Approximation and Force Constants</a>
+  <ul class="collapse">
+  <li><a href="#symmetry-and-translational-invariance" id="toc-symmetry-and-translational-invariance" class="nav-link" data-scroll-target="#symmetry-and-translational-invariance"><span class="header-section-number">6.5.1</span> Symmetry and Translational Invariance</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">6.5.2</span> Interpretation</a></li>
+  <li><a href="#brief-remark-on-microscopic-meaning" id="toc-brief-remark-on-microscopic-meaning" class="nav-link" data-scroll-target="#brief-remark-on-microscopic-meaning"><span class="header-section-number">6.5.3</span> Brief Remark on Microscopic Meaning</a></li>
+  </ul></li>
+  <li><a href="#equations-of-motion-in-real-space" id="toc-equations-of-motion-in-real-space" class="nav-link" data-scroll-target="#equations-of-motion-in-real-space"><span class="header-section-number">6.6</span> Equations of Motion in Real Space</a>
+  <ul class="collapse">
+  <li><a href="#sanity-check-1" id="toc-sanity-check-1" class="nav-link" data-scroll-target="#sanity-check-1"><span class="header-section-number">6.6.1</span> Sanity Check</a></li>
+  </ul></li>
+  <li><a href="#plane-wave-ansatz-and-the-dynamical-matrix" id="toc-plane-wave-ansatz-and-the-dynamical-matrix" class="nav-link" data-scroll-target="#plane-wave-ansatz-and-the-dynamical-matrix"><span class="header-section-number">6.7</span> Plane-Wave Ansatz and the Dynamical Matrix</a>
+  <ul class="collapse">
+  <li><a href="#why-this-is-the-key-simplification" id="toc-why-this-is-the-key-simplification" class="nav-link" data-scroll-target="#why-this-is-the-key-simplification"><span class="header-section-number">6.7.1</span> Why This Is the Key Simplification</a></li>
+  <li><a href="#hermiticity-and-positivity" id="toc-hermiticity-and-positivity" class="nav-link" data-scroll-target="#hermiticity-and-positivity"><span class="header-section-number">6.7.2</span> Hermiticity and Positivity</a></li>
+  </ul></li>
+  <li><a href="#branch-counting-and-mode-classification" id="toc-branch-counting-and-mode-classification" class="nav-link" data-scroll-target="#branch-counting-and-mode-classification"><span class="header-section-number">6.8</span> Branch Counting and Mode Classification</a>
+  <ul class="collapse">
+  <li><a href="#acoustic-branches" id="toc-acoustic-branches" class="nav-link" data-scroll-target="#acoustic-branches"><span class="header-section-number">6.8.1</span> Acoustic Branches</a></li>
+  <li><a href="#optical-branches" id="toc-optical-branches" class="nav-link" data-scroll-target="#optical-branches"><span class="header-section-number">6.8.2</span> Optical Branches</a></li>
+  <li><a href="#longitudinal-and-transverse-modes" id="toc-longitudinal-and-transverse-modes" class="nav-link" data-scroll-target="#longitudinal-and-transverse-modes"><span class="header-section-number">6.8.3</span> Longitudinal and Transverse Modes</a></li>
+  <li><a href="#sanity-checks" id="toc-sanity-checks" class="nav-link" data-scroll-target="#sanity-checks"><span class="header-section-number">6.8.4</span> Sanity Checks</a></li>
+  </ul></li>
+  <li><a href="#bridge-to-the-next-lecture-from-formalism-to-explicit-dispersions" id="toc-bridge-to-the-next-lecture-from-formalism-to-explicit-dispersions" class="nav-link" data-scroll-target="#bridge-to-the-next-lecture-from-formalism-to-explicit-dispersions"><span class="header-section-number">6.9</span> Bridge to the Next Lecture: From Formalism to Explicit Dispersions</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">6.10</span> Problem Set</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -285,8 +328,578 @@ window.Quarto = {
 </ul>
 </div>
 </div>
+<section id="roadmap" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="roadmap"><span class="header-section-number">6.1</span> Roadmap</h2>
+<ul>
+<li>From the full electron–nucleus problem to the Born–Oppenheimer effective potential.</li>
+<li>Geometry and indexing of a crystal with a basis.</li>
+<li>Harmonic approximation and force constants.</li>
+<li>Equations of motion and translational invariance.</li>
+<li>Plane-wave ansatz, Born–von Kármán boundary conditions, and the dynamical matrix.</li>
+<li>Branch counting and the classification into acoustic and optical modes.</li>
+<li>Bridge to the next lecture: explicit chains, dispersions, and group velocity.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 63%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf r_j\)</span></td>
+<td>coordinate of electron <span class="math inline">\(j\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf R_I\)</span></td>
+<td>coordinate of nucleus <span class="math inline">\(I\)</span> in the general Born–Oppenheimer derivation</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(H\)</span></td>
+<td>full electron–nucleus Hamiltonian</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(H_e\)</span></td>
+<td>electronic Hamiltonian at fixed nuclear configuration</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Psi\)</span></td>
+<td>full electron–nucleus wavefunction</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\psi_m({\mathbf r_j};{\mathbf R_I})\)</span></td>
+<td>electronic eigenstate for fixed nuclei</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\chi_m({\mathbf R_I})\)</span></td>
+<td>nuclear amplitude on electronic surface <span class="math inline">\(m\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf R_m\)</span></td>
+<td>Bravais-lattice vector of primitive cell <span class="math inline">\(m\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf r_\mu\)</span></td>
+<td>equilibrium position of basis atom <span class="math inline">\(\mu\)</span> inside a primitive cell</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf u(m,\mu,t)\)</span></td>
+<td>displacement of atom <span class="math inline">\(\mu\)</span> in cell <span class="math inline">\(m\)</span> from equilibrium</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(u_\alpha(m,\mu,t)\)</span></td>
+<td>Cartesian component <span class="math inline">\(\alpha\in{x,y,z}\)</span> of <span class="math inline">\(\mathbf u(m,\mu,t)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(M_\mu\)</span></td>
+<td>mass of basis atom <span class="math inline">\(\mu\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Phi_{\alpha\beta}^{\mu\nu}(m,n)\)</span></td>
+<td>force-constant tensor</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf q\)</span></td>
+<td>phonon wavevector in the first Brillouin zone</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(D_{\alpha\beta}^{\mu\nu}(\mathbf q)\)</span></td>
+<td>dynamical matrix</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\omega_\lambda(\mathbf q)\)</span></td>
+<td>angular frequency of branch <span class="math inline">\(\lambda\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(e_{\mu,\alpha}^{(\lambda)}(\mathbf q)\)</span></td>
+<td>polarization-vector component of branch <span class="math inline">\(\lambda\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="why-lattice-dynamics-matters-for-thermal-physics" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="why-lattice-dynamics-matters-for-thermal-physics"><span class="header-section-number">6.2</span> Why Lattice Dynamics Matters for Thermal Physics</h2>
+<p>A rigid lattice is not enough to understand the thermal behavior of a solid. At finite temperature, atoms fluctuate about their equilibrium positions, and these collective motions are essential for specific heat, thermal expansion, sound propagation, and thermal conductivity, especially in insulators and semiconductors. In this lecture we build the general harmonic formalism that makes those phenomena calculable.</p>
+<!-- [Ibach–Lüth, Ch. 4 introduction, pp. 81–82; Sólyom, Ch. 11 introduction, pp. 331–332] -->
+</section>
+<section id="bornoppenheimer-approximation-and-effective-potential-for-the-nuclei" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="bornoppenheimer-approximation-and-effective-potential-for-the-nuclei"><span class="header-section-number">6.3</span> Born–Oppenheimer Approximation and Effective Potential for the Nuclei</h2>
+<p>The first simplification is not yet specific to crystals. A solid is a coupled quantum system of electrons and nuclei, so in principle one should solve the full many-body Schrödinger equation for both at once. The reason this is usually not attempted directly in lattice dynamics is the large mass difference between electrons and nuclei: the electronic degrees of freedom adjust much faster than the nuclear ones. This scale separation motivates the Born–Oppenheimer, or adiabatic, approximation.</p>
+<!-- [Ibach–Lüth, Ch. 4 introduction, pp. 81–82; Sólyom, Ch. 11 introduction, pp. 331–332] -->
+<section id="full-electronnucleus-hamiltonian" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="full-electronnucleus-hamiltonian"><span class="header-section-number">6.3.1</span> Full electron–nucleus Hamiltonian</h3>
+<p>We begin from the non-relativistic Coulomb Hamiltonian for <span class="math inline">\(N_e\)</span> electrons and <span class="math inline">\(N_n\)</span> nuclei:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+H = T_e + T_n + V_{ee} + V_{nn} + V_{en},
+\]</span></p>
+</div>
+</div>
+</div>
+<p>with <span class="math display">\[
+\begin{aligned}
+T_e &amp;= -\sum_{j=1}^{N_e}\frac{\hbar^2}{2m_e}\nabla_{\mathbf r_j}^2,\\
+T_n &amp;= -\sum_{I=1}^{N_n}\frac{\hbar^2}{2M_I}\nabla_{\mathbf R_I}^2,\\
+V_{ee} &amp;= \sum_{i&lt;j}\frac{e^2}{4\pi\varepsilon_0|\mathbf r_i-\mathbf r_j|},\\
+V_{nn} &amp;= \sum_{I&lt;J}\frac{Z_I Z_J e^2}{4\pi\varepsilon_0|\mathbf R_I-\mathbf R_J|},\\
+V_{en} &amp;= -\sum_{j,I}\frac{Z_I e^2}{4\pi\varepsilon_0|\mathbf r_j-\mathbf R_I|},\\
+\end{aligned}
+\]</span> where <span class="math inline">\(T_e\)</span> represents the kinetic energy of the electrons, <span class="math inline">\(T_n\)</span> the kinetic energy of the nuclei, <span class="math inline">\(V_{ee}\)</span> the interaction among the electrons, <span class="math inline">\(V_{nn}\)</span> the interaction among the nuclei, and <span class="math inline">\(V_{en}\)</span> the interaction among electrons and nuclei.</p>
+<p>The exact stationary problem is therefore <span class="math display">\[
+H\Psi({\mathbf r_j},{\mathbf R_I})=E\Psi({\mathbf r_j},{\mathbf R_I}).
+\]</span></p>
+</section>
+<section id="electronic-problem-at-fixed-nuclei" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="electronic-problem-at-fixed-nuclei"><span class="header-section-number">6.3.2</span> Electronic problem at fixed nuclei</h3>
+<p>Now freeze the nuclei at some instantaneous configuration <span class="math inline">\({\mathbf R_I}\)</span> and group all remaining terms into an electronic Hamiltonian <span class="math display">\[
+H_e({\mathbf r_j};{\mathbf R_I})
+=
+T_e+V_{ee}+V_{en}+V_{nn}.
+\]</span></p>
+<p>For each fixed nuclear configuration one solves the electronic eigenvalue problem</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+H_e({\mathbf r_j};{\mathbf R_I})
+\psi_m({\mathbf r_j};{\mathbf R_I})
+=
+E_m({\mathbf R_I})
+\psi_m({\mathbf r_j};{\mathbf R_I}).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>The eigenvalues <span class="math inline">\(E_m({\mathbf R_I})\)</span> are electronic energy surfaces as functions of the nuclear coordinates. In lattice dynamics, the most important one is usually the ground-state surface <span class="math inline">\(E_0({\mathbf R_I})\)</span>.</p>
+</section>
+<section id="expansion-of-the-full-wavefunction" class="level3" data-number="6.3.3">
+<h3 data-number="6.3.3" class="anchored" data-anchor-id="expansion-of-the-full-wavefunction"><span class="header-section-number">6.3.3</span> Expansion of the full wavefunction</h3>
+<p>The exact total wavefunction may be expanded in the electronic basis: <span class="math display">\[
+\Psi({\mathbf r_j},{\mathbf R_I})
+=
+\sum_m
+\chi_m({\mathbf R_I})
+\psi_m({\mathbf r_j};{\mathbf R_I}).
+\]</span></p>
+<p>Substituting this into the full Schrödinger equation and projecting onto an electronic state yields a set of coupled nuclear equations. The only nontrivial point is that the nuclear kinetic-energy operator acts both on the nuclear amplitudes <span class="math inline">\(\chi_m\)</span> and on the <span class="math inline">\({\mathbf R_I}\)</span>-dependence of the electronic states <span class="math inline">\(\psi_m\)</span>. This produces derivative couplings between different electronic surfaces. Writing <span class="math display">\[
+\mathbf d_{nm}^{(I)}
+=
+\left\langle
+\psi_n
+\middle|
+\nabla_{\mathbf R_I}\psi_m
+\right\rangle_{\mathbf r},
+\qquad
+\tau_{nm}^{(I)}
+=
+\left\langle
+\psi_n
+\middle|
+\nabla_{\mathbf R_I}^2\psi_m
+\right\rangle_{\mathbf r},
+\]</span> one obtains the exact coupled equations <span class="math display">\[
+\sum_m
+\left\{
+-\sum_I \frac{\hbar^2}{2M_I}
+\left[
+\delta_{nm}\nabla_{\mathbf R_I}^2
++2\mathbf d_{nm}^{(I)}\cdot\nabla_{\mathbf R_I}
++\tau_{nm}^{(I)}
+\right]
++\delta_{nm}E_m({\mathbf R_I})
+\right\}
+\chi_m
+=
+E\chi_n.
+\]</span></p>
+</section>
+<section id="bornoppenheimer-approximation" class="level3" data-number="6.3.4">
+<h3 data-number="6.3.4" class="anchored" data-anchor-id="bornoppenheimer-approximation"><span class="header-section-number">6.3.4</span> Born–Oppenheimer approximation</h3>
+<p>The Born–Oppenheimer approximation assumes that nuclear motion is slow enough that transitions between different electronic surfaces are negligible. Mathematically, one neglects the non-adiabatic couplings and keeps only one electronic surface, typically the ground state <span class="math inline">\(m=0\)</span>. Then the nuclear problem reduces to</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\left[
+-\sum_I\frac{\hbar^2}{2M_I}\nabla_{\mathbf R_I}^2
++
+E_0({\mathbf R_I})
+\right]
+\chi_0({\mathbf R_I})
+=
+E\chi_0({\mathbf R_I}).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This is the precise meaning of the statement that the nuclei move in an <strong>effective potential</strong>: the potential energy surface is the electronic ground-state energy as a function of all nuclear coordinates.</p>
+<!-- [Ibach–Lüth, Ch. 4 introduction, pp. 81–82; Sólyom, Ch. 11.1 introduction, pp. 331–332; derivation adapted to current notation] -->
+</section>
+<section id="transition-to-the-harmonic-approximation" class="level3" data-number="6.3.5">
+<h3 data-number="6.3.5" class="anchored" data-anchor-id="transition-to-the-harmonic-approximation"><span class="header-section-number">6.3.5</span> Transition to the Harmonic Approximation</h3>
+<p>The Born–Oppenheimer approximation has now reduced the problem to nuclear motion on a multidimensional potential-energy surface. For lattice dynamics, the next step is to specialize to a <strong>periodic equilibrium crystal structure</strong> and assume that the nuclei perform only <strong>small oscillations</strong> about it. Then <span class="math inline">\(E_0({\mathbf R_I})\)</span> can be expanded in powers of the nuclear displacements. Keeping only terms up to second order gives the harmonic approximation, which is the central working model of this lecture.</p>
+</section>
+</section>
+<section id="geometry-and-indexing-of-a-crystal-with-a-basis" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="geometry-and-indexing-of-a-crystal-with-a-basis"><span class="header-section-number">6.4</span> Geometry and Indexing of a Crystal with a Basis</h2>
+<p>For a crystal with <span class="math inline">\(p\)</span> atoms in the primitive cell, we label cells by Bravais-lattice vectors <span class="math inline">\(\mathbf R_m\)</span> and basis atoms by <span class="math inline">\(\mu=1,\dots,p\)</span>. The equilibrium position of atom <span class="math inline">\(\mu\)</span> in cell <span class="math inline">\(m\)</span> is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf r^0(m,\mu)=\mathbf R_m+\mathbf r_\mu,
+\]</span></p>
+</div>
+</div>
+</div>
+<p>and its instantaneous position is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf r(m,\mu,t)=\mathbf R_m+\mathbf r_\mu+\mathbf u(m,\mu,t).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>The displacement field <span class="math inline">\(\mathbf u(m,\mu,t)\)</span> is the central dynamical variable of the theory.</p>
+<!-- [Sólyom, Ch. 11.1, Eq. (11.1.1)–(11.1.2), p. 332] -->
+<div id="fig-cell-notation" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cell-notation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Ibach–Lüth, Ch. 4, Fig. 4.1, p. 82] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cell-notation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: <strong>Figure placeholder.</strong> Indexing of primitive cells and basis atoms, showing the Bravais-lattice vector, the basis position inside the cell, and the displacement from equilibrium.
+</figcaption>
+</figure>
+</div>
+<section id="sanity-check" class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="sanity-check"><span class="header-section-number">6.4.1</span> Sanity Check</h3>
+<p>The split <span class="math display">\[
+\text{position}=\text{cell origin}+\text{basis position}+\text{displacement}
+\]</span> cleanly separates crystal geometry from dynamics. The periodic structure is represented by <span class="math inline">\(\mathbf R_m\)</span> and <span class="math inline">\(\mathbf r_\mu\)</span>, while all time dependence is in <span class="math inline">\(\mathbf u(m,\mu,t)\)</span>.</p>
+</section>
+</section>
+<section id="harmonic-approximation-and-force-constants" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="harmonic-approximation-and-force-constants"><span class="header-section-number">6.5</span> Harmonic Approximation and Force Constants</h2>
+<p>Within the Born–Oppenheimer approximation, the effective potential is the electronic ground-state energy evaluated at the instantaneous nuclear coordinates. We therefore expand that effective potential in powers of the small displacements around equilibrium:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+U = U_0
++ \sum_{m,\mu,\alpha} \Phi^\mu_\alpha(m) u_\alpha(m,\mu)
++ \frac12 \sum_{m,\mu,\alpha}\sum_{n,\nu,\beta}
+  \Phi_{\alpha\beta}^{\mu\nu}(m,n)
+  u_\alpha(m,\mu) u_\beta(n,\nu)
++ \cdots
+\]</span></p>
+<p>with <span class="math display">\[
+\Phi^\mu_\alpha(m)=
+\frac{\partial U}{\partial u_\alpha(m,\mu)},
+\qquad
+\Phi_{\alpha\beta}^{\mu\nu}(m,n)=
+\frac{\partial^2 U}
+{\partial u_\alpha(m,\mu),\partial u_\beta(n,\nu)}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>At equilibrium the linear term vanishes, because the first derivatives of the potential are zero there. Keeping only the quadratic term defines the <strong>harmonic approximation</strong>. The coefficients <span class="math inline">\(\Phi_{\alpha\beta}^{\mu\nu}(m,n)\)</span> are the <strong>force constants</strong>: they are the many-body generalization of spring constants.</p>
+<!-- [Sólyom, Ch. 11.1.1, Eq. (11.1.3)–(11.1.4), pp. 332–333; Ibach–Lüth, Ch. 4.1, Eq. (4.1)–(4.2), pp. 82–83] -->
+<section id="symmetry-and-translational-invariance" class="level3" data-number="6.5.1">
+<h3 data-number="6.5.1" class="anchored" data-anchor-id="symmetry-and-translational-invariance"><span class="header-section-number">6.5.1</span> Symmetry and Translational Invariance</h3>
+<p>Because mixed partial derivatives commute, <span class="math display">\[
+\Phi_{\alpha\beta}^{\mu\nu}(m,n)
+=
+\Phi_{\beta\alpha}^{\nu\mu}(n,m).
+\]</span></p>
+<p>Because a rigid translation of the entire crystal cannot generate restoring forces, the force constants satisfy the sum rule <span class="math display">\[
+\sum_{n,\nu}\Phi_{\alpha\beta}^{\mu\nu}(m,n)=0.
+\]</span></p>
+<p>Finally, in an ordered crystal translational symmetry implies <span class="math display">\[
+\Phi_{\alpha\beta}^{\mu\nu}(m,n)
+=
+\Phi_{\alpha\beta}^{\mu\nu}(m-n),
+\]</span> so the couplings depend only on the difference between cell labels, not on absolute position.</p>
+<!-- [Sólyom, Ch. 11.1.1, Eq. (11.1.5), Eq. (11.1.8)–(11.1.11), pp. 333–334; Ibach–Lüth, Ch. 4.1, Eq. (4.3), p. 83] -->
+<p>A particularly useful equivalent form of the harmonic potential is <span class="math display">\[
+U_{\mathrm{harm}}
+=
+-\frac14
+\sum_{m,\mu,\alpha}\sum_{n,\nu,\beta}
+\Phi_{\alpha\beta}^{\mu\nu}(m,n)
+\big[u_\alpha(m,\mu)-u_\alpha(n,\nu)\big]
+\big[u_\beta(m,\mu)-u_\beta(n,\nu)\big].
+\]</span></p>
+</section>
+<section id="interpretation" class="level3" data-number="6.5.2">
+<h3 data-number="6.5.2" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">6.5.2</span> Interpretation</h3>
+<p>This form makes the physics transparent: only <strong>relative</strong> displacements matter. A rigid translation leaves all displacement differences unchanged and therefore costs no energy.</p>
+</section>
+<section id="brief-remark-on-microscopic-meaning" class="level3" data-number="6.5.3">
+<h3 data-number="6.5.3" class="anchored" data-anchor-id="brief-remark-on-microscopic-meaning"><span class="header-section-number">6.5.3</span> Brief Remark on Microscopic Meaning</h3>
+<p>For central pair forces, the restoring force depends strongly on the component of the relative displacement along the line joining the atoms. This is why bond geometry enters lattice dynamics so directly, even within a harmonic description.</p>
+<!-- [Sólyom, Ch. 11.1.2, Eq. (11.1.17)–(11.1.19), p. 335] -->
+</section>
+</section>
+<section id="equations-of-motion-in-real-space" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="equations-of-motion-in-real-space"><span class="header-section-number">6.6</span> Equations of Motion in Real Space</h2>
+<p>The kinetic energy of the vibrating lattice is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+T_{\mathrm{kin}}
+=
+\sum_{m,\mu}
+\frac12 M_\mu \dot{\mathbf u}^2(m,\mu,t),
+\]</span></p>
+</div>
+</div>
+</div>
+<p>and the harmonic equations of motion are</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+M_\mu \ddot u_\alpha(m,\mu,t)
+=
+-
+\sum_{n,\nu,\beta}
+\Phi_{\alpha\beta}^{\mu\nu}(m-n)
+u_\beta(n,\nu,t).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Thus the crystal is a system of <span class="math inline">\(3pN\)</span> coupled linear oscillators if there are <span class="math inline">\(N\)</span> primitive cells and <span class="math inline">\(p\)</span> atoms per cell.</p>
+<!-- [Sólyom, Ch. 11.1.3, Eq. (11.1.20)–(11.1.21), Eq. (11.1.28), pp. 335–336; Ibach–Lüth, Ch. 4.2, Eq. (4.4), p. 83] -->
+<section id="sanity-check-1" class="level3" data-number="6.6.1">
+<h3 data-number="6.6.1" class="anchored" data-anchor-id="sanity-check-1"><span class="header-section-number">6.6.1</span> Sanity Check</h3>
+<p>The equations are linear because we stopped at quadratic order in the potential. That linearity is exactly what makes a normal-mode decomposition possible.</p>
+</section>
+</section>
+<section id="plane-wave-ansatz-and-the-dynamical-matrix" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="plane-wave-ansatz-and-the-dynamical-matrix"><span class="header-section-number">6.7</span> Plane-Wave Ansatz and the Dynamical Matrix</h2>
+<p>A periodic crystal strongly suggests a Fourier description. Under Born–von Kármán boundary conditions, the allowed wavevectors are discrete and can be chosen inside the first Brillouin zone. In three dimensions one may write <span class="math display">\[
+\mathbf q
+=
+\frac{n_1}{N_1}\mathbf b_1
++
+\frac{n_2}{N_2}\mathbf b_2
++
+\frac{n_3}{N_3}\mathbf b_3,
+\]</span> with reciprocal-lattice vectors <span class="math inline">\(\mathbf b_i\)</span>. Wavevectors that differ by a reciprocal-lattice vector describe the same displacement pattern, so the first Brillouin zone contains the physically distinct choices.</p>
+<!-- [Sólyom, Ch. 11.2.4, Eq. (11.2.53)–(11.2.54), p. 350] -->
+<p>For a single normal mode we use a mass-weighted plane-wave ansatz, <span class="math display">\[
+u_\alpha(m,\mu,t)
+=
+\frac{1}{\sqrt{M_\mu}}
+e_{\mu,\alpha}^{(\lambda)}(\mathbf q)
+e^{i(\mathbf q\cdot\mathbf R_m-\omega t)}.
+\]</span></p>
+<p>Substituting this into the real-space equations of motion yields the eigenvalue problem</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\sum_{\nu,\beta}
+D_{\alpha\beta}^{\mu\nu}(\mathbf q)
+e_{\nu,\beta}^{(\lambda)}(\mathbf q)
+=
+\omega_\lambda^2(\mathbf q)
+e_{\mu,\alpha}^{(\lambda)}(\mathbf q),
+\]</span> with <span class="math display">\[
+D_{\alpha\beta}^{\mu\nu}(\mathbf q)
+=
+\frac{1}{\sqrt{M_\mu M_\nu}}
+\sum_{\ell}
+\Phi_{\alpha\beta}^{\mu\nu}(\ell)
+e^{-i\mathbf q\cdot\mathbf R_\ell}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>The matrix <span class="math inline">\(D(\mathbf q)\)</span> is the <strong>dynamical matrix</strong>. Its eigenvalues are the squared normal-mode frequencies, and its eigenvectors give the polarization pattern inside the primitive cell.</p>
+<!-- [Sólyom, Ch. 11.3.1, Eq. (11.3.1)–(11.3.5), pp. 355–356; Ibach–Lüth, Ch. 4.2, Eq. (4.5)–(4.8), pp. 83–84] -->
+<section id="why-this-is-the-key-simplification" class="level3" data-number="6.7.1">
+<h3 data-number="6.7.1" class="anchored" data-anchor-id="why-this-is-the-key-simplification"><span class="header-section-number">6.7.1</span> Why This Is the Key Simplification</h3>
+<p>Translational symmetry decouples different wavevectors. For each fixed <span class="math inline">\(\mathbf q\)</span>, only the <span class="math inline">\(3p\)</span> displacement amplitudes inside the primitive cell remain coupled. The original <span class="math inline">\(3pN\)</span>-dimensional problem has therefore been reduced to diagonalizing a <span class="math inline">\(3p\times 3p\)</span> matrix for each <span class="math inline">\(\mathbf q\)</span>.</p>
+</section>
+<section id="hermiticity-and-positivity" class="level3" data-number="6.7.2">
+<h3 data-number="6.7.2" class="anchored" data-anchor-id="hermiticity-and-positivity"><span class="header-section-number">6.7.2</span> Hermiticity and Positivity</h3>
+<p>The dynamical matrix is Hermitian, <span class="math display">\[
+D_{\alpha\beta}^{\mu\nu}(\mathbf q)
+=
+\big[D_{\beta\alpha}^{\nu\mu}(\mathbf q)\big]^{*},
+\]</span> so its eigenvalues are real. Because the harmonic expansion is taken around an energy minimum, the eigenvalues are also nonnegative. Therefore <span class="math inline">\(\omega_\lambda^2(\mathbf q)\ge 0\)</span>.</p>
+<!-- [Sólyom, Ch. 11.3.1, Eq. (11.3.6)–(11.3.8), pp. 356–357] -->
+</section>
+</section>
+<section id="branch-counting-and-mode-classification" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="branch-counting-and-mode-classification"><span class="header-section-number">6.8</span> Branch Counting and Mode Classification</h2>
+<p>For each <span class="math inline">\(\mathbf q\)</span>, the dynamical matrix has dimension <span class="math inline">\(3p\times 3p\)</span>. Therefore a crystal with <span class="math inline">\(p\)</span> atoms in the primitive cell has</p>
+<p><span class="math display">\[
+3p
+\]</span></p>
+<p>vibrational branches.</p>
+<section id="acoustic-branches" class="level3" data-number="6.8.1">
+<h3 data-number="6.8.1" class="anchored" data-anchor-id="acoustic-branches"><span class="header-section-number">6.8.1</span> Acoustic Branches</h3>
+<p>At <span class="math inline">\(\mathbf q=\mathbf 0\)</span>, a rigid translation of the entire crystal must cost no energy. In the mass-weighted eigenproblem this corresponds to eigenvectors of the form <span class="math display">\[
+\mathbf e_\mu^{(\lambda)}(\mathbf 0)
+\propto
+\sqrt{M_\mu} \hat{\mathbf e}^{(\lambda)},
+\]</span> where <span class="math inline">\(\hat{\mathbf e}^{(\lambda)}\)</span> is a unit vector in one of three mutually perpendicular directions. Hence there are always <strong>three zero-frequency solutions</strong> at <span class="math inline">\(\mathbf q=\mathbf 0\)</span>, and therefore always <strong>three acoustic branches</strong>.</p>
+<!-- [Sólyom, Ch. 11.3.3, Eq. (11.3.32)–(11.3.36), pp. 360–361] -->
+<p>For small <span class="math inline">\(|\mathbf q|\)</span>, all atoms in a primitive cell move almost in phase and with nearly equal amplitudes. These modes become the elastic sound waves of continuum theory in the long-wavelength limit.</p>
+</section>
+<section id="optical-branches" class="level3" data-number="6.8.2">
+<h3 data-number="6.8.2" class="anchored" data-anchor-id="optical-branches"><span class="header-section-number">6.8.2</span> Optical Branches</h3>
+<p>The remaining <span class="math display">\[
+3p-3
+\]</span> branches are optical branches. They have finite frequency at <span class="math inline">\(\mathbf q=\mathbf 0\)</span> in general and correspond to <strong>internal motion of the basis</strong> rather than rigid translation of the crystal.</p>
+<p>For a diatomic basis, the long-wavelength optical motion satisfies <span class="math display">\[
+M_1 \mathbf u_1 + M_2 \mathbf u_2 = 0.
+\]</span> So the center of mass of the primitive cell remains fixed while the two sublattices move against each other.</p>
+<!-- [Sólyom, Ch. 11.3.3, Eq. (11.3.37)–(11.3.41), pp. 361–362] -->
+<p>If the two sublattices carry opposite effective charges, such a mode can produce a dipole moment and couple to light. This explains the name <strong>optical</strong>. However, the label is kinematic, not spectroscopic: “optical” means “finite frequency at <span class="math inline">\(\mathbf q=\mathbf 0\)</span>,” not automatically “optically active”. In diamond-type crystals, for example, optical modes exist although the <span class="math inline">\(\mathbf q=\mathbf 0\)</span> optical mode does not generate a dipole moment.</p>
+<!-- [Ibach–Lüth, Ch. 4.3, pp. 86–88] -->
+</section>
+<section id="longitudinal-and-transverse-modes" class="level3" data-number="6.8.3">
+<h3 data-number="6.8.3" class="anchored" data-anchor-id="longitudinal-and-transverse-modes"><span class="header-section-number">6.8.3</span> Longitudinal and Transverse Modes</h3>
+<p>In directions of high symmetry, one may classify modes by the orientation of the polarization vector relative to <span class="math inline">\(\mathbf q\)</span>:</p>
+<ul>
+<li><strong>longitudinal:</strong> polarization parallel to <span class="math inline">\(\mathbf q\)</span>,</li>
+<li><strong>transverse:</strong> polarization perpendicular to <span class="math inline">\(\mathbf q\)</span>.</li>
+</ul>
+<p>For a general propagation direction, however, the eigenvectors need not be purely parallel or perpendicular to <span class="math inline">\(\mathbf q\)</span>; mixed character is possible.</p>
+<!-- [Ibach–Lüth, Ch. 4.3, p. 87; Sólyom, Ch. 11.2.4 and 11.3.3] -->
+<div id="fig-si-phonon-branches" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-si-phonon-branches-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Ibach–Lüth, Ch. 4, Fig. 4.4, p. 88] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-si-phonon-branches-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.2: <strong>Figure placeholder.</strong> Example phonon branches of crystalline silicon along high-symmetry directions, labeled TA, LA, TO, and LO. This figure is useful here only as a classification map; the explicit construction of such dispersions is deferred to the next lecture.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sanity-checks" class="level3" data-number="6.8.4">
+<h3 data-number="6.8.4" class="anchored" data-anchor-id="sanity-checks"><span class="header-section-number">6.8.4</span> Sanity Checks</h3>
+<ul>
+<li>If <span class="math inline">\(p=1\)</span>, then <span class="math inline">\(3p-3=0\)</span>: a monatomic crystal has no optical branches.</li>
+<li>If <span class="math inline">\(p&gt;1\)</span>, optical branches are possible because the basis has internal degrees of freedom.</li>
+<li>The existence of three acoustic branches is tied directly to the three independent rigid translations of a three-dimensional crystal.</li>
+</ul>
+</section>
+</section>
+<section id="bridge-to-the-next-lecture-from-formalism-to-explicit-dispersions" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="bridge-to-the-next-lecture-from-formalism-to-explicit-dispersions"><span class="header-section-number">6.9</span> Bridge to the Next Lecture: From Formalism to Explicit Dispersions</h2>
+<p>Today we built the general framework. We now know what the variables are, how the Born–Oppenheimer approximation produces an effective potential for the nuclei, what the harmonic approximation means, how the equations of motion arise, and why the problem reduces to a dynamical-matrix eigenvalue equation.</p>
+<p>In the next lecture we will make this framework concrete. We will choose explicit one-dimensional models (first with one atom per cell, then with two atoms per cell), construct <span class="math inline">\(D(\mathbf q)\)</span> explicitly, and extract:</p>
+<ul>
+<li>dispersion relations <span class="math inline">\(\omega_\lambda(\mathbf q)\)</span>,</li>
+<li>the meaning of zone-center and zone-boundary motion,</li>
+<li>acoustic versus optical behavior in a fully worked example,</li>
+<li>and the bridge from dispersion to the density of states.</li>
+</ul>
+<p>That is where group velocity, band folding, and the first direct connection to heat-capacity calculations will enter.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Take-Home Messages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The Born–Oppenheimer approximation turns the full electron–nucleus problem into nuclear motion in an effective potential.</li>
+<li>In lattice dynamics, that effective potential is expanded about the equilibrium crystal structure.</li>
+<li>The harmonic approximation keeps only quadratic terms in the displacements and leads to linear equations of motion.</li>
+<li>Force constants are generalized spring constants, constrained by symmetry and by rigid-translation sum rules.</li>
+<li>Translational symmetry is what makes the plane-wave reduction possible.</li>
+<li>For each wavevector, the vibrational problem is the diagonalization of a <span class="math inline">\(3p\times 3p\)</span> dynamical matrix.</li>
+<li>Every three-dimensional crystal has three acoustic branches.</li>
+<li>Optical branches exist only when the primitive cell contains internal degrees of freedom beyond rigid translation.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="problem-set" class="level2" data-number="6.10">
+<h2 data-number="6.10" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">6.10</span> Problem Set</h2>
+<ol type="1">
+<li><p><strong>Why does the linear term vanish?</strong> In the Taylor expansion of the effective potential about equilibrium, explain why the term linear in the displacements must vanish. Then show why <span class="math display">\[
+\Phi_{\alpha\beta}^{\mu\nu}(m,n)
+=
+\Phi_{\beta\alpha}^{\nu\mu}(n,m)
+\]</span> follows from the definition of the force constants.</p></li>
+<li><p><strong>Translational-invariance sum rule.</strong> Consider a uniform displacement of the whole crystal, <span class="math display">\[
+\mathbf u(m,\mu)=\mathbf u_0
+\qquad \text{for all } m,\mu.
+\]</span> Starting from the harmonic force law, show that the force on every atom vanishes only if <span class="math display">\[
+\sum_{n,\nu}\Phi_{\alpha\beta}^{\mu\nu}(m,n)=0.
+\]</span> What is the physical content of this result?</p></li>
+<li><p><strong>Deriving the dynamical matrix.</strong> Insert the mass-weighted plane-wave ansatz <span class="math display">\[
+u_\alpha(m,\mu,t)
+=
+\frac{1}{\sqrt{M_\mu}}
+e_{\mu,\alpha}(\mathbf q)
+e^{i(\mathbf q\cdot\mathbf R_m-\omega t)}
+\]</span> into the real-space equations of motion and derive the eigenvalue problem <span class="math display">\[
+\sum_{\nu,\beta}
+D_{\alpha\beta}^{\mu\nu}(\mathbf q)
+e_{\nu,\beta}(\mathbf q)
+=
+\omega^2
+e_{\mu,\alpha}(\mathbf q).
+\]</span> Why do different wavevectors decouple?</p></li>
+<li><p><strong>Branch counting.</strong> For crystals with <span class="math inline">\(p=1\)</span>, <span class="math inline">\(p=2\)</span>, and <span class="math inline">\(p=4\)</span> atoms in the primitive cell, count the total number of branches, the number of acoustic branches, and the number of optical branches. Then state whether diamond-structure silicon has optical branches and whether its <span class="math inline">\(\mathbf q=\mathbf 0\)</span> optical mode must be infrared active.</p></li>
+<li><p><strong>Meaning of a long-wavelength optical mode.</strong> In a crystal with a diatomic basis, explain the physical meaning of <span class="math display">\[
+M_1\mathbf u_1+M_2\mathbf u_2=0
+\]</span> for a <span class="math inline">\(\mathbf q=\mathbf 0\)</span> optical mode. What does this imply if <span class="math inline">\(M_1=M_2\)</span>?</p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
