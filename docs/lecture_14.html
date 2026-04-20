@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -226,8 +255,29 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">14.1</span> Roadmap</a></li>
+  <li><a href="#direct-phonon-measurements" id="toc-direct-phonon-measurements" class="nav-link" data-scroll-target="#direct-phonon-measurements"><span class="header-section-number">14.2</span> Direct Phonon Measurements</a></li>
+  <li><a href="#optical-methods" id="toc-optical-methods" class="nav-link" data-scroll-target="#optical-methods"><span class="header-section-number">14.3</span> Optical Methods</a>
+  <ul class="collapse">
+  <li><a href="#infrared-absorption" id="toc-infrared-absorption" class="nav-link" data-scroll-target="#infrared-absorption"><span class="header-section-number">14.3.1</span> Infrared Absorption</a></li>
+  <li><a href="#raman-scattering" id="toc-raman-scattering" class="nav-link" data-scroll-target="#raman-scattering"><span class="header-section-number">14.3.2</span> Raman Scattering</a></li>
+  <li><a href="#brillouin-scattering" id="toc-brillouin-scattering" class="nav-link" data-scroll-target="#brillouin-scattering"><span class="header-section-number">14.3.3</span> Brillouin Scattering</a></li>
+  </ul></li>
+  <li><a href="#neutron-scattering-from-a-thermally-vibrating-crystal" id="toc-neutron-scattering-from-a-thermally-vibrating-crystal" class="nav-link" data-scroll-target="#neutron-scattering-from-a-thermally-vibrating-crystal"><span class="header-section-number">14.4</span> Neutron Scattering From a Thermally Vibrating Crystal</a>
+  <ul class="collapse">
+  <li><a href="#the-dynamical-structure-factor-and-the-one-phonon-signal" id="toc-the-dynamical-structure-factor-and-the-one-phonon-signal" class="nav-link" data-scroll-target="#the-dynamical-structure-factor-and-the-one-phonon-signal"><span class="header-section-number">14.4.1</span> The Dynamical Structure Factor and the One-Phonon Signal</a></li>
+  <li><a href="#elastic-scattering-inelastic-peaks-and-bragg-diffraction" id="toc-elastic-scattering-inelastic-peaks-and-bragg-diffraction" class="nav-link" data-scroll-target="#elastic-scattering-inelastic-peaks-and-bragg-diffraction"><span class="header-section-number">14.4.2</span> Elastic Scattering, Inelastic Peaks, and Bragg Diffraction</a></li>
+  <li><a href="#the-debyewaller-factor" id="toc-the-debyewaller-factor" class="nav-link" data-scroll-target="#the-debyewaller-factor"><span class="header-section-number">14.4.3</span> The Debye–Waller Factor</a></li>
+  </ul></li>
+  <li><a href="#comparing-the-methods" id="toc-comparing-the-methods" class="nav-link" data-scroll-target="#comparing-the-methods"><span class="header-section-number">14.5</span> Comparing the Methods</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">14.6</span> Problem Set</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -256,8 +306,537 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </div>
 </div>
+<section id="roadmap" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="roadmap"><span class="header-section-number">14.1</span> Roadmap</h2>
+<ul>
+<li>Start from the general kinematic logic of phonon measurements.</li>
+<li>Study optical probes: infrared absorption, Raman scattering, and Brillouin scattering.</li>
+<li>Move to neutron scattering as the direct probe of phonon dispersion throughout the Brillouin zone.</li>
+<li>Interpret the dynamical structure factor, Debye–Waller factor, and phonon linewidth.</li>
+<li>Bridge to the next lecture: from measured phonon spectra to lifetimes, anharmonicity, and thermal transport.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\omega_i,\omega_f\)</span></td>
+<td>angular frequency of the incident and scattered probe</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf{k}_i,\mathbf{k}_f\)</span></td>
+<td>wave vector of the incident and scattered probe</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf{q}\)</span></td>
+<td>phonon wave vector</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\omega_\lambda(\mathbf{q})\)</span></td>
+<td>phonon frequency in branch <span class="math inline">\(\lambda\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf{G}\)</span></td>
+<td>reciprocal-lattice vector</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Omega\)</span></td>
+<td>energy transfer to the sample, defined by <span class="math inline">\(\hbar\Omega=E_i-E_f\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf{K}\)</span></td>
+<td>momentum transfer, defined by <span class="math inline">\(\mathbf{K}=\mathbf{k}_i-\mathbf{k}_f\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(n_B(\omega)\)</span></td>
+<td>Bose occupation number, <span class="math inline">\(n_B(\omega)=1/(e^{\hbar\omega/k_B T}-1)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(n\)</span></td>
+<td>refractive index of the sample</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\theta\)</span></td>
+<td>scattering angle between incident and scattered light</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(c_\lambda\)</span></td>
+<td>sound velocity for acoustic polarization <span class="math inline">\(\lambda\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(S(\mathbf{K},\Omega)\)</span></td>
+<td>dynamical structure factor</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(W\)</span></td>
+<td>Debye–Waller exponent</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Gamma_\lambda(\mathbf{q})\)</span></td>
+<td>inverse lifetime of a phonon mode</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="direct-phonon-measurements" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="direct-phonon-measurements"><span class="header-section-number">14.2</span> Direct Phonon Measurements</h2>
+<p><a href="lecture_09.html" class="quarto-xref">Lecture&nbsp;<span>9</span></a> established how phonons determine thermal properties such as the heat capacity. Today we turn to the complementary question: how are phonons measured directly?</p>
+<p>The experimental logic is simple. A probe exchanges energy and momentum with the crystal. If the process creates or annihilates a single phonon, the measured changes in the probe identify the phonon energy and wave vector.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\hbar\Omega = E_i-E_f,
+\qquad
+\mathbf{K}=\mathbf{k}_i-\mathbf{k}_f.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(E_i\)</span> and <span class="math inline">\(E_f\)</span> are the initial and final energies of the probe, <span class="math inline">\(\mathbf{k}_i\)</span> and <span class="math inline">\(\mathbf{k}_f\)</span> are its initial and final wave vectors, <span class="math inline">\(\hbar\Omega\)</span> is the energy transferred to the sample, and <span class="math inline">\(\mathbf{K}\)</span> is the momentum transfer.</p>
+<p>For a one-phonon process in a crystal,</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\Omega = \pm \omega_\lambda(\mathbf{q}),
+\qquad
+\mathbf{K}=\mathbf{G}\pm\mathbf{q}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(\omega_\lambda(\mathbf{q})\)</span> is the phonon frequency in branch <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(\mathbf{q}\)</span> is the phonon wave vector, and <span class="math inline">\(\mathbf{G}\)</span> is a reciprocal-lattice vector. The plus sign corresponds to phonon creation and the minus sign to phonon annihilation with our convention for <span class="math inline">\(\Omega\)</span>.</p>
+<p>These two relations are the backbone of the lecture. Different probes differ mainly in the ranges of energy and momentum they can access.</p>
+<!-- [Sólyom, Sec. 13.1, opening discussion and Eqs. (13.1.2)–(13.1.3), pp. 429–430 if chapter-opening page is counted; certainly p. 430] -->
+<p><strong>Why Probe Choice Matters</strong></p>
+<p>To map a phonon dispersion relation over an appreciable part of the Brillouin zone, the probe wavelength must be comparable to the lattice spacing, while the probe energy must also be comparable to phonon energies.</p>
+<p>Typical phonon energies are on the order of a few to a few tens of meV. Visible photons have much larger energies but very small wave numbers on the scale of the Brillouin zone, so they access only phonons near <span class="math inline">\(\mathbf{q}\approx 0\)</span>. Thermal neutrons, by contrast, naturally have both energies and wave numbers in the relevant range.</p>
+<!-- [Sólyom, Sec. 13.1, discussion of X-rays, visible photons, and thermal neutrons, p. 430] -->
+</section>
+<section id="optical-methods" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="optical-methods"><span class="header-section-number">14.3</span> Optical Methods</h2>
+<section id="infrared-absorption" class="level3" data-number="14.3.1">
+<h3 data-number="14.3.1" class="anchored" data-anchor-id="infrared-absorption"><span class="header-section-number">14.3.1</span> Infrared Absorption</h3>
+<p>The simplest optical process is direct photon absorption accompanied by phonon creation. Because infrared photon momenta are tiny on the scale of the Brillouin zone, the created phonon must satisfy <span class="math display">\[
+\mathbf{q}\approx 0.
+\]</span></p>
+<p>Here <span class="math inline">\(\mathbf{q}\)</span> is the phonon wave vector. The statement means that infrared absorption probes only zone-center modes.</p>
+<p>In addition, direct coupling to the electric field requires a changing dipole moment. Long-wavelength acoustic phonons do not create such a dipole moment, so direct infrared absorption selects optical modes, and in the simplest picture specifically transverse optical modes because the electric field of the light is transverse to its propagation direction.</p>
+<p>Only those zone-center optical modes that change the dipole moment are <strong>infrared active</strong>.</p>
+<!-- [Sólyom, Sec. 13.2.1, pp. 431–432] -->
+<p>A useful sanity check is the hierarchy of scales:</p>
+<ul>
+<li>infrared wavelengths are much larger than the lattice constant;</li>
+<li>therefore photon momentum is negligible compared with reciprocal-lattice vectors;</li>
+<li>hence infrared spectroscopy is symmetry-selective but not wave-vector resolved.</li>
+</ul>
+<div id="fig-ir-absorption" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ir-absorption-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Sec. 13.2.1, Fig. 13.1, p. 432] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ir-absorption-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.1: <strong>Figure placeholder.</strong> Infrared absorption spectrum showing sharp peaks at the frequencies of infrared-active optical modes near <span class="math inline">\(\mathbf{q}=0\)</span>, illustrated in the textbook for solid C<span class="math inline">\(_{60}\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>If anharmonic interactions are present, the initially created optical phonon can decay into two phonons or scatter from an already occupied phonon state. Then absorption is no longer strictly confined to a delta-like line, and finite-width features or sidebands appear.</p>
+<!-- [Sólyom, Sec. 13.2.1, discussion around Fig. 13.2 and Fig. 13.3, pp. 432–433] -->
+<p><strong>What Infrared Absorption Does and Does Not Give You</strong></p>
+<p>Infrared absorption is excellent for:</p>
+<ul>
+<li>identifying zone-center transverse optical modes;</li>
+<li>diagnosing symmetry and selection rules;</li>
+<li>locating infrared-active phonons in ionic and polar materials.</li>
+</ul>
+<p>It is not a method for mapping the full dispersion relation <span class="math inline">\(\omega_\lambda(\mathbf{q})\)</span> across the Brillouin zone.</p>
+</section>
+<section id="raman-scattering" class="level3" data-number="14.3.2">
+<h3 data-number="14.3.2" class="anchored" data-anchor-id="raman-scattering"><span class="header-section-number">14.3.2</span> Raman Scattering</h3>
+<p>Raman scattering is inelastic light scattering by optical phonons near the zone center. Because the photon momentum is again negligible on the lattice scale, the dominant one-phonon process involves <span class="math inline">\(\mathbf{q}\approx 0\)</span> optical modes.</p>
+<p>The energy balance is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\omega_f=\omega_i\mp\omega_\lambda(\mathbf{q}\approx 0).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(\omega_i\)</span> and <span class="math inline">\(\omega_f\)</span> are the angular frequencies of the incident and scattered photons, and <span class="math inline">\(\omega_\lambda(\mathbf{q}\approx 0)\)</span> is the zone-center optical-phonon frequency. The upper sign corresponds to phonon emission and the lower sign to phonon absorption.</p>
+<p>This immediately produces two shifted lines:</p>
+<ul>
+<li>the <strong>Stokes</strong> line at lower photon frequency, from phonon creation;</li>
+<li>the <strong>anti-Stokes</strong> line at higher photon frequency, from phonon annihilation.</li>
+</ul>
+<!-- [Sólyom, Sec. 13.2.2, Eq. (13.2.1), p. 434] -->
+<p>The thermal population of the phonon controls the intensities:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+n_B(\omega)=\frac{1}{e^{\hbar\omega/k_B T}-1},
+\qquad
+I_{\mathrm{AS}}\propto n_B(\omega),
+\qquad
+I_{\mathrm{S}}\propto n_B(\omega)+1.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(n_B(\omega)\)</span> is the Bose occupation number, <span class="math inline">\(I_{\mathrm{AS}}\)</span> is the anti-Stokes intensity, and <span class="math inline">\(I_{\mathrm{S}}\)</span> is the Stokes intensity. The extra <span class="math inline">\(+1\)</span> in the Stokes channel is the bosonic stimulated-emission factor.</p>
+<p>A direct consequence is that the anti-Stokes line weakens strongly as temperature is lowered and vanishes at <span class="math inline">\(T=0\)</span>, while the Stokes line remains finite.</p>
+<!-- [Sólyom, Sec. 13.2.2, Eq. (13.2.2) and discussion of Stokes/anti-Stokes intensities, p. 434] -->
+<p>A short sanity check:</p>
+<ul>
+<li>anti-Stokes scattering needs a phonon to be present already;</li>
+<li>Stokes scattering can create a phonon even from the ground state;</li>
+<li>therefore anti-Stokes is the more temperature-sensitive branch.</li>
+</ul>
+<p>Selection rules are again essential. A mode is <strong>Raman active</strong> if the optical vibration changes the polarizability of the basis. Thus Raman and infrared spectroscopy are complementary rather than redundant: a mode can be active in one channel, both, or neither, depending on symmetry.</p>
+<!-- [Sólyom, Sec. 13.2.2, discussion of Raman-active modes and fullerite example, pp. 434–435] -->
+<div id="fig-raman-stokes-antistokes" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-raman-stokes-antistokes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Sec. 13.2.2, Fig. 13.5, p. 435] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-raman-stokes-antistokes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.2: <strong>Figure placeholder.</strong> Raman spectrum showing Stokes and anti-Stokes components at different temperatures, highlighting the Bose-factor control of line intensity.
+</figcaption>
+</figure>
+</div>
+<p>Higher-order optical processes are also possible. In two-phonon Raman scattering, phonon pairs with wave vectors <span class="math inline">\(\mathbf{q}\)</span> and <span class="math inline">\(-\mathbf{q}\)</span> contribute, so the spectrum broadens into a continuum with strong weight where the phonon density of states is large.</p>
+<!-- [Sólyom, Sec. 13.2.2, discussion of two-phonon Raman scattering and Fig. 13.7, p. 436] -->
+</section>
+<section id="brillouin-scattering" class="level3" data-number="14.3.3">
+<h3 data-number="14.3.3" class="anchored" data-anchor-id="brillouin-scattering"><span class="header-section-number">14.3.3</span> Brillouin Scattering</h3>
+<p>Brillouin scattering is the optical analog of acoustic-phonon spectroscopy. Unlike Raman scattering, the relevant phonons are acoustic, and now the change in photon momentum must be retained.</p>
+<p>Inside a medium of refractive index <span class="math inline">\(n\)</span>, the photon wave number is <span class="math inline">\(nk\)</span>, where <span class="math inline">\(k=\omega_i/c\)</span>. Simple geometry gives</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+q=2nk\sin\frac{\theta}{2}
+= 2n\frac{\omega_i}{c}\sin\frac{\theta}{2}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(q=|\mathbf{q}|\)</span> is the magnitude of the acoustic-phonon wave vector, <span class="math inline">\(n\)</span> is the refractive index, <span class="math inline">\(\theta\)</span> is the scattering angle, <span class="math inline">\(\omega_i\)</span> is the incident photon frequency, and <span class="math inline">\(c\)</span> is the speed of light in vacuum.</p>
+<!-- [Sólyom, Sec. 13.2.3, Eqs. (13.2.3)–(13.2.5), pp. 436–437] -->
+<p>For long-wavelength acoustic phonons, <span class="math display">\[
+\omega_\lambda(\mathbf{q})\approx c_\lambda q.
+\]</span></p>
+<p>Here <span class="math inline">\(c_\lambda\)</span> is the sound velocity for polarization <span class="math inline">\(\lambda\)</span>. Combining this with the previous equation yields the Brillouin shift</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\Delta\omega_\lambda
+= \pm c_\lambda q
+= \pm 2n\frac{\omega_i}{c} c_\lambda\sin\frac{\theta}{2}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(\Delta\omega_\lambda=\omega_f-\omega_i\)</span> is the frequency shift of the scattered light. The sign distinguishes phonon creation and annihilation.</p>
+<p>This formula means that the measured frequency shift directly gives the sound velocity.</p>
+<!-- [Sólyom, Sec. 13.2.3, Eq. (13.2.6), p. 437] -->
+<p>Interpretation:</p>
+<ul>
+<li>Brillouin scattering probes only very small <span class="math inline">\(q\)</span>;</li>
+<li>therefore it measures the slope of the acoustic branches near the zone center;</li>
+<li>experimentally, this means access to elastic constants and sound velocities.</li>
+</ul>
+<div id="fig-brillouin-spectra" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-brillouin-spectra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Sec. 13.2.3, Fig. 13.9, p. 438] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-brillouin-spectra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.3: <strong>Figure placeholder.</strong> Brillouin spectra showing weak side peaks on both sides of the large elastic line, corresponding to longitudinal and transverse acoustic phonons close to the direct beam.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="neutron-scattering-from-a-thermally-vibrating-crystal" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="neutron-scattering-from-a-thermally-vibrating-crystal"><span class="header-section-number">14.4</span> Neutron Scattering From a Thermally Vibrating Crystal</h2>
+<p>Optical methods are limited to <span class="math inline">\(\mathbf{q}\approx 0\)</span>. To map phonons throughout reciprocal space, the probe must have both a lattice-scale wavelength and meV-scale energy transfer. Thermal neutrons satisfy both requirements.</p>
+<p>Sólyom rewrites the neutron energy as <span class="math display">\[
+\varepsilon \approx 2.1\times 10^{-3}\ [k(\mathring{\mathrm{A}}^{-1})]^2\ \mathrm{eV}.
+\]</span></p>
+<p>Here <span class="math inline">\(\varepsilon\)</span> is the neutron energy and <span class="math inline">\(k=|\mathbf{k}|\)</span> is the neutron wave number in inverse ångströms. For <span class="math inline">\(k\sim 1,\mathrm{\mathring{\mathrm{A}}}^{-1}\)</span>, the energy is on the order of <span class="math inline">\(0.1,\mathrm{eV}\)</span> and the wave vector is comparable to Brillouin-zone dimensions.</p>
+<p>This is why thermal neutrons are such a natural probe of lattice dynamics.</p>
+<!-- [Sólyom, Sec. 13.3, Eqs. (13.3.1)–(13.3.2), p. 438] -->
+<p><strong>Triple-Axis Spectroscopy</strong></p>
+<p>In inelastic neutron scattering, the incident beam is first monochromatized, then scattered by the sample, and finally energy-analyzed before detection. The standard instrument is the triple-axis spectrometer.</p>
+<div id="fig-triple-axis" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-triple-axis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Sec. 13.3, Fig. 13.10, p. 439] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-triple-axis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.4: <strong>Figure placeholder.</strong> Schematic of a triple-axis spectrometer with source, monochromator, sample, analyzer, and detector. Independent rotations of monochromator, sample, and analyzer permit controlled scans in momentum and energy.
+</figcaption>
+</figure>
+</div>
+<p>The key experimental capability is this: by adjusting the instrument geometry, one chooses a momentum transfer <span class="math inline">\(\mathbf{K}\)</span> and then measures intensity as a function of energy transfer <span class="math inline">\(\Omega\)</span>, or vice versa.</p>
+<!-- [Sólyom, Sec. 13.3, discussion around Fig. 13.10, p. 439] -->
+<section id="the-dynamical-structure-factor-and-the-one-phonon-signal" class="level3" data-number="14.4.1">
+<h3 data-number="14.4.1" class="anchored" data-anchor-id="the-dynamical-structure-factor-and-the-one-phonon-signal"><span class="header-section-number">14.4.1</span> The Dynamical Structure Factor and the One-Phonon Signal</h3>
+<p>For coherent scattering from a vibrating lattice, the measured doubly differential cross section is proportional to the dynamical structure factor:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\frac{d^2\sigma}{d\Omega_{\mathrm{sc}} dE_f}
+\propto
+S(\mathbf{K},\Omega).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(d\Omega_{\mathrm{sc}}\)</span> is the solid-angle element for the scattered beam, <span class="math inline">\(E_f\)</span> is the final neutron energy, <span class="math inline">\(\mathbf{K}\)</span> is the momentum transfer, and <span class="math inline">\(\Omega\)</span> is the energy transfer to the sample.</p>
+<p>The dynamical structure factor is the space-time Fourier transform of density correlations:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+S(\mathbf{K},\Omega)
+=
+\frac{1}{N}
+\int_{-\infty}^{\infty}dt,e^{i\Omega t}
+\sum_{m,n}
+e^{-i\mathbf{K}\cdot(\mathbf{R}_m-\mathbf{R}_n)}
+\left\langle
+e^{-i\mathbf{K}\cdot\mathbf{u}_m(t)}
+e^{i\mathbf{K}\cdot\mathbf{u}_n(0)}
+\right\rangle .
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(N\)</span> is the number of primitive cells, <span class="math inline">\(\mathbf{R}_m\)</span> and <span class="math inline">\(\mathbf{R}_n\)</span> are equilibrium lattice vectors, and <span class="math inline">\(\mathbf{u}_m(t)\)</span> is the displacement of atom <span class="math inline">\(m\)</span> at time <span class="math inline">\(t\)</span>.</p>
+<!-- [Sólyom, Sec. 13.3.1, Eqs. (13.3.5)–(13.3.7), pp. 440–441] -->
+<p>Expanding the exponentials to first order in the atomic displacements isolates the one-phonon contribution:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+S_{1\mathrm{ph}}(\mathbf{K},\Omega)
+\propto
+e^{-2W}
+\sum_{\lambda,\mathbf{q}}
+\frac{|\mathbf{K}\cdot \mathbf{e}_\lambda(\mathbf{q})|^2}{\omega_\lambda(\mathbf{q})}
+\Big[
+\big(n_B(\omega_\lambda)+1\big)
+\delta\big(\Omega-\omega_\lambda(\mathbf{q})\big)
+\delta_{\mathbf{K},\mathbf{G}+\mathbf{q}}
++
+n_B(\omega_\lambda),
+\delta\big(\Omega+\omega_\lambda(\mathbf{q})\big)
+\delta_{\mathbf{K},\mathbf{G}-\mathbf{q}}
+\Big].
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(\mathbf{e}_\lambda(\mathbf{q})\)</span> is the phonon polarization vector, <span class="math inline">\(n_B(\omega_\lambda)\)</span> is the Bose occupation number, and <span class="math inline">\(e^{-2W}\)</span> is the Debye–Waller factor.</p>
+<p>This single formula contains the essential physics:</p>
+<ul>
+<li>the delta functions fix the phonon energy and wave vector;</li>
+<li>the Bose factors distinguish phonon creation from annihilation;</li>
+<li>the factor <span class="math inline">\(|\mathbf{K}\cdot\mathbf{e}_\lambda|^2\)</span> gives a polarization selection rule;</li>
+<li>the Debye–Waller factor reduces intensity as thermal motion grows.</li>
+</ul>
+<!-- [Sólyom, Sec. 13.3.1, Eqs. (13.3.16)–(13.3.18), pp. 442–443, rewritten into the common experimental sign convention $\hbar\Omega=E_i-E_f$] -->
+</section>
+<section id="elastic-scattering-inelastic-peaks-and-bragg-diffraction" class="level3" data-number="14.4.2">
+<h3 data-number="14.4.2" class="anchored" data-anchor-id="elastic-scattering-inelastic-peaks-and-bragg-diffraction"><span class="header-section-number">14.4.2</span> Elastic Scattering, Inelastic Peaks, and Bragg Diffraction</h3>
+<p>The zeroth-order term in the expansion of <span class="math inline">\(S(\mathbf{K},\Omega)\)</span> gives <span class="math display">\[
+\Omega=0,
+\qquad
+\mathbf{K}=\mathbf{G}.
+\]</span></p>
+<p>This is ordinary Bragg diffraction: no energy transfer, momentum transfer equal to a reciprocal-lattice vector.</p>
+<p>The first-order terms give inelastic peaks shifted away from the Bragg condition by <span class="math inline">\(\pm\mathbf{q}\)</span> and away from zero energy by <span class="math inline">\(\pm\omega_\lambda(\mathbf{q})\)</span>. This is the direct route to the phonon dispersion relation.</p>
+<!-- [Sólyom, Sec. 13.3.1 and 13.3.3, discussion below Eq. (13.3.18), pp. 443–446] -->
+</section>
+<section id="the-debyewaller-factor" class="level3" data-number="14.4.3">
+<h3 data-number="14.4.3" class="anchored" data-anchor-id="the-debyewaller-factor"><span class="header-section-number">14.4.3</span> The Debye–Waller Factor</h3>
+<p>The Debye–Waller factor is introduced through <span class="math display">\[
+e^{-W}=e^{-\frac{1}{2}\langle(\mathbf{K}\cdot\mathbf{u})^2\rangle}.
+\]</span></p>
+<p>Here <span class="math inline">\(\mathbf{u}\)</span> is the thermal displacement of an atom, and <span class="math inline">\(\langle\cdots\rangle\)</span> denotes the thermal average. The full scattering intensity is reduced by the factor <span class="math inline">\(e^{-2W}\)</span>.</p>
+<p>In isotropic form, we can write</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+2W=\frac{K^2}{3}\langle u^2\rangle .
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(K=|\mathbf{K}|\)</span> and <span class="math inline">\(\langle u^2\rangle\)</span> is the mean-square atomic displacement.</p>
+<p>The physical meaning is transparent: stronger thermal vibrations reduce the coherent scattering intensity, even though the Bragg peaks themselves remain sharp in the harmonic approximation.</p>
+<!-- [Sólyom, Sec. 13.3.2, Eqs. (13.3.19)–(13.3.21), p. 443] -->
+<details>
+<summary>
+<strong>Optional: Finite Lifetime and Phonon Linewidth</strong>
+</summary>
+<p>Anharmonicity makes phonons unstable against decay, so the ideal delta-function peak broadens. If the phonon amplitude decays as <span class="math inline">\(e^{-\Gamma_\lambda(\mathbf{q})|t|}\)</span>, then the spectral line becomes Lorentzian: <span class="math display">\[
+\int_{-\infty}^{\infty}dt\
+e^{i\Omega t}
+e^{\pm i\omega_\lambda(\mathbf{q})t-\Gamma_\lambda(\mathbf{q})|t|}
+=
+\frac{2\Gamma_\lambda(\mathbf{q})}
+{\big(\Omega\pm\omega_\lambda(\mathbf{q})\big)^2+\Gamma_\lambda^2(\mathbf{q})}.
+\]</span></p>
+<p>Here <span class="math inline">\(\Gamma_\lambda(\mathbf{q})\)</span> is the inverse lifetime of the phonon mode. A smaller <span class="math inline">\(\Gamma_\lambda(\mathbf{q})\)</span> means a sharper peak and a longer-lived phonon.</p>
+<p>So neutron scattering does not only locate phonon branches. It also measures their damping.</p>
+<!-- [Sólyom, Sec. 13.3.4, Eqs. (13.3.24)–(13.3.25), pp. 446–447] -->
+<div id="fig-neutron-linewidth" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-neutron-linewidth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Sec. 13.3.4, Fig. 13.13, p. 446] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-neutron-linewidth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.5: <strong>Figure placeholder.</strong> Inelastic neutron-scattering peak with finite width, illustrating how phonon damping and instrumental resolution broaden the ideal one-phonon signal.
+</figcaption>
+</figure>
+</div>
+</details>
+</section>
+</section>
+<section id="comparing-the-methods" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="comparing-the-methods"><span class="header-section-number">14.5</span> Comparing the Methods</h2>
+<p>The four methods fit together naturally:</p>
+<ul>
+<li><strong>infrared absorption</strong>: zone-center, dipole-active optical phonons;</li>
+<li><strong>Raman scattering</strong>: zone-center, polarizability-active optical phonons;</li>
+<li><strong>Brillouin scattering</strong>: very small-<span class="math inline">\(q\)</span> acoustic phonons and sound velocities;</li>
+<li><strong>neutron scattering</strong>: full phonon dispersion, branch polarization, temperature dependence, and linewidths.</li>
+</ul>
+<p>The choice of method is therefore not arbitrary. It is dictated by kinematics and selection rules.</p>
+<!-- [Sólyom, Secs. 13.1–13.3, chapter summary logic] -->
+<!--
+## Bridge to the Next Lecture: From Spectra to Lifetimes and Thermal Transport
+
+Today’s experiments give direct access to three quantities that Lecture 09 could only treat indirectly:
+
+* $\omega_\lambda(\mathbf{q})$, the phonon dispersion relation;
+* $|\mathbf{K}\cdot\mathbf{e}_\lambda(\mathbf{q})|^2$, the polarization content of the mode;
+* $\Gamma_\lambda(\mathbf{q})$, the phonon linewidth and thus the lifetime.
+
+This is the bridge to the next lecture. Once phonon lifetimes are finite, phonons no longer control only equilibrium thermodynamics; they also control nonequilibrium transport. The same anharmonic interactions that broaden peaks in Raman or neutron spectra also limit heat flow.
+
+So the next conceptual step is:
+
+* from measured phonon energies to the phonon density of states;
+* from linewidths to scattering rates;
+* from scattering rates to lattice thermal conductivity and other anharmonic effects.
+
+-->
+<!-- [Sólyom, Sec. 13.2.1 on phonon–phonon effects, pp. 432–433; Sec. 13.3.4 on linewidths and lifetimes, pp. 446–447] -->
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Take-Home Messages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Direct phonon measurements rely on simultaneous conservation of energy and crystal momentum.</li>
+<li>Optical probes are restricted to phonons very close to the Brillouin-zone center.</li>
+<li>Infrared absorption selects dipole-active transverse optical modes.</li>
+<li>Raman scattering measures zone-center optical phonons through Stokes and anti-Stokes shifts, with intensities governed by Bose occupation.</li>
+<li>Brillouin scattering measures long-wavelength acoustic phonons and gives sound velocities from the frequency shift.</li>
+<li>Thermal neutrons are ideal because their wavelengths and energies match lattice scales and phonon energies.</li>
+<li>In neutron scattering, the one-phonon signal is encoded in the dynamical structure factor and carries information about branch energy, polarization, and occupation.</li>
+<li>Finite phonon linewidths are direct experimental signatures of finite phonon lifetimes and anharmonicity.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="problem-set" class="level2" data-number="14.6">
+<h2 data-number="14.6" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">14.6</span> Problem Set</h2>
+<ol type="1">
+<li><p><strong>Why Optical Methods Probe <span class="math inline">\(\mathbf{q}\approx 0\)</span>.</strong> Explain why both infrared absorption and one-phonon Raman scattering are restricted to phonons near the center of the Brillouin zone. Then state what additional selection rule distinguishes infrared-active from Raman-active modes.</p></li>
+<li><p><strong>Stokes Versus Anti-Stokes.</strong> Starting from <span class="math display">\[
+n_B(\omega)=\frac{1}{e^{\hbar\omega/k_B T}-1},
+\qquad
+I_{\mathrm{AS}}\propto n_B(\omega),
+\qquad
+I_{\mathrm{S}}\propto n_B(\omega)+1,
+\]</span> show that <span class="math display">\[
+\frac{I_{\mathrm{AS}}}{I_{\mathrm{S}}}=e^{-\hbar\omega/k_B T}.
+\]</span> Interpret the result physically.</p></li>
+<li><p><strong>Brillouin Shift.</strong> Derive the Brillouin frequency shift for long-wavelength acoustic phonons, <span class="math display">\[
+\Delta\omega_\lambda
+=
+\pm 2n\frac{\omega_i}{c},c_\lambda\sin\frac{\theta}{2},
+\]</span> from the relations <span class="math display">\[
+q=2n\frac{\omega_i}{c}\sin\frac{\theta}{2},
+\qquad
+\omega_\lambda(\mathbf{q})\approx c_\lambda q.
+\]</span></p></li>
+<li><p><strong>Reading the One-Phonon Neutron Cross Section.</strong> In the one-phonon neutron-scattering signal, what determines</p>
+<ol type="a">
+<li>the phonon energy,</li>
+<li>the phonon wave vector,</li>
+<li>the difference between phonon creation and annihilation intensities, and</li>
+<li>the visibility of different polarizations?</li>
+</ol></li>
+<li><p><strong>Debye–Waller Factor and Linewidth.</strong> Explain the physical difference between the roles of the Debye–Waller factor <span class="math inline">\(e^{-2W}\)</span> and the linewidth parameter <span class="math inline">\(\Gamma_\lambda(\mathbf{q})\)</span> in neutron scattering.</p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
