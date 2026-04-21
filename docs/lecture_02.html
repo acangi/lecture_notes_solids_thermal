@@ -277,7 +277,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#from-the-harmonic-oscillator-to-bond-stiffness" id="toc-from-the-harmonic-oscillator-to-bond-stiffness" class="nav-link" data-scroll-target="#from-the-harmonic-oscillator-to-bond-stiffness"><span class="header-section-number">2.3</span> From the Harmonic Oscillator to Bond Stiffness</a>
   <ul class="collapse">
-  <li><a href="#the-harmonic-oscillator-as-a-model-of-small-vibrations" id="toc-the-harmonic-oscillator-as-a-model-of-small-vibrations" class="nav-link" data-scroll-target="#the-harmonic-oscillator-as-a-model-of-small-vibrations"><span class="header-section-number">2.3.1</span> The Harmonic Oscillator as a Model of Small Vibrations</a></li>
+  <li><a href="#harmonic-oscillator" id="toc-harmonic-oscillator" class="nav-link" data-scroll-target="#harmonic-oscillator"><span class="header-section-number">2.3.1</span> Harmonic Oscillator</a></li>
   <li><a href="#why-the-harmonic-oscillator-matters-for-solids" id="toc-why-the-harmonic-oscillator-matters-for-solids" class="nav-link" data-scroll-target="#why-the-harmonic-oscillator-matters-for-solids"><span class="header-section-number">2.3.2</span> Why the Harmonic Oscillator Matters for Solids</a></li>
   <li><a href="#equilibrium-distance-and-curvature" id="toc-equilibrium-distance-and-curvature" class="nav-link" data-scroll-target="#equilibrium-distance-and-curvature"><span class="header-section-number">2.3.3</span> Equilibrium Distance and Curvature</a></li>
   <li><a href="#why-curvature-not-only-depth-matters" id="toc-why-curvature-not-only-depth-matters" class="nav-link" data-scroll-target="#why-curvature-not-only-depth-matters"><span class="header-section-number">2.3.4</span> Why Curvature, Not Only Depth, Matters</a></li>
@@ -402,6 +402,7 @@ Figure&nbsp;2.1: Schematic splitting of atomic levels into bands as many atoms a
 </figcaption>
 </figure>
 </div>
+<p>Another concept relevant for understanding chemical bonds is <strong>electronegativity</strong> which describes the tendency of an atom to attract bonding electrons to itself.</p>
 <p>A useful first classification is suggested by chemistry and by periodic-table trends:</p>
 <ul>
 <li><strong>similar electronegativities + strong local orbital overlap</strong> <span class="math inline">\(\rightarrow\)</span> often <strong>covalent</strong> bonding,</li>
@@ -547,12 +548,15 @@ E_{\mathrm M}
 \frac{E_{\mathrm M}}{N}
 =
 -\alpha
-\frac{Z_1 Z_2 e^2}{4\pi\varepsilon_0 d_1},
+\frac{Z_1 Z_2 e^2}{4\pi\varepsilon_0 r_0},
 \]</span></p>
 </div>
 </div>
 </div>
-<p>where <span class="math inline">\(d_1\)</span> is the nearest-neighbor cation–anion distance and <span class="math inline">\(\alpha\)</span> is the <strong>Madelung constant</strong>, which depends on the lattice geometry.</p>
+<p>where <span class="math inline">\(r_0\)</span> is the nearest-neighbor cation–anion distance and <span class="math inline">\(\alpha\)</span> is the <strong>Madelung constant</strong>, which depends on the lattice geometry.</p>
+<p>It is determined by summing electrostatic interactions of one reference ion with all other ions in the crystal, taking into account the lattice geometry. For a reference ion at the origin, the Madelung constant is defined as <span class="math display">\[
+\alpha = \sum_{j\neq 0} \frac{\pm 1}{\frac{r_j}{r_0}},
+\]</span> where <span class="math inline">\(r_j\)</span> is the distance to ion <span class="math inline">\(j\)</span> measured from the reference ion at the origin, <span class="math inline">\(r_0\)</span> is the nearest-neighbor distance, and the sign in the numerator is negative for oppositely charged ions and positive for the same charge.</p>
 <!-- [Sólyom–Piróth I, Eqs. (4.3.29)–(4.3.31), pp. 87–88] -->
 <p>Thus ionic bonding is already an example where structure and bonding are inseparable: NaCl, CsCl, ZnS, and CaF<span class="math inline">\(_2\)</span> have different Madelung constants because their full ionic environments are different.</p>
 <div id="fig-ionic-structures" class="figure lightbox quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
@@ -585,7 +589,7 @@ B\exp\!\left(-\frac{r}{\rho}\right).
 </div>
 <p>Here <span class="math inline">\(B\)</span> sets the repulsive energy scale and <span class="math inline">\(\rho\)</span> its range.</p>
 <!-- [Sólyom–Piróth I, Eq. (4.3.32), p. 88] -->
-<p>The equilibrium distance <span class="math inline">\(d_1\)</span> is determined by the minimum condition</p>
+<p>The equilibrium distance <span class="math inline">\(r_0\)</span> is determined by the minimum condition</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -593,12 +597,12 @@ B\exp\!\left(-\frac{r}{\rho}\right).
 </div>
 <div class="callout-body-container">
 <p><span class="math display">\[
-\left.\frac{dU_{\mathrm{ion}}}{dr}\right|_{r=d_1}
+\left.\frac{dU_{\mathrm{ion}}}{dr}\right|_{r=r_0}
 =
 \alpha
-\frac{Z_1 Z_2 e^2}{4\pi\varepsilon_0 d_1^2}
+\frac{Z_1 Z_2 e^2}{4\pi\varepsilon_0 r_0^2}
 -
-\frac{B}{\rho}\exp\!\left(-\frac{d_1}{\rho}\right)
+\frac{B}{\rho}\exp\!\left(-\frac{r_0}{\rho}\right)
 =
 0.
 \]</span></p>
@@ -616,15 +620,15 @@ B\exp\!\left(-\frac{r}{\rho}\right).
 \frac{E}{N}
 =
 -\alpha
-\frac{Z_1 Z_2 e^2}{4\pi\varepsilon_0 d_1}
+\frac{Z_1 Z_2 e^2}{4\pi\varepsilon_0 r_0}
 \left(
-1-\frac{\rho}{d_1}
+1-\frac{\rho}{r_0}
 \right),
 \]</span></p>
 </div>
 </div>
 </div>
-<p>with <span class="math inline">\(\rho/d_1\)</span> typically of order <span class="math inline">\(0.1\)</span>.</p>
+<p>with <span class="math inline">\(\rho/r_0\)</span> typically of order <span class="math inline">\(0.1\)</span>.</p>
 <!-- [Sólyom–Piróth I, Eqs. (4.3.33)–(4.3.34), pp. 88–89] -->
 <p>This is the key thermal message: ionic crystals are stiff because their energy minimum is produced by the balance of a strong long-range attraction and a steep short-range repulsion.</p>
 </section>
@@ -875,8 +879,8 @@ Figure&nbsp;2.4: Electron-density contours comparing a typical ionic crystal (Na
 </section>
 <section id="from-the-harmonic-oscillator-to-bond-stiffness" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="from-the-harmonic-oscillator-to-bond-stiffness"><span class="header-section-number">2.3</span> From the Harmonic Oscillator to Bond Stiffness</h2>
-<section id="the-harmonic-oscillator-as-a-model-of-small-vibrations" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="the-harmonic-oscillator-as-a-model-of-small-vibrations"><span class="header-section-number">2.3.1</span> The Harmonic Oscillator as a Model of Small Vibrations</h3>
+<section id="harmonic-oscillator" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="harmonic-oscillator"><span class="header-section-number">2.3.1</span> Harmonic Oscillator</h3>
 <p>Consider a particle of mass <span class="math inline">\(m\)</span> attached to a spring and displaced by an amount <span class="math inline">\(x\)</span> from its equilibrium position. For small displacements, the restoring force is proportional to the displacement and points back toward equilibrium:</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
