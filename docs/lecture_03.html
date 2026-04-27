@@ -266,7 +266,6 @@ window.Quarto = {
   <li><a href="#primitive-cell" id="toc-primitive-cell" class="nav-link" data-scroll-target="#primitive-cell"><span class="header-section-number">3.3.1</span> Primitive Cell</a></li>
   <li><a href="#conventional-cell" id="toc-conventional-cell" class="nav-link" data-scroll-target="#conventional-cell"><span class="header-section-number">3.3.2</span> Conventional Cell</a></li>
   <li><a href="#wignerseitz-cell" id="toc-wignerseitz-cell" class="nav-link" data-scroll-target="#wignerseitz-cell"><span class="header-section-number">3.3.3</span> Wigner–Seitz Cell</a></li>
-  <li><a href="#counting-lattice-points-in-cubic-conventional-cells" id="toc-counting-lattice-points-in-cubic-conventional-cells" class="nav-link" data-scroll-target="#counting-lattice-points-in-cubic-conventional-cells"><span class="header-section-number">3.3.4</span> Counting Lattice Points in Cubic Conventional Cells</a></li>
   </ul></li>
   <li><a href="#symmetry-operations-and-crystal-classification" id="toc-symmetry-operations-and-crystal-classification" class="nav-link" data-scroll-target="#symmetry-operations-and-crystal-classification"><span class="header-section-number">3.4</span> Symmetry Operations and Crystal Classification</a>
   <ul class="collapse">
@@ -281,9 +280,11 @@ window.Quarto = {
   <li><a href="#common-elemental-structure-types-in-real-space" id="toc-common-elemental-structure-types-in-real-space" class="nav-link" data-scroll-target="#common-elemental-structure-types-in-real-space"><span class="header-section-number">3.6</span> Common Elemental Structure Types in Real Space</a>
   <ul class="collapse">
   <li><a href="#simple-cubic-body-centered-cubic-and-face-centered-cubic" id="toc-simple-cubic-body-centered-cubic-and-face-centered-cubic" class="nav-link" data-scroll-target="#simple-cubic-body-centered-cubic-and-face-centered-cubic"><span class="header-section-number">3.6.1</span> Simple Cubic, Body-Centered Cubic, and Face-Centered Cubic</a></li>
-  <li><a href="#hexagonal-close-packed" id="toc-hexagonal-close-packed" class="nav-link" data-scroll-target="#hexagonal-close-packed"><span class="header-section-number">3.6.2</span> Hexagonal Close Packed</a></li>
-  <li><a href="#diamond" id="toc-diamond" class="nav-link" data-scroll-target="#diamond"><span class="header-section-number">3.6.3</span> Diamond</a></li>
-  <li><a href="#graphite" id="toc-graphite" class="nav-link" data-scroll-target="#graphite"><span class="header-section-number">3.6.4</span> Graphite</a></li>
+  <li><a href="#counting-lattice-points-in-cubic-conventional-cells" id="toc-counting-lattice-points-in-cubic-conventional-cells" class="nav-link" data-scroll-target="#counting-lattice-points-in-cubic-conventional-cells"><span class="header-section-number">3.6.2</span> Counting Lattice Points in Cubic Conventional Cells</a></li>
+  <li><a href="#primitive-lattice-vectors-and-primitive-cell-volume-of-the-cubic-bravais-lattices" id="toc-primitive-lattice-vectors-and-primitive-cell-volume-of-the-cubic-bravais-lattices" class="nav-link" data-scroll-target="#primitive-lattice-vectors-and-primitive-cell-volume-of-the-cubic-bravais-lattices"><span class="header-section-number">3.6.3</span> Primitive Lattice Vectors and Primitive-Cell Volume of the Cubic Bravais Lattices</a></li>
+  <li><a href="#hexagonal-close-packed" id="toc-hexagonal-close-packed" class="nav-link" data-scroll-target="#hexagonal-close-packed"><span class="header-section-number">3.6.4</span> Hexagonal Close Packed</a></li>
+  <li><a href="#diamond" id="toc-diamond" class="nav-link" data-scroll-target="#diamond"><span class="header-section-number">3.6.5</span> Diamond</a></li>
+  <li><a href="#graphite" id="toc-graphite" class="nav-link" data-scroll-target="#graphite"><span class="header-section-number">3.6.6</span> Graphite</a></li>
   </ul></li>
   <li><a href="#common-binary-structure-types-in-real-space" id="toc-common-binary-structure-types-in-real-space" class="nav-link" data-scroll-target="#common-binary-structure-types-in-real-space"><span class="header-section-number">3.7</span> Common Binary Structure Types in Real Space</a>
   <ul class="collapse">
@@ -513,61 +514,6 @@ V_{\mathrm c}
 <!-- [Gross–Marx, Sec. 1.1.1.3, pp. 6–7] -->
 <!-- [Sólyom, Sec. 5.1.4] -->
 </section>
-<section id="counting-lattice-points-in-cubic-conventional-cells" class="level3" data-number="3.3.4">
-<h3 data-number="3.3.4" class="anchored" data-anchor-id="counting-lattice-points-in-cubic-conventional-cells"><span class="header-section-number">3.3.4</span> Counting Lattice Points in Cubic Conventional Cells</h3>
-<p>For the cubic conventional cells:</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><span class="math display">\[
-N_{\mathrm{lp}}^{\mathrm{SC}}
-= 8\times \frac18
-= 1 ,
-\]</span></p>
-<p><span class="math display">\[
-N_{\mathrm{lp}}^{\mathrm{BCC}}
-= 8\times \frac18 + 1
-= 2 ,
-\]</span></p>
-<p><span class="math display">\[
-N_{\mathrm{lp}}^{\mathrm{FCC}}
-= 8\times \frac18 + 6\times \frac12
-= 4 .
-\]</span></p>
-</div>
-</div>
-</div>
-<p>Here <span class="math inline">\(N_{\mathrm{lp}}\)</span> is the number of lattice points in the conventional cell.</p>
-<p>This immediately explains why the common monatomic cubic structures are labeled <span class="math inline">\(cP1\)</span>, <span class="math inline">\(cI2\)</span>, and <span class="math inline">\(cF4\)</span>.</p>
-<!-- [Gross–Marx, Secs. 1.2.1–1.2.3, pp. 25–26] -->
-<!-- [Sólyom, Sec. 7.1; Secs. 7.2.1–7.2.3] -->
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Important Distinction.</strong> A monatomic BCC crystal is a Bravais lattice. The CsCl structure is not that Bravais lattice: once the corner and body-center sites are occupied by different species, translation by half the body diagonal is no longer a symmetry of the decorated crystal.</p>
-</div>
-</div>
-<div id="fig-cells" class="figure quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-cells-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure from [Gross–Marx, Figs. 1.4 and 1.5, pp. 6–7; Sólyom, Sec. 5.1.4] -->
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cells-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.2: <strong>Figure placeholder.</strong> Primitive, conventional, and Wigner–Seitz cells, including the nonprimitive conventional cubic descriptions of BCC and FCC.
-</figcaption>
-</figure>
-</div>
-</section>
 </section>
 <section id="symmetry-operations-and-crystal-classification" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="symmetry-operations-and-crystal-classification"><span class="header-section-number">3.4</span> Symmetry Operations and Crystal Classification</h2>
@@ -650,7 +596,7 @@ n = 1,2,3,4,6 .
 <!-- Placeholder: insert figure from [Gross–Marx, Fig. 1.7, p. 9] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-symmetry-operations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.3: <strong>Figure placeholder.</strong> The standard crystallographic symmetry operations used in point-group classification: rotations, inversion, mirror reflection, and rotoinversion.
+Figure&nbsp;3.2: <strong>Figure placeholder.</strong> The standard crystallographic symmetry operations used in point-group classification: rotations, inversion, mirror reflection, and rotoinversion.
 </figcaption>
 </figure>
 </div>
@@ -660,7 +606,7 @@ Figure&nbsp;3.3: <strong>Figure placeholder.</strong> The standard crystallograp
 <!-- Placeholder: insert figure from [Gross–Marx, Fig. 1.9, pp. 14–15] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-basis-lowers-symmetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.4: <strong>Figure placeholder.</strong> Two crystals built on the same cubic cell but with different bases, illustrating that the basis may preserve or reduce the visible symmetry of the structure.
+Figure&nbsp;3.3: <strong>Figure placeholder.</strong> Two crystals built on the same cubic cell but with different bases, illustrating that the basis may preserve or reduce the visible symmetry of the structure.
 </figcaption>
 </figure>
 </div>
@@ -760,7 +706,7 @@ Figure&nbsp;3.4: <strong>Figure placeholder.</strong> Two crystals built on the 
 <!-- Placeholder: insert figure from [Gross–Marx, Fig. 1.11, p. 17; Sólyom, Fig. 5.23] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bravais-14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.5: <strong>Figure placeholder.</strong> The 14 Bravais lattices grouped by crystal system and centering type.
+Figure&nbsp;3.4: <strong>Figure placeholder.</strong> The 14 Bravais lattices grouped by crystal system and centering type.
 </figcaption>
 </figure>
 </div>
@@ -825,8 +771,177 @@ Figure&nbsp;3.5: <strong>Figure placeholder.</strong> The 14 Bravais lattices gr
 <li><strong>FCC</strong> can be viewed as close-packed triangular layers stacked as <span class="math inline">\(ABCABC\ldots\)</span>.</li>
 </ul>
 </section>
-<section id="hexagonal-close-packed" class="level3" data-number="3.6.2">
-<h3 data-number="3.6.2" class="anchored" data-anchor-id="hexagonal-close-packed"><span class="header-section-number">3.6.2</span> Hexagonal Close Packed</h3>
+<section id="counting-lattice-points-in-cubic-conventional-cells" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="counting-lattice-points-in-cubic-conventional-cells"><span class="header-section-number">3.6.2</span> Counting Lattice Points in Cubic Conventional Cells</h3>
+<p>For the cubic conventional cells:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+N_{\mathrm{lp}}^{\mathrm{SC}}
+= 8\times \frac18
+= 1 ,
+\]</span></p>
+<p><span class="math display">\[
+N_{\mathrm{lp}}^{\mathrm{BCC}}
+= 8\times \frac18 + 1
+= 2 ,
+\]</span></p>
+<p><span class="math display">\[
+N_{\mathrm{lp}}^{\mathrm{FCC}}
+= 8\times \frac18 + 6\times \frac12
+= 4 .
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Here <span class="math inline">\(N_{\mathrm{lp}}\)</span> is the number of lattice points in the conventional cell.</p>
+<p>This immediately explains why the common monatomic cubic structures are labeled <span class="math inline">\(cP1\)</span>, <span class="math inline">\(cI2\)</span>, and <span class="math inline">\(cF4\)</span>.</p>
+<!-- [Gross–Marx, Secs. 1.2.1–1.2.3, pp. 25–26] -->
+<!-- [Sólyom, Sec. 7.1; Secs. 7.2.1–7.2.3] -->
+<div id="fig-cells" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cells-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross–Marx, Figs. 1.4 and 1.5, pp. 6–7; Sólyom, Sec. 5.1.4] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cells-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.5: <strong>Figure placeholder.</strong> Primitive, conventional, and Wigner–Seitz cells, including the nonprimitive conventional cubic descriptions of BCC and FCC.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="primitive-lattice-vectors-and-primitive-cell-volume-of-the-cubic-bravais-lattices" class="level3" data-number="3.6.3">
+<h3 data-number="3.6.3" class="anchored" data-anchor-id="primitive-lattice-vectors-and-primitive-cell-volume-of-the-cubic-bravais-lattices"><span class="header-section-number">3.6.3</span> Primitive Lattice Vectors and Primitive-Cell Volume of the Cubic Bravais Lattices</h3>
+<p>For the cubic Bravais lattices, it is useful to distinguish clearly between the <strong>conventional cubic cell</strong> of edge length <span class="math inline">\(a\)</span> and the <strong>primitive cell</strong>, which contains exactly one lattice point. The primitive-cell volume is given by</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+V_{\mathrm{prim}}
+=
+\left| \mathbf a_1 \cdot (\mathbf a_2 \times \mathbf a_3) \right| .
+\]</span></p>
+</div>
+</div>
+</div>
+<p>For SC, the conventional cubic cell is already primitive. For BCC and FCC, by contrast, the conventional cubic cell is chosen for symmetry reasons, while the primitive cell is smaller.</p>
+<section id="simple-cubic" class="level4" data-number="3.6.3.1">
+<h4 data-number="3.6.3.1" class="anchored" data-anchor-id="simple-cubic"><span class="header-section-number">3.6.3.1</span> Simple Cubic</h4>
+<p>For the simple cubic lattice, a natural choice of primitive vectors is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf a_1 = a(1,0,0), \qquad
+\mathbf a_2 = a(0,1,0), \qquad
+\mathbf a_3 = a(0,0,1).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>The primitive-cell volume is therefore</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+V_{\mathrm{prim}}^{\mathrm{sc}}
+=
+\left| \mathbf a_1 \cdot (\mathbf a_2 \times \mathbf a_3) \right|
+=
+a^3.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>So for SC, the primitive cell and the conventional cubic cell coincide.</p>
+</section>
+<section id="body-centered-cubic" class="level4" data-number="3.6.3.2">
+<h4 data-number="3.6.3.2" class="anchored" data-anchor-id="body-centered-cubic"><span class="header-section-number">3.6.3.2</span> Body-Centered Cubic</h4>
+<p>For the body-centered cubic lattice, a convenient choice of primitive vectors is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf a_1 = \frac{a}{2}(-1,1,1), \qquad
+\mathbf a_2 = \frac{a}{2}(1,-1,1), \qquad
+\mathbf a_3 = \frac{a}{2}(1,1,-1).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Their triple product gives</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+V_{\mathrm{prim}}^{\mathrm{bcc}}
+=
+\left| \mathbf a_1 \cdot (\mathbf a_2 \times \mathbf a_3) \right|
+=
+\frac{a^3}{2}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This is consistent with the fact that the conventional cubic BCC cell contains two lattice points, so the primitive-cell volume must be half of the conventional-cell volume.</p>
+</section>
+<section id="face-centered-cubic" class="level4" data-number="3.6.3.3">
+<h4 data-number="3.6.3.3" class="anchored" data-anchor-id="face-centered-cubic"><span class="header-section-number">3.6.3.3</span> Face-Centered Cubic</h4>
+<p>For the face-centered cubic lattice, a standard choice of primitive vectors is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf a_1 = \frac{a}{2}(0,1,1), \qquad
+\mathbf a_2 = \frac{a}{2}(1,0,1), \qquad
+\mathbf a_3 = \frac{a}{2}(1,1,0).
+\]</span></p>
+</div>
+</div>
+</div>
+<p>The primitive-cell volume is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+V_{\mathrm{prim}}^{\mathrm{fcc}}
+=
+\left| \mathbf a_1 \cdot (\mathbf a_2 \times \mathbf a_3) \right|
+=
+\frac{a^3}{4}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This agrees with the fact that the conventional cubic FCC cell contains four lattice points.</p>
+</section>
+</section>
+<section id="hexagonal-close-packed" class="level3" data-number="3.6.4">
+<h3 data-number="3.6.4" class="anchored" data-anchor-id="hexagonal-close-packed"><span class="header-section-number">3.6.4</span> Hexagonal Close Packed</h3>
 <p>The HCP structure has the same close-packing efficiency as FCC, but a different translational symmetry. It is built from close-packed triangular layers stacked as</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -923,8 +1038,8 @@ c=2h = 2\sqrt{\frac{2}{3}}(2r)/2 = 2\sqrt{\frac{8}{3}}r
 <!-- [Gross–Marx, Sec. 1.2.4, pp. 27–28] -->
 </details>
 </section>
-<section id="diamond" class="level3" data-number="3.6.3">
-<h3 data-number="3.6.3" class="anchored" data-anchor-id="diamond"><span class="header-section-number">3.6.3</span> Diamond</h3>
+<section id="diamond" class="level3" data-number="3.6.5">
+<h3 data-number="3.6.5" class="anchored" data-anchor-id="diamond"><span class="header-section-number">3.6.5</span> Diamond</h3>
 <p>Diamond is an elemental structure with directional covalent bonding. Its underlying Bravais lattice is FCC, but the crystal requires a two-atom basis:</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -945,8 +1060,8 @@ c=2h = 2\sqrt{\frac{2}{3}}(2r)/2 = 2\sqrt{\frac{8}{3}}r
 <!-- [Sólyom, Sec. 7.2.4] -->
 <p>A useful mental picture is that diamond consists of two interpenetrating FCC sublattices displaced by one quarter of the body diagonal of the conventional cube. Because the bonding is strongly directional, the structure is much more open than close-packed structures.</p>
 </section>
-<section id="graphite" class="level3" data-number="3.6.4">
-<h3 data-number="3.6.4" class="anchored" data-anchor-id="graphite"><span class="header-section-number">3.6.4</span> Graphite</h3>
+<section id="graphite" class="level3" data-number="3.6.6">
+<h3 data-number="3.6.6" class="anchored" data-anchor-id="graphite"><span class="header-section-number">3.6.6</span> Graphite</h3>
 <p>Graphite is the second important crystalline allotrope of carbon. Its structure consists of parallel <strong>graphene-like layers</strong>. Within each layer, carbon atoms form a honeycomb arrangement with strong covalent <span class="math inline">\(sp^2\)</span> bonding; neighboring layers are coupled only weakly by van der Waals forces.</p>
 <!-- [Gross–Marx, Sec. 1.2.10, pp. 33–34] -->
 <!-- [Sólyom, Sec. 7.5, p. 231] -->
