@@ -274,8 +274,8 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#braggs-direct-space-picture" id="toc-braggs-direct-space-picture" class="nav-link" data-scroll-target="#braggs-direct-space-picture"><span class="header-section-number">4.6.1</span> Bragg’s Direct-Space Picture</a></li>
   <li><a href="#laues-reciprocal-space-picture" id="toc-laues-reciprocal-space-picture" class="nav-link" data-scroll-target="#laues-reciprocal-space-picture"><span class="header-section-number">4.6.2</span> Laue’s Reciprocal-Space Picture</a></li>
-  <li><a href="#equivalence-of-bragg-and-laue-conditions" id="toc-equivalence-of-bragg-and-laue-conditions" class="nav-link" data-scroll-target="#equivalence-of-bragg-and-laue-conditions"><span class="header-section-number">4.6.3</span> Equivalence of Bragg and Laue Conditions</a></li>
-  <li><a href="#ewald-construction" id="toc-ewald-construction" class="nav-link" data-scroll-target="#ewald-construction"><span class="header-section-number">4.6.4</span> Ewald Construction</a></li>
+  <li><a href="#ewald-construction" id="toc-ewald-construction" class="nav-link" data-scroll-target="#ewald-construction"><span class="header-section-number">4.6.3</span> Ewald Construction</a></li>
+  <li><a href="#equivalence-of-bragg-and-laue-conditions" id="toc-equivalence-of-bragg-and-laue-conditions" class="nav-link" data-scroll-target="#equivalence-of-bragg-and-laue-conditions"><span class="header-section-number">4.6.4</span> Equivalence of Bragg and Laue Conditions</a></li>
   <li><a href="#bragg-planes-and-brillouin-zone-boundaries" id="toc-bragg-planes-and-brillouin-zone-boundaries" class="nav-link" data-scroll-target="#bragg-planes-and-brillouin-zone-boundaries"><span class="header-section-number">4.6.5</span> Bragg Planes and Brillouin-Zone Boundaries</a></li>
   </ul></li>
   <li><a href="#general-scattering-amplitude-and-the-phase-problem" id="toc-general-scattering-amplitude-and-the-phase-problem" class="nav-link" data-scroll-target="#general-scattering-amplitude-and-the-phase-problem"><span class="header-section-number">4.7</span> General Scattering Amplitude and the Phase Problem</a>
@@ -824,13 +824,20 @@ e^{i(\mathbf k'-\mathbf k)\cdot\mathbf R_n}=1 .
 <!-- [Gross and Marx, Ch. 2, Sec. 2.2.2, pp. 67-69] -->
 <p>Some texts define the scattering vector with the opposite sign. Here we use <span class="math inline">\(\Delta\mathbf k=\mathbf k'-\mathbf k\)</span>. The measured intensity is unchanged by reversing the sign convention.</p>
 </section>
-<section id="equivalence-of-bragg-and-laue-conditions" class="level3" data-number="4.6.3">
-<h3 data-number="4.6.3" class="anchored" data-anchor-id="equivalence-of-bragg-and-laue-conditions"><span class="header-section-number">4.6.3</span> Equivalence of Bragg and Laue Conditions</h3>
+<section id="ewald-construction" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="ewald-construction"><span class="header-section-number">4.6.3</span> Ewald Construction</h3>
+<p>The Ewald construction gives a geometric way to see when the Laue condition is satisfied.</p>
+<p>Draw the incident vector <span class="math inline">\(\mathbf k\)</span> so that its tip ends at a reciprocal-lattice point. Then draw a sphere of radius <span class="math inline">\(|\mathbf k|\)</span> centered at the tail of <span class="math inline">\(\mathbf k\)</span>. If another reciprocal-lattice point lies on the sphere, then an elastically scattered beam exists in the direction <span class="math inline">\(\mathbf k'\)</span> from the sphere center to that reciprocal-lattice point.</p>
+<p>Changing the wavelength changes the radius of the Ewald sphere. Rotating the crystal rotates the reciprocal lattice. Both operations are practical ways to bring reciprocal-lattice points onto the Ewald sphere.</p>
+<!-- [Gross and Marx, Ch. 2, Sec. 2.2.2.1, p. 70] -->
+</section>
+<section id="equivalence-of-bragg-and-laue-conditions" class="level3" data-number="4.6.4">
+<h3 data-number="4.6.4" class="anchored" data-anchor-id="equivalence-of-bragg-and-laue-conditions"><span class="header-section-number">4.6.4</span> Equivalence of Bragg and Laue Conditions</h3>
 <p>For elastic scattering, the triangle formed by <span class="math inline">\(\mathbf k\)</span>, <span class="math inline">\(\mathbf k'\)</span>, and <span class="math inline">\(\mathbf G=\mathbf k'-\mathbf k\)</span> gives</p>
 <p><span class="math display">\[
 |\mathbf G|=2|\mathbf k|\sin\theta .
 \]</span></p>
-<p>Using <span class="math inline">\(|\mathbf k|=2\pi/\lambda\)</span> and <span class="math inline">\(|\mathbf G|=m,2\pi/d_{hkl}\)</span> gives</p>
+<p>Using <span class="math inline">\(|\mathbf k|=2\pi/\lambda\)</span> and <span class="math inline">\(|\mathbf G|=m 2\pi/d_{hkl}\)</span> gives</p>
 <p><span class="math display">\[
 m\frac{2\pi}{d_{hkl}}
 = 2\frac{2\pi}{\lambda}\sin\theta .
@@ -850,13 +857,6 @@ m\frac{2\pi}{d_{hkl}}
 </div>
 <p>Bragg’s law and the Laue condition are therefore the same diffraction condition expressed in real space and reciprocal space.</p>
 <!-- [Gross and Marx, Ch. 2, Sec. 2.2.3, pp. 70-71] -->
-</section>
-<section id="ewald-construction" class="level3" data-number="4.6.4">
-<h3 data-number="4.6.4" class="anchored" data-anchor-id="ewald-construction"><span class="header-section-number">4.6.4</span> Ewald Construction</h3>
-<p>The Ewald construction gives a geometric way to see when the Laue condition is satisfied.</p>
-<p>Draw the incident vector <span class="math inline">\(\mathbf k\)</span> so that its tip ends at a reciprocal-lattice point. Then draw a sphere of radius <span class="math inline">\(|\mathbf k|\)</span> centered at the tail of <span class="math inline">\(\mathbf k\)</span>. If another reciprocal-lattice point lies on the sphere, then an elastically scattered beam exists in the direction <span class="math inline">\(\mathbf k'\)</span> from the sphere center to that reciprocal-lattice point.</p>
-<p>Changing the wavelength changes the radius of the Ewald sphere. Rotating the crystal rotates the reciprocal lattice. Both operations are practical ways to bring reciprocal-lattice points onto the Ewald sphere.</p>
-<!-- [Gross and Marx, Ch. 2, Sec. 2.2.2.1, p. 70] -->
 </section>
 <section id="bragg-planes-and-brillouin-zone-boundaries" class="level3" data-number="4.6.5">
 <h3 data-number="4.6.5" class="anchored" data-anchor-id="bragg-planes-and-brillouin-zone-boundaries"><span class="header-section-number">4.6.5</span> Bragg Planes and Brillouin-Zone Boundaries</h3>
@@ -1632,17 +1632,11 @@ Figure&nbsp;4.14: <strong>Figure placeholder.</strong> Laue, rotating-crystal, a
 <section id="problem-set" class="level2" data-number="4.16">
 <h2 data-number="4.16" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">4.16</span> Problem Set</h2>
 <ol type="1">
-<li><p><strong>Reciprocal Basis and Plane Spacing.</strong> Consider a simple cubic lattice with primitive vectors <span class="math display">\[
-\mathbf a_1=a\hat{\mathbf x},
-\qquad
-\mathbf a_2=a\hat{\mathbf y},
-\qquad
-\mathbf a_3=a\hat{\mathbf z}.
-\]</span> Derive the reciprocal primitive vectors and compute <span class="math inline">\(d_{100}\)</span>, <span class="math inline">\(d_{110}\)</span>, and <span class="math inline">\(d_{111}\)</span>.</p></li>
+<li><p><strong>Reciprocal Lattice.</strong> Starting from real-space FCC and BCC lattices, compute the corresponding reciprocal lattice vectors.</p></li>
 <li><p><strong>From Laue to Bragg.</strong> Starting from the condition for constructive interference from lattice points separated by <span class="math inline">\(\mathbf R_n\)</span>, derive the Laue condition <span class="math display">\[
 \Delta\mathbf k=\mathbf G.
 \]</span> Then show that elastic scattering gives Bragg’s law.</p></li>
-<li><p><strong>Structure Factor of CsCl and bcc.</strong> For atoms at <span class="math inline">\((0,0,0)\)</span> and <span class="math inline">\((1/2,1/2,1/2)\)</span>, compute <span class="math inline">\(S_{hkl}\)</span>. Discuss the difference between CsCl, where the two atoms have different form factors, and bcc, where they are identical.</p></li>
+<li><p><strong>Structure Factor of CsCl and bcc.</strong> For atoms at <span class="math inline">\((0,0,0)\)</span> and <span class="math inline">\((1/2,1/2,1/2)\)</span>, compute the structre factor <span class="math inline">\(S_{hkl}\)</span>. Discuss the difference between CsCl, where the two atoms have different form factors, and bcc, where they are identical.</p></li>
 <li><p><strong>fcc Extinction Rule.</strong> Use the conventional fcc positions <span class="math display">\[
 (0,0,0),
 \quad
