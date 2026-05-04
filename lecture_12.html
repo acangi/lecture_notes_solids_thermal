@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>12&nbsp; Electron–Phonon Coupling (optional) – Fundamentals of Solid-State Physics: Thermal Properties</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./lecture_13.html" rel="next">
+<link href="./lecture_11.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-95f147d06fdb9f8ce149f95e323965f4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-9c50916d60d090ebff2a56275c345c42.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lecture_12.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Electron–Phonon Coupling (optional)</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title"><span id="sec-lecture-12" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Electron–Phonon Coupling (optional)</span></span></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Fundamentals of Solid-State Physics: Thermal Properties</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamental Concepts of Solids</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Interatomic Bonding</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fundamentals of Crystal Structure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Reciprocal Space, Diffraction, and Structure Factor</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lattice Dynamics I</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lattice Dynamics II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phonons I</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Phonons II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Anharmonicity and Thermal Expansion</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Thermal Transport by Phonons</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Electronic Contributions to Thermal Properties</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_12.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Electron–Phonon Coupling (optional)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Experimental Methods for Thermal Properties (optional)</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">12.1</span> Roadmap</a></li>
+  <li><a href="#from-electronic-contributions-to-a-vibrating-lattice" id="toc-from-electronic-contributions-to-a-vibrating-lattice" class="nav-link" data-scroll-target="#from-electronic-contributions-to-a-vibrating-lattice"><span class="header-section-number">12.2</span> From Electronic Contributions to a Vibrating Lattice</a></li>
+  <li><a href="#linearized-electronphonon-coupling" id="toc-linearized-electronphonon-coupling" class="nav-link" data-scroll-target="#linearized-electronphonon-coupling"><span class="header-section-number">12.3</span> Linearized Electron–Phonon Coupling</a>
+  <ul class="collapse">
+  <li><a href="#small-displacements-and-the-perturbing-potential" id="toc-small-displacements-and-the-perturbing-potential" class="nav-link" data-scroll-target="#small-displacements-and-the-perturbing-potential"><span class="header-section-number">12.3.1</span> Small Displacements and the Perturbing Potential</a></li>
+  <li><a href="#normal-mode-form-of-the-lattice-vibration" id="toc-normal-mode-form-of-the-lattice-vibration" class="nav-link" data-scroll-target="#normal-mode-form-of-the-lattice-vibration"><span class="header-section-number">12.3.2</span> Normal-Mode Form of the Lattice Vibration</a></li>
+  <li><a href="#matrix-element-and-crystal-momentum-selection-rule" id="toc-matrix-element-and-crystal-momentum-selection-rule" class="nav-link" data-scroll-target="#matrix-element-and-crystal-momentum-selection-rule"><span class="header-section-number">12.3.3</span> Matrix Element and Crystal-Momentum Selection Rule</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">12.3.4</span> Interpretation</a></li>
+  </ul></li>
+  <li><a href="#deformation-potential" id="toc-deformation-potential" class="nav-link" data-scroll-target="#deformation-potential"><span class="header-section-number">12.4</span> Deformation Potential</a>
+  <ul class="collapse">
+  <li><a href="#continuum-limit-for-long-wavelength-acoustic-phonons" id="toc-continuum-limit-for-long-wavelength-acoustic-phonons" class="nav-link" data-scroll-target="#continuum-limit-for-long-wavelength-acoustic-phonons"><span class="header-section-number">12.4.1</span> Continuum Limit for Long-Wavelength Acoustic Phonons</a></li>
+  <li><a href="#free-electron-estimate-of-the-coupling-strength" id="toc-free-electron-estimate-of-the-coupling-strength" class="nav-link" data-scroll-target="#free-electron-estimate-of-the-coupling-strength"><span class="header-section-number">12.4.2</span> Free-Electron Estimate of the Coupling Strength</a></li>
+  <li><a href="#physical-scope-of-the-approximation" id="toc-physical-scope-of-the-approximation" class="nav-link" data-scroll-target="#physical-scope-of-the-approximation"><span class="header-section-number">12.4.3</span> Physical Scope of the Approximation</a></li>
+  </ul></li>
+  <li><a href="#electronphonon-scattering-resistivity-and-thermal-transport" id="toc-electronphonon-scattering-resistivity-and-thermal-transport" class="nav-link" data-scroll-target="#electronphonon-scattering-resistivity-and-thermal-transport"><span class="header-section-number">12.5</span> Electron–Phonon Scattering, Resistivity, and Thermal Transport</a>
+  <ul class="collapse">
+  <li><a href="#scattering-probability" id="toc-scattering-probability" class="nav-link" data-scroll-target="#scattering-probability"><span class="header-section-number">12.5.1</span> Scattering Probability</a></li>
+  <li><a href="#temperature-dependence" id="toc-temperature-dependence" class="nav-link" data-scroll-target="#temperature-dependence"><span class="header-section-number">12.5.2</span> Temperature Dependence</a></li>
+  <li><a href="#resistivity-versus-temperature" id="toc-resistivity-versus-temperature" class="nav-link" data-scroll-target="#resistivity-versus-temperature"><span class="header-section-number">12.5.3</span> Resistivity Versus Temperature</a></li>
+  <li><a href="#consequence-for-electronic-thermal-conductivity" id="toc-consequence-for-electronic-thermal-conductivity" class="nav-link" data-scroll-target="#consequence-for-electronic-thermal-conductivity"><span class="header-section-number">12.5.4</span> Consequence for Electronic Thermal Conductivity</a></li>
+  </ul></li>
+  <li><a href="#phonon-lifetime-and-linewidth" id="toc-phonon-lifetime-and-linewidth" class="nav-link" data-scroll-target="#phonon-lifetime-and-linewidth"><span class="header-section-number">12.6</span> Phonon Lifetime and Linewidth</a>
+  <ul class="collapse">
+  <li><a href="#phonons-also-acquire-a-finite-lifetime" id="toc-phonons-also-acquire-a-finite-lifetime" class="nav-link" data-scroll-target="#phonons-also-acquire-a-finite-lifetime"><span class="header-section-number">12.6.1</span> Phonons Also Acquire a Finite Lifetime</a></li>
+  <li><a href="#spectroscopic-meaning" id="toc-spectroscopic-meaning" class="nav-link" data-scroll-target="#spectroscopic-meaning"><span class="header-section-number">12.6.2</span> Spectroscopic Meaning</a></li>
+  <li><a href="#short-interpretation" id="toc-short-interpretation" class="nav-link" data-scroll-target="#short-interpretation"><span class="header-section-number">12.6.3</span> Short Interpretation</a></li>
+  </ul></li>
+  <li><a href="#take-home-messages" id="toc-take-home-messages" class="nav-link" data-scroll-target="#take-home-messages"><span class="header-section-number">12.7</span> Take-Home Messages</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">12.8</span> Problem Set</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By the end of this lecture, you should be able to:</p>
+<ul>
+<li>explain why lattice vibrations modulate the electronic potential and therefore scatter Bloch electrons;</li>
+<li>derive the linearized form of the electron–phonon perturbation from small ionic displacements;</li>
+<li>state the crystal-momentum and energy selection rules for phonon absorption and emission;</li>
+<li>explain the deformation-potential picture for long-wavelength longitudinal acoustic phonons;</li>
+<li>connect electron–phonon scattering to electrical resistivity, electronic thermal conductivity, and finite phonon lifetimes;</li>
+<li>interpret phonon broadening and softening as observable consequences of electron–phonon coupling.</li>
+</ul>
+</div>
+</div>
+<section id="roadmap" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="roadmap"><span class="header-section-number">12.1</span> Roadmap</h2>
+<ul>
+<li>From the static lattice of <a href="lecture_11.html" class="quarto-xref">Lecture&nbsp;<span>11</span></a> to a vibrating lattice</li>
+<li>Linearized electron–phonon coupling and the scattering picture</li>
+<li>Deformation potential as a continuum, long-wavelength limit</li>
+<li>Temperature dependence of scattering and transport consequences</li>
+<li>Phonon lifetime, linewidth, and the spectroscopic signature of coupling</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf{R}_{l}^{0}\)</span></td>
+<td>equilibrium position of ion <span class="math inline">\(l\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf{u}_{l}\)</span></td>
+<td>displacement of ion <span class="math inline">\(l\)</span> from <span class="math inline">\(\mathbf{R}_{l}^{0}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(U_{0}(\mathbf{r})\)</span></td>
+<td>static lattice-periodic electron–ion potential</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\delta U(\mathbf{r})\)</span></td>
+<td>change in potential caused by lattice vibrations</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\psi_{\mathbf{k}}(\mathbf{r})\)</span></td>
+<td>Bloch state of crystal momentum <span class="math inline">\(\mathbf{k}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf{q}\)</span></td>
+<td>phonon wave vector</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\lambda\)</span></td>
+<td>phonon branch or polarization index</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\omega_{\lambda}(\mathbf{q})\)</span></td>
+<td>phonon angular frequency</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf{e}_{\lambda}(\mathbf{q})\)</span></td>
+<td>phonon polarization vector</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf{G}\)</span></td>
+<td>reciprocal-lattice vector</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(g_{\lambda}(\mathbf{k},\mathbf{q})\)</span></td>
+<td>electron–phonon matrix element</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(N_{\mathbf{q}\lambda}\)</span></td>
+<td>Bose occupation number of phonons</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\tau_{el\text{–}ph}\)</span></td>
+<td>electron lifetime limited by electron–phonon scattering</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\rho(T)\)</span></td>
+<td>electrical resistivity</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\kappa_{e}\)</span></td>
+<td>electronic thermal conductivity</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Delta(\mathbf{r})\)</span></td>
+<td>local dilatation, <span class="math inline">\(\delta V/V\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C\)</span></td>
+<td>deformation-potential constant</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Gamma_{\lambda}(\mathbf{q})\)</span></td>
+<td>phonon decay width in energy units</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="from-electronic-contributions-to-a-vibrating-lattice" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="from-electronic-contributions-to-a-vibrating-lattice"><span class="header-section-number">12.2</span> From Electronic Contributions to a Vibrating Lattice</h2>
+<p>In <a href="lecture_11.html" class="quarto-xref">Lecture&nbsp;<span>11</span></a>, electrons contributed to thermal transport through quantities such as <span class="math inline">\(C_{el}\)</span>, <span class="math inline">\(v_F\)</span>, and a relaxation time <span class="math inline">\(\tau\)</span>. What was still missing was a microscopic origin of that relaxation time. In a real crystal, ions are not fixed: they vibrate about their equilibrium positions, and these vibrations modulate the periodic potential felt by the electrons. That modulation is the microscopic origin of electron–phonon coupling.</p>
+<p>The starting point is therefore to separate the static lattice potential from the vibrational correction: <span class="math display">\[
+U_{el\text{–}ion}(\mathbf{r};{\mathbf{R}_{l}})
+=
+U_{0}(\mathbf{r}) + \delta U(\mathbf{r}) .
+\]</span> Here <span class="math inline">\(U_{el\text{–}ion}(\mathbf{r};{\mathbf{R}_{l}})\)</span> is the full electron–ion potential, <span class="math inline">\(U_{0}(\mathbf{r})\)</span> is the equilibrium lattice-periodic part obtained when <span class="math inline">\(\mathbf{R}_{l}=\mathbf{R}_{l}^{0}\)</span>, and <span class="math inline">\(\delta U(\mathbf{r})\)</span> is the perturbation caused by the ionic displacements.</p>
+<!-- [Sólyom, Ch. 23.1–23.2, pp. 330–334] -->
+<p>The separation is justified because electrons adjust much faster than the ions move. This can be formulated as an adiabatic or Born–Oppenheimer decoupling: the electrons see an almost instantaneous ionic configuration, while the ions move in an averaged electronic background. For our purposes, this means that the Bloch states of the static crystal remain the natural starting basis, and the vibrational correction can be treated as a perturbation.</p>
+<!-- [Sólyom, Ch. 23.1, pp. 330–333] -->
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key Point
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Electron–phonon coupling does not require introducing a new force. It is simply the statement that lattice vibrations change the electron–ion potential, and therefore the electronic energies and wavefunctions.</p>
+</div>
+</div>
+</section>
+<section id="linearized-electronphonon-coupling" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="linearized-electronphonon-coupling"><span class="header-section-number">12.3</span> Linearized Electron–Phonon Coupling</h2>
+<section id="small-displacements-and-the-perturbing-potential" class="level3" data-number="12.3.1">
+<h3 data-number="12.3.1" class="anchored" data-anchor-id="small-displacements-and-the-perturbing-potential"><span class="header-section-number">12.3.1</span> Small Displacements and the Perturbing Potential</h3>
+<p>For small ionic displacements, the potential may be expanded to first order: <span class="math display">\[
+\delta U(\mathbf{r})
+=
+\sum_{l}
+\mathbf{u}_{l}\cdot
+\left.
+\frac{\partial U_{el\text{–}ion}(\mathbf{r};{\mathbf{R}_{m}})}{\partial \mathbf{R}_{l}}
+\right|_{{\mathbf{R}_{m}^{0}}} .
+\]</span> Here <span class="math inline">\(\mathbf{u}_{l}=\mathbf{R}_{l}-\mathbf{R}_{l}^{0}\)</span> is the displacement of ion <span class="math inline">\(l\)</span>, and the derivative is evaluated at the equilibrium ionic positions <span class="math inline">\({\mathbf{R}_{m}^{0}}\)</span>.</p>
+<!-- [Sólyom, Ch. 23.2, pp. 333–334] -->
+<p>This is the central microscopic statement: the coupling is linear in displacement to leading order. The approximation is reliable because thermal vibrations are small compared with interatomic distances over most of the harmonic regime.</p>
+<p>A useful sanity check:</p>
+<ul>
+<li>if all <span class="math inline">\(\mathbf{u}_{l}=0\)</span>, then <span class="math inline">\(\delta U(\mathbf{r})=0\)</span> and we recover the static crystal;</li>
+<li>the larger the displacement field, the larger the perturbation acting on the electrons.</li>
+</ul>
+<div id="fig-rigid-ion" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rigid-ion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Ch. 23.2.2, Fig. 23.3, p. 338] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rigid-ion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.1: <strong>Figure placeholder.</strong> Static and displaced atomic potentials in the rigid-ion picture, illustrating how ionic motion changes the electron–ion potential locally.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="normal-mode-form-of-the-lattice-vibration" class="level3" data-number="12.3.2">
+<h3 data-number="12.3.2" class="anchored" data-anchor-id="normal-mode-form-of-the-lattice-vibration"><span class="header-section-number">12.3.2</span> Normal-Mode Form of the Lattice Vibration</h3>
+<p>To make the perturbation physically transparent, write a normal mode of lattice vibration as <span class="math display">\[
+\mathbf{u}_{l}(t)
+=
+\mathbf{e}_{\lambda}(\mathbf{q})\ u_{\lambda\mathbf{q}}\
+e^{i(\mathbf{q}\cdot \mathbf{R}_{l}^{0}-\omega_{\lambda}(\mathbf{q})t)}
++\text{c.c.}
+\]</span> Here <span class="math inline">\(\mathbf{q}\)</span> is the phonon wave vector, <span class="math inline">\(\lambda\)</span> labels the branch or polarization, <span class="math inline">\(\mathbf{e}_{\lambda}(\mathbf{q})\)</span> is the polarization vector, <span class="math inline">\(u_{\lambda\mathbf{q}}\)</span> is the mode amplitude, and c.c. denotes the complex conjugate required to make the displacement real.</p>
+<!-- [Sólyom, Ch. 23.2.1, pp. 334–336; phrased here without second quantization] -->
+<p>Substituting this mode into the linearized perturbation shows that a single phonon mode acts as a traveling modulation of the crystal potential. That modulation can scatter an electron from one Bloch state into another.</p>
+</section>
+<section id="matrix-element-and-crystal-momentum-selection-rule" class="level3" data-number="12.3.3">
+<h3 data-number="12.3.3" class="anchored" data-anchor-id="matrix-element-and-crystal-momentum-selection-rule"><span class="header-section-number">12.3.3</span> Matrix Element and Crystal-Momentum Selection Rule</h3>
+<p>The transition amplitude between Bloch states <span class="math inline">\(\psi_{\mathbf{k}}\)</span> and <span class="math inline">\(\psi_{\mathbf{k}'}\)</span> is <span class="math display">\[
+g_{\lambda}(\mathbf{k},\mathbf{q};\mathbf{k}')
+=
+\langle \psi_{\mathbf{k}'} \vert \delta U_{\lambda\mathbf{q}} \vert \psi_{\mathbf{k}} \rangle .
+\]</span> Here <span class="math inline">\(\delta U_{\lambda\mathbf{q}}\)</span> is the part of the perturbing potential associated with the mode <span class="math inline">\((\mathbf{q},\lambda)\)</span>, and <span class="math inline">\(g_{\lambda}(\mathbf{k},\mathbf{q};\mathbf{k}')\)</span> is the corresponding electron–phonon matrix element.</p>
+<!-- [Sólyom, Ch. 23.2.1, pp. 335–336] -->
+<p>Because the perturbation carries the lattice phase factor <span class="math inline">\(e^{i\mathbf{q}\cdot \mathbf{R}_{l}^{0}}\)</span>, the sum over lattice sites contains <span class="math display">\[
+\sum_{l}e^{i(\mathbf{k}-\mathbf{k}'+\mathbf{q})\cdot \mathbf{R}_{l}^{0}} .
+\]</span> This sum vanishes unless <span class="math display">\[
+\mathbf{k}'=\mathbf{k}+\mathbf{q}+\mathbf{G} .
+\]</span> Here <span class="math inline">\(\mathbf{G}\)</span> is a reciprocal-lattice vector.</p>
+<!-- [Sólyom, Ch. 23.2.1, pp. 336–337] -->
+<p>This is the crystal-momentum selection rule for electron–phonon scattering.</p>
+<ul>
+<li>If <span class="math inline">\(\mathbf{G}=0\)</span>, the process is <strong>normal</strong>.</li>
+<li>If <span class="math inline">\(\mathbf{G}\neq 0\)</span>, the process is <strong>umklapp</strong>.</li>
+</ul>
+<p>The accompanying energy condition is <span class="math display">\[
+\varepsilon_{\mathbf{k}'}
+=
+\varepsilon_{\mathbf{k}}
+\pm
+\hbar\omega_{\lambda}(\mathbf{q}) .
+\]</span> Here <span class="math inline">\(\varepsilon_{\mathbf{k}}\)</span> and <span class="math inline">\(\varepsilon_{\mathbf{k}'}\)</span> are the electron energies before and after scattering, and the plus or minus sign corresponds to phonon absorption or emission, respectively.</p>
+<!-- [Sólyom, Ch. 23.2.1, pp. 336–337] -->
+<div id="fig-eph-scattering" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-eph-scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Ch. 23.2.1, Figs. 23.1–23.2, p. 337] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-eph-scattering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.2: <strong>Figure placeholder.</strong> Electron–phonon scattering by phonon absorption and emission, including normal and umklapp processes in reciprocal space.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="interpretation" class="level3" data-number="12.3.4">
+<h3 data-number="12.3.4" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">12.3.4</span> Interpretation</h3>
+<p>The important conceptual point is not merely that electrons scatter, but that the vibrating lattice breaks the exact translational symmetry of the static lattice. Once the vibration is resolved into phonon modes, however, the missing momentum is carried by the phonon wave vector <span class="math inline">\(\mathbf{q}\)</span>, modulo a reciprocal-lattice vector.</p>
+<p>This is why a static Bloch state has only a finite lifetime in a vibrating crystal: it is not an exact eigenstate of the full, time-dependent problem.</p>
+<!-- [Sólyom, Ch. 23.2.1 and 23.3, pp. 336–345] -->
+</section>
+</section>
+<section id="deformation-potential" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="deformation-potential"><span class="header-section-number">12.4</span> Deformation Potential</h2>
+<section id="continuum-limit-for-long-wavelength-acoustic-phonons" class="level3" data-number="12.4.1">
+<h3 data-number="12.4.1" class="anchored" data-anchor-id="continuum-limit-for-long-wavelength-acoustic-phonons"><span class="header-section-number">12.4.1</span> Continuum Limit for Long-Wavelength Acoustic Phonons</h3>
+<p>For long-wavelength longitudinal acoustic phonons, the lattice may be treated as an elastic continuum. The relevant scalar field is the local dilatation <span class="math display">\[
+\Delta(\mathbf{r})
+\equiv
+\frac{\delta V}{V}
+=
+\nabla\cdot\mathbf{u}(\mathbf{r}) .
+\]</span> Here <span class="math inline">\(\mathbf{u}(\mathbf{r})\)</span> is the continuum displacement field, <span class="math inline">\(\delta V/V\)</span> is the local relative volume change, and <span class="math inline">\(\Delta(\mathbf{r})\)</span> measures local compression or expansion.</p>
+<!-- [Sólyom, Ch. 23.2.3, pp. 339–340] -->
+<p>The deformation-potential approximation states that this local compression shifts the electronic potential by <span class="math display">\[
+U_{def}(\mathbf{r})=C\ \Delta(\mathbf{r}) .
+\]</span> Here <span class="math inline">\(C\)</span> is the deformation-potential constant.</p>
+<!-- [Sólyom, Ch. 23.2.3, pp. 340–341] -->
+<p>This is a very useful simplification because it converts a complicated microscopic potential change into a local scalar coupling to compression.</p>
+</section>
+<section id="free-electron-estimate-of-the-coupling-strength" class="level3" data-number="12.4.2">
+<h3 data-number="12.4.2" class="anchored" data-anchor-id="free-electron-estimate-of-the-coupling-strength"><span class="header-section-number">12.4.2</span> Free-Electron Estimate of the Coupling Strength</h3>
+<p>In a free-electron picture, the Fermi energy scales with density as <span class="math display">\[
+\varepsilon_{F}\propto n^{2/3}\propto V^{-2/3} .
+\]</span> Here <span class="math inline">\(n\)</span> is the electron density and <span class="math inline">\(V\)</span> is the local volume. Therefore a small local volume change gives <span class="math display">\[
+\delta \varepsilon_{F}
+=
+-\frac{2}{3}\varepsilon_{F}\frac{\delta V}{V}
+=
+-\frac{2}{3}\varepsilon_{F}\Delta(\mathbf{r}) .
+\]</span> Here <span class="math inline">\(\delta \varepsilon_{F}\)</span> is the local shift of the Fermi energy.</p>
+<!-- [Sólyom, Ch. 23.2.3, pp. 340–341] -->
+<p>Because the chemical potential must remain uniform in equilibrium, the electronic potential must shift in the opposite direction: <span class="math display">\[
+U_{def}(\mathbf{r})
+=
+\frac{2}{3}\varepsilon_{F}\Delta(\mathbf{r}) .
+\]</span> Hence <span class="math display">\[
+C=\frac{2}{3}\varepsilon_{F} .
+\]</span> Here <span class="math inline">\(\varepsilon_{F}\)</span> is the Fermi energy of the electron gas.</p>
+<!-- [Sólyom, Ch. 23.2.3, pp. 340–341] -->
+<p>This result is conceptually important even if the numerical prefactor is only approximate. It shows that the deformation potential is not arbitrary: it is tied to how compression changes the electronic energy scale.</p>
+</section>
+<section id="physical-scope-of-the-approximation" class="level3" data-number="12.4.3">
+<h3 data-number="12.4.3" class="anchored" data-anchor-id="physical-scope-of-the-approximation"><span class="header-section-number">12.4.3</span> Physical Scope of the Approximation</h3>
+<p>The deformation-potential picture is most natural for long-wavelength longitudinal acoustic phonons.</p>
+<ul>
+<li>Long wavelength means the crystal can be viewed locally as a continuum.</li>
+<li>Longitudinal means the displacement has a nonzero divergence.</li>
+<li>Acoustic means the distortion corresponds to compression and expansion rather than internal relative motion within the basis.</li>
+</ul>
+<p>For short wavelengths, optical phonons, or strongly ionic systems, a more detailed microscopic description is needed.</p>
+<!-- [Sólyom, Ch. 23.2.3–23.2.4, pp. 341–342] -->
+</section>
+</section>
+<section id="electronphonon-scattering-resistivity-and-thermal-transport" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="electronphonon-scattering-resistivity-and-thermal-transport"><span class="header-section-number">12.5</span> Electron–Phonon Scattering, Resistivity, and Thermal Transport</h2>
+<section id="scattering-probability" class="level3" data-number="12.5.1">
+<h3 data-number="12.5.1" class="anchored" data-anchor-id="scattering-probability"><span class="header-section-number">12.5.1</span> Scattering Probability</h3>
+<p>Once the lattice vibration is resolved into phonon modes, the scattering probability has the standard golden-rule structure <span class="math display">\[
+W_{\mathbf{k}\rightarrow\mathbf{k}'}
+=
+\frac{2\pi}{\hbar}
+|g_{\lambda}(\mathbf{k},\mathbf{q};\mathbf{k}')|^{2}
+\Big[
+(N_{\mathbf{q}\lambda}+1)
+\delta(\varepsilon_{\mathbf{k}'}-\varepsilon_{\mathbf{k}}+\hbar\omega_{\lambda}(\mathbf{q}))
++
+N_{\mathbf{q}\lambda}
+\delta(\varepsilon_{\mathbf{k}'}-\varepsilon_{\mathbf{k}}-\hbar\omega_{\lambda}(\mathbf{q}))
+\Big] .
+\]</span></p>
+<p>Here <span class="math inline">\(W_{\mathbf{k}\rightarrow\mathbf{k}'}\)</span> is the transition probability per unit time, <span class="math inline">\(N_{\mathbf{q}\lambda}\)</span> is the phonon occupation number, and the two delta functions enforce energy conservation for emission and absorption, respectively. The final state must also satisfy <span class="math inline">\(\mathbf{k}'=\mathbf{k}\pm\mathbf{q}+\mathbf{G}\)</span>.</p>
+<!-- [Sólyom, Ch. 23.3.1, pp. 344–345; rewritten here in first-quantized notation] -->
+<p>Two immediate consequences follow:</p>
+<ul>
+<li>the scattering strength grows with the phonon population;</li>
+<li>even in a perfect crystal, thermal vibrations alone give electrons a finite lifetime.</li>
+</ul>
+<p>Summing over all allowed final states gives an inverse lifetime <span class="math display">\[
+\frac{1}{\tau_{el\text{–}ph}(\mathbf{k})}
+=
+\sum_{\mathbf{k}',\lambda}
+W_{\mathbf{k}\rightarrow\mathbf{k}'} .
+\]</span> Here <span class="math inline">\(\tau_{el\text{–}ph}(\mathbf{k})\)</span> is the lifetime of an electron in Bloch state <span class="math inline">\(\mathbf{k}\)</span> against phonon scattering.</p>
+<!-- [Sólyom, Ch. 23.3.1, pp. 344–346] -->
+</section>
+<section id="temperature-dependence" class="level3" data-number="12.5.2">
+<h3 data-number="12.5.2" class="anchored" data-anchor-id="temperature-dependence"><span class="header-section-number">12.5.2</span> Temperature Dependence</h3>
+<p>There are two limiting trends for metals:</p>
+<ul>
+<li>at sufficiently high temperature, the lifetime scales approximately as <span class="math inline">\(\tau_{el\text{–}ph}\propto T^{-1}\)</span>;</li>
+<li>at very low temperature, the lifetime grows more rapidly as the thermal phonon population collapses, with <span class="math inline">\(\tau_{el\text{–}ph}\propto T^{-3}\)</span> for the single-particle lifetime in metals.</li>
+</ul>
+<!-- [Sólyom, Ch. 23.3.1, pp. 345–346] -->
+<p>The high-temperature trend is easy to understand: when many phonon modes are thermally occupied, the Bose factor increases roughly linearly with <span class="math inline">\(T\)</span>, so the scattering rate increases and the lifetime decreases.</p>
+<p>The low-temperature trend is also physically intuitive: only long-wavelength phonons remain populated, the available phase space shrinks strongly, and scattering is suppressed.</p>
+</section>
+<section id="resistivity-versus-temperature" class="level3" data-number="12.5.3">
+<h3 data-number="12.5.3" class="anchored" data-anchor-id="resistivity-versus-temperature"><span class="header-section-number">12.5.3</span> Resistivity Versus Temperature</h3>
+<p>Because electron–phonon scattering relaxes electronic momentum, it is one of the main microscopic origins of the resistivity of metals. At the qualitative level relevant for the present lecture:</p>
+<ul>
+<li>once phonons are well populated, the electron–phonon contribution to <span class="math inline">\(\rho(T)\)</span> grows roughly linearly with temperature;</li>
+<li>as <span class="math inline">\(T\to 0\)</span>, the phonon population vanishes and the electron–phonon contribution to the resistivity falls rapidly toward zero.</li>
+</ul>
+<!-- [Sólyom, Ch. 23.3, p. 343; Ch. 23.3.1, pp. 344–346] -->
+<p>This directly connects to <a href="lecture_11.html" class="quarto-xref">Lecture&nbsp;<span>11</span></a>: the relaxation time in transport is not just a phenomenological parameter but can be traced to scattering from thermally excited lattice vibrations.</p>
+</section>
+<section id="consequence-for-electronic-thermal-conductivity" class="level3" data-number="12.5.4">
+<h3 data-number="12.5.4" class="anchored" data-anchor-id="consequence-for-electronic-thermal-conductivity"><span class="header-section-number">12.5.4</span> Consequence for Electronic Thermal Conductivity</h3>
+<p>From <a href="lecture_11.html" class="quarto-xref">Lecture&nbsp;<span>11</span></a> we know that the electronic thermal conductivity may be written schematically as <span class="math display">\[
+\kappa_{e}\sim \frac{1}{3}C_{el}v_{F}^{2}\tau ,
+\]</span> where <span class="math inline">\(C_{el}\)</span> is the electronic heat capacity, <span class="math inline">\(v_{F}\)</span> is the Fermi velocity, and <span class="math inline">\(\tau\)</span> is the transport relaxation time.</p>
+<p>Electron–phonon coupling now gives a microscopic meaning to <span class="math inline">\(\tau\)</span>: when phonons become more abundant, electron scattering is stronger, the mean free path is shorter, and <span class="math inline">\(\kappa_{e}\)</span> is reduced. Thus electron–phonon coupling matters for thermal properties in two distinct ways:</p>
+<ul>
+<li>it limits charge transport and therefore electrical conductivity;</li>
+<li>it limits heat transport by shortening the lifetime of the same electronic carriers.</li>
+</ul>
+<p>This is the microscopic complement to the Wiedemann–Franz discussion of <a href="lecture_11.html" class="quarto-xref">Lecture&nbsp;<span>11</span></a>.</p>
+</section>
+</section>
+<section id="phonon-lifetime-and-linewidth" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="phonon-lifetime-and-linewidth"><span class="header-section-number">12.6</span> Phonon Lifetime and Linewidth</h2>
+<section id="phonons-also-acquire-a-finite-lifetime" class="level3" data-number="12.6.1">
+<h3 data-number="12.6.1" class="anchored" data-anchor-id="phonons-also-acquire-a-finite-lifetime"><span class="header-section-number">12.6.1</span> Phonons Also Acquire a Finite Lifetime</h3>
+<p>Electron–phonon coupling does not only scatter electrons. It also allows a phonon to create an electron–hole pair, or the reverse process, so phonons themselves are no longer infinitely long-lived. In perturbation theory, this appears as a complex correction to the phonon energy: <span class="math display">\[
+\hbar\widetilde{\omega}_{\lambda}(\mathbf{q})
+=
+\hbar\omega_{\lambda}(\mathbf{q})
++
+\Delta E_{\lambda}(\mathbf{q})
+-
+i\Gamma_{\lambda}(\mathbf{q}) .
+\]</span> Here <span class="math inline">\(\widetilde{\omega}_{\lambda}(\mathbf{q})\)</span> is the renormalized phonon frequency, <span class="math inline">\(\Delta E_{\lambda}(\mathbf{q})\)</span> is the real energy shift, and <span class="math inline">\(\Gamma_{\lambda}(\mathbf{q})\)</span> is the decay width induced by the interaction.</p>
+<!-- [Sólyom, Ch. 23.3, pp. 343–344; Ch. 23.3.3, pp. 350–352] -->
+<p>The corresponding phonon lifetime is <span class="math display">\[
+\tau_{\lambda}(\mathbf{q})
+=
+\frac{\hbar}{2\Gamma_{\lambda}(\mathbf{q})} .
+\]</span> Here <span class="math inline">\(\tau_{\lambda}(\mathbf{q})\)</span> is the phonon lifetime.</p>
+<!-- [Sólyom, Ch. 23.3 and 23.3.1, pp. 343–346] -->
+<p>This equation is one of the most important thermal statements of this lecture: once phonons interact with electrons, they acquire a finite linewidth and therefore a finite lifetime.</p>
+</section>
+<section id="spectroscopic-meaning" class="level3" data-number="12.6.2">
+<h3 data-number="12.6.2" class="anchored" data-anchor-id="spectroscopic-meaning"><span class="header-section-number">12.6.2</span> Spectroscopic Meaning</h3>
+<p>A finite phonon lifetime shows up experimentally as a broadened phonon line in spectroscopy.</p>
+<ul>
+<li>In Raman or infrared spectroscopy, broader peaks indicate faster decay.</li>
+<li>In inelastic neutron or x-ray scattering, the linewidth likewise encodes the inverse lifetime.</li>
+<li>The real part of the interaction shifts the phonon frequency, while the imaginary part broadens the line.</li>
+</ul>
+<p>Thus phonon linewidth is not merely a spectroscopic detail: it is a direct observable of electron–phonon coupling.</p>
+<!-- [Sólyom, Ch. 23.3, pp. 343–344; Ch. 23.3.3, pp. 350–352] -->
+</section>
+<section id="short-interpretation" class="level3" data-number="12.6.3">
+<h3 data-number="12.6.3" class="anchored" data-anchor-id="short-interpretation"><span class="header-section-number">12.6.3</span> Short Interpretation</h3>
+<p>The same interaction that makes electrons poor ballistic carriers also makes phonons poor eternal normal modes. Electron–phonon coupling therefore renormalizes both subsystems simultaneously:</p>
+<ul>
+<li>electrons acquire finite lifetimes and energy shifts;</li>
+<li>phonons acquire finite lifetimes and energy shifts.</li>
+</ul>
+<p>That mutual renormalization is the microscopic core of the chapter.</p>
+<!-- [Sólyom, Ch. 23.3, pp. 343–344] -->
+<details>
+<summary>
+<strong>Optional: Kohn Anomalies and Soft Phonons</strong>
+</summary>
+<p>At special wave vectors, especially around <span class="math inline">\(q\approx 2k_{F}\)</span>, the electron–phonon correction to the phonon energy can become unusually large. In three dimensions this produces a kink or anomaly in the phonon dispersion, known as a <strong>Kohn anomaly</strong>. In one-dimensional or strongly anisotropic systems the effect is much stronger and may drive a soft phonon and ultimately a lattice instability of Peierls type.</p>
+<!-- [Sólyom, Ch. 23.3.3, pp. 350–353] -->
+<div id="fig-kohn-anomaly" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-kohn-anomaly-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Sólyom, Ch. 23.3.3, Fig. 23.7, p. 351] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kohn-anomaly-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.3: <strong>Figure placeholder.</strong> Kohn anomaly in the phonon dispersion near <span class="math inline">\(q=2k_{F}\)</span>, showing how coupling to electrons can soften a phonon branch.
+</figcaption>
+</figure>
+</div>
+<p>For the present lecture, the essential message is simpler: strong electron–phonon coupling may reveal itself not only by a linewidth but also by a measurable frequency shift and, in extreme cases, by a soft mode.</p>
+</details>
+<!--
+## Bridge to the Next Lecture: From Microscopic Coupling to Full Transport Theory
+
+Today’s lecture supplied the microscopic origin of the relaxation processes that were summarized phenomenologically in Lecture 12. The new ingredient is clear:
+
+* lattice vibrations modulate the periodic potential;
+* that modulation scatters Bloch electrons;
+* the same interaction also shortens phonon lifetimes and broadens phonon spectra.
+
+The next lecture can now make transport fully quantitative by turning this scattering picture into transport coefficients and temperature laws for metals and semiconductors. Beyond transport, the same chapter already hints at an even deeper consequence: in second order, phonon exchange produces an effective electron–electron interaction, which is the bridge to superconductivity.
+-->
+</section>
+</section>
+<section id="take-home-messages" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="take-home-messages"><span class="header-section-number">12.7</span> Take-Home Messages</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Electron–phonon coupling originates from the modulation of the electron–ion potential by lattice vibrations.</li>
+<li>To leading order, the coupling is linear in the ionic displacement field.</li>
+<li>A phonon scatters an electron between Bloch states while conserving crystal momentum up to a reciprocal-lattice vector.</li>
+<li>Normal and umklapp processes are distinguished by whether such a reciprocal-lattice shift is needed.</li>
+<li>The deformation-potential picture is the simplest description of long-wavelength longitudinal acoustic phonons.</li>
+<li>Electron–phonon scattering is a major microscopic source of the temperature-dependent resistivity of metals.</li>
+<li>The same interaction limits electronic thermal conductivity by shortening the electronic mean free path.</li>
+<li>Phonons also acquire finite lifetimes, so electron–phonon coupling appears experimentally as phonon broadening and frequency shifts.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="problem-set" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">12.8</span> Problem Set</h2>
+<ol type="1">
+<li><p><strong>Linearized coupling.</strong> Starting from the full potential <span class="math inline">\(U_{el\text{–}ion}(\mathbf{r};{\mathbf{R}_{l}})\)</span>, show that the first-order correction caused by small displacements <span class="math inline">\(\mathbf{u}_{l}\)</span> is <span class="math display">\[
+\delta U(\mathbf{r})
+=
+\sum_{l}
+\mathbf{u}_{l}\cdot
+\left.
+\frac{\partial U_{el\text{–}ion}}{\partial \mathbf{R}_{l}}
+\right|_{{\mathbf{R}_{m}^{0}}} .
+\]</span> Explain physically why the zeroth-order term is just the static lattice potential.</p></li>
+<li><p><strong>Crystal-momentum selection rule.</strong> Assume the scattering matrix element contains the lattice sum <span class="math display">\[
+\sum_{l}e^{i(\mathbf{k}-\mathbf{k}'+\mathbf{q})\cdot \mathbf{R}_{l}^{0}} .
+\]</span> Show that it vanishes unless <span class="math inline">\(\mathbf{k}'=\mathbf{k}+\mathbf{q}+\mathbf{G}\)</span>. What is the difference between a normal process and an umklapp process?</p></li>
+<li><p><strong>Deformation potential.</strong> Use the free-electron scaling <span class="math inline">\(\varepsilon_{F}\propto V^{-2/3}\)</span> to derive <span class="math display">\[
+\delta\varepsilon_{F}
+=
+-\frac{2}{3}\varepsilon_{F}\frac{\delta V}{V} .
+\]</span> Why does this imply the deformation-potential estimate <span class="math display">\[
+U_{def}(\mathbf{r})=\frac{2}{3}\varepsilon_{F}\Delta(\mathbf{r})\ ?
+\]</span></p></li>
+<li><p><strong>Temperature trends in transport.</strong> Give a qualitative explanation for why the electron–phonon contribution to the resistivity is roughly linear in temperature at high <span class="math inline">\(T\)</span> but falls rapidly as <span class="math inline">\(T\to 0\)</span>.</p></li>
+<li><p><strong>Phonon lifetime and linewidth.</strong> Starting from <span class="math display">\[
+\hbar\widetilde{\omega}_{\lambda}(\mathbf{q})
+=
+\hbar\omega_{\lambda}(\mathbf{q})
++
+\Delta E_{\lambda}(\mathbf{q})
+-
+i\Gamma_{\lambda}(\mathbf{q}) ,
+\]</span> show that a finite <span class="math inline">\(\Gamma_{\lambda}(\mathbf{q})\)</span> implies a finite lifetime. Why does this lead to a broadened phonon line in spectroscopy?</p></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./lecture_11.html" class="pagination-link" aria-label="Electronic Contributions to Thermal Properties">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Electronic Contributions to Thermal Properties</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./lecture_13.html" class="pagination-link" aria-label="Experimental Methods for Thermal Properties (optional)">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Experimental Methods for Thermal Properties (optional)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
