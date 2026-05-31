@@ -256,14 +256,14 @@ window.Quarto = {
    
   <ul>
   <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">6.1</span> Roadmap</a></li>
-  <li><a href="#from-the-dynamical-matrix-to-explicit-models" id="toc-from-the-dynamical-matrix-to-explicit-models" class="nav-link" data-scroll-target="#from-the-dynamical-matrix-to-explicit-models"><span class="header-section-number">6.2</span> From the Dynamical Matrix to Explicit Models</a></li>
+  <li><a href="#summary-of-lattice-dynamics" id="toc-summary-of-lattice-dynamics" class="nav-link" data-scroll-target="#summary-of-lattice-dynamics"><span class="header-section-number">6.2</span> Summary of Lattice Dynamics</a></li>
   <li><a href="#crystal-lattice-with-a-one-atomic-basis" id="toc-crystal-lattice-with-a-one-atomic-basis" class="nav-link" data-scroll-target="#crystal-lattice-with-a-one-atomic-basis"><span class="header-section-number">6.3</span> Crystal Lattice With a One-Atomic Basis</a>
   <ul class="collapse">
   <li><a href="#force-law-for-longitudinal-plane-vibrations" id="toc-force-law-for-longitudinal-plane-vibrations" class="nav-link" data-scroll-target="#force-law-for-longitudinal-plane-vibrations"><span class="header-section-number">6.3.1</span> Force Law for Longitudinal Plane Vibrations</a></li>
   <li><a href="#dispersion-relation-for-general-couplings" id="toc-dispersion-relation-for-general-couplings" class="nav-link" data-scroll-target="#dispersion-relation-for-general-couplings"><span class="header-section-number">6.3.2</span> Dispersion Relation for General Couplings</a></li>
   <li><a href="#nearest-neighbor-approximation" id="toc-nearest-neighbor-approximation" class="nav-link" data-scroll-target="#nearest-neighbor-approximation"><span class="header-section-number">6.3.3</span> Nearest-Neighbor Approximation</a></li>
-  <li><a href="#interpretation-and-limiting-cases" id="toc-interpretation-and-limiting-cases" class="nav-link" data-scroll-target="#interpretation-and-limiting-cases"><span class="header-section-number">6.3.4</span> Interpretation and Limiting Cases</a></li>
-  <li><a href="#long-wavelength-limit" id="toc-long-wavelength-limit" class="nav-link" data-scroll-target="#long-wavelength-limit"><span class="header-section-number">6.3.5</span> Long-Wavelength Limit</a></li>
+  <li><a href="#group-velocity" id="toc-group-velocity" class="nav-link" data-scroll-target="#group-velocity"><span class="header-section-number">6.3.4</span> Group Velocity</a></li>
+  <li><a href="#limiting-cases" id="toc-limiting-cases" class="nav-link" data-scroll-target="#limiting-cases"><span class="header-section-number">6.3.5</span> Limiting Cases</a></li>
   <li><a href="#continuum-check" id="toc-continuum-check" class="nav-link" data-scroll-target="#continuum-check"><span class="header-section-number">6.3.6</span> Continuum Check</a></li>
   </ul></li>
   <li><a href="#the-first-brillouin-zone" id="toc-the-first-brillouin-zone" class="nav-link" data-scroll-target="#the-first-brillouin-zone"><span class="header-section-number">6.4</span> The First Brillouin Zone</a>
@@ -417,8 +417,8 @@ window.Quarto = {
 </tbody>
 </table>
 </section>
-<section id="from-the-dynamical-matrix-to-explicit-models" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="from-the-dynamical-matrix-to-explicit-models"><span class="header-section-number">6.2</span> From the Dynamical Matrix to Explicit Models</h2>
+<section id="summary-of-lattice-dynamics" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="summary-of-lattice-dynamics"><span class="header-section-number">6.2</span> Summary of Lattice Dynamics</h2>
 <p>For a crystal with basis atoms labeled by <span class="math inline">\(\alpha,\beta\)</span> and Cartesian components <span class="math inline">\(i,j\)</span>, the harmonic equations of motion can be written as <span class="math display">\[
 M_{\alpha}\frac{\partial^2 u_{n\alpha i}}{\partial t^2}
 +
@@ -456,6 +456,19 @@ e^{\mathrm i\mathbf q\cdot(\mathbf R_m-\mathbf R_n)}.
 </section>
 <section id="crystal-lattice-with-a-one-atomic-basis" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="crystal-lattice-with-a-one-atomic-basis"><span class="header-section-number">6.3</span> Crystal Lattice With a One-Atomic Basis</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A crystal with a one-atomic basis is the simplest setting in which acoustic lattice vibrations and Brillouin-zone restriction can be seen explicitly.</p>
+</div>
+</div>
 <p>We first consider a crystal with a one-atomic basis and a wave propagating along a high-symmetry direction. If entire lattice planes move parallel to their normal direction, symmetry eliminates transverse force components. The problem then reduces to a one-dimensional longitudinal vibration of lattice planes.</p>
 <!-- [Gross–Marx, Ch. 5, Sec. 5.2.2.1, pp. 178–179] -->
 <div id="fig-longitudinal-transverse-one-atomic" class="figure quarto-float quarto-figure quarto-figure-center anchored">
@@ -470,6 +483,19 @@ Figure&nbsp;6.1: <strong>Figure placeholder.</strong> Longitudinal and transvers
 </div>
 <section id="force-law-for-longitudinal-plane-vibrations" class="level3" data-number="6.3.1">
 <h3 data-number="6.3.1" class="anchored" data-anchor-id="force-law-for-longitudinal-plane-vibrations"><span class="header-section-number">6.3.1</span> Force Law for Longitudinal Plane Vibrations</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The restoring force is determined by relative displacements between neighboring lattice planes, not by absolute displacements.</p>
+</div>
+</div>
 <p>Let <span class="math inline">\(u_n\)</span> denote the displacement of plane <span class="math inline">\(n\)</span>. The force exerted on plane <span class="math inline">\(n\)</span> by plane <span class="math inline">\(n+p\)</span> is proportional to the relative displacement <span class="math inline">\(u_{n+p}-u_n\)</span>. Summing over all planes gives <span class="math display">\[
 F_n
 =
@@ -486,11 +512,24 @@ M\frac{\partial^2u_n}{\partial t^2}
 </section>
 <section id="dispersion-relation-for-general-couplings" class="level3" data-number="6.3.2">
 <h3 data-number="6.3.2" class="anchored" data-anchor-id="dispersion-relation-for-general-couplings"><span class="header-section-number">6.3.2</span> Dispersion Relation for General Couplings</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The dispersion relation follows by inserting a plane-wave displacement pattern into the discrete equations of motion.</p>
+</div>
+</div>
 <p>Use the plane-wave ansatz <span class="math display">\[
 u_n
 =
-A e^{\mathrm i(qna-\omega t)}.
-\]</span></p>
+A e^{\mathrm i(qna-\omega t)},
+\]</span> where <span class="math inline">\(a\)</span> is the distance between the planes (lattice constant).</p>
 <p>Then <span class="math display">\[
 u_{n+p}
 =
@@ -534,6 +573,19 @@ C_p\left(1-\cos qpa\right).
 </section>
 <section id="nearest-neighbor-approximation" class="level3" data-number="6.3.3">
 <h3 data-number="6.3.3" class="anchored" data-anchor-id="nearest-neighbor-approximation"><span class="header-section-number">6.3.3</span> Nearest-Neighbor Approximation</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Keeping only the nearest-neighbor coupling gives the simplest analytic form of the acoustic phonon dispersion.</p>
+</div>
+</div>
 <p>If only nearest-neighbor planes are coupled, then <span class="math inline">\(C_1\neq 0\)</span> and all other <span class="math inline">\(C_p\)</span> vanish. The dispersion reduces to <span class="math display">\[
 \omega^2(q)
 =
@@ -572,8 +624,39 @@ Figure&nbsp;6.2: <strong>Figure placeholder.</strong> Dispersion relation of lat
 </figure>
 </div>
 </section>
-<section id="interpretation-and-limiting-cases" class="level3" data-number="6.3.4">
-<h3 data-number="6.3.4" class="anchored" data-anchor-id="interpretation-and-limiting-cases"><span class="header-section-number">6.3.4</span> Interpretation and Limiting Cases</h3>
+<section id="group-velocity" class="level3" data-number="6.3.4">
+<h3 data-number="6.3.4" class="anchored" data-anchor-id="group-velocity"><span class="header-section-number">6.3.4</span> Group Velocity</h3>
+<p>A single phonon mode described by a plane wave extends throughout the entire crystal and therefore cannot represent a localized disturbance. Physical vibrational excitations are instead described by wave packets formed from the superposition of modes with wavevectors in a narrow range around a central wavevector <span class="math inline">\(\mathbf q\)</span>.</p>
+<p>The superposition produces a rapidly oscillating carrier wave modulated by a slowly varying envelope. The envelope represents the localized vibrational excitation and propagates through the crystal with the <strong>group velocity</strong></p>
+<p><span class="math display">\[
+\mathbf v_g
+=
+\nabla_{\mathbf q}\omega(\mathbf q).
+\]</span></p>
+<p>In one dimension this reduces to</p>
+<p><span class="math display">\[
+v_g
+=
+\frac{d\omega}{dq}.
+\]</span></p>
+<p>The group velocity determines the propagation of vibrational energy and information through the crystal. For long-wavelength acoustic phonons, where the dispersion relation is approximately linear,</p>
+<p><span class="math display">\[
+\omega \approx v_s q,
+\]</span></p>
+<p>the group velocity becomes</p>
+<p><span class="math display">\[
+v_g
+=
+\frac{d\omega}{dq}
+=
+v_s,
+\]</span></p>
+<p>which is equal to the speed of sound in the crystal.</p>
+</section>
+<section id="limiting-cases" class="level3" data-number="6.3.5">
+<h3 data-number="6.3.5" class="anchored" data-anchor-id="limiting-cases"><span class="header-section-number">6.3.5</span> Limiting Cases</h3>
+<section id="zone-boundary" class="level4" data-number="6.3.5.1">
+<h4 data-number="6.3.5.1" class="anchored" data-anchor-id="zone-boundary"><span class="header-section-number">6.3.5.1</span> Zone boundary</h4>
 <p>At the zone boundary, <span class="math display">\[
 q=\frac{\pi}{a},
 \]</span> the frequency reaches <span class="math display">\[
@@ -599,8 +682,8 @@ v_g\left(\frac{\pi}{a}\right)=0.
 <p>At the Brillouin-zone boundary the wave is a standing wave, not a propagating wave packet.</p>
 <!-- [Gross–Marx, Ch. 5, Sec. 5.2.2.2, Eq. (5.2.14)–(5.2.15), p. 180] -->
 </section>
-<section id="long-wavelength-limit" class="level3" data-number="6.3.5">
-<h3 data-number="6.3.5" class="anchored" data-anchor-id="long-wavelength-limit"><span class="header-section-number">6.3.5</span> Long-Wavelength Limit</h3>
+<section id="long-wavelength-limit" class="level4" data-number="6.3.5.2">
+<h4 data-number="6.3.5.2" class="anchored" data-anchor-id="long-wavelength-limit"><span class="header-section-number">6.3.5.2</span> Long-Wavelength Limit</h4>
 <p>For <span class="math inline">\(qa\ll 1\)</span>, <span class="math display">\[
 \sin\frac{qa}{2}
 \simeq
@@ -627,8 +710,20 @@ v_s
 </div>
 </div>
 </div>
+<p>The identification of <span class="math inline">\(v_s\)</span> as the speed of sound follows from the long-wavelength condition <span class="math inline">\(\lambda\gg a\)</span>. In this limit neighboring atoms move almost in phase, so the discrete lattice no longer resolves individual atomic spacings and behaves like a continuous elastic medium. The acoustic phonon wave packet therefore propagates like an ordinary sound wave. Since the group velocity is the slope of the dispersion relation, <span class="math display">\[
+v_g
+=
+\frac{d\omega}{dq},
+\]</span> the linear dispersion gives <span class="math display">\[
+v_g
+=
+\frac{d}{dq}(v_s q)
+=
+v_s.
+\]</span></p>
 <p>In this limit the discrete lattice behaves like an elastic continuum. More generally, the linear relation <span class="math inline">\(\omega\propto q\)</span> at small <span class="math inline">\(q\)</span> does not depend on keeping only nearest-neighbor couplings; longer-range couplings merely change the numerical value of the sound velocity.</p>
 <!-- [Gross–Marx, Ch. 5, Sec. 5.2.2.2, Eq. (5.2.16)–(5.2.19), pp. 180–181] -->
+</section>
 </section>
 <section id="continuum-check" class="level3" data-number="6.3.6">
 <h3 data-number="6.3.6" class="anchored" data-anchor-id="continuum-check"><span class="header-section-number">6.3.6</span> Continuum Check</h3>
@@ -665,6 +760,19 @@ v_s^2
 </section>
 <section id="the-first-brillouin-zone" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="the-first-brillouin-zone"><span class="header-section-number">6.4</span> The First Brillouin Zone</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Only wavevectors inside the first Brillouin zone are needed because wavevectors differing by a reciprocal-lattice vector describe the same lattice displacement pattern.</p>
+</div>
+</div>
 <p>The dynamical matrix contains phase factors of the form <span class="math display">\[
 e^{\mathrm i\mathbf q\cdot(\mathbf R_m-\mathbf R_n)}.
 \]</span></p>
@@ -712,12 +820,38 @@ Figure&nbsp;6.3: <strong>Figure placeholder.</strong> Two waves with wavevectors
 </div>
 <section id="transverse-and-mixed-polarizations" class="level3" data-number="6.4.1">
 <h3 data-number="6.4.1" class="anchored" data-anchor-id="transverse-and-mixed-polarizations"><span class="header-section-number">6.4.1</span> Transverse and Mixed Polarizations</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In three-dimensional crystals, lattice vibrations are characterized not only by their wavevector but also by their polarization.</p>
+</div>
+</div>
 <p>For transverse vibrations of a one-atomic basis, the derivation is analogous, but the coupling constants <span class="math inline">\(C_p\)</span> are generally different from the longitudinal ones. Purely longitudinal and purely transverse waves occur only for propagation along suitable symmetry directions. In a cubic crystal these include the <span class="math inline">\([100]\)</span>, <span class="math inline">\([110]\)</span>, and <span class="math inline">\([111]\)</span> directions. For general propagation directions, the atomic displacements need not be exactly parallel or perpendicular to <span class="math inline">\(\mathbf q\)</span>, and the polarization is mixed.</p>
 <!-- [Gross–Marx, Ch. 5, Sec. 5.2.2.4–5.2.2.5, pp. 182–183] -->
 </section>
 </section>
 <section id="crystal-lattice-with-a-two-atomic-basis" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="crystal-lattice-with-a-two-atomic-basis"><span class="header-section-number">6.5</span> Crystal Lattice With a Two-Atomic Basis</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A two-atomic basis introduces internal motion within the unit cell and therefore produces both acoustic and optical branches.</p>
+</div>
+</div>
 <p>We now consider a lattice with two atoms per basis, with masses <span class="math inline">\(M_1\)</span> and <span class="math inline">\(M_2\)</span>. The displacement of the <span class="math inline">\(M_1\)</span> plane in cell <span class="math inline">\(n\)</span> is <span class="math inline">\(u_n\)</span>, and the displacement of the <span class="math inline">\(M_2\)</span> plane is <span class="math inline">\(v_n\)</span>. The distance between equivalent planes is <span class="math inline">\(a\)</span>. Only nearest-neighbor interactions are retained, and their coupling constant is denoted by <span class="math inline">\(f\)</span>.</p>
 <!-- [Gross–Marx, Ch. 5, Sec. 5.2.3, pp. 183–184] -->
 <div id="fig-two-atomic-chain" class="figure quarto-float quarto-figure quarto-figure-center anchored">
@@ -732,6 +866,19 @@ Figure&nbsp;6.4: <strong>Figure placeholder.</strong> Longitudinal lattice vibra
 </div>
 <section id="equations-of-motion" class="level3" data-number="6.5.1">
 <h3 data-number="6.5.1" class="anchored" data-anchor-id="equations-of-motion"><span class="header-section-number">6.5.1</span> Equations of Motion</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The coupled equations describe how each atom in the basis is restored by its neighboring atoms of the other type.</p>
+</div>
+</div>
 <p>The restoring force on <span class="math inline">\(u_n\)</span> comes from its two neighboring <span class="math inline">\(v\)</span> planes: <span class="math display">\[
 M_1\frac{\partial^2u_n}{\partial t^2}
 =
@@ -757,6 +904,19 @@ f(2v_n-u_n-u_{n+1})
 </section>
 <section id="mass-normalized-plane-wave-ansatz" class="level3" data-number="6.5.2">
 <h3 data-number="6.5.2" class="anchored" data-anchor-id="mass-normalized-plane-wave-ansatz"><span class="header-section-number">6.5.2</span> Mass-Normalized Plane-Wave Ansatz</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mass normalization converts the coupled equations into a symmetric dynamical-matrix eigenvalue problem.</p>
+</div>
+</div>
 <p>As an ansatz for the solutions, we use <span class="math display">\[
 u_n(q)
 =
@@ -801,6 +961,19 @@ D(q)
 </section>
 <section id="acoustic-and-optical-branches" class="level3" data-number="6.5.3">
 <h3 data-number="6.5.3" class="anchored" data-anchor-id="acoustic-and-optical-branches"><span class="header-section-number">6.5.3</span> Acoustic and Optical Branches</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The two eigenfrequencies for each wavevector correspond to collective translation of the basis and internal relative motion of the basis.</p>
+</div>
+</div>
 <p>The determinant condition gives</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -839,6 +1012,19 @@ Figure&nbsp;6.5: <strong>Figure placeholder.</strong> Dispersion relation for a 
 </section>
 <section id="long-wavelength-limits" class="level3" data-number="6.5.4">
 <h3 data-number="6.5.4" class="anchored" data-anchor-id="long-wavelength-limits"><span class="header-section-number">6.5.4</span> Long-Wavelength Limits</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The two eigenfrequencies for each wavevector correspond to collective translation of the basis and internal relative motion of the basis.</p>
+</div>
+</div>
 <p>For <span class="math inline">\(qa\ll1\)</span>, expand the square root in the dispersion relation. The two branches become <span class="math display">\[
 \omega_+^2(q)
 \simeq
@@ -946,10 +1132,36 @@ q=\frac{\pi}{a},
 </section>
 <section id="lattice-vibrations-in-three-dimensions" class="level2" data-number="6.6">
 <h2 data-number="6.6" class="anchored" data-anchor-id="lattice-vibrations-in-three-dimensions"><span class="header-section-number">6.6</span> Lattice Vibrations in Three Dimensions</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The one-dimensional examples generalize to real crystals by adding polarization directions and branch counting.</p>
+</div>
+</div>
 <p>The one-dimensional models are pedagogical reductions. In a real three-dimensional crystal, each atom has three displacement components, and the polarization structure becomes central.</p>
 <!-- [Gross–Marx, Ch. 5, Sec. 5.2.4, pp. 189–190] -->
 <section id="one-atomic-basis-in-three-dimensions" class="level3" data-number="6.6.1">
 <h3 data-number="6.6.1" class="anchored" data-anchor-id="one-atomic-basis-in-three-dimensions"><span class="header-section-number">6.6.1</span> One-Atomic Basis in Three Dimensions</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A three-dimensional crystal with one atom per basis has three acoustic branches, corresponding to one longitudinal and two transverse polarizations.</p>
+</div>
+</div>
 <p>For a three-dimensional crystal with a one-atomic basis, <span class="math inline">\(r'=1\)</span>, there are <span class="math display">\[
 3r'=3
 \]</span> branches for each wavevector <span class="math inline">\(\mathbf q\)</span>.</p>
@@ -981,6 +1193,19 @@ Figure&nbsp;6.7: <strong>Figure placeholder.</strong> Phonon dispersion relation
 </section>
 <section id="multiatomic-basis-in-three-dimensions" class="level3" data-number="6.6.2">
 <h3 data-number="6.6.2" class="anchored" data-anchor-id="multiatomic-basis-in-three-dimensions"><span class="header-section-number">6.6.2</span> Multiatomic Basis in Three Dimensions</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A multiatomic basis produces additional optical branches because atoms inside the unit cell can move relative to one another.</p>
+</div>
+</div>
 <p>For a basis with <span class="math inline">\(r'\)</span> atoms, the determinant equation has <span class="math display">\[
 3r'
 \]</span> solutions for each <span class="math inline">\(\mathbf q\)</span>. In a three-dimensional crystal these separate into</p>
