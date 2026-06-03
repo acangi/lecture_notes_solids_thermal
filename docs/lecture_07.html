@@ -256,31 +256,36 @@ window.Quarto = {
    
   <ul>
   <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">7.1</span> Roadmap</a></li>
-  <li><a href="#from-harmonic-normal-modes-to-phonons" id="toc-from-harmonic-normal-modes-to-phonons" class="nav-link" data-scroll-target="#from-harmonic-normal-modes-to-phonons"><span class="header-section-number">7.2</span> From Harmonic Normal Modes to Phonons</a>
+  <li><a href="#why-we-need-a-density-of-states" id="toc-why-we-need-a-density-of-states" class="nav-link" data-scroll-target="#why-we-need-a-density-of-states"><span class="header-section-number">7.2</span> Why We Need a Density of States</a></li>
+  <li><a href="#boundary-conditions-and-allowed-wavevectors" id="toc-boundary-conditions-and-allowed-wavevectors" class="nav-link" data-scroll-target="#boundary-conditions-and-allowed-wavevectors"><span class="header-section-number">7.3</span> Boundary Conditions and Allowed Wavevectors</a>
   <ul class="collapse">
-  <li><a href="#harmonic-hamiltonian-in-normal-coordinates" id="toc-harmonic-hamiltonian-in-normal-coordinates" class="nav-link" data-scroll-target="#harmonic-hamiltonian-in-normal-coordinates"><span class="header-section-number">7.2.1</span> Harmonic Hamiltonian in Normal Coordinates</a></li>
-  <li><a href="#canonical-quantization-of-a-single-mode" id="toc-canonical-quantization-of-a-single-mode" class="nav-link" data-scroll-target="#canonical-quantization-of-a-single-mode"><span class="header-section-number">7.2.2</span> Canonical Quantization of a Single Mode</a></li>
-  <li><a href="#quantized-lattice-hamiltonian" id="toc-quantized-lattice-hamiltonian" class="nav-link" data-scroll-target="#quantized-lattice-hamiltonian"><span class="header-section-number">7.2.3</span> Quantized Lattice Hamiltonian</a></li>
-  <li><a href="#phonons-as-elementary-excitations" id="toc-phonons-as-elementary-excitations" class="nav-link" data-scroll-target="#phonons-as-elementary-excitations"><span class="header-section-number">7.2.4</span> Phonons as Elementary Excitations</a></li>
+  <li><a href="#fixed-ends-in-one-dimension" id="toc-fixed-ends-in-one-dimension" class="nav-link" data-scroll-target="#fixed-ends-in-one-dimension"><span class="header-section-number">7.3.1</span> Fixed Ends in One Dimension</a></li>
+  <li><a href="#periodic-boundary-conditions-in-one-dimension" id="toc-periodic-boundary-conditions-in-one-dimension" class="nav-link" data-scroll-target="#periodic-boundary-conditions-in-one-dimension"><span class="header-section-number">7.3.2</span> Periodic Boundary Conditions in One Dimension</a></li>
   </ul></li>
-  <li><a href="#thermal-population-of-phonon-modes" id="toc-thermal-population-of-phonon-modes" class="nav-link" data-scroll-target="#thermal-population-of-phonon-modes"><span class="header-section-number">7.3</span> Thermal Population of Phonon Modes</a>
+  <li><a href="#mode-counting-in-three-dimensional-reciprocal-space" id="toc-mode-counting-in-three-dimensional-reciprocal-space" class="nav-link" data-scroll-target="#mode-counting-in-three-dimensional-reciprocal-space"><span class="header-section-number">7.4</span> Mode Counting in Three-Dimensional Reciprocal Space</a>
   <ul class="collapse">
-  <li><a href="#partition-function-of-one-harmonic-mode" id="toc-partition-function-of-one-harmonic-mode" class="nav-link" data-scroll-target="#partition-function-of-one-harmonic-mode"><span class="header-section-number">7.3.1</span> Partition Function of One Harmonic Mode</a></li>
-  <li><a href="#mean-energy-of-one-mode" id="toc-mean-energy-of-one-mode" class="nav-link" data-scroll-target="#mean-energy-of-one-mode"><span class="header-section-number">7.3.2</span> Mean Energy of One Mode</a></li>
-  <li><a href="#two-limits-worth-remembering" id="toc-two-limits-worth-remembering" class="nav-link" data-scroll-target="#two-limits-worth-remembering"><span class="header-section-number">7.3.3</span> Two Limits Worth Remembering</a></li>
+  <li><a href="#reciprocal-space-density-of-states" id="toc-reciprocal-space-density-of-states" class="nav-link" data-scroll-target="#reciprocal-space-density-of-states"><span class="header-section-number">7.4.1</span> Reciprocal-Space Density of States</a></li>
   </ul></li>
-  <li><a href="#constructing-the-phonon-density-of-states" id="toc-constructing-the-phonon-density-of-states" class="nav-link" data-scroll-target="#constructing-the-phonon-density-of-states"><span class="header-section-number">7.4</span> Constructing the Phonon Density of States</a>
+  <li><a href="#density-of-states-in-frequency-space" id="toc-density-of-states-in-frequency-space" class="nav-link" data-scroll-target="#density-of-states-in-frequency-space"><span class="header-section-number">7.5</span> Density of States in Frequency Space</a>
   <ul class="collapse">
-  <li><a href="#from-discrete-mathbf-q-values-to-the-continuum" id="toc-from-discrete-mathbf-q-values-to-the-continuum" class="nav-link" data-scroll-target="#from-discrete-mathbf-q-values-to-the-continuum"><span class="header-section-number">7.4.1</span> From Discrete <span class="math inline">\(\mathbf q\)</span> Values to the Continuum</a></li>
-  <li><a href="#definition-of-the-dos" id="toc-definition-of-the-dos" class="nav-link" data-scroll-target="#definition-of-the-dos"><span class="header-section-number">7.4.2</span> Definition of the DOS</a></li>
-  <li><a href="#geometric-interpretation" id="toc-geometric-interpretation" class="nav-link" data-scroll-target="#geometric-interpretation"><span class="header-section-number">7.4.3</span> Geometric Interpretation</a></li>
-  <li><a href="#debye-approximation" id="toc-debye-approximation" class="nav-link" data-scroll-target="#debye-approximation"><span class="header-section-number">7.4.4</span> Debye Approximation</a></li>
-  <li><a href="#what-the-debye-approximation-captures-and-what-it-misses" id="toc-what-the-debye-approximation-captures-and-what-it-misses" class="nav-link" data-scroll-target="#what-the-debye-approximation-captures-and-what-it-misses"><span class="header-section-number">7.4.5</span> What the Debye Approximation Captures and What It Misses</a></li>
-  <li><a href="#reading-a-dos-plot-physically" id="toc-reading-a-dos-plot-physically" class="nav-link" data-scroll-target="#reading-a-dos-plot-physically"><span class="header-section-number">7.4.6</span> Reading a DOS Plot Physically</a></li>
+  <li><a href="#physical-meaning-a-histogram-of-frequencies" id="toc-physical-meaning-a-histogram-of-frequencies" class="nav-link" data-scroll-target="#physical-meaning-a-histogram-of-frequencies"><span class="header-section-number">7.5.1</span> Physical Meaning: A Histogram of Frequencies</a></li>
   </ul></li>
-  <li><a href="#bridge-to-the-next-lecture-internal-energy-as-a-dos-integral" id="toc-bridge-to-the-next-lecture-internal-energy-as-a-dos-integral" class="nav-link" data-scroll-target="#bridge-to-the-next-lecture-internal-energy-as-a-dos-integral"><span class="header-section-number">7.5</span> Bridge to the Next Lecture: Internal Energy as a DOS Integral</a></li>
-  <li><a href="#optional-appendix-einstein-model-as-a-one-frequency-dos" id="toc-optional-appendix-einstein-model-as-a-one-frequency-dos" class="nav-link" data-scroll-target="#optional-appendix-einstein-model-as-a-one-frequency-dos"><span class="header-section-number">7.6</span> Optional / Appendix: Einstein Model as a One-Frequency DOS</a></li>
-  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">7.7</span> Problem Set</a></li>
+  <li><a href="#general-geometric-formula-for-domega" id="toc-general-geometric-formula-for-domega" class="nav-link" data-scroll-target="#general-geometric-formula-for-domega"><span class="header-section-number">7.6</span> General Geometric Formula for <span class="math inline">\(D(\omega)\)</span></a>
+  <ul class="collapse">
+  <li><a href="#relation-to-group-velocity-and-van-hove-singularities" id="toc-relation-to-group-velocity-and-van-hove-singularities" class="nav-link" data-scroll-target="#relation-to-group-velocity-and-van-hove-singularities"><span class="header-section-number">7.6.1</span> Relation to Group Velocity and van Hove Singularities</a></li>
+  </ul></li>
+  <li><a href="#example-isotropic-acoustic-medium-in-three-dimensions" id="toc-example-isotropic-acoustic-medium-in-three-dimensions" class="nav-link" data-scroll-target="#example-isotropic-acoustic-medium-in-three-dimensions"><span class="header-section-number">7.7</span> Example: Isotropic Acoustic Medium in Three Dimensions</a></li>
+  <li><a href="#dimensionality-one-two-and-three-dimensions" id="toc-dimensionality-one-two-and-three-dimensions" class="nav-link" data-scroll-target="#dimensionality-one-two-and-three-dimensions"><span class="header-section-number">7.8</span> Dimensionality: One, Two, and Three Dimensions</a>
+  <ul class="collapse">
+  <li><a href="#two-dimensions" id="toc-two-dimensions" class="nav-link" data-scroll-target="#two-dimensions"><span class="header-section-number">7.8.1</span> Two Dimensions</a></li>
+  <li><a href="#one-dimension" id="toc-one-dimension" class="nav-link" data-scroll-target="#one-dimension"><span class="header-section-number">7.8.2</span> One Dimension</a></li>
+  <li><a href="#dimensional-trend" id="toc-dimensional-trend" class="nav-link" data-scroll-target="#dimensional-trend"><span class="header-section-number">7.8.3</span> Dimensional Trend</a></li>
+  </ul></li>
+  <li><a href="#reading-a-phonon-density-of-states-plot" id="toc-reading-a-phonon-density-of-states-plot" class="nav-link" data-scroll-target="#reading-a-phonon-density-of-states-plot"><span class="header-section-number">7.9</span> Reading a Phonon Density-of-States Plot</a></li>
+  <li><a href="#optional-appendix-debye-cutoff-as-a-mode-counting-approximation" id="toc-optional-appendix-debye-cutoff-as-a-mode-counting-approximation" class="nav-link" data-scroll-target="#optional-appendix-debye-cutoff-as-a-mode-counting-approximation"><span class="header-section-number">7.10</span> Optional / Appendix: Debye Cutoff as a Mode-Counting Approximation</a></li>
+  <li><a href="#bridge-to-the-next-lecture-from-mode-counting-to-phonons" id="toc-bridge-to-the-next-lecture-from-mode-counting-to-phonons" class="nav-link" data-scroll-target="#bridge-to-the-next-lecture-from-mode-counting-to-phonons"><span class="header-section-number">7.11</span> Bridge to the Next Lecture: From Mode Counting to Phonons</a></li>
+  <li><a href="#take-home-messages" id="toc-take-home-messages" class="nav-link" data-scroll-target="#take-home-messages"><span class="header-section-number">7.12</span> Take-Home Messages</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">7.13</span> Problem Set</a></li>
   </ul>
 </nav>
     </div>
@@ -302,23 +307,24 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Explain why each harmonic normal mode of a crystal becomes a quantum harmonic oscillator.</li>
-<li>Define phonons as bosonic quanta of lattice vibration and interpret the meaning of zero-point motion.</li>
-<li>Derive the Bose–Einstein occupation factor and the mean energy of a phonon mode.</li>
-<li>Construct the phonon density of states from mode counting in <span class="math inline">\(\mathbf q\)</span>-space and interpret the Debye approximation.</li>
-<li>Write the lattice internal energy as an integral over the phonon DOS and prepare the route to heat capacity.</li>
+<li>Explain why a finite crystal allows only a discrete set of phonon wavevectors.</li>
+<li>Use Born-von Karman boundary conditions to count allowed states in reciprocal space.</li>
+<li>Define the phonon density of states in reciprocal space and in frequency space.</li>
+<li>Interpret the frequency-space density of states as a histogram of phonon frequencies.</li>
+<li>Derive the general density-of-states formula using constant-frequency surfaces.</li>
+<li>Explain why flat phonon dispersions produce large density-of-states features.</li>
 </ul>
 </div>
 </div>
 <section id="roadmap" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="roadmap"><span class="header-section-number">7.1</span> Roadmap</h2>
 <ul>
-<li>Start from the harmonic normal modes obtained in <a href="lecture_06.html" class="quarto-xref">Lecture&nbsp;<span>6</span></a>.</li>
-<li>Quantize each mode and introduce phonon creation and annihilation operators.</li>
-<li>Derive thermal occupation and mean mode energy from equilibrium statistical mechanics.</li>
-<li>Define and interpret the phonon density of states.</li>
-<li>Use the Debye approximation as a controlled low-frequency DOS model.</li>
-<li>Bridge to the next lecture: internal energy and heat capacity from the DOS.</li>
+<li>Begin with finite one-dimensional chains to see how boundary conditions quantize <span class="math inline">\(q\)</span>.</li>
+<li>Generalize the counting of allowed states to three-dimensional reciprocal space.</li>
+<li>Define the density of states <span class="math inline">\(D(\omega)\)</span> in frequency space.</li>
+<li>Derive the geometric expression for <span class="math inline">\(D(\omega)\)</span> from constant-frequency surfaces.</li>
+<li>Apply the result to isotropic acoustic phonons in one, two, and three dimensions.</li>
+<li>Connect the density of states to the thermodynamics of phonons in the next lecture.</li>
 </ul>
 <table class="caption-top table">
 <colgroup>
@@ -333,127 +339,218 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(\mathbf q\)</span></td>
-<td>wavevector in reciprocal space</td>
+<td><span class="math inline">\(a\)</span></td>
+<td>lattice spacing in a one-dimensional chain</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\lambda\)</span></td>
-<td>phonon branch / polarization index</td>
+<td><span class="math inline">\(\mathbf a_i\)</span></td>
+<td>primitive real-space lattice vector</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf b_i\)</span></td>
+<td>primitive reciprocal-lattice vector</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(A\)</span></td>
+<td>area of a two-dimensional crystal</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(D(\omega)\)</span></td>
+<td>phonon density of states in frequency space for the whole crystal</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(D^{(d)}(\omega)\)</span></td>
+<td>phonon density of states in frequency space for a <span class="math inline">\(d\)</span>-dimensional system</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(dS_q\)</span></td>
+<td>infinitesimal surface element on a constant-frequency surface in three-dimensional <span class="math inline">\(q\)</span>-space</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(dL_q\)</span></td>
+<td>infinitesimal line element on a constant-frequency line in two-dimensional <span class="math inline">\(q\)</span>-space</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(dP_q\)</span></td>
+<td>point element on a constant-frequency set in one-dimensional <span class="math inline">\(q\)</span>-space</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(dq_\perp\)</span></td>
+<td>infinitesimal displacement perpendicular to a constant-frequency surface</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf G\)</span></td>
+<td>reciprocal-lattice vector</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(L\)</span></td>
+<td>length of a one-dimensional crystal</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(N\)</span></td>
+<td>number of Bravais-lattice points or primitive cells</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(N_i\)</span></td>
+<td>number of primitive cells along direction <span class="math inline">\(\mathbf a_i\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(p,p_i\)</span></td>
+<td>integer mode-counting indices</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf q\)</span></td>
+<td>phonon wavevector</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(r\)</span></td>
-<td>number of atoms in the primitive cell</td>
+<td>phonon branch index</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(N\)</span></td>
-<td>number of primitive cells</td>
+<td><span class="math inline">\(r'\)</span></td>
+<td>number of atoms in the primitive basis</td>
 </tr>
 <tr class="odd">
+<td><span class="math inline">\(\mathbf R\)</span></td>
+<td>Bravais-lattice vector</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(u_n\)</span></td>
+<td>displacement of the atom or plane labeled by <span class="math inline">\(n\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf u(\mathbf R)\)</span></td>
+<td>displacement field at the Bravais-lattice point <span class="math inline">\(\mathbf R\)</span></td>
+</tr>
+<tr class="even">
 <td><span class="math inline">\(V\)</span></td>
-<td>crystal volume</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\omega_{\lambda}(\mathbf q)\)</span></td>
-<td>phonon angular frequency</td>
+<td>total crystal volume</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(Q_{\lambda}(\mathbf q)\)</span></td>
-<td>normal coordinate of a mode</td>
+<td><span class="math inline">\(V_{\mathrm{WS}}\)</span></td>
+<td>primitive-cell volume <span class="math inline">\(V_{\mathrm{WS}}=\mathbf a_1\cdot(\mathbf a_2\times\mathbf a_3)\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(P_{\lambda}(\mathbf q)\)</span></td>
-<td>conjugated momentum of a mode</td>
+<td><span class="math inline">\(v_i\)</span></td>
+<td>sound velocity of branch <span class="math inline">\(i\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(a_{\lambda}(\mathbf q), a_{\lambda}^{\dagger}(\mathbf q)\)</span></td>
-<td>phonon annihilation and creation operators</td>
+<td><span class="math inline">\(v_L\)</span></td>
+<td>longitudinal sound velocity</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(n_B(\omega,T)\)</span></td>
-<td>Bose–Einstein occupation factor</td>
+<td><span class="math inline">\(v_T\)</span></td>
+<td>transverse sound velocity</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(g(\omega)\)</span></td>
-<td>phonon density of states per unit volume</td>
+<td><span class="math inline">\(Z(q)\)</span></td>
+<td>density of allowed states in reciprocal space</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\omega_D,\Theta_D\)</span></td>
-<td>Debye frequency and Debye temperature, with <span class="math inline">\(\hbar\omega_D=k_B\Theta_D\)</span></td>
+<td><span class="math inline">\(\Omega_{\mathrm{BZ}}\)</span></td>
+<td>volume of the first Brillouin zone</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega\)</span></td>
+<td>angular frequency</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\omega_r(\mathbf q)\)</span></td>
+<td>phonon dispersion relation of branch <span class="math inline">\(r\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega_{\min},\omega_{\max}\)</span></td>
+<td>lower and upper frequency bounds of a phonon spectrum</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\nabla_{\mathbf q}\omega\)</span></td>
+<td>gradient of the dispersion relation in reciprocal space</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="from-harmonic-normal-modes-to-phonons" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="from-harmonic-normal-modes-to-phonons"><span class="header-section-number">7.2</span> From Harmonic Normal Modes to Phonons</h2>
-<p>In the previous lecture we diagonalized the harmonic lattice problem and expressed the crystal motion in terms of independent normal modes. The essential next step is conceptual rather than structural: each of these decoupled harmonic modes is quantized in exactly the same way as a single quantum harmonic oscillator.</p>
-<!-- [Sólyom, Ch. 12.1.3, transition from harmonic lattice dynamics to quantum mechanics, pp. 391–392] -->
-<section id="harmonic-hamiltonian-in-normal-coordinates" class="level3" data-number="7.2.1">
-<h3 data-number="7.2.1" class="anchored" data-anchor-id="harmonic-hamiltonian-in-normal-coordinates"><span class="header-section-number">7.2.1</span> Harmonic Hamiltonian in Normal Coordinates</h3>
-<p>In normal coordinates, the harmonic lattice Hamiltonian is a sum of independent oscillators, <span class="math display">\[
-H_{\mathrm{harm}}
-=
-\frac{1}{2}
-\sum_{\mathbf q,\lambda}
-\left[
-P_{\lambda}^{\dagger}(\mathbf q)P_{\lambda}(\mathbf q)
-+
-\omega_{\lambda}^{2}(\mathbf q)
-Q_{\lambda}^{\dagger}(\mathbf q)Q_{\lambda}(\mathbf q)
-\right],
-\]</span> where <span class="math inline">\(Q_{\lambda}(\mathbf q)\)</span> is the normal coordinate of a vibrational mode <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(P_{\lambda}(\mathbf q)\)</span> its conjugate momentum.</p>
-<p>In this picture, a crystal is no longer described as <span class="math inline">\(3rN\)</span> coupled atomic displacements, but as <span class="math inline">\(3rN\)</span> independent harmonic modes labeled by <span class="math inline">\((\mathbf q,\lambda)\)</span>.</p>
-<p>A useful sanity check is immediate:</p>
-<ul>
-<li>one allowed <span class="math inline">\(\mathbf q\)</span> value for each primitive cell,</li>
-<li><span class="math inline">\(3r\)</span> branches for each <span class="math inline">\(\mathbf q\)</span>,</li>
-<li>hence <span class="math inline">\(3rN\)</span> modes in total.</li>
-</ul>
-<!-- [Sólyom, Ch. 12.1.3, harmonic Hamiltonian in normal coordinates, pp. 391–392] -->
+<section id="why-we-need-a-density-of-states" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="why-we-need-a-density-of-states"><span class="header-section-number">7.2</span> Why We Need a Density of States</h2>
+<p>So far, phonon dispersions have been described as functions <span class="math inline">\(\omega_r(\mathbf q)\)</span>: for each wavevector <span class="math inline">\(\mathbf q\)</span> and branch <span class="math inline">\(r\)</span>, there is a normal-mode frequency. This is the most detailed description of the harmonic lattice spectrum.</p>
+<p>For thermodynamics, however, we often do not need to know <em>which</em> wavevector produced a given frequency. We need to know <em>how many modes</em> lie in a given frequency interval. This motivates the phonon density of states.</p>
+<p>A useful analogy is a histogram. The dispersion relation is like a detailed list of every student’s exam score together with their name. The density of states is the histogram that tells us how many scores fall into each interval. It loses some detailed information, but it is exactly the right object when we want to compute averages over the whole class.</p>
+<p>For phonons, the corresponding question is:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>How many vibrational modes have frequencies between <span class="math inline">\(\omega\)</span> and <span class="math inline">\(\omega+d\omega\)</span>?</p>
+</div>
+</div>
+</div>
+<p>This question is central because the thermal energy, heat capacity, and many scattering intensities depend on sums over all phonon modes.</p>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3, p. 191] -->
 </section>
-<section id="canonical-quantization-of-a-single-mode" class="level3" data-number="7.2.2">
-<h3 data-number="7.2.2" class="anchored" data-anchor-id="canonical-quantization-of-a-single-mode"><span class="header-section-number">7.2.2</span> Canonical Quantization of a Single Mode</h3>
-<p>For one harmonic mode of frequency <span class="math inline">\(\omega\)</span>, write the Hamiltonian <span class="math display">\[
-H=\frac{1}{2}\left(P^2+\omega^2Q^2\right)
-\]</span> and recall the corresponding commutation relation <span class="math inline">\([Q,P]=i\hbar\)</span>.</p>
-<p>We now introduce the ladder operators <span class="math display">\[
-a=\sqrt{\frac{\omega}{2\hbar}}
-\left(
-Q+\frac{i}{\omega}P
-\right),
+<section id="boundary-conditions-and-allowed-wavevectors" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="boundary-conditions-and-allowed-wavevectors"><span class="header-section-number">7.3</span> Boundary Conditions and Allowed Wavevectors</h2>
+<p>A real crystal is finite. Therefore not every wavevector is allowed. Boundary conditions select a discrete set of wavevectors, and this discreteness is the starting point for mode counting.</p>
+<p>For a macroscopic crystal, the detailed physical boundary condition at the surface should not affect bulk thermodynamic quantities. We therefore choose mathematically convenient boundary conditions, provided they give the correct density of allowed modes in the large-system limit.</p>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.1, pp. 191-194] -->
+<section id="fixed-ends-in-one-dimension" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="fixed-ends-in-one-dimension"><span class="header-section-number">7.3.1</span> Fixed Ends in One Dimension</h3>
+<p>Consider a one-dimensional chain with lattice spacing <span class="math inline">\(a\)</span>. The equilibrium positions are</p>
+<p><span class="math display">\[
+x_n=na,
 \qquad
-a^{\dagger}
-=
-\sqrt{\frac{\omega}{2\hbar}}
-\left(
-Q-\frac{i}{\omega}P
-\right).
+n=0,1,2,\dots,N,
 \]</span></p>
-<p>Then <span class="math display">\[
-[a,a^{\dagger}]=1,
-\]</span> and the Hamiltonian becomes</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+<p>and the length of the chain is</p>
 <p><span class="math display">\[
-H=\hbar\omega\left(a^{\dagger}a+\frac{1}{2}\right).
+L=Na.
 \]</span></p>
+<p>The end atoms at <span class="math inline">\(n=0\)</span> and <span class="math inline">\(n=N\)</span> are fixed, so only the <span class="math inline">\(N-1\)</span> interior atoms can oscillate.</p>
+<div id="fig-fixed-chain" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fixed-chain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 5, Fig. 5.12, p. 192] -->
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fixed-chain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.1: <strong>Figure:</strong> Finite one-dimensional atomic chain with fixed end atoms. The fixed ends impose standing-wave boundary conditions.
+</figcaption>
+</figure>
 </div>
-</div>
-<p>Therefore the energy eigenvalues are <span class="math display">\[
-E_n=\hbar\omega\left(n+\frac{1}{2}\right),
+<p>For a standing wave, we use a superposition of waves traveling to the right and to the left,</p>
+<p><span class="math display">\[
+u_n
+=
+A_1 e^{i(qna-\omega t)}
++
+A_2 e^{-i(qna+\omega t)}.
+\]</span></p>
+<p>The fixed-end boundary conditions are</p>
+<p><span class="math display">\[
+u_0=0,
 \qquad
-n=0,1,2,\dots
+u_N=0.
 \]</span></p>
-<p>The operator <span class="math inline">\(a^{\dagger}\)</span> raises the excitation number by one quantum, while <span class="math inline">\(a\)</span> lowers it by one.</p>
-<!-- [Sólyom, Ch. 12.1.4, harmonic oscillator spectrum and ladder operators, pp. 392–393] -->
-</section>
-<section id="quantized-lattice-hamiltonian" class="level3" data-number="7.2.3">
-<h3 data-number="7.2.3" class="anchored" data-anchor-id="quantized-lattice-hamiltonian"><span class="header-section-number">7.2.3</span> Quantized Lattice Hamiltonian</h3>
-<p>Applying the quantized harmonic oscillator mode by mode gives</p>
+<p>The first boundary condition gives</p>
+<p><span class="math display">\[
+A_1=-A_2.
+\]</span></p>
+<p>Therefore</p>
+<p><span class="math display">\[
+u_n
+=
+2iA_1\sin(qna)e^{-i\omega t}.
+\]</span></p>
+<p>The second boundary condition requires</p>
+<p><span class="math display">\[
+\sin(qNa)=0.
+\]</span></p>
+<p>Thus</p>
+<p><span class="math display">\[
+qNa=p\pi,
+\qquad
+p\in\mathbb Z.
+\]</span></p>
+<p>Since <span class="math inline">\(L=Na\)</span>, the allowed wavevectors are</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -461,70 +558,83 @@ n=0,1,2,\dots
 </div>
 <div class="callout-body-container">
 <p><span class="math display">\[
-H_{\mathrm{harm}}
-=
-\sum_{\mathbf q,\lambda}
-\hbar\omega_{\lambda}(\mathbf q)
-\left[
-a_{\lambda}^{\dagger}(\mathbf q)a_{\lambda}(\mathbf q)
-+
-\frac{1}{2}
-\right].
+q=\frac{\pi}{L}p,
+\qquad
+p=0,1,2,\dots,N.
 \]</span></p>
 </div>
 </div>
 </div>
-<p>The number operator <span class="math display">\[
-\hat n_{\lambda}(\mathbf q)
-=
-a_{\lambda}^{\dagger}(\mathbf q)a_{\lambda}(\mathbf q)
-\]</span> has eigenvalues <span class="math inline">\(0,1,2,\dots\)</span>, so the crystal energy is built from discrete quanta <span class="math inline">\(\hbar\omega_{\lambda}(\mathbf q)\)</span>.</p>
-<p>This is the origin of the <strong>phonon</strong> picture.</p>
-<!-- [Sólyom, Ch. 12.1.5, creation and annihilation operators for vibrational modes, pp. 394–395] -->
-</section>
-<section id="phonons-as-elementary-excitations" class="level3" data-number="7.2.4">
-<h3 data-number="7.2.4" class="anchored" data-anchor-id="phonons-as-elementary-excitations"><span class="header-section-number">7.2.4</span> Phonons as Elementary Excitations</h3>
-<p>A <strong>phonon</strong> is the quantum of a lattice normal mode. For a mode <span class="math inline">\((\mathbf q,\lambda)\)</span>:</p>
-<ul>
-<li>creating one phonon raises the energy by <span class="math inline">\(\hbar\omega_{\lambda}(\mathbf q)\)</span>,</li>
-<li>annihilating one phonon lowers the energy by the same amount.</li>
-</ul>
-<p>Because the operators satisfy bosonic commutation relations, phonons are bosons. Multiple phonons may occupy the same mode.</p>
-<p>A further important point is that even the ground state is not completely motionless. Each mode contributes the zero-point energy <span class="math display">\[
-E_{0,\lambda}(\mathbf q)=\frac{1}{2}\hbar\omega_{\lambda}(\mathbf q).
+<p>The endpoints of this list do not correspond to physical vibrations:</p>
+<p><span class="math display">\[
+p=0
+\quad\Rightarrow\quad
+u_n=0,
 \]</span></p>
-<p>Thus the harmonic crystal retains quantum zero-point motion even at <span class="math inline">\(T=0\)</span>.</p>
-<!-- [Sólyom, Ch. 12.1.5–12.1.6, pp. 394–396] -->
-</section>
-</section>
-<section id="thermal-population-of-phonon-modes" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="thermal-population-of-phonon-modes"><span class="header-section-number">7.3</span> Thermal Population of Phonon Modes</h2>
-<p>Once the normal modes are quantized, thermal physics reduces to the thermal population of independent bosonic modes.</p>
-<!-- [Ibach–Lüth, Ch. 5.2, thermal energy of a harmonic oscillator, pp. 115–116; Sólyom, Ch. 12.1.6, Bose statistics for phonons, p. 396] -->
-<section id="partition-function-of-one-harmonic-mode" class="level3" data-number="7.3.1">
-<h3 data-number="7.3.1" class="anchored" data-anchor-id="partition-function-of-one-harmonic-mode"><span class="header-section-number">7.3.1</span> Partition Function of One Harmonic Mode</h3>
-<p>For one mode of frequency <span class="math inline">\(\omega\)</span>, the energy levels are <span class="math display">\[
-E_n=\hbar\omega\left(n+\frac{1}{2}\right).
+<p>and</p>
+<p><span class="math display">\[
+p=N
+\quad\Rightarrow\quad
+u_n\propto \sin(\pi n)=0.
 \]</span></p>
-<p>The canonical partition function is therefore <span class="math display">\[
-Z_{\omega}
+<p>Hence the number of nontrivial modes is</p>
+<p><span class="math display">\[
+N-1,
+\]</span></p>
+<p>which is exactly the number of atoms that are free to oscillate.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Sanity check.</strong> A system with <span class="math inline">\(N-1\)</span> moving masses must have <span class="math inline">\(N-1\)</span> independent one-dimensional normal modes.</p>
+</div>
+</div>
+</div>
+<div id="fig-fixed-chain-modes" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fixed-chain-modes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 5, Fig. 5.13, p. 193] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fixed-chain-modes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.2: <strong>Figure:</strong> Standing-wave modes of a short fixed-end chain. The modes with <span class="math inline">\(p=0\)</span> and <span class="math inline">\(p=N\)</span> give no displacement of the moving atoms.
+</figcaption>
+</figure>
+</div>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.1.1, pp. 192-193] -->
+</section>
+<section id="periodic-boundary-conditions-in-one-dimension" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="periodic-boundary-conditions-in-one-dimension"><span class="header-section-number">7.3.2</span> Periodic Boundary Conditions in One Dimension</h3>
+<p>Fixed boundaries are physically intuitive, but they make the algebra slightly inconvenient because they produce standing waves. For bulk crystals we usually use periodic, or cyclic, Born-von Karman boundary conditions.</p>
+<p>The condition is</p>
+<p><span class="math display">\[
+u_n=u_{n+N}.
+\]</span></p>
+<p>Physically, this is like bending a very long chain into a ring. For large <span class="math inline">\(N\)</span>, the local physics is unchanged, but the ends disappear.</p>
+<p>Use the traveling-wave ansatz</p>
+<p><span class="math display">\[
+u_n
 =
-\sum_{n=0}^{\infty}
-e^{-\beta E_n}
+A e^{i(qna-\omega t)}.
+\]</span></p>
+<p>The boundary condition gives</p>
+<p><span class="math display">\[
+A e^{i(qna-\omega t)}
 =
-\sum_{n=0}^{\infty}
-e^{-\beta \hbar\omega(n+1/2)}
-=
-\frac{e^{-\beta\hbar\omega/2}}{1-e^{-\beta\hbar\omega}},
-\]</span> where <span class="math inline">\(\beta=\frac{1}{k_B T}\)</span>.</p>
-<p>From this, we obtain the mean occupation number as <span class="math display">\[
-\langle n\rangle
-= \sum_{n=0}^{\infty} n p_n
-=\frac{1}{Z_{\omega}}
-\sum_{n=0}^{\infty}
-n e^{-\beta \hbar\omega(n+1/2)}
-=\frac{1}{e^{\beta\hbar\omega}-1}.
-\]</span> Notice that phonons follow the Bose-Einstein statistics. Therefore it is convenient to name this quantity</p>
+A e^{i(q(n+N)a-\omega t)}.
+\]</span></p>
+<p>After cancellation,</p>
+<p><span class="math display">\[
+e^{iqNa}=1.
+\]</span></p>
+<p>Therefore</p>
+<p><span class="math display">\[
+qNa=2\pi p,
+\qquad
+p\in\mathbb Z,
+\]</span></p>
+<p>or</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -532,94 +642,233 @@ n e^{-\beta \hbar\omega(n+1/2)}
 </div>
 <div class="callout-body-container">
 <p><span class="math display">\[
-n_B(\omega,T)
-=\frac{1}{e^{\beta\hbar\omega}-1}
-=\frac{1}{e^{\hbar\omega/k_B T}-1}.
+q=\frac{2\pi}{L}p.
 \]</span></p>
 </div>
 </div>
 </div>
-<p>Also note that for phonons, the chemical potential is zero because phonon number is not conserved.</p>
-<!-- [Ibach–Lüth, Ch. 5.2, Eqs. around pp. 115–116; Sólyom, Ch. 12.1.6, phonon occupation and vanishing chemical potential, p. 396] -->
+<p>Restricting the wavevector to the first Brillouin zone gives</p>
+<p><span class="math display">\[
+-\frac{\pi}{a}&lt;q\le \frac{\pi}{a}.
+\]</span></p>
+<p>Equivalently,</p>
+<p><span class="math display">\[
+-\frac{N}{2}&lt;p\le \frac{N}{2}.
+\]</span></p>
+<p>This gives exactly <span class="math inline">\(N\)</span> allowed values of <span class="math inline">\(q\)</span>, as expected for a one-dimensional chain with <span class="math inline">\(N\)</span> moving atoms.</p>
+<p>The spacing between neighboring allowed wavevectors is</p>
+<p><span class="math display">\[
+\Delta q=\frac{2\pi}{L}.
+\]</span></p>
+<p>Thus each allowed state occupies a length <span class="math inline">\(2\pi/L\)</span> in one-dimensional reciprocal space. The reciprocal-space density of states is therefore</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+Z(q)
+=
+\frac{1}{\Delta q}
+=
+\frac{L}{2\pi}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Equivalently, over the first Brillouin zone,</p>
+<p><span class="math display">\[
+Z(q)
+=
+\frac{\text{number of allowed states}}{\text{length of the first Brillouin zone}}
+=
+\frac{N}{2\pi/a}
+=
+\frac{L}{2\pi}.
+\]</span></p>
+<div id="fig-q-states-1d" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-q-states-1d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 5, Fig. 5.14, p. 194] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-q-states-1d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.3: <strong>Figure:</strong> Equally spaced allowed states in one-dimensional reciprocal space. Neighboring states are separated by <span class="math inline">\(2\pi/L\)</span>.
+</figcaption>
+</figure>
+</div>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.1.2, pp. 193-194] -->
 </section>
-<section id="mean-energy-of-one-mode" class="level3" data-number="7.3.2">
-<h3 data-number="7.3.2" class="anchored" data-anchor-id="mean-energy-of-one-mode"><span class="header-section-number">7.3.2</span> Mean Energy of One Mode</h3>
-<p>The mean energy follows immediately: <span class="math display">\[
-\langle E_{\omega}\rangle
+</section>
+<section id="mode-counting-in-three-dimensional-reciprocal-space" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="mode-counting-in-three-dimensional-reciprocal-space"><span class="header-section-number">7.4</span> Mode Counting in Three-Dimensional Reciprocal Space</h2>
+<p>The one-dimensional result generalizes directly to a crystal with primitive lattice vectors <span class="math inline">\(\mathbf a_1,\mathbf a_2,\mathbf a_3\)</span>. Let the crystal contain</p>
+<p><span class="math display">\[
+N=N_1N_2N_3
+\]</span></p>
+<p>primitive cells. A Bravais-lattice vector is</p>
+<p><span class="math display">\[
+\mathbf R=n_1\mathbf a_1+n_2\mathbf a_2+n_3\mathbf a_3.
+\]</span></p>
+<p>Born-von Karman boundary conditions require</p>
+<p><span class="math display">\[
+\mathbf u(\mathbf R)
 =
-\hbar\omega\left(\langle n\rangle+\frac{1}{2}\right)
+\mathbf u(\mathbf R+N_i\mathbf a_i),
+\qquad
+i=1,2,3.
+\]</span></p>
+<p>For a plane-wave displacement,</p>
+<p><span class="math display">\[
+\mathbf u(\mathbf R)
 =
-\hbar\omega
-\left[
-\frac{1}{e^{\beta\hbar\omega}-1}
+\mathbf A e^{i(\mathbf q\cdot\mathbf R-\omega t)},
+\]</span></p>
+<p>we obtain</p>
+<p><span class="math display">\[
+e^{i\mathbf q\cdot N_i\mathbf a_i}=1.
+\]</span></p>
+<p>Therefore</p>
+<p><span class="math display">\[
+N_i\mathbf a_i\cdot\mathbf q=2\pi p_i,
+\qquad
+p_i\in\mathbb Z.
+\]</span></p>
+<p>Write the wavevector in the reciprocal basis,</p>
+<p><span class="math display">\[
+\mathbf q=h\mathbf b_1+k\mathbf b_2+\ell\mathbf b_3,
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+\mathbf a_i\cdot\mathbf b_j=2\pi\delta_{ij}.
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+h=\frac{p_1}{N_1},
+\qquad
+k=\frac{p_2}{N_2},
+\qquad
+\ell=\frac{p_3}{N_3}.
+\]</span></p>
+<p>Thus the allowed wavevectors are</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+\mathbf q
+=
+\frac{p_1}{N_1}\mathbf b_1
 +
-\frac{1}{2}
-\right].
-\]</span></p>
-<p>It is useful to split this into two pieces: <span class="math display">\[
-\langle E_{\omega}\rangle
-=
-\underbrace{
-\frac{\hbar\omega}{e^{\beta\hbar\omega}-1}
-}_{\text{thermal part}}
+\frac{p_2}{N_2}\mathbf b_2
 +
-\underbrace{
-\frac{1}{2}\hbar\omega
-}_{\text{zero-point part}}.
+\frac{p_3}{N_3}\mathbf b_3.
 \]</span></p>
-<p>The thermal part vanishes as <span class="math inline">\(T\to 0\)</span>, while the zero-point part remains.</p>
-<!-- [Ibach–Lüth, Ch. 5.2, mean oscillator energy, pp. 115–116; Sólyom, Ch. 12.1.6 and Ch. 12.3.2, pp. 396, 413–414] -->
-</section>
-<section id="two-limits-worth-remembering" class="level3" data-number="7.3.3">
-<h3 data-number="7.3.3" class="anchored" data-anchor-id="two-limits-worth-remembering"><span class="header-section-number">7.3.3</span> Two Limits Worth Remembering</h3>
-<p><strong>High temperature</strong></p>
-<p>At high temperature, <span class="math inline">\(\beta\hbar\omega\ll 1\)</span>, so <span class="math display">\[
-n_B(\omega,T)\approx \frac{k_B T}{\hbar\omega},
-\]</span> and hence <span class="math display">\[
-\langle E_{\omega}\rangle
-\approx
-k_B T+\frac{1}{2}\hbar\omega.
+</div>
+</div>
+</div>
+<p>For odd <span class="math inline">\(N_i\)</span>, the integers may be chosen as</p>
+<p><span class="math display">\[
+p_i=0,\pm 1,\pm 2,\dots,\pm \frac{N_i-1}{2}.
 \]</span></p>
-<p>The <strong>temperature-dependent</strong> part becomes classical.</p>
-<p><strong>Low temperature</strong></p>
-<p>At low temperature, <span class="math inline">\(\beta\hbar\omega\gg 1\)</span>, so <span class="math display">\[
-n_B(\omega,T)\approx e^{-\beta\hbar\omega},
-\]</span> and thermal excitation is strongly suppressed.</p>
-<p>This already hints at the key role of low-frequency modes: they are the easiest to populate thermally and dominate low-temperature thermodynamics.</p>
-<!-- [Ibach–Lüth, Ch. 5.2 and Ch. 5.3, pp. 115–117; Sólyom, Ch. 12.1.1–12.1.2, pp. 388–390] -->
-</section>
-</section>
-<section id="constructing-the-phonon-density-of-states" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="constructing-the-phonon-density-of-states"><span class="header-section-number">7.4</span> Constructing the Phonon Density of States</h2>
-<p>The phonon spectrum is usually too complicated to handle mode by mode. The density of states reorganizes the same information in the context of thermodynamics.</p>
-<!-- [Ibach–Lüth, Ch. 5.1, pp. 112–114; Sólyom, Ch. 12.2.1, pp. 398–401] -->
-<section id="from-discrete-mathbf-q-values-to-the-continuum" class="level3" data-number="7.4.1">
-<h3 data-number="7.4.1" class="anchored" data-anchor-id="from-discrete-mathbf-q-values-to-the-continuum"><span class="header-section-number">7.4.1</span> From Discrete <span class="math inline">\(\mathbf q\)</span> Values to the Continuum</h3>
-<p>For a macroscopic crystal, allowed <span class="math inline">\(\mathbf q\)</span> values are extremely dense. The sum over wavevectors may be replaced by an integral, <span class="math display">\[
+<p>There are therefore <span class="math inline">\(N_1N_2N_3=N\)</span> allowed wavevectors in the first Brillouin zone.</p>
+<p>If the primitive basis contains <span class="math inline">\(r'\)</span> atoms, then each wavevector has <span class="math inline">\(3r'\)</span> phonon branches in three dimensions. Hence the total number of vibrational modes is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+3r'N.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This is the expected result: each atom has three displacement degrees of freedom.</p>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.1.3, pp. 194-195] -->
+<section id="reciprocal-space-density-of-states" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="reciprocal-space-density-of-states"><span class="header-section-number">7.4.1</span> Reciprocal-Space Density of States</h3>
+<p>The volume of the first Brillouin zone is</p>
+<p><span class="math display">\[
+\Omega_{\mathrm{BZ}}
+=
+\frac{(2\pi)^3}{V_{\mathrm{WS}}},
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+V_{\mathrm{WS}}
+=
+\mathbf a_1\cdot(\mathbf a_2\times\mathbf a_3)
+\]</span></p>
+<p>is the primitive-cell volume. Since the crystal volume is</p>
+<p><span class="math display">\[
+V=NV_{\mathrm{WS}},
+\]</span></p>
+<p>the reciprocal-space volume occupied by one allowed <span class="math inline">\(\mathbf q\)</span> state is</p>
+<p><span class="math display">\[
+\frac{\Omega_{\mathrm{BZ}}}{N}
+=\frac{(2\pi)^3}{NV_{\mathrm{WS}}}
+=\frac{(2\pi)^3}{V}.
+\]</span></p>
+<p>Therefore the density of allowed states in reciprocal space is</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+Z(q)
+=
+\frac{V}{(2\pi)^3}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>This is the central replacement rule:</p>
+<p><span class="math display">\[
 \sum_{\mathbf q}
 \longrightarrow
-\frac{V}{(2\pi)^3}\int d^3q.
+\frac{V}{(2\pi)^3}
+\int_{\mathrm{1.\ BZ}} d^3q.
 \]</span></p>
-<p>This replacement is the reciprocal-space version of passing from a finite crystal to the thermodynamic limit.</p>
-<p>A good sanity check is the dimensionality: the factor <span class="math inline">\(V/(2\pi)^3\)</span> has units of reciprocal-space density, exactly what is needed to count modes in a <span class="math inline">\(d^3q\)</span> volume element.</p>
-<!-- [Sólyom, Ch. 12.2, replacement of sums by integrals, pp. 398–399; Ibach–Lüth, Ch. 5.1, mode counting in $q$-space, pp. 112–113] -->
+<p>A useful sanity check is dimensional. The factor <span class="math inline">\(V/(2\pi)^3\)</span> has dimensions of reciprocal-space inverse volume, so multiplying it by <span class="math inline">\(d^3q\)</span> gives a dimensionless number of states.</p>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.2, p. 195] -->
 </section>
-<section id="definition-of-the-dos" class="level3" data-number="7.4.2">
-<h3 data-number="7.4.2" class="anchored" data-anchor-id="definition-of-the-dos"><span class="header-section-number">7.4.2</span> Definition of the DOS</h3>
-<p>Define the partial DOS of branch <span class="math inline">\(\lambda\)</span> and the total DOS by <span class="math display">\[
-g_{\lambda}(\omega)
-=
-\int \frac{d^3q}{(2\pi)^3}
-\delta\left(\omega-\omega_{\lambda}(\mathbf q)\right),
-\]</span> <span class="math display">\[
-g(\omega)=\sum_{\lambda}g_{\lambda}(\omega).
+</section>
+<section id="density-of-states-in-frequency-space" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="density-of-states-in-frequency-space"><span class="header-section-number">7.5</span> Density of States in Frequency Space</h2>
+<p>The reciprocal-space density <span class="math inline">\(Z(q)\)</span> counts allowed wavevectors. But many physical quantities depend on frequency rather than directly on <span class="math inline">\(\mathbf q\)</span>. We therefore introduce a density of states in frequency space.</p>
+<p>Suppose we need a sum of the form</p>
+<p><span class="math display">\[
+\sum_{\mathbf q,r}
+F[\omega_r(\mathbf q)],
 \]</span></p>
-<p>With this definition, for any function <span class="math inline">\(f(\omega)\)</span>, <span class="math display">\[
-\frac{1}{V}\sum_{\mathbf q,\lambda} f\left(\omega_{\lambda}(\mathbf q)\right)
+<p>where <span class="math inline">\(r\)</span> labels the phonon branch. For a macroscopic crystal, the allowed wavevectors are dense, and we write</p>
+<p><span class="math display">\[
+\sum_{\mathbf q,r}
+F[\omega_r(\mathbf q)]
 =
-\int_{0}^{\infty} d\omega g(\omega) f(\omega).
+\sum_r
+\int_{\mathrm{1.\ BZ}} d^3q
+Z(q)
+F[\omega_r(\mathbf q)].
 \]</span></p>
-<p>So <span class="math inline">\(g(\omega) d\omega\)</span> is the number of phonon states per unit volume with frequencies between <span class="math inline">\(\omega\)</span> and <span class="math inline">\(\omega+d\omega\)</span>.</p>
+<p>We now define <span class="math inline">\(D(\omega)\)</span> by requiring that</p>
+<p><span class="math display">\[
+\sum_r
+\int_{\mathrm{1.\ BZ}} d^3q
+Z(q)
+F[\omega_r(\mathbf q)]
+=
+\int_{\omega_{\min}}^{\omega_{\max}}
+d\omega
+D(\omega)F(\omega).
+\]</span></p>
+<p>This is possible for any function <span class="math inline">\(F\)</span>. The density of states is therefore</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -627,166 +876,284 @@ g(\omega)=\sum_{\lambda}g_{\lambda}(\omega).
 </div>
 <div class="callout-body-container">
 <p><span class="math display">\[
-\frac{1}{V}\sum_{\mathbf q,\lambda} f\left(\omega_{\lambda}(\mathbf q)\right)
+D(\omega)
 =
-\int_{0}^{\infty} d\omega\ g(\omega) f(\omega).
+\sum_r
+\int_{\mathrm{1.\ BZ}} d^3q
+Z(q)
+\delta[\omega-\omega_r(\mathbf q)].
 \]</span></p>
 </div>
 </div>
 </div>
-<!-- [Sólyom, Ch. 12.2.1, DOS definition, p. 399; Ibach–Lüth, Ch. 5.1, definition of the vibrational DOS, pp. 112–113] -->
-</section>
-<section id="geometric-interpretation" class="level3" data-number="7.4.3">
-<h3 data-number="7.4.3" class="anchored" data-anchor-id="geometric-interpretation"><span class="header-section-number">7.4.3</span> Geometric Interpretation</h3>
-<p>Let <span class="math inline">\(S_{\lambda}(\omega)\)</span> be the constant-frequency surface in <span class="math inline">\(\mathbf q\)</span>-space defined by <span class="math display">\[
-\omega_{\lambda}(\mathbf q)=\omega.
+<p>The interpretation is direct:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math inline">\(D(\omega)d\omega\)</span> is the number of phonon modes with angular frequencies between <span class="math inline">\(\omega\)</span> and <span class="math inline">\(\omega+d\omega\)</span>.</p>
+</div>
+</div>
+</div>
+<p>The normalization condition is</p>
+<p><span class="math display">\[
+\int_{\omega_{\min}}^{\omega_{\max}}D(\omega)d\omega
+=3r'N.
 \]</span></p>
-<p>Then <span class="math display">\[
-g_{\lambda}(\omega)
+<p>Thus the area under the full density-of-states curve counts all vibrational modes.</p>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.3, p. 196] -->
+<section id="physical-meaning-a-histogram-of-frequencies" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="physical-meaning-a-histogram-of-frequencies"><span class="header-section-number">7.5.1</span> Physical Meaning: A Histogram of Frequencies</h3>
+<p>The density of states is the frequency histogram of the phonon spectrum.</p>
+<p>If the dispersion <span class="math inline">\(\omega_r(\mathbf q)\)</span> changes rapidly with <span class="math inline">\(\mathbf q\)</span>, then only a small number of nearby wavevectors fall into a given frequency interval. The density of states is small.</p>
+<p>If the dispersion is flat, many different wavevectors have nearly the same frequency. The density of states is large.</p>
+<p>This is the main intuition:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Flat dispersion means many modes pile up at nearly the same frequency.</p>
+</div>
+</div>
+</div>
+<p>In one dimension, this can be seen from</p>
+<p><span class="math display">\[
+Z(q)dq=D(\omega)d\omega.
+\]</span></p>
+<p>Therefore</p>
+<p><span class="math display">\[
+D(\omega)
 =
-\frac{1}{(2\pi)^3}
-\int_{S_{\lambda}(\omega)}
-\frac{dS}{\left|\nabla_{\mathbf q}\omega_{\lambda}(\mathbf q)\right|}.
+Z(q)
+\left|
+\frac{dq}{d\omega}
+\right|.
 \]</span></p>
-<p>This formula is physically very revealing:</p>
-<ul>
-<li>where the dispersion is steep, <span class="math inline">\(\left|\nabla_{\mathbf q}\omega\right|\)</span> is large and the DOS is small;</li>
-<li>where the dispersion is flat, the DOS is enhanced;</li>
-<li>if the group velocity vanishes on special parts of the spectrum, sharp DOS features can appear.</li>
-</ul>
-<p>Thus the DOS is high where many nearby <span class="math inline">\(\mathbf q\)</span> values correspond to nearly the same frequency.</p>
-<!-- [Sólyom, Ch. 12.2.1, constant-energy-surface derivation, pp. 399–400; Ibach–Lüth, Ch. 5.1, discussion of flat dispersion and DOS enhancement, pp. 113–114] -->
-<div id="fig-dos-surfaces" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<p>If <span class="math inline">\(d\omega/dq\)</span> is small, then <span class="math inline">\(dq/d\omega\)</span> is large, and the density of states is enhanced.</p>
+<div id="fig-dos-from-dispersion" class="figure quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-dos-surfaces-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure from [Sólyom, Ch. 12.2.1, Fig. 12.2, p. 400] -->
+<div aria-describedby="fig-dos-from-dispersion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 5, Fig. 5.15, p. 196] -->
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dos-surfaces-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7.1: <strong>Figure placeholder.</strong> Constant-frequency surfaces <span class="math inline">\(\omega\)</span> and <span class="math inline">\(\omega+d\omega\)</span> in reciprocal space. The DOS is obtained by counting the allowed <span class="math inline">\(\mathbf q\)</span> values in the shell between them.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dos-from-dispersion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.4: <strong>Figure:</strong> Construction of the frequency-space density of states from a one-dimensional dispersion relation. A flat part of the dispersion maps a large interval in <span class="math inline">\(q\)</span> into a small interval in <span class="math inline">\(\omega\)</span>.
 </figcaption>
 </figure>
 </div>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.3, p. 196] -->
 </section>
-<section id="debye-approximation" class="level3" data-number="7.4.4">
-<h3 data-number="7.4.4" class="anchored" data-anchor-id="debye-approximation"><span class="header-section-number">7.4.4</span> Debye Approximation</h3>
-<p>For low-frequency acoustic phonons, we can approximate the crystal as an isotropic elastic continuum. Then <span class="math display">\[
-\omega_{\lambda}(\mathbf q)=c_{\lambda}|\mathbf q|,
-\]</span> with one longitudinal branch and two transverse branches.</p>
-<p>For one branch, <span class="math display">\[
-g_{\lambda}(\omega)
-=
-\frac{1}{2\pi^2}\frac{\omega^2}{c_{\lambda}^3}.
+</section>
+<section id="general-geometric-formula-for-domega" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="general-geometric-formula-for-domega"><span class="header-section-number">7.6</span> General Geometric Formula for <span class="math inline">\(D(\omega)\)</span></h2>
+<p>We now derive a general expression for the density of states of one branch <span class="math inline">\(\omega(\mathbf q)\)</span> in three dimensions.</p>
+<p>Consider all points in reciprocal space with frequencies between <span class="math inline">\(\omega\)</span> and <span class="math inline">\(\omega+\Delta\omega\)</span>. These points form a thin shell between two constant-frequency surfaces.</p>
+<p>The number of states in this shell is</p>
+<p><span class="math display">\[
+D(\omega)\Delta\omega
+\simeq
+\frac{V}{(2\pi)^3}
+\int_{\omega}^{\omega+\Delta\omega}
+d^3q.
 \]</span></p>
-<p>Summing the branches gives <span class="math display">\[
-g(\omega)
+<p>Use local coordinates adapted to the constant-frequency surface. The reciprocal-space volume element is</p>
+<p><span class="math display">\[
+d^3q=dS_q dq_\perp,
+\]</span></p>
+<p>where <span class="math inline">\(dS_q\)</span> is a surface element on <span class="math inline">\(\omega(\mathbf q)=\mathrm{const}\)</span> and <span class="math inline">\(dq_\perp\)</span> is the distance perpendicular to that surface.</p>
+<p>The frequency change perpendicular to the surface is</p>
+<p><span class="math display">\[
+\Delta\omega
 =
-\frac{1}{2\pi^2}\omega^2
+|\nabla_{\mathbf q}\omega(\mathbf q)| dq_\perp.
+\]</span></p>
+<p>Therefore</p>
+<p><span class="math display">\[
+dq_\perp
+=
+\frac{\Delta\omega}{|\nabla_{\mathbf q}\omega(\mathbf q)|}.
+\]</span></p>
+<p>Substitution gives</p>
+<p><span class="math display">\[
+D(\omega)\Delta\omega
+=
+\frac{V}{(2\pi)^3}
+\int_{\omega=\mathrm{const}}
+dS_q
+\frac{\Delta\omega}{|\nabla_{\mathbf q}\omega(\mathbf q)|}.
+\]</span></p>
+<p>Canceling <span class="math inline">\(\Delta\omega\)</span> yields</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+D(\omega)
+=
+\frac{V}{(2\pi)^3}
+\int_{\omega=\mathrm{const}}
+\frac{dS_q}{|\nabla_{\mathbf q}\omega(\mathbf q)|}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>For several branches, one sums this expression over all branches <span class="math inline">\(r\)</span>.</p>
+<div id="fig-constant-frequency-surfaces" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-constant-frequency-surfaces-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 5, Fig. 5.16, p. 197] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-constant-frequency-surfaces-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.5: <strong>Figure:</strong> Constant-frequency surfaces in reciprocal space. The density of states is obtained by counting the allowed <span class="math inline">\(\mathbf q\)</span> states in the thin shell between two nearby constant-frequency surfaces.
+</figcaption>
+</figure>
+</div>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.3, pp. 197-198] -->
+<section id="relation-to-group-velocity-and-van-hove-singularities" class="level3" data-number="7.6.1">
+<h3 data-number="7.6.1" class="anchored" data-anchor-id="relation-to-group-velocity-and-van-hove-singularities"><span class="header-section-number">7.6.1</span> Relation to Group Velocity and van Hove Singularities</h3>
+<p>The group velocity of a phonon wave packet is</p>
+<p><span class="math display">\[
+\mathbf v_g(\mathbf q)
+=
+\nabla_{\mathbf q}\omega(\mathbf q).
+\]</span></p>
+<p>Thus the general density-of-states formula can be read as</p>
+<p><span class="math display">\[
+D(\omega)
+\propto
+\int_{\omega=\mathrm{const}}
+\frac{dS_q}{|\mathbf v_g(\mathbf q)|}.
+\]</span></p>
+<p>This shows why slow modes contribute strongly to the density of states. A small group velocity means that the frequency changes only weakly as <span class="math inline">\(\mathbf q\)</span> changes, so many nearby wavevectors correspond to nearly the same frequency.</p>
+<p>If</p>
+<p><span class="math display">\[
+\nabla_{\mathbf q}\omega(\mathbf q)=0
+\]</span></p>
+<p>at special points or regions in reciprocal space, the integrand becomes singular. Such features are called <strong>van Hove singularities</strong>.</p>
+<p>In real crystals, these singularities are often broadened by finite resolution, disorder, anharmonicity, and the fact that experimental measurements average over finite intervals. Nevertheless, the peaks and edges in measured phonon spectra often reflect precisely these flat parts of the dispersion.</p>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.3, p. 198] -->
+</section>
+</section>
+<section id="example-isotropic-acoustic-medium-in-three-dimensions" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="example-isotropic-acoustic-medium-in-three-dimensions"><span class="header-section-number">7.7</span> Example: Isotropic Acoustic Medium in Three Dimensions</h2>
+<p>As an important example, consider an isotropic medium with one longitudinal acoustic branch and two transverse acoustic branches. The long-wavelength dispersions are</p>
+<p><span class="math display">\[
+\omega_L(\mathbf q)=v_Lq,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\omega_T(\mathbf q)=v_Tq,
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+q=|\mathbf q|.
+\]</span></p>
+<p>For one branch <span class="math inline">\(i\)</span>, the surface <span class="math inline">\(\omega_i(\mathbf q)=\omega\)</span> is a sphere with radius</p>
+<p><span class="math display">\[
+q=\frac{\omega}{v_i}.
+\]</span></p>
+<p>The surface area is</p>
+<p><span class="math display">\[
+4\pi q^2,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+|\nabla_{\mathbf q}\omega_i|=v_i.
+\]</span></p>
+<p>Therefore the contribution of one branch is</p>
+<p><span class="math display">\[
+D_i(\omega)
+=
+\frac{V}{(2\pi)^3}
+\frac{4\pi q^2}{v_i}.
+\]</span></p>
+<p>Using <span class="math inline">\(q=\omega/v_i\)</span> gives</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+D_i(\omega)
+=
+\frac{V}{2\pi^2}
+\frac{\omega^2}{v_i^3}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Adding one longitudinal and two transverse branches gives</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+D(\omega)
+=
+\frac{V}{2\pi^2}
 \left(
-\frac{1}{c_L^3}+\frac{2}{c_T^3}
-\right).
-\]</span></p>
-<p>If one introduces an effective Debye sound velocity <span class="math inline">\(c_D\)</span> through <span class="math display">\[
-\frac{3}{c_D^3}
-=
-\frac{1}{c_L^3}+\frac{2}{c_T^3},
-\]</span> then <span class="math display">\[
-g(\omega)=\frac{3}{2\pi^2}\frac{\omega^2}{c_D^3}.
-\]</span></p>
-<p>This cannot hold to arbitrarily large frequency, so the Debye model imposes a cutoff <span class="math inline">\(\omega_D=c_D q_D\)</span> chosen such that the total number of modes is still correct: <span class="math display">\[
-\frac{V}{(2\pi)^3}\frac{4\pi q_D^3}{3}=rN.
-\]</span></p>
-<p>Therefore the <strong>Debye DOS</strong> is</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><span class="math display">\[
-g_D(\omega)
-=
-\begin{cases}
-\dfrac{9rN}{V}\dfrac{\omega^2}{\omega_D^3}, &amp; 0\le \omega\le \omega_D,\\
-0, &amp; \omega&gt;\omega_D.
-\end{cases}
-\]</span></p>
-</div>
-</div>
-</div>
-<p>A crucial sanity check is normalization: <span class="math display">\[
-V\int_0^{\omega_D} g_D(\omega) d\omega
-=
-3rN.
-\]</span></p>
-<p>So the Debye model preserves the correct total number of vibrational modes even though it smooths out the detailed branch structure.</p>
-<!-- [Sólyom, Ch. 12.2.1, Debye DOS and cutoff, pp. 400–401; Ibach–Lüth, Ch. 5.1 and Ch. 5.3, Debye DOS and cutoff logic, pp. 113–117] -->
-</section>
-<section id="what-the-debye-approximation-captures-and-what-it-misses" class="level3" data-number="7.4.5">
-<h3 data-number="7.4.5" class="anchored" data-anchor-id="what-the-debye-approximation-captures-and-what-it-misses"><span class="header-section-number">7.4.5</span> What the Debye Approximation Captures and What It Misses</h3>
-<p>The Debye DOS gets the low-frequency part right because in three dimensions:</p>
-<ul>
-<li>acoustic branches are linear near <span class="math inline">\(\mathbf q=\mathbf 0\)</span>,</li>
-<li>the area of a sphere in <span class="math inline">\(\mathbf q\)</span>-space scales as <span class="math inline">\(q^2\)</span>,</li>
-<li>and therefore <span class="math inline">\(g(\omega)\propto \omega^2\)</span> for small <span class="math inline">\(\omega\)</span>.</li>
-</ul>
-<p>However, the Debye DOS misses:</p>
-<ul>
-<li>the detailed separation of acoustic and optical branches,</li>
-<li>narrow peaks from weakly dispersive optical modes,</li>
-<li>and sharper DOS features associated with Van Hove singularities.</li>
-</ul>
-<p>Real phonon DOS curves therefore agree with the Debye form at low frequency, but deviate strongly at intermediate and high frequency.</p>
-<!-- [Ibach–Lüth, Ch. 5.1, comparison of real DOS with Debye approximation, p. 114; Sólyom, Ch. 12.2.3, Van Hove singularities in the phonon DOS, pp. 405–406] -->
-<div id="fig-si-dos" class="figure quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-si-dos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure from [Ibach–Lüth, Ch. 5.1, Fig. 5.2, p. 114] -->
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-si-dos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7.2: <strong>Figure placeholder.</strong> Phonon DOS of silicon together with the smooth Debye approximation, showing good agreement only in the low-frequency regime.
-</figcaption>
-</figure>
-</div>
-<div id="fig-al-dos" class="figure quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-al-dos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure from [Sólyom, Ch. 12.2.3, Fig. 12.5, p. 406] -->
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-al-dos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7.3: <strong>Figure placeholder.</strong> Calculated phonon DOS of aluminum with characteristic Van Hove features arising from flat regions of the dispersion.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="reading-a-dos-plot-physically" class="level3" data-number="7.4.6">
-<h3 data-number="7.4.6" class="anchored" data-anchor-id="reading-a-dos-plot-physically"><span class="header-section-number">7.4.6</span> Reading a DOS Plot Physically</h3>
-<p>When you look at a phonon DOS curve, several quick interpretations are useful:</p>
-<ul>
-<li>the total area counts all vibrational modes;</li>
-<li>the low-frequency onset is controlled by acoustic branches;</li>
-<li>broad smooth parts reflect rapidly varying dispersions;</li>
-<li>sharp peaks indicate flat dispersions and slow group velocity;</li>
-<li>nearly dispersionless optical modes often show up as narrow high-frequency structures.</li>
-</ul>
-<p>This is why the DOS is such a useful quantity for representing the vibrational spectrum.</p>
-<!-- [Ibach–Lüth, Ch. 5.1, p. 114; Sólyom, Ch. 12.2.1–12.2.3, pp. 399–406] -->
-</section>
-</section>
-<section id="bridge-to-the-next-lecture-internal-energy-as-a-dos-integral" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="bridge-to-the-next-lecture-internal-energy-as-a-dos-integral"><span class="header-section-number">7.5</span> Bridge to the Next Lecture: Internal Energy as a DOS Integral</h2>
-<p>In the next lecture, we will combine the quantized-mode picture and the DOS into a compact formula for the thermal energy of the lattice.</p>
-<p>For the full harmonic crystal, <span class="math display">\[
-U(T)
-=
-\sum_{\mathbf q,\lambda}
-\hbar\omega_{\lambda}(\mathbf q)
-\left[
-n_B\left(\omega_{\lambda}(\mathbf q),T\right)
+\frac{1}{v_L^3}
 +
-\frac{1}{2}
-\right].
+\frac{2}{v_T^3}
+\right)
+\omega^2.
 \]</span></p>
-<p>Using the DOS definition, this becomes</p>
+</div>
+</div>
+</div>
+<p>This result explains the characteristic low-frequency behavior of three-dimensional acoustic phonons:</p>
+<p><span class="math display">\[
+D(\omega)\propto \omega^2.
+\]</span></p>
+<p>The reason is geometric. In three dimensions, the number of allowed wavevectors at radius <span class="math inline">\(q\)</span> grows like the area of a sphere, namely like <span class="math inline">\(q^2\)</span>. Since acoustic phonons have <span class="math inline">\(\omega\propto q\)</span> at small <span class="math inline">\(q\)</span>, the density of states grows like <span class="math inline">\(\omega^2\)</span>.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Sanity check.</strong> The density of states vanishes at <span class="math inline">\(\omega=0\)</span> in three dimensions because the available surface area near the origin of reciprocal space shrinks to zero.</p>
+</div>
+</div>
+</div>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.3, p. 198] -->
+</section>
+<section id="dimensionality-one-two-and-three-dimensions" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="dimensionality-one-two-and-three-dimensions"><span class="header-section-number">7.8</span> Dimensionality: One, Two, and Three Dimensions</h2>
+<p>The same reasoning gives different low-frequency behavior in different dimensions. This is a useful way to remember the result.</p>
+<section id="two-dimensions" class="level3" data-number="7.8.1">
+<h3 data-number="7.8.1" class="anchored" data-anchor-id="two-dimensions"><span class="header-section-number">7.8.1</span> Two Dimensions</h3>
+<p>In two dimensions, the allowed states fill an area in reciprocal space. The density of states in reciprocal space is</p>
+<p><span class="math display">\[
+Z^{(2)}(q)=\frac{A}{(2\pi)^2}.
+\]</span></p>
+<p>The constant-frequency set is now a line, not a surface. Therefore</p>
+<p><span class="math display">\[
+D^{(2)}(\omega)
+=
+\frac{A}{(2\pi)^2}
+\int_{\omega=\mathrm{const}}
+\frac{dL_q}{|\nabla_{\mathbf q}\omega(\mathbf q)|}.
+\]</span></p>
+<p>For an isotropic acoustic branch with <span class="math inline">\(\omega_i=v_iq\)</span>, the constant-frequency line is a circle of radius <span class="math inline">\(q=\omega/v_i\)</span>. Its circumference is <span class="math inline">\(2\pi q\)</span>. Hence</p>
+<p><span class="math display">\[
+D_i^{(2)}(\omega)
+=
+\frac{A}{(2\pi)^2}
+\frac{2\pi q}{v_i}
+=
+\frac{A}{2\pi}
+\frac{\omega}{v_i^2}.
+\]</span></p>
+<p>For one longitudinal and one transverse acoustic branch,</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -794,112 +1161,202 @@ n_B\left(\omega_{\lambda}(\mathbf q),T\right)
 </div>
 <div class="callout-body-container">
 <p><span class="math display">\[
-U(T)
+D^{(2)}(\omega)
 =
-V\int_{0}^{\infty} d\omega\
-g(\omega) \hbar\omega
-\left[
-n_B(\omega,T)+\frac{1}{2}
-\right].
+\frac{A}{2\pi}
+\left(
+\frac{1}{v_L^2}
++
+\frac{1}{v_T^2}
+\right)
+\omega.
 \]</span></p>
 </div>
 </div>
 </div>
-<p>Separating thermal and zero-point parts, <span class="math display">\[
-U(T)=U_{\mathrm{th}}(T)+U_0,
-\]</span> with <span class="math display">\[
-U_{\mathrm{th}}(T)
-=
-V\int_{0}^{\infty} d\omega\
-g(\omega)
-\frac{\hbar\omega}{e^{\beta\hbar\omega}-1},
-\]</span> <span class="math display">\[
-U_0
-=
-\frac{V}{2}\int_{0}^{\infty} d\omega\ g(\omega) \hbar\omega.
+<p>Thus in two dimensions,</p>
+<p><span class="math display">\[
+D^{(2)}(\omega)\propto \omega.
 \]</span></p>
-<p>This is how heat capacity will come into play:</p>
-<ul>
-<li><span class="math inline">\(U_0\)</span> is temperature independent in the harmonic approximation, so it does not contribute to <span class="math inline">\(C_V\)</span>;</li>
-<li>the low-temperature behavior is controlled by the low-frequency DOS;</li>
-<li>the high-temperature limit is controlled by DOS normalization.</li>
-</ul>
-<p>In the next lecture, we will evaluate these integrals, especially with the Debye DOS, and extract the temperature dependence of the heat capacity.</p>
-<!-- [Sólyom, Ch. 12.3.2, internal energy and DOS representation, pp. 413–416; Ibach–Lüth, Ch. 5.3, internal energy and Debye specific heat, pp. 116–118] -->
 </section>
-<section id="optional-appendix-einstein-model-as-a-one-frequency-dos" class="level2" data-number="7.6">
-<h2 data-number="7.6" class="anchored" data-anchor-id="optional-appendix-einstein-model-as-a-one-frequency-dos"><span class="header-section-number">7.6</span> Optional / Appendix: Einstein Model as a One-Frequency DOS</h2>
+<section id="one-dimension" class="level3" data-number="7.8.2">
+<h3 data-number="7.8.2" class="anchored" data-anchor-id="one-dimension"><span class="header-section-number">7.8.2</span> One Dimension</h3>
+<p>In one dimension, the allowed states lie along a line in reciprocal space. The density of states in reciprocal space is</p>
+<p><span class="math display">\[
+Z^{(1)}(q)=\frac{L}{2\pi}.
+\]</span></p>
+<p>The constant-frequency set consists of points. Thus</p>
+<p><span class="math display">\[
+D^{(1)}(\omega)
+=
+\frac{L}{2\pi}
+\int_{\omega=\mathrm{const}}
+\frac{dP_q}{|\nabla_q\omega(q)|}.
+\]</span></p>
+<p>For an acoustic dispersion <span class="math inline">\(\omega=v_L|q|\)</span>, a positive frequency corresponds to two points, <span class="math inline">\(+q\)</span> and <span class="math inline">\(-q\)</span>. Therefore</p>
+<p><span class="math display">\[
+\int_{\omega=\mathrm{const}}
+dP_q
+= 2 .
+\]</span></p>
+<p>Thus</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math display">\[
+D^{(1)}(\omega)
+= \frac{L}{2\pi}\frac{2}{v_L}
+= \frac{L}{\pi v_L}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>The one-dimensional acoustic density of states is independent of frequency.</p>
+</section>
+<section id="dimensional-trend" class="level3" data-number="7.8.3">
+<h3 data-number="7.8.3" class="anchored" data-anchor-id="dimensional-trend"><span class="header-section-number">7.8.3</span> Dimensional Trend</h3>
+<p>For acoustic phonons with linear dispersion, the low-frequency density of states follows the geometry of reciprocal space:</p>
+<p><span class="math display">\[
+D^{(3)}(\omega)\propto \omega^2,
+\]</span></p>
+<p><span class="math display">\[
+D^{(2)}(\omega)\propto \omega,
+\]</span></p>
+<p><span class="math display">\[
+D^{(1)}(\omega)\propto \omega^0.
+\]</span></p>
+<p>The lower the dimension, the more strongly low-frequency modes are represented.</p>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.3, pp. 198-199] -->
+</section>
+</section>
+<section id="reading-a-phonon-density-of-states-plot" class="level2" data-number="7.9">
+<h2 data-number="7.9" class="anchored" data-anchor-id="reading-a-phonon-density-of-states-plot"><span class="header-section-number">7.9</span> Reading a Phonon Density-of-States Plot</h2>
+<p>A density-of-states plot should be read as a mode-counting graph.</p>
+<p>Key features have direct interpretations:</p>
+<ul>
+<li>The total area counts the total number of phonon modes.</li>
+<li>The low-frequency onset is controlled by acoustic branches.</li>
+<li>A steep dispersion produces a small density of states.</li>
+<li>A flat dispersion produces a large density of states.</li>
+<li>Peaks often indicate van Hove singularities or weakly dispersive branches.</li>
+<li>Optical branches, when present, often produce high-frequency structures because their dispersion can be relatively flat.</li>
+</ul>
+<p>A useful practical rule is:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The density of states is large where phonons move slowly through reciprocal space.</p>
+</div>
+</div>
+</div>
+<p>Here “move slowly” refers to the group velocity in reciprocal-space language: a small <span class="math inline">\(|\nabla_{\mathbf q}\omega|\)</span> means that the frequency changes slowly as the wavevector changes.</p>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.3, pp. 196-198] -->
+</section>
+<section id="optional-appendix-debye-cutoff-as-a-mode-counting-approximation" class="level2" data-number="7.10">
+<h2 data-number="7.10" class="anchored" data-anchor-id="optional-appendix-debye-cutoff-as-a-mode-counting-approximation"><span class="header-section-number">7.10</span> Optional / Appendix: Debye Cutoff as a Mode-Counting Approximation</h2>
 <details>
 <summary>
 Open optional appendix
 </summary>
-<p>Another useful model for the DOS is the Einstein model, where all oscillators have the same frequency <span class="math inline">\(\omega_E\)</span>. This corresponds to <span class="math display">\[
-g_E(\omega)=\frac{3rN}{V} \delta(\omega-\omega_E).
+<p>The isotropic acoustic result motivates the Debye approximation used in heat-capacity theory. The idea is to replace the true Brillouin zone by a sphere in reciprocal space and the true acoustic dispersions by linear dispersions.</p>
+<p>For a monatomic three-dimensional crystal, there are three acoustic branches and <span class="math inline">\(N\)</span> allowed wavevectors per branch. The cutoff wavevector <span class="math inline">\(q_D\)</span> is chosen so that the Debye sphere contains <span class="math inline">\(N\)</span> allowed wavevectors:</p>
+<p><span class="math display">\[
+\frac{V}{(2\pi)^3}
+\frac{4\pi q_D^3}{3}
+= N .
 \]</span></p>
-<p>Then <span class="math display">\[
-U_{\mathrm{th}}(T)
-=
-3rN
-\frac{\hbar\omega_E}{e^{\beta\hbar\omega_E}-1}.
+<p>With three acoustic branches, this gives <span class="math inline">\(3N\)</span> modes in total.</p>
+<p>The corresponding Debye frequency is</p>
+<p><span class="math display">\[
+\omega_D=v_Dq_D,
 \]</span></p>
-<p>This captures quantization correctly but misses the acoustic low-frequency modes. That is why it gives a qualitatively wrong low-temperature heat capacity, whereas the Debye approximation succeeds there.</p>
-<!-- [Sólyom, Ch. 12.1.1, Einstein model, pp. 387–389] -->
+<p>where <span class="math inline">\(v_D\)</span> is an effective sound velocity. This approximation preserves the correct number of modes and the correct low-frequency power law, but it does not reproduce detailed van Hove features or optical branches.</p>
+<p>For crystals with a multi-atom basis, the acoustic Debye model accounts naturally for the acoustic branches. Optical branches require additional modeling if one wants to represent the entire phonon spectrum.</p>
 </details>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Take-Home Messages
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Quantizing lattice normal modes turns the harmonic crystal into a gas of independent bosonic excitations called phonons.</li>
-<li>Each mode behaves like a quantum harmonic oscillator and retains zero-point motion even at zero temperature.</li>
-<li>Thermal phonon populations follow Bose–Einstein statistics because many phonons can occupy the same mode.</li>
-<li>Low-frequency modes are thermally the most important because they are easiest to excite.</li>
-<li>The phonon DOS repackages the dispersion information into a form directly suited to thermodynamics.</li>
-<li>In three dimensions, the low-frequency DOS grows quadratically with frequency for acoustic phonons.</li>
-<li>The Debye model is a low-frequency approximation, not a detailed description of the full phonon spectrum.</li>
-<li>Heat capacity will follow from differentiating the DOS integral for the internal energy.</li>
-</ul>
-</div>
-</div>
+<!-- [Gross-Marx, Ch. 5, Sec. 5.3.2-5.3.3, pp. 195-199] -->
 </section>
-<section id="problem-set" class="level2" data-number="7.7">
-<h2 data-number="7.7" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">7.7</span> Problem Set</h2>
+<section id="bridge-to-the-next-lecture-from-mode-counting-to-phonons" class="level2" data-number="7.11">
+<h2 data-number="7.11" class="anchored" data-anchor-id="bridge-to-the-next-lecture-from-mode-counting-to-phonons"><span class="header-section-number">7.11</span> Bridge to the Next Lecture: From Mode Counting to Phonons</h2>
+<p>This lecture counted the normal modes of a harmonic crystal. The next step is to quantize these normal modes.</p>
+<p>Once the normal modes are quantized, each mode behaves like a harmonic oscillator with discrete energy levels. The density of states then becomes the bridge between microscopic lattice dynamics and macroscopic thermal properties.</p>
+<p>The main replacement will be</p>
+<p><span class="math display">\[
+\sum_{\mathbf q,r}
+F[\omega_r(\mathbf q)]
+\longrightarrow
+\int d\omega,D(\omega)F(\omega).
+\]</span></p>
+<p>In the next lecture, <span class="math inline">\(F(\omega)\)</span> will contain the thermal occupation and energy of a phonon mode. This will lead directly to the lattice internal energy and then to the heat capacity.</p>
+</section>
+<section id="take-home-messages" class="level2" data-number="7.12">
+<h2 data-number="7.12" class="anchored" data-anchor-id="take-home-messages"><span class="header-section-number">7.12</span> Take-Home Messages</h2>
+<ul>
+<li>A finite crystal allows only a discrete set of phonon wavevectors.</li>
+<li>Born-von Karman boundary conditions give a convenient bulk mode-counting scheme.</li>
+<li>Each phonon branch contains one allowed wavevector state per primitive cell.</li>
+<li>The reciprocal-space density of states is uniform for a macroscopic periodic crystal.</li>
+<li>The frequency-space density of states is a histogram of phonon frequencies.</li>
+<li>Flat dispersions produce large density-of-states features.</li>
+<li>Van Hove singularities occur where the phonon group velocity vanishes.</li>
+<li>The low-frequency acoustic density of states depends strongly on dimensionality.</li>
+</ul>
+</section>
+<section id="problem-set" class="level2" data-number="7.13">
+<h2 data-number="7.13" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">7.13</span> Problem Set</h2>
 <ol type="1">
-<li><p><strong>One mode, one oscillator.</strong> Starting from <span class="math display">\[
-H=\frac{1}{2}\left(P^2+\omega^2Q^2\right),
-\qquad
-[Q,P]=i\hbar,
-\]</span> define ladder operators and show that the Hamiltonian can be written as <span class="math display">\[
-H=\hbar\omega\left(a^{\dagger}a+\frac{1}{2}\right).
-\]</span> What are the energy eigenvalues?</p></li>
-<li><p><strong>Bose occupation of a phonon mode.</strong> For one phonon mode of frequency <span class="math inline">\(\omega\)</span>, compute the partition function <span class="math display">\[
-Z_{\omega}=\sum_{n=0}^{\infty} e^{-\beta \hbar\omega(n+1/2)}
-\]</span> and derive the mean occupation number <span class="math display">\[
-n_B(\omega,T)=\frac{1}{e^{\beta\hbar\omega}-1}.
-\]</span> Then obtain the mean energy of the mode.</p></li>
-<li><p><strong>Debye DOS and normalization.</strong> Assume an isotropic elastic continuum with one longitudinal sound velocity <span class="math inline">\(c_L\)</span> and two transverse sound velocities <span class="math inline">\(c_T\)</span>. Derive <span class="math display">\[
-g(\omega)
+<li><p><strong>Fixed-end chain.</strong> Consider a one-dimensional chain with equilibrium positions <span class="math inline">\(x_n=na\)</span>, length <span class="math inline">\(L=Na\)</span>, and fixed endpoints at <span class="math inline">\(n=0\)</span> and <span class="math inline">\(n=N\)</span>. Starting from <span class="math display">\[
+u_n
 =
-\frac{1}{2\pi^2}\omega^2
+A_1 e^{i(qna-\omega t)}
++
+A_2 e^{-i(qna+\omega t)},
+\]</span> derive the allowed values of <span class="math inline">\(q\)</span>. How many nontrivial vibrational modes are obtained?</p></li>
+<li><p><strong>Periodic boundary conditions.</strong> For a one-dimensional chain with <span class="math inline">\(N\)</span> atoms and periodic boundary condition <span class="math inline">\(u_n=u_{n+N}\)</span>, use <span class="math display">\[
+u_n=Ae^{i(qna-\omega t)}
+\]</span> to derive the allowed values of <span class="math inline">\(q\)</span>. Show that the spacing between neighboring allowed wavevectors is <span class="math inline">\(2\pi/L\)</span> and obtain <span class="math inline">\(Z(q)\)</span>.</p></li>
+<li><p><strong>Three-dimensional reciprocal-space counting.</strong> A crystal has primitive vectors <span class="math inline">\(\mathbf a_1,\mathbf a_2,\mathbf a_3\)</span> and contains <span class="math inline">\(N_1,N_2,N_3\)</span> primitive cells along these directions. Derive <span class="math display">\[
+\mathbf q
+=
+\frac{p_1}{N_1}\mathbf b_1
++
+\frac{p_2}{N_2}\mathbf b_2
++
+\frac{p_3}{N_3}\mathbf b_3.
+\]</span> Then show that one allowed <span class="math inline">\(\mathbf q\)</span> state occupies reciprocal-space volume <span class="math inline">\((2\pi)^3/V\)</span>.</p></li>
+<li><p><strong>Frequency-space density of states.</strong> Starting from <span class="math display">\[
+\sum_{\mathbf q,r}F[\omega_r(\mathbf q)],
+\]</span> derive the definition <span class="math display">\[
+D(\omega)
+=
+\sum_r
+\int_{\mathrm{1.\ BZ}}d^3q
+Z(q)
+\delta[\omega-\omega_r(\mathbf q)].
+\]</span> Explain in words what <span class="math inline">\(D(\omega)d\omega\)</span> counts.</p></li>
+<li><p><strong>Constant-frequency surfaces.</strong> For a single branch <span class="math inline">\(\omega(\mathbf q)\)</span> in three dimensions, derive <span class="math display">\[
+D(\omega)
+=
+\frac{V}{(2\pi)^3}
+\int_{\omega=\mathrm{const}}
+\frac{dS_q}{|\nabla_{\mathbf q}\omega(\mathbf q)|}.
+\]</span> Why is the density of states large where the dispersion is flat?</p></li>
+<li><p><strong>Isotropic acoustic phonons.</strong> For a three-dimensional isotropic medium with one longitudinal branch <span class="math inline">\(\omega_L=v_Lq\)</span> and two transverse branches <span class="math inline">\(\omega_T=v_Tq\)</span>, derive <span class="math display">\[
+D(\omega)
+=
+\frac{V}{2\pi^2}
 \left(
-\frac{1}{c_L^3}+\frac{2}{c_T^3}
-\right).
-\]</span> Then show that the Debye cutoff can be chosen so that the total number of modes is <span class="math inline">\(3rN\)</span>.</p></li>
-<li><p><strong>High-temperature limit from the DOS.</strong> Starting from <span class="math display">\[
-U_{\mathrm{th}}(T)
-=
-V\int_{0}^{\infty} d\omega
-g(\omega)
-\frac{\hbar\omega}{e^{\beta\hbar\omega}-1},
-\]</span> show that if <span class="math inline">\(k_B T\gg \hbar\omega\)</span> over the relevant spectrum and the DOS is normalized to <span class="math inline">\(3rN\)</span> modes, then <span class="math display">\[
-U_{\mathrm{th}}(T)\approx 3rN k_B T.
-\]</span> What follows for the heat capacity?</p></li>
+\frac{1}{v_L^3}
++
+\frac{2}{v_T^3}
+\right)
+\omega^2.
+\]</span> What is the corresponding low-frequency power law in two and one dimensions?</p></li>
 </ol>
 
 
