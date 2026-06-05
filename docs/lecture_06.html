@@ -274,8 +274,8 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#equations-of-motion" id="toc-equations-of-motion" class="nav-link" data-scroll-target="#equations-of-motion"><span class="header-section-number">6.5.1</span> Equations of Motion</a></li>
   <li><a href="#mass-normalized-plane-wave-ansatz" id="toc-mass-normalized-plane-wave-ansatz" class="nav-link" data-scroll-target="#mass-normalized-plane-wave-ansatz"><span class="header-section-number">6.5.2</span> Mass-Normalized Plane-Wave Ansatz</a></li>
-  <li><a href="#acoustic-and-optical-branches" id="toc-acoustic-and-optical-branches" class="nav-link" data-scroll-target="#acoustic-and-optical-branches"><span class="header-section-number">6.5.3</span> Acoustic and Optical Branches</a></li>
-  <li><a href="#long-wavelength-limits" id="toc-long-wavelength-limits" class="nav-link" data-scroll-target="#long-wavelength-limits"><span class="header-section-number">6.5.4</span> Long-Wavelength Limits</a></li>
+  <li><a href="#eigenfrequencies" id="toc-eigenfrequencies" class="nav-link" data-scroll-target="#eigenfrequencies"><span class="header-section-number">6.5.3</span> Eigenfrequencies</a></li>
+  <li><a href="#long-wavelength-limits-and-branches-acoustic-and-optical" id="toc-long-wavelength-limits-and-branches-acoustic-and-optical" class="nav-link" data-scroll-target="#long-wavelength-limits-and-branches-acoustic-and-optical"><span class="header-section-number">6.5.4</span> Long-Wavelength Limits and Branches (Acoustic and Optical)</a></li>
   <li><a href="#mode-character-at-the-zone-center" id="toc-mode-character-at-the-zone-center" class="nav-link" data-scroll-target="#mode-character-at-the-zone-center"><span class="header-section-number">6.5.5</span> Mode Character at the Zone Center</a></li>
   <li><a href="#zone-boundary-limits-and-frequency-gap" id="toc-zone-boundary-limits-and-frequency-gap" class="nav-link" data-scroll-target="#zone-boundary-limits-and-frequency-gap"><span class="header-section-number">6.5.6</span> Zone-Boundary Limits and Frequency Gap</a></li>
   <li><a href="#limiting-mass-ratios" id="toc-limiting-mass-ratios" class="nav-link" data-scroll-target="#limiting-mass-ratios"><span class="header-section-number">6.5.7</span> Limiting Mass Ratios</a></li>
@@ -959,8 +959,8 @@ D(q)
 \]</span></p>
 <!-- [Gross–Marx, Ch. 5, Sec. 5.2.3, Eq. (5.2.29)–(5.2.32), p. 184] -->
 </section>
-<section id="acoustic-and-optical-branches" class="level3" data-number="6.5.3">
-<h3 data-number="6.5.3" class="anchored" data-anchor-id="acoustic-and-optical-branches"><span class="header-section-number">6.5.3</span> Acoustic and Optical Branches</h3>
+<section id="eigenfrequencies" class="level3" data-number="6.5.3">
+<h3 data-number="6.5.3" class="anchored" data-anchor-id="eigenfrequencies"><span class="header-section-number">6.5.3</span> Eigenfrequencies</h3>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -997,7 +997,7 @@ f
 </div>
 </div>
 </div>
-<p>There are two branches because there are two independent longitudinal degrees of freedom per cell. The lower branch <span class="math inline">\(\omega_-(q)\)</span> is the acoustic branch; the upper branch <span class="math inline">\(\omega_+(q)\)</span> is the optical branch.</p>
+<p>There are two branches because there are two independent longitudinal degrees of freedom per cell. The lower branch <span class="math inline">\(\omega_-(q)\)</span> is the acoustic branch and the upper branch <span class="math inline">\(\omega_+(q)\)</span> is the optical branch, as we will below.</p>
 <!-- [Gross–Marx, Ch. 5, Sec. 5.2.3, Eq. (5.2.33), p. 185] -->
 <div id="fig-two-atomic-dispersion" class="figure quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1010,8 +1010,8 @@ Figure&nbsp;6.5: <strong>Figure placeholder.</strong> Dispersion relation for a 
 </figure>
 </div>
 </section>
-<section id="long-wavelength-limits" class="level3" data-number="6.5.4">
-<h3 data-number="6.5.4" class="anchored" data-anchor-id="long-wavelength-limits"><span class="header-section-number">6.5.4</span> Long-Wavelength Limits</h3>
+<section id="long-wavelength-limits-and-branches-acoustic-and-optical" class="level3" data-number="6.5.4">
+<h3 data-number="6.5.4" class="anchored" data-anchor-id="long-wavelength-limits-and-branches-acoustic-and-optical"><span class="header-section-number">6.5.4</span> Long-Wavelength Limits and Branches (Acoustic and Optical)</h3>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1036,7 +1036,7 @@ Note
 \simeq
 \frac{a^2f}{2(M_1+M_2)}q^2.
 \]</span></p>
-<p>Thus the acoustic branch is linear at small <span class="math inline">\(q\)</span>: <span class="math display">\[
+<p>The lower branch, <span class="math inline">\(\omega_-(q)\)</span>, is linear at small <span class="math inline">\(q\)</span>: <span class="math display">\[
 \omega_-(q)
 \simeq
 v_s q,
@@ -1044,8 +1044,8 @@ v_s q,
 v_s
 =
 \sqrt{\frac{a^2f}{2(M_1+M_2)}}.
-\]</span></p>
-<p>The optical branch has a nonzero zone-center frequency:</p>
+\]</span> This means <span class="math inline">\(\lim_{q\to 0} \omega_-(q) = 0\)</span>. Hence, we call the lower branch the <strong>acoustic branch</strong>, because it has the same linear low-<span class="math inline">\(q\)</span> behavior as an acoustic wave.</p>
+<p>The upper branch, <span class="math inline">\(\omega_+(q)\)</span>, is thus the <strong>optical branch</strong>. In the limit <span class="math inline">\(q\to 0\)</span>, it has a nonzero frequency:</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
