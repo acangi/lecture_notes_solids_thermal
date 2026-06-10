@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Phonons II – Fundamentals of Solid-State Physics: Thermal Properties</title>
+<title>8&nbsp; Specific Heat – Fundamentals of Solid-State Physics: Thermal Properties</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lecture_08.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Phonons II</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lecture_08.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Specific Heat</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -125,7 +125,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title"><span id="sec-lecture-08" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Phonons II</span></span></h1>
+      <h1 class="title"><span id="sec-specific-heat" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Specific Heat</span></span></h1>
                       </div>
   </div>
     
@@ -206,13 +206,13 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lecture_07.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phonons I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phonons</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lecture_08.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Phonons II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Specific Heat</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -256,30 +256,45 @@ window.Quarto = {
    
   <ul>
   <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">8.1</span> Roadmap</a></li>
-  <li><a href="#from-the-phonon-dos-to-heat-capacity" id="toc-from-the-phonon-dos-to-heat-capacity" class="nav-link" data-scroll-target="#from-the-phonon-dos-to-heat-capacity"><span class="header-section-number">8.2</span> From the Phonon DOS to Heat Capacity</a></li>
-  <li><a href="#einstein-model-quantum-oscillators-at-one-frequency" id="toc-einstein-model-quantum-oscillators-at-one-frequency" class="nav-link" data-scroll-target="#einstein-model-quantum-oscillators-at-one-frequency"><span class="header-section-number">8.3</span> Einstein Model: Quantum Oscillators at One Frequency</a>
+  <li><a href="#notation" id="toc-notation" class="nav-link" data-scroll-target="#notation"><span class="header-section-number">8.2</span> Notation</a></li>
+  <li><a href="#heat-capacity-and-specific-heat" id="toc-heat-capacity-and-specific-heat" class="nav-link" data-scroll-target="#heat-capacity-and-specific-heat"><span class="header-section-number">8.3</span> Heat Capacity and Specific Heat</a></li>
+  <li><a href="#classical-lattice-heat-capacity-the-dulong-petit-law" id="toc-classical-lattice-heat-capacity-the-dulong-petit-law" class="nav-link" data-scroll-target="#classical-lattice-heat-capacity-the-dulong-petit-law"><span class="header-section-number">8.4</span> Classical Lattice Heat Capacity: The Dulong-Petit Law</a>
   <ul class="collapse">
-  <li><a href="#einstein-dos-and-heat-capacity" id="toc-einstein-dos-and-heat-capacity" class="nav-link" data-scroll-target="#einstein-dos-and-heat-capacity"><span class="header-section-number">8.3.1</span> Einstein DOS and Heat Capacity</a></li>
-  <li><a href="#high-temperature-limit-dulongpetit-recovered" id="toc-high-temperature-limit-dulongpetit-recovered" class="nav-link" data-scroll-target="#high-temperature-limit-dulongpetit-recovered"><span class="header-section-number">8.3.2</span> High-Temperature Limit: Dulong–Petit Recovered</a></li>
-  <li><a href="#why-the-einstein-model-fails-at-low-temperature" id="toc-why-the-einstein-model-fails-at-low-temperature" class="nav-link" data-scroll-target="#why-the-einstein-model-fails-at-low-temperature"><span class="header-section-number">8.3.3</span> Why the Einstein Model Fails at Low Temperature</a></li>
+  <li><a href="#why-the-classical-result-cannot-be-complete" id="toc-why-the-classical-result-cannot-be-complete" class="nav-link" data-scroll-target="#why-the-classical-result-cannot-be-complete"><span class="header-section-number">8.4.1</span> Why the Classical Result Cannot Be Complete</a></li>
   </ul></li>
-  <li><a href="#debye-model-acoustic-modes-dominate-low-temperature-thermodynamics" id="toc-debye-model-acoustic-modes-dominate-low-temperature-thermodynamics" class="nav-link" data-scroll-target="#debye-model-acoustic-modes-dominate-low-temperature-thermodynamics"><span class="header-section-number">8.4</span> Debye Model: Acoustic Modes Dominate Low-Temperature Thermodynamics</a>
+  <li><a href="#quantum-oscillators-and-phonon-occupation" id="toc-quantum-oscillators-and-phonon-occupation" class="nav-link" data-scroll-target="#quantum-oscillators-and-phonon-occupation"><span class="header-section-number">8.5</span> Quantum Oscillators and Phonon Occupation</a>
   <ul class="collapse">
-  <li><a href="#debye-dos-and-the-debye-temperature" id="toc-debye-dos-and-the-debye-temperature" class="nav-link" data-scroll-target="#debye-dos-and-the-debye-temperature"><span class="header-section-number">8.4.1</span> Debye DOS and the Debye Temperature</a></li>
-  <li><a href="#debye-internal-energy-and-heat-capacity" id="toc-debye-internal-energy-and-heat-capacity" class="nav-link" data-scroll-target="#debye-internal-energy-and-heat-capacity"><span class="header-section-number">8.4.2</span> Debye Internal Energy and Heat Capacity</a></li>
-  <li><a href="#low-temperature-limit-the-t3-law" id="toc-low-temperature-limit-the-t3-law" class="nav-link" data-scroll-target="#low-temperature-limit-the-t3-law"><span class="header-section-number">8.4.3</span> Low-Temperature Limit: The <span class="math inline">\(T^{3}\)</span> Law</a></li>
-  <li><a href="#high-temperature-limit-dulongpetit-recovered-again" id="toc-high-temperature-limit-dulongpetit-recovered-again" class="nav-link" data-scroll-target="#high-temperature-limit-dulongpetit-recovered-again"><span class="header-section-number">8.4.4</span> High-Temperature Limit: Dulong–Petit Recovered Again</a></li>
-  <li><a href="#what-the-debye-temperature-means" id="toc-what-the-debye-temperature-means" class="nav-link" data-scroll-target="#what-the-debye-temperature-means"><span class="header-section-number">8.4.5</span> What the Debye Temperature Means</a></li>
+  <li><a href="#mean-occupation-number" id="toc-mean-occupation-number" class="nav-link" data-scroll-target="#mean-occupation-number"><span class="header-section-number">8.5.1</span> Mean Occupation Number</a></li>
   </ul></li>
-  <li><a href="#data-literacy-how-to-read-low-temperature-heat-capacity-data" id="toc-data-literacy-how-to-read-low-temperature-heat-capacity-data" class="nav-link" data-scroll-target="#data-literacy-how-to-read-low-temperature-heat-capacity-data"><span class="header-section-number">8.5</span> Data Literacy: How to Read Low-Temperature Heat-Capacity Data</a>
+  <li><a href="#internal-energy-of-the-phonon-gas" id="toc-internal-energy-of-the-phonon-gas" class="nav-link" data-scroll-target="#internal-energy-of-the-phonon-gas"><span class="header-section-number">8.6</span> Internal Energy of the Phonon Gas</a>
   <ul class="collapse">
-  <li><a href="#insulators-extracting-the-phonon-coefficient" id="toc-insulators-extracting-the-phonon-coefficient" class="nav-link" data-scroll-target="#insulators-extracting-the-phonon-coefficient"><span class="header-section-number">8.5.1</span> Insulators: Extracting the Phonon Coefficient</a></li>
-  <li><a href="#metals-why-plot-ct-versus-t2" id="toc-metals-why-plot-ct-versus-t2" class="nav-link" data-scroll-target="#metals-why-plot-ct-versus-t2"><span class="header-section-number">8.5.2</span> Metals: Why Plot <span class="math inline">\(C/T\)</span> Versus <span class="math inline">\(T^2\)</span>?</a></li>
-  <li><a href="#what-a-straight-line-does-and-does-not-mean" id="toc-what-a-straight-line-does-and-does-not-mean" class="nav-link" data-scroll-target="#what-a-straight-line-does-and-does-not-mean"><span class="header-section-number">8.5.3</span> What a Straight Line Does and Does Not Mean</a></li>
-  <li><a href="#experimental-note" id="toc-experimental-note" class="nav-link" data-scroll-target="#experimental-note"><span class="header-section-number">8.5.4</span> Experimental Note</a></li>
+  <li><a href="#density-of-states-form" id="toc-density-of-states-form" class="nav-link" data-scroll-target="#density-of-states-form"><span class="header-section-number">8.6.1</span> Density-of-States Form</a></li>
   </ul></li>
-  <li><a href="#bridge-to-the-next-lecture-why-the-pure-phonon-picture-is-not-the-whole-story" id="toc-bridge-to-the-next-lecture-why-the-pure-phonon-picture-is-not-the-whole-story" class="nav-link" data-scroll-target="#bridge-to-the-next-lecture-why-the-pure-phonon-picture-is-not-the-whole-story"><span class="header-section-number">8.6</span> Bridge to the Next Lecture: Why the Pure Phonon Picture Is Not the Whole Story</a></li>
-  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">8.7</span> Problem Set</a></li>
+  <li><a href="#einstein-approximation" id="toc-einstein-approximation" class="nav-link" data-scroll-target="#einstein-approximation"><span class="header-section-number">8.7</span> Einstein Approximation</a>
+  <ul class="collapse">
+  <li><a href="#limiting-cases" id="toc-limiting-cases" class="nav-link" data-scroll-target="#limiting-cases"><span class="header-section-number">8.7.1</span> Limiting Cases</a></li>
+  </ul></li>
+  <li><a href="#debye-approximation" id="toc-debye-approximation" class="nav-link" data-scroll-target="#debye-approximation"><span class="header-section-number">8.8</span> Debye Approximation</a>
+  <ul class="collapse">
+  <li><a href="#from-mode-counting-to-the-debye-cutoff" id="toc-from-mode-counting-to-the-debye-cutoff" class="nav-link" data-scroll-target="#from-mode-counting-to-the-debye-cutoff"><span class="header-section-number">8.8.1</span> From Mode Counting to the Debye Cutoff</a></li>
+  <li><a href="#debye-heat-capacity" id="toc-debye-heat-capacity" class="nav-link" data-scroll-target="#debye-heat-capacity"><span class="header-section-number">8.8.2</span> Debye Heat Capacity</a></li>
+  <li><a href="#high-temperature-limit" id="toc-high-temperature-limit" class="nav-link" data-scroll-target="#high-temperature-limit"><span class="header-section-number">8.8.3</span> High-Temperature Limit</a></li>
+  <li><a href="#low-temperature-limit-and-the-t3-law" id="toc-low-temperature-limit-and-the-t3-law" class="nav-link" data-scroll-target="#low-temperature-limit-and-the-t3-law"><span class="header-section-number">8.8.4</span> Low-Temperature Limit and the <span class="math inline">\(T^3\)</span> Law</a></li>
+  </ul></li>
+  <li><a href="#meaning-of-the-debye-temperature" id="toc-meaning-of-the-debye-temperature" class="nav-link" data-scroll-target="#meaning-of-the-debye-temperature"><span class="header-section-number">8.9</span> Meaning of the Debye Temperature</a></li>
+  <li><a href="#phonon-number-and-zero-point-energy" id="toc-phonon-number-and-zero-point-energy" class="nav-link" data-scroll-target="#phonon-number-and-zero-point-energy"><span class="header-section-number">8.10</span> Phonon Number and Zero-Point Energy</a></li>
+  <li><a href="#optional-dimensionality-and-the-low-temperature-power-law" id="toc-optional-dimensionality-and-the-low-temperature-power-law" class="nav-link" data-scroll-target="#optional-dimensionality-and-the-low-temperature-power-law"><span class="header-section-number">8.11</span> Optional: Dimensionality and the Low-Temperature Power Law</a></li>
+  <li><a href="#optional-analogy-between-phonons-and-photons" id="toc-optional-analogy-between-phonons-and-photons" class="nav-link" data-scroll-target="#optional-analogy-between-phonons-and-photons"><span class="header-section-number">8.12</span> Optional: Analogy Between Phonons and Photons</a></li>
+  <li><a href="#bridge-to-the-next-topic-anharmonicity-and-thermal-expansion" id="toc-bridge-to-the-next-topic-anharmonicity-and-thermal-expansion" class="nav-link" data-scroll-target="#bridge-to-the-next-topic-anharmonicity-and-thermal-expansion"><span class="header-section-number">8.13</span> Bridge to the Next Topic: Anharmonicity and Thermal Expansion</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">8.14</span> Problem Set</a>
+  <ul class="collapse">
+  <li><a href="#problem-1-definitions-and-thermodynamic-meaning" id="toc-problem-1-definitions-and-thermodynamic-meaning" class="nav-link" data-scroll-target="#problem-1-definitions-and-thermodynamic-meaning"><span class="header-section-number">8.14.1</span> Problem 1: Definitions and Thermodynamic Meaning</a></li>
+  <li><a href="#problem-2-dulong-petit-law" id="toc-problem-2-dulong-petit-law" class="nav-link" data-scroll-target="#problem-2-dulong-petit-law"><span class="header-section-number">8.14.2</span> Problem 2: Dulong-Petit Law</a></li>
+  <li><a href="#problem-3-freezing-out-of-a-quantum-oscillator" id="toc-problem-3-freezing-out-of-a-quantum-oscillator" class="nav-link" data-scroll-target="#problem-3-freezing-out-of-a-quantum-oscillator"><span class="header-section-number">8.14.3</span> Problem 3: Freezing Out of a Quantum Oscillator</a></li>
+  <li><a href="#problem-4-einstein-approximation" id="toc-problem-4-einstein-approximation" class="nav-link" data-scroll-target="#problem-4-einstein-approximation"><span class="header-section-number">8.14.4</span> Problem 4: Einstein Approximation</a></li>
+  <li><a href="#problem-5-debye-wave-vector-and-debye-temperature" id="toc-problem-5-debye-wave-vector-and-debye-temperature" class="nav-link" data-scroll-target="#problem-5-debye-wave-vector-and-debye-temperature"><span class="header-section-number">8.14.5</span> Problem 5: Debye Wave Vector and Debye Temperature</a></li>
+  <li><a href="#problem-6-debye-t3-law" id="toc-problem-6-debye-t3-law" class="nav-link" data-scroll-target="#problem-6-debye-t3-law"><span class="header-section-number">8.14.6</span> Problem 6: Debye <span class="math inline">\(T^3\)</span> Law</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -300,528 +315,1069 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>After this lecture, you should be able to:</p>
 <ul>
-<li>Use the phonon density of states from <a href="lecture_09.html" class="quarto-xref">Lecture&nbsp;<span>9</span></a> to write the lattice internal energy and heat capacity.</li>
-<li>Derive the Einstein heat capacity and explain why it reproduces the Dulong–Petit limit but fails at low temperature.</li>
-<li>Derive the Debye heat capacity and obtain its low-temperature <span class="math inline">\(T^{3}\)</span> law and high-temperature limit.</li>
-<li>Interpret the Debye temperature as a physically meaningful energy scale rather than a sharp transition temperature.</li>
-<li>Read low-temperature heat-capacity data and extract <span class="math inline">\(\beta_{\mathrm{LT}}\)</span>, <span class="math inline">\(\Theta_D\)</span>, and the metallic <span class="math inline">\(\gamma T\)</span> term.</li>
+<li>distinguish heat capacity, molar heat capacity, and specific heat capacity;</li>
+<li>explain why the classical Dulong-Petit law works at high temperature but fails at low temperature;</li>
+<li>derive the quantum-mechanical lattice internal energy from phonon occupation numbers;</li>
+<li>compare the Einstein and Debye approximations for the phonon spectrum;</li>
+<li>derive the Debye <span class="math inline">\(T^3\)</span> law for the low-temperature lattice heat capacity;</li>
+<li>interpret the Debye temperature as an energy scale for lattice vibrations.</li>
 </ul>
 </div>
 </div>
 <section id="roadmap" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="roadmap"><span class="header-section-number">8.1</span> Roadmap</h2>
 <ul>
-<li>Recall the general phonon formula for <span class="math inline">\(U(T)\)</span> and <span class="math inline">\(C_V\)</span>.</li>
-<li>Use the Einstein model as the simplest quantum correction to classical specific heat.</li>
-<li>Replace the one-frequency picture by the Debye acoustic continuum.</li>
-<li>Derive the low- and high-temperature asymptotics.</li>
-<li>Learn the experimental logic behind <span class="math inline">\(C/T\)</span> versus <span class="math inline">\(T^2\)</span> plots.</li>
-<li>Bridge to the next lecture: why metals need an additional electronic term.</li>
+<li>Define <span class="math inline">\(C_V\)</span>, <span class="math inline">\(C_p\)</span>, and the thermodynamic meaning of lattice heat capacity.</li>
+<li>Review the classical equipartition result and the Dulong-Petit law.</li>
+<li>Quantize lattice vibrations and obtain the phonon expression for the internal energy.</li>
+<li>Use the Einstein approximation as a first quantum model of lattice specific heat.</li>
+<li>Use the Debye approximation to explain the observed low-temperature <span class="math inline">\(T^3\)</span> law.</li>
+<li>Connect lattice specific heat to the next topic: anharmonicity and thermal expansion.</li>
 </ul>
+</section>
+<section id="notation" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="notation"><span class="header-section-number">8.2</span> Notation</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 90%">
+<col style="width: 19%">
+<col style="width: 48%">
+<col style="width: 0%">
+<col style="width: 30%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Symbol</th>
 <th>Meaning</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(r\)</span></td>
-<td>number of atoms in the primitive cell</td>
+<td><span class="math inline">\(T\)</span></td>
+<td>absolute temperature</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Q\)</span></td>
+<td>heat supplied to the system</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(U\)</span></td>
+<td>internal energy</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(U_{\mathrm{eq}}\)</span></td>
+<td>energy of the static equilibrium lattice</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(U_0\)</span></td>
+<td>zero-point energy of lattice vibrations</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(U_{\mathrm{th}}\)</span></td>
+<td>thermal part of the vibrational internal energy</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C\)</span></td>
+<td>heat capacity of a sample</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(C_V\)</span></td>
+<td>heat capacity at constant volume</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C_p\)</span></td>
+<td>heat capacity at constant pressure</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(c_m\)</span></td>
+<td>molar heat capacity</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(c_{\mathrm{mass}}\)</span></td>
+<td>heat capacity per mass</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(c_{\mathrm{vol}}\)</span></td>
+<td>heat capacity per volume</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(m\)</span></td>
+<td>sample mass</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(V\)</span></td>
+<td>sample volume</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(p\)</span></td>
+<td>pressure</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\alpha_V\)</span></td>
+<td>volume expansion coefficient</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(B\)</span></td>
+<td>bulk modulus</td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(N\)</span></td>
-<td>number of primitive cells</td>
+<td>number of unit cells</td>
+<td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(V\)</span></td>
-<td>crystal volume</td>
+<td><span class="math inline">\(r'\)</span></td>
+<td>number of atoms per unit cell</td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(g(\omega)\)</span></td>
-<td>phonon density of states per unit volume</td>
+<td><span class="math inline">\(N_A\)</span></td>
+<td>Avogadro constant</td>
+<td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(\omega_E,\Theta_E\)</span></td>
-<td>Einstein frequency and Einstein temperature, with <span class="math inline">\(k_B\Theta_E=\hbar\omega_E\)</span></td>
+<td><span class="math inline">\(\nu\)</span></td>
+<td>amount of substance in moles</td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\omega_D,\Theta_D\)</span></td>
-<td>Debye frequency and Debye temperature, with <span class="math inline">\(k_B\Theta_D=\hbar\omega_D\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(U(T), C_V\)</span></td>
-<td>lattice internal energy and constant-volume heat capacity</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\beta\)</span></td>
-<td>inverse temperature, <span class="math inline">\(\beta=1/(k_B T)\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(C_{V,m}\)</span></td>
-<td>molar constant-volume heat capacity</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\beta_{\mathrm{LT}}, \gamma\)</span></td>
-<td>low-temperature phonon coefficient and linear electronic coefficient</td>
-</tr>
-<tr class="odd">
 <td><span class="math inline">\(R\)</span></td>
-<td>gas constant, <span class="math inline">\(R=N_A k_B\)</span></td>
+<td>gas constant, <span class="math inline">\(R=N_Ak_B\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(k_B\)</span></td>
+<td>Boltzmann constant</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\hbar\)</span></td>
+<td>reduced Planck constant</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\beta\)</span></td>
+<td>inverse thermal energy, <span class="math inline">\(\beta=1/(k_B T)\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(n\)</span></td>
+<td>oscillator quantum number</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\langle n\rangle\)</span></td>
+<td>mean phonon occupation number</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf q\)</span></td>
+<td>phonon wave vector</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>$q=</td>
+<td>q</td>
+<td>$</td>
+<td>magnitude of the phonon wave vector</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(r\)</span></td>
+<td>phonon branch index when used in <span class="math inline">\(\omega_{\mathbf q r}\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega_{\mathbf q r}\)</span></td>
+<td>angular frequency of a phonon mode</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(D(\omega)\)</span></td>
+<td>phonon density of states in frequency space</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega_E\)</span></td>
+<td>Einstein frequency</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Theta_E\)</span></td>
+<td>Einstein temperature, <span class="math inline">\(\Theta_E=\hbar\omega_E/k_B\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega_D\)</span></td>
+<td>Debye frequency</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(q_D\)</span></td>
+<td>Debye wave vector</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Theta_D\)</span></td>
+<td>Debye temperature, <span class="math inline">\(\Theta_D=\hbar\omega_D/k_B\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(v_i\)</span></td>
+<td>sound velocity of acoustic branch <span class="math inline">\(i\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(v_s\)</span></td>
+<td>averaged sound velocity used in the Debye approximation</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(N_{\mathrm{ph}}\)</span></td>
+<td>total number of thermally excited phonons</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="from-the-phonon-dos-to-heat-capacity" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="from-the-phonon-dos-to-heat-capacity"><span class="header-section-number">8.2</span> From the Phonon DOS to Heat Capacity</h2>
-<p>We take the end point of <a href="lecture_07.html" class="quarto-xref">Lecture&nbsp;<span>7</span></a> as the starting point here: once the phonon density of states is known, lattice thermodynamics reduces to a one-dimensional frequency integral:</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+<section id="heat-capacity-and-specific-heat" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="heat-capacity-and-specific-heat"><span class="header-section-number">8.3</span> Heat Capacity and Specific Heat</h2>
+<p>The heat capacity of a body is the amount of heat required to raise its temperature by one kelvin:</p>
 <p><span class="math display">\[
-U(T)
+C
+\equiv
+\frac{\Delta Q}{\Delta T}.
+\]</span></p>
+<p>It is an extensive quantity. A larger sample has a larger heat capacity even if the material is the same. To compare materials, one usually normalizes the heat capacity. The molar heat capacity is</p>
+<p><span class="math display">\[
+c_m
+\equiv
+\frac{C}{\nu},
+\]</span></p>
+<p>where <span class="math inline">\(\nu\)</span> is the amount of substance in moles. One may also define heat capacity per mass or per volume,</p>
+<p><span class="math display">\[
+c_{\mathrm{mass}}
 =
-V\int_{0}^{\infty} d\omega\
-g(\omega)\hbar\omega
-\left[
-\frac{1}{e^{\beta\hbar\omega}-1}
-+
-\frac{1}{2}
-\right].
+\frac{C}{m},
+\qquad
+c_{\mathrm{vol}}
+=
+\frac{C}{V}.
 \]</span></p>
-</div>
-</div>
-</div>
-<p>Here <span class="math inline">\(U(T)\)</span> is the lattice internal energy, <span class="math inline">\(g(\omega)\)</span> is the phonon density of states per unit volume, and <span class="math inline">\(\beta=1/(k_B T)\)</span> is the inverse temperature. The term <span class="math inline">\(\hbar\omega/2\)</span> is the zero-point contribution of each mode.</p>
-<!-- [Sólyom, Sec. 12.3.2, Eqs. (12.3.15), (12.3.22b), pp. 413–414; Ibach–Lüth, Sec. 5.3, Eq. (5.16), p. 116] -->
-<p>The heat capacity is defined as the derivative of the internal energy of the lattice with respect to temperature <span class="math display">\[
-C_V = \frac{\partial U(T)}{\partial T}
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.1, p. 214] -->
+<p>For a solid, the useful thermodynamic distinction is between constant volume and constant pressure. From the first law,</p>
+<p><span class="math display">\[
+dQ=dU+p dV,
 \]</span></p>
-<p>This gives</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<p>because the work done on the system is <span class="math inline">\(dW=-p,dV\)</span>. If the volume is fixed, <span class="math inline">\(dV=0\)</span>, and therefore</p>
+<p><span class="math display">\[
+C_V
+\equiv
+\left(\frac{\partial Q}{\partial T}\right)_V
+=
+\left(\frac{\partial U}{\partial T}\right)_V.
+\]</span></p>
+<p>Thus <span class="math inline">\(C_V\)</span> is directly determined by how the internal energy changes with temperature.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.1, p. 214] -->
+<p>Most measurements on solids are closer to constant pressure conditions. The measured quantity is then</p>
+<p><span class="math display">\[
+C_p
+\equiv
+\left(\frac{\partial Q}{\partial T}\right)_p.
+\]</span></p>
+<p>Thermodynamics gives</p>
+<p><span class="math display">\[
+C_p-C_V
+=
+T V B \alpha_V^2,
+\]</span></p>
+<p>where <span class="math inline">\(\alpha_V\)</span> is the volume expansion coefficient and <span class="math inline">\(B\)</span> is the bulk modulus. Since <span class="math inline">\(B&gt;0\)</span> and <span class="math inline">\(\alpha_V^2\ge 0\)</span>, one has</p>
+<p><span class="math display">\[
+C_p \ge C_V.
+\]</span></p>
+<p>The difference is usually small for crystalline solids at ordinary temperatures, so we will mostly discuss <span class="math inline">\(C_V\)</span> and interpret it as the lattice specific heat.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.1, p. 215] -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>At constant pressure, part of the supplied heat is used to expand the solid. At constant volume, no expansion work is done. This is why <span class="math inline">\(C_p\)</span> is slightly larger than <span class="math inline">\(C_V\)</span>.</p>
+</div>
+</div>
+</section>
+<section id="classical-lattice-heat-capacity-the-dulong-petit-law" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="classical-lattice-heat-capacity-the-dulong-petit-law"><span class="header-section-number">8.4</span> Classical Lattice Heat Capacity: The Dulong-Petit Law</h2>
+<p>Consider a crystal with <span class="math inline">\(N\)</span> unit cells and <span class="math inline">\(r'\)</span> atoms per unit cell. There are <span class="math inline">\(3r'N\)</span> normal modes of vibration. In a classical harmonic solid, each mode contributes</p>
+<p><span class="math display">\[
+\frac{1}{2}k_B T
+\]</span></p>
+<p>as mean kinetic energy and</p>
+<p><span class="math display">\[
+\frac{1}{2}k_B T
+\]</span></p>
+<p>as mean potential energy. Therefore each normal mode contributes <span class="math inline">\(k_B T\)</span> to the internal energy.</p>
+<p>The classical internal energy is</p>
+<p><span class="math display">\[
+U
+=
+U_{\mathrm{eq}}
++
+3r'N k_B T.
+\]</span></p>
+<p>The static lattice energy <span class="math inline">\(U_{\mathrm{eq}}\)</span> is temperature independent, so</p>
 <p><span class="math display">\[
 C_V
 =
-V k_B
-\int_{0}^{\infty} d\omega\
-g(\omega)
-\frac{x^2 e^x}{(e^x-1)^2},
-\qquad
-x=\frac{\hbar\omega}{k_B T}.
+\left(\frac{\partial U}{\partial T}\right)_V
+=
+3r'N k_B.
 \]</span></p>
+<p>This is the Dulong-Petit law.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.2, pp. 215-216] -->
+<p>For one mole of unit cells, <span class="math inline">\(N=N_A\)</span>, and the molar heat capacity is</p>
+<p><span class="math display">\[
+c_{m,V}
+=
+3r' N_A k_B
+=
+3r'R.
+\]</span></p>
+<p>For a monatomic crystal, <span class="math inline">\(r'=1\)</span>, so</p>
+<p><span class="math display">\[
+c_{m,V}
+=
+3R
+\simeq
+24.9\ \mathrm{J,mol^{-1}K^{-1}}.
+\]</span></p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The Dulong-Petit law is a mode-counting result: each atom supplies three vibrational degrees of freedom, and each degree of freedom contributes classically to the heat capacity.</p>
 </div>
 </div>
 </div>
-<p>Since the zero-point term is temperature independent in the harmonic approximation, it drops out of the heat capacity.</p>
-<p>The dimensionless variable <span class="math inline">\(x\)</span> compares the phonon energy <span class="math inline">\(\hbar\omega\)</span> with the thermal scale <span class="math inline">\(k_B T\)</span>. This formula shows immediately that the heat capacity is controlled by two inputs only: the Bose factor and the phonon DOS.</p>
-<!-- [Sólyom, Sec. 12.3.2, Eqs. (12.3.27)–(12.3.28), p. 415] -->
-<p>A useful sanity check:</p>
+<section id="why-the-classical-result-cannot-be-complete" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="why-the-classical-result-cannot-be-complete"><span class="header-section-number">8.4.1</span> Why the Classical Result Cannot Be Complete</h3>
+<p>The Dulong-Petit law works well at sufficiently high temperatures, but experiments show two key deviations:</p>
 <ul>
-<li>low-frequency modes have small <span class="math inline">\(x\)</span> and are easy to excite;</li>
-<li>high-frequency modes have large <span class="math inline">\(x\)</span> and are thermally frozen out;</li>
-<li>therefore the low-<span class="math inline">\(\omega\)</span> part of <span class="math inline">\(g(\omega)\)</span> controls low-temperature thermodynamics.</li>
+<li>at low temperature, the heat capacity becomes much smaller than <span class="math inline">\(3r'Nk_B\)</span>;</li>
+<li>in many insulating crystals, the low-temperature behavior is approximately proportional to <span class="math inline">\(T^3\)</span>.</li>
 </ul>
-</section>
-<section id="einstein-model-quantum-oscillators-at-one-frequency" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="einstein-model-quantum-oscillators-at-one-frequency"><span class="header-section-number">8.3</span> Einstein Model: Quantum Oscillators at One Frequency</h2>
-<p>The Einstein model is the simplest quantum model of lattice heat capacity: all vibrational modes are assigned the same frequency <span class="math inline">\(\omega_E\)</span>. It is therefore a model with the correct quantum statistics but an oversimplified spectrum.</p>
-<section id="einstein-dos-and-heat-capacity" class="level3" data-number="8.3.1">
-<h3 data-number="8.3.1" class="anchored" data-anchor-id="einstein-dos-and-heat-capacity"><span class="header-section-number">8.3.1</span> Einstein DOS and Heat Capacity</h3>
-<p>In DOS language, the Einstein model is</p>
-<p><span class="math display">\[
-g_E(\omega)
-=
-\frac{3rN}{V}\ \delta(\omega-\omega_E).
-\]</span></p>
-<p>The prefactor counts the <span class="math inline">\(3rN\)</span> vibrational modes of the crystal, and the delta function means that all of them sit at the same angular frequency <span class="math inline">\(\omega_E\)</span>.</p>
-<!-- [Sólyom, Sec. 12.1.1, Einstein model; Sec. 12.2.1, Einstein DOS, pp. 388–389, 399] -->
-<p>Substituting <span class="math inline">\(g_E(\omega)\)</span> into the general formula for <span class="math inline">\(C_V\)</span> gives</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<p>The classical model fails because it assumes that every vibrational mode can absorb arbitrarily small amounts of energy. Quantum mechanics changes this: a mode of frequency <span class="math inline">\(\omega\)</span> can only be excited in energy steps of size <span class="math inline">\(\hbar\omega\)</span>.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.2.3, p. 218] -->
+<div id="fig-specific-heat-data" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-specific-heat-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross & Marx, Ch. 6, Fig. 6.1, p. 218] -->
 </div>
-<div class="callout-body-container">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-specific-heat-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.1: : Figure: Specific heat <span class="math inline">\(c_p\)</span> of Ge, Si, and diamond. The data approach the Dulong-Petit value at high temperature but fall strongly below it at low temperature.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="quantum-oscillators-and-phonon-occupation" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="quantum-oscillators-and-phonon-occupation"><span class="header-section-number">8.5</span> Quantum Oscillators and Phonon Occupation</h2>
+<p>For a quantum harmonic oscillator, the allowed energies are</p>
 <p><span class="math display">\[
-C_V^{(E)}
+E_n
 =
-3rN k_B
-\frac{x_E^2 e^{x_E}}{(e^{x_E}-1)^2},
+\left(n+\frac{1}{2}\right)\hbar\omega,
 \qquad
-x_E=\frac{\hbar\omega_E}{k_B T}=\frac{\Theta_E}{T}.
+n=0,1,2,\ldots
 \]</span></p>
-</div>
-</div>
-</div>
-<p>Here <span class="math inline">\(\Theta_E\)</span> is the Einstein temperature, defined by <span class="math inline">\(k_B\Theta_E=\hbar\omega_E\)</span>. The factor <span class="math display">\[
-F_E(x)=\frac{x^2 e^x}{(e^x-1)^2}
-\]</span> is the Einstein function.</p>
-<!-- [Sólyom, Sec. 12.1.1, Eqs. (12.1.7)–(12.1.8), pp. 388–389] -->
-<p>Interpretation:</p>
+<p>The term <span class="math inline">\(\hbar\omega/2\)</span> is the zero-point energy. The oscillator cannot have less energy than this even at <span class="math inline">\(T=0\)</span>.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.3, p. 219] -->
+<p>The essential comparison is between the thermal energy <span class="math inline">\(k_B T\)</span> and the excitation energy <span class="math inline">\(\hbar\omega\)</span>:</p>
 <ul>
-<li>one model parameter, <span class="math inline">\(\omega_E\)</span> or equivalently <span class="math inline">\(\Theta_E\)</span>;</li>
-<li>all branches are treated as if they were equally hard to excite;</li>
-<li>no true acoustic low-energy continuum is present.</li>
+<li>if <span class="math inline">\(k_B T\gg \hbar\omega\)</span>, the oscillator can easily exchange energy with the heat bath and behaves almost classically;</li>
+<li>if <span class="math inline">\(k_B T\ll \hbar\omega\)</span>, the first excited state is too costly and the oscillator remains mostly in its ground state.</li>
 </ul>
-</section>
-<section id="high-temperature-limit-dulongpetit-recovered" class="level3" data-number="8.3.2">
-<h3 data-number="8.3.2" class="anchored" data-anchor-id="high-temperature-limit-dulongpetit-recovered"><span class="header-section-number">8.3.2</span> High-Temperature Limit: Dulong–Petit Recovered</h3>
-<p>For <span class="math inline">\(T \gg \Theta_E\)</span>, one has <span class="math inline">\(x_E \ll 1\)</span>, and therefore</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A useful analogy is an entrance fee. If a mode requires an energy ticket <span class="math inline">\(\hbar\omega\)</span> and the heat bath only has a typical budget <span class="math inline">\(k_B T\)</span>, then modes with <span class="math inline">\(\hbar\omega\gg k_B T\)</span> are effectively inaccessible.</p>
+</div>
+</div>
+<div id="fig-oscillator-freezing" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-oscillator-freezing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross & Marx, Ch. 6, Fig. 6.2, p. 219] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-oscillator-freezing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.2: : Figure: Occupation of oscillator states at low and high temperature. At low temperature, the oscillator remains in the ground state; at high temperature, many oscillator levels are thermally accessible.
+</figcaption>
+</figure>
+</div>
+<section id="mean-occupation-number" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="mean-occupation-number"><span class="header-section-number">8.5.1</span> Mean Occupation Number</h3>
+<p>For a harmonic oscillator in thermal equilibrium, the mean occupation number is</p>
 <p><span class="math display">\[
-\frac{x_E^2 e^{x_E}}{(e^{x_E}-1)^2}
+\langle n\rangle
 =
-1+\mathcal O(x_E^2).
+\frac{1}{e^{\hbar\omega/(k_B T)}-1}.
 \]</span></p>
-<p>Hence</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+<p>This is the Bose-Einstein distribution with zero chemical potential. Phonon number is not conserved, so no chemical potential appears.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.3.1, pp. 219-221] -->
+<p>The mean oscillator energy is</p>
 <p><span class="math display">\[
-C_V^{(E)}
-\longrightarrow
-3rN k_B.
+\langle E\rangle
+=
+\hbar\omega
+\left(
+\frac{1}{2}
++
+\langle n\rangle
+\right)
+=
+\hbar\omega
+\left[
+\frac{1}{2}
++
+\frac{1}{e^{\hbar\omega/(k_B T)}-1}
+\right].
 \]</span></p>
+<p>At high temperature, <span class="math inline">\(\hbar\omega\ll k_B T\)</span>, and</p>
+<p><span class="math display">\[
+\langle n\rangle
+\simeq
+\frac{k_B T}{\hbar\omega}.
+\]</span></p>
+<p>Thus</p>
+<p><span class="math display">\[
+\langle E\rangle
+\simeq
+k_B T
++
+\frac{1}{2}\hbar\omega.
+\]</span></p>
+<p>The temperature derivative of the zero-point term vanishes, so the heat capacity approaches the classical value.</p>
+<div id="fig-bose-einstein" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bose-einstein-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross & Marx, Ch. 6, Fig. 6.3, p. 221] -->
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bose-einstein-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.3: : Figure: Bose-Einstein occupation number <span class="math inline">\(\langle n\rangle\)</span> as a function of <span class="math inline">\(k_BT/\hbar\omega\)</span>. The occupation grows approximately linearly with temperature in the classical limit.
+</figcaption>
+</figure>
 </div>
-</div>
-<p>This is the Dulong–Petit law. Per mole of primitive cells, the corresponding limit is <span class="math inline">\(3rR\)</span>. In this regime every vibrational mode contributes essentially <span class="math inline">\(k_B\)</span> to the heat capacity.</p>
-<!-- [Sólyom, Sec. 12.1.1, Eq. (12.1.9), p. 389; Ibach–Lüth, Sec. 5.3, discussion around Eq. (5.21), p. 117] -->
-<p>The high-temperature result is therefore not a special property of the Einstein model. It follows much more generally from mode counting plus classical equipartition.</p>
 </section>
-<section id="why-the-einstein-model-fails-at-low-temperature" class="level3" data-number="8.3.3">
-<h3 data-number="8.3.3" class="anchored" data-anchor-id="why-the-einstein-model-fails-at-low-temperature"><span class="header-section-number">8.3.3</span> Why the Einstein Model Fails at Low Temperature</h3>
-<p>For <span class="math inline">\(T \ll \Theta_E\)</span>, one has <span class="math inline">\(x_E \gg 1\)</span>, so</p>
+</section>
+<section id="internal-energy-of-the-phonon-gas" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="internal-energy-of-the-phonon-gas"><span class="header-section-number">8.6</span> Internal Energy of the Phonon Gas</h2>
+<p>A real crystal has many normal modes. We label them by a wave vector <span class="math inline">\(\mathbf q\)</span> and a branch index <span class="math inline">\(r\)</span>. The angular frequency of such a mode is <span class="math inline">\(\omega_{\mathbf q r}\)</span>.</p>
+<p>For a crystal with <span class="math inline">\(N\)</span> unit cells and <span class="math inline">\(r'\)</span> atoms per unit cell, the total number of vibrational modes is</p>
 <p><span class="math display">\[
-\frac{x_E^2 e^{x_E}}{(e^{x_E}-1)^2}
-\sim
-x_E^2 e^{-x_E}.
+3r'N.
 \]</span></p>
-<p>Therefore</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+<p>The quantum-mechanical mean internal energy is</p>
 <p><span class="math display">\[
-C_V^{(E)}
-\sim
-3rN k_B
+\langle U\rangle
+=
+U_{\mathrm{eq}}
++
+\sum_{\mathbf q,r}
+\frac{1}{2}\hbar\omega_{\mathbf q r}
++
+\sum_{\mathbf q,r}
+\frac{\hbar\omega_{\mathbf q r}}
+{e^{\hbar\omega_{\mathbf q r}/(k_B T)}-1}.
+\]</span></p>
+<p>The three contributions are:</p>
+<ul>
+<li><span class="math inline">\(U_{\mathrm{eq}}\)</span>: static equilibrium lattice energy;</li>
+<li><span class="math inline">\(\sum_{\mathbf q,r}\hbar\omega_{\mathbf q r}/2\)</span>: zero-point vibration energy;</li>
+<li>the final sum: thermal energy stored in excited phonons.</li>
+</ul>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.3.1, p. 221] -->
+<p>Since <span class="math inline">\(U_{\mathrm{eq}}\)</span> and the zero-point term are temperature independent in the harmonic approximation, only the thermal phonon term contributes to <span class="math inline">\(C_V\)</span>:</p>
+<p><span class="math display">\[
+C_V
+=
+\left(\frac{\partial \langle U\rangle}{\partial T}\right)_V
+=
+\sum_{\mathbf q,r}
+\frac{\partial}{\partial T}
+\left[
+\frac{\hbar\omega_{\mathbf q r}}
+{e^{\hbar\omega_{\mathbf q r}/(k_B T)}-1}
+\right].
+\]</span></p>
+<p>Equivalently, defining</p>
+<p><span class="math display">\[
+x_{\mathbf q r}
+=
+\frac{\hbar\omega_{\mathbf q r}}{k_BT},
+\]</span></p>
+<p>one obtains the mode-resolved heat capacity</p>
+<p><span class="math display">\[
+C_{V,\mathbf q r}
+=
+k_B
+\frac{x_{\mathbf q r}^2 e^{x_{\mathbf q r}}}
+{(e^{x_{\mathbf q r}}-1)^2}.
+\]</span></p>
+<p>This expression has two important limits:</p>
+<p><span class="math display">\[
+C_{V,\mathbf q r}
+\rightarrow
+k_B
+\qquad
+(x_{\mathbf q r}\ll 1),
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+C_{V,\mathbf q r}
+\rightarrow
+0
+\qquad
+(x_{\mathbf q r}\gg 1).
+\]</span></p>
+<p>Each mode either contributes approximately <span class="math inline">\(k_B\)</span> if thermally active or almost nothing if frozen out.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.4, p. 222] -->
+<section id="density-of-states-form" class="level3" data-number="8.6.1">
+<h3 data-number="8.6.1" class="anchored" data-anchor-id="density-of-states-form"><span class="header-section-number">8.6.1</span> Density-of-States Form</h3>
+<p>For a large crystal, the allowed <span class="math inline">\(\mathbf q\)</span> values are very dense. It is then convenient to replace sums over modes by integrals using the phonon density of states <span class="math inline">\(D(\omega)\)</span>:</p>
+<p><span class="math display">\[
+\langle U\rangle
+=
+U_{\mathrm{eq}}
++
+\int_0^{\omega_D}
+\frac{\hbar\omega}{2}D(\omega) d\omega
++
+\int_0^{\omega_D}
+\hbar\omega D(\omega)
+\langle n(\omega,T)\rangle d\omega.
+\]</span></p>
+<p>Here</p>
+<p><span class="math display">\[
+\langle n(\omega,T)\rangle
+=
+\frac{1}{e^{\hbar\omega/(k_B T)}-1}.
+\]</span></p>
+<p>The heat capacity is obtained by differentiating the thermal part with respect to <span class="math inline">\(T\)</span>.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.3.1, p. 222] -->
+</section>
+</section>
+<section id="einstein-approximation" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="einstein-approximation"><span class="header-section-number">8.7</span> Einstein Approximation</h2>
+<p>The Einstein approximation assumes that all <span class="math inline">\(3N\)</span> normal modes of a monatomic crystal have the same angular frequency <span class="math inline">\(\omega_E\)</span>:</p>
+<p><span class="math display">\[
+D(\omega)
+=
+3N\delta(\omega-\omega_E).
+\]</span></p>
+<p>This is a drastic simplification. It ignores the dispersion of acoustic modes but keeps the quantum nature of the oscillators.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.5.1, p. 224] -->
+<p>With <span class="math inline">\(U_{\mathrm{eq}}\)</span> omitted for simplicity, the mean internal energy becomes</p>
+<p><span class="math display">\[
+\langle U\rangle
+=
+3N\hbar\omega_E
+\left[
+\frac{1}{2}
++
+\frac{1}{e^{\hbar\omega_E/(k_B T)}-1}
+\right].
+\]</span></p>
+<p>Introduce the Einstein temperature</p>
+<p><span class="math display">\[
+\Theta_E
+=
+\frac{\hbar\omega_E}{k_B}.
+\]</span></p>
+<p>Then the Einstein heat capacity is</p>
+<p><span class="math display">\[
+C_V^{E}
+=
+3Nk_B
+\left(\frac{\Theta_E}{T}\right)^2
+\frac{e^{\Theta_E/T}}
+{\left(e^{\Theta_E/T}-1\right)^2}.
+\]</span></p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.5.1, pp. 224-225] -->
+<section id="limiting-cases" class="level3" data-number="8.7.1">
+<h3 data-number="8.7.1" class="anchored" data-anchor-id="limiting-cases"><span class="header-section-number">8.7.1</span> Limiting Cases</h3>
+<p>At high temperature, <span class="math inline">\(T\gg \Theta_E\)</span>, we have <span class="math inline">\(\Theta_E/T\ll 1\)</span>. Expanding the exponential gives</p>
+<p><span class="math display">\[
+C_V^{E}
+\rightarrow
+3Nk_B.
+\]</span></p>
+<p>Thus the Einstein model recovers the Dulong-Petit law.</p>
+<p>At low temperature, <span class="math inline">\(T\ll \Theta_E\)</span>, one obtains</p>
+<p><span class="math display">\[
+C_V^{E}
+\simeq
+3Nk_B
 \left(\frac{\Theta_E}{T}\right)^2
 e^{-\Theta_E/T}.
 \]</span></p>
-</div>
-</div>
-</div>
-<p>The heat capacity falls off exponentially.</p>
-<!-- [Sólyom, Sec. 12.1.1, Eq. (12.1.10), p. 389] -->
-<p>This is too fast. The physical reason is simple: the Einstein model has no modes with arbitrarily small <span class="math inline">\(\omega\)</span>. Real crystals do. Long-wavelength acoustic phonons cost very little energy and remain thermally accessible even when <span class="math inline">\(T\)</span> is small. The Einstein model therefore captures quantization, but it suppresses the very modes that dominate low-temperature thermodynamics.</p>
-<!-- [Sólyom, Sec. 12.1.1, discussion below Eq. (12.1.10), p. 389] -->
+<p>The heat capacity is exponentially small.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.5.1, p. 225] -->
+<p>The Einstein model therefore explains why the heat capacity decreases at low temperature, but it does not reproduce the experimentally observed <span class="math inline">\(T^3\)</span> law. The reason is that the model assigns a finite energy gap <span class="math inline">\(\hbar\omega_E\)</span> to every vibrational mode. Real crystals have acoustic phonons with arbitrarily small frequency as <span class="math inline">\(q\rightarrow 0\)</span>.</p>
 <div id="fig-einstein-diamond" class="figure quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-einstein-diamond-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure from [Sólyom, Sec. 12.1.1, Fig. 12.1, p. 389] -->
+<!-- Placeholder: insert figure from [Gross & Marx, Ch. 6, Fig. 6.5, p. 225] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-einstein-diamond-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8.1: <strong>Figure placeholder.</strong> Specific heat in the Einstein model as a function of reduced temperature, compared with experimental data for diamond. The model improves substantially over the classical result but still decays too rapidly at low temperature.
+Figure&nbsp;8.4: : Figure: Molar heat capacity of diamond compared with the Einstein approximation using <span class="math inline">\(\Theta_E=1320\ \mathrm{K}\)</span>. The agreement is reasonable at intermediate temperatures but fails at sufficiently low temperature.
 </figcaption>
 </figure>
 </div>
-</section>
-</section>
-<section id="debye-model-acoustic-modes-dominate-low-temperature-thermodynamics" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="debye-model-acoustic-modes-dominate-low-temperature-thermodynamics"><span class="header-section-number">8.4</span> Debye Model: Acoustic Modes Dominate Low-Temperature Thermodynamics</h2>
-<p>The Debye model keeps the one ingredient the Einstein model misses: an acoustic continuum with linear dispersion at low frequency.</p>
-<section id="debye-dos-and-the-debye-temperature" class="level3" data-number="8.4.1">
-<h3 data-number="8.4.1" class="anchored" data-anchor-id="debye-dos-and-the-debye-temperature"><span class="header-section-number">8.4.1</span> Debye DOS and the Debye Temperature</h3>
-<p>In <a href="lecture_07.html" class="quarto-xref">Lecture&nbsp;<span>7</span></a> we obtained the Debye density of states</p>
-<p><span class="math display">\[
-g_D(\omega)
-=
-\begin{cases}
-\dfrac{9rN}{V}\dfrac{\omega^2}{\omega_D^3}, &amp; 0\le \omega \le \omega_D,\\
-0, &amp; \omega&gt;\omega_D.
-\end{cases}
-\]</span></p>
-<p>The cutoff <span class="math inline">\(\omega_D\)</span> is chosen so that the total number of modes remains correct: <span class="math display">\[
-V\int_{0}^{\omega_D}\ g_D(\omega) d\omega = 3rN.
-\]</span></p>
-<p>Thus the Debye model does not preserve the detailed branch structure of the real phonon spectrum, but it does preserve the total number of modes and the correct low-frequency behavior <span class="math inline">\(g(\omega)\propto \omega^2\)</span>.</p>
-<!-- [Sólyom, Sec. 12.2.1, Eqs. (12.2.19) and surrounding discussion, p. 401; Ibach–Lüth, Sec. 5.1, Eqs. (5.6)–(5.7), pp. 113–114] -->
-<p>The Debye temperature is defined by <span class="math display">\[
-k_B\Theta_D=\hbar\omega_D.
-\]</span></p>
-<p>It packages the cutoff energy into a temperature scale. In the Debye model, once <span class="math inline">\(\Theta_D\)</span> is fixed, the entire temperature dependence of the lattice heat capacity is fixed as well.</p>
-<!-- [Sólyom, Sec. 12.3.1, Eq. (12.3.8), p. 412; Ibach–Lüth, Sec. 5.3, Eq. (5.20), p. 117] -->
-</section>
-<section id="debye-internal-energy-and-heat-capacity" class="level3" data-number="8.4.2">
-<h3 data-number="8.4.2" class="anchored" data-anchor-id="debye-internal-energy-and-heat-capacity"><span class="header-section-number">8.4.2</span> Debye Internal Energy and Heat Capacity</h3>
-<p>We insert <span class="math inline">\(g_D(\omega)\)</span> into the thermal part of the internal energy, omit the zero-point term, and change variables to <span class="math display">\[
-t=\frac{\hbar\omega}{k_B T}.
-\]</span> The symbol <span class="math inline">\(t\)</span> is dimensionless; it measures phonon frequency in units of temperature.</p>
-<p>We obtain</p>
-<p><span class="math display">\[
-U_T
-=
-9rN k_B T
-\left(\frac{T}{\Theta_D}\right)^3
-\int_{0}^{\Theta_D/T} dt\
-\frac{t^3}{e^t-1} .
-\]</span></p>
-<p>Differentiating with respect to <span class="math inline">\(T\)</span> yields the Debye heat capacity</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
+<p>The Einstein model treats the crystal like many identical quantum oscillators. This is useful for optical-like modes with weak dispersion, but it is not adequate for low-temperature acoustic phonons.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="debye-approximation" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="debye-approximation"><span class="header-section-number">8.8</span> Debye Approximation</h2>
+<p>The Debye approximation improves the low-temperature physics by replacing the real phonon spectrum with three acoustic branches of linear dispersion:</p>
 <p><span class="math display">\[
-C_V^{(D)}
+\omega_i(q)
 =
-9rN k_B
-\left(\frac{T}{\Theta_D}\right)^3
-\int_{0}^{\Theta_D/T} dt\
-\frac{t^4 e^t}{(e^t-1)^2} .
+v_i q,
+\qquad
+i=1,2,3.
 \]</span></p>
-</div>
-</div>
-</div>
-<p>This is the central working formula of the Debye model.</p>
-<!-- [Sólyom, Sec. 12.3.2, Eqs. (12.3.29)–(12.3.35), pp. 415–416; Ibach–Lüth, Sec. 5.3, Eqs. (5.17)–(5.21), pp. 117–118] -->
-<p>Sanity checks:</p>
-<ul>
-<li>the prefactor is extensive in the number of modes, <span class="math inline">\(3rN\)</span>;</li>
-<li>the only material parameter is <span class="math inline">\(\Theta_D\)</span>;</li>
-<li>the entire nontrivial temperature dependence sits in a dimensionless integral.</li>
-</ul>
-<div id="fig-debye-curve" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<p>Here <span class="math inline">\(v_i\)</span> are the sound velocities of the three acoustic branches. At low temperature, this approximation is natural because optical phonons are high-energy modes and are barely occupied.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.4, p. 223; Sec. 6.1.5.2, p. 225] -->
+<div id="fig-low-temperature-phonons" class="figure quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-debye-curve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure from [Ibach–Lüth, Sec. 5.3, Fig. 5.3, p. 118] -->
+<div aria-describedby="fig-low-temperature-phonons-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross & Marx, Ch. 6, Fig. 6.4, p. 223] -->
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-debye-curve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8.2: <strong>Figure placeholder.</strong> Debye-model specific heat as a universal function of reduced temperature <span class="math inline">\(T/\Theta_D\)</span>, normalized by the Dulong–Petit value.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-low-temperature-phonons-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.5: : Figure: Low-temperature approximation to the phonon spectrum. Optical branches are neglected, and acoustic branches are approximated by linear dispersions.
+</figcaption>
+</figure>
+</div>
+<section id="from-mode-counting-to-the-debye-cutoff" class="level3" data-number="8.8.1">
+<h3 data-number="8.8.1" class="anchored" data-anchor-id="from-mode-counting-to-the-debye-cutoff"><span class="header-section-number">8.8.1</span> From Mode Counting to the Debye Cutoff</h3>
+<p>The linear acoustic approximation cannot be valid to arbitrarily large <span class="math inline">\(q\)</span>. Debye therefore introduces a cutoff wave vector <span class="math inline">\(q_D\)</span>. It is chosen so that the number of allowed <span class="math inline">\(\mathbf q\)</span> states per acoustic branch is exactly <span class="math inline">\(N\)</span>.</p>
+<p>In <span class="math inline">\(q\)</span>-space, one state occupies the volume</p>
+<p><span class="math display">\[
+\left(\frac{2\pi}{L}\right)^3,
+\]</span></p>
+<p>where <span class="math inline">\(L^3=V\)</span>. The Debye sphere must therefore satisfy</p>
+<p><span class="math display">\[
+N
+\left(\frac{2\pi}{L}\right)^3
+=
+\frac{4\pi}{3}q_D^3.
+\]</span></p>
+<p>Solving for <span class="math inline">\(q_D\)</span> gives</p>
+<p><span class="math display">\[
+q_D
+=
+\left(
+6\pi^2\frac{N}{V}
+\right)^{1/3}.
+\]</span></p>
+<p>For branch <span class="math inline">\(i\)</span>, the corresponding Debye frequency is</p>
+<p><span class="math display">\[
+\omega_{D,i}
+=
+v_i q_D.
+\]</span></p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.5.2, p. 227] -->
+<p>For an averaged sound velocity <span class="math inline">\(v_s\)</span>, the Debye temperature is defined by</p>
+<p><span class="math display">\[
+\Theta_D
+\equiv
+\frac{\hbar\omega_D}{k_B}
+=
+\frac{\hbar v_s q_D}{k_B}
+=
+\frac{\hbar v_s}{k_B}
+\left(
+6\pi^2\frac{N}{V}
+\right)^{1/3}.
+\]</span></p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.5.2, p. 228] -->
+<p>The averaged sound velocity is defined through</p>
+<p><span class="math display">\[
+\frac{1}{v_s^3}
+=
+\frac{1}{3}
+\sum_{i=1}^{3}
+\int
+\frac{d\Omega}{4\pi}
+\frac{1}{v_i^3}.
+\]</span></p>
+<p>This average is weighted by <span class="math inline">\(1/v_i^3\)</span> because slower acoustic modes produce a larger density of states.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.4, p. 224] -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Debye sphere is a bookkeeping device. It replaces the real first Brillouin zone by a sphere with the same number of allowed vibrational states.</p>
+</div>
+</div>
+<div id="fig-debye-dos" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-debye-dos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross & Marx, Ch. 6, Fig. 6.6, p. 227] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-debye-dos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.6: : Figure: Real phonon density of states compared with the Debye approximation. The Debye density of states is smooth and proportional to <span class="math inline">\(\omega^2\)</span>, while the real density of states can contain strong structure and van Hove singularities. The areas under the curves are chosen to represent the same number of modes.
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="low-temperature-limit-the-t3-law" class="level3" data-number="8.4.3">
-<h3 data-number="8.4.3" class="anchored" data-anchor-id="low-temperature-limit-the-t3-law"><span class="header-section-number">8.4.3</span> Low-Temperature Limit: The <span class="math inline">\(T^{3}\)</span> Law</h3>
-<p>For <span class="math inline">\(T \ll \Theta_D\)</span>, the upper integration limit <span class="math inline">\(\Theta_D/T\)</span> is very large, so the integral may be extended to infinity:</p>
+<section id="debye-heat-capacity" class="level3" data-number="8.8.2">
+<h3 data-number="8.8.2" class="anchored" data-anchor-id="debye-heat-capacity"><span class="header-section-number">8.8.2</span> Debye Heat Capacity</h3>
+<p>Using the Debye approximation, the heat capacity of a monatomic three-dimensional crystal can be written as</p>
 <p><span class="math display">\[
-\int_{0}^{\Theta_D/T} dt\
-\frac{t^4 e^t}{(e^t-1)^2}
-\approx
-\int_{0}^{\infty} dt\
-\frac{t^4 e^t}{(e^t-1)^2}
+C_V^D
+=
+\frac{V}{(2\pi)^3}
+\frac{\partial}{\partial T}
+\sum_{i=1}^{3}
+\int_0^{q_D}
+4\pi q^2 dq
+\frac{\hbar v_iq}
+{e^{\hbar v_iq/(k_B T)}-1}.
+\]</span></p>
+<p>Using the averaged sound velocity <span class="math inline">\(v_s\)</span> and introducing</p>
+<p><span class="math display">\[
+x
+=
+\frac{\hbar v_s q}{k_B T},
+\]</span></p>
+<p>this becomes</p>
+<p><span class="math display">\[
+C_V^D
+=
+9Nk_B
+\left(\frac{T}{\Theta_D}\right)^3
+\int_0^{\Theta_D/T}
+\frac{x^4e^x}{(e^x-1)^2} dx.
+\]</span></p>
+<p>This is the Debye heat-capacity formula.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.5.2, p. 228] -->
+<div id="fig-debye-heat-capacity" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-debye-heat-capacity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross & Marx, Ch. 6, Fig. 6.7, p. 228] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-debye-heat-capacity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.7: : Figure: Specific heat calculated in the Debye approximation as a function of <span class="math inline">\(T/\Theta_D\)</span>. The high-temperature limit is the Dulong-Petit value <span class="math inline">\(3Nk_B\)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="high-temperature-limit" class="level3" data-number="8.8.3">
+<h3 data-number="8.8.3" class="anchored" data-anchor-id="high-temperature-limit"><span class="header-section-number">8.8.3</span> High-Temperature Limit</h3>
+<p>For <span class="math inline">\(T\gg\Theta_D\)</span>, all modes are thermally occupied. The Debye expression reduces to</p>
+<p><span class="math display">\[
+C_V^D
+\rightarrow
+3Nk_B.
+\]</span></p>
+<p>Thus the Debye model also recovers the Dulong-Petit law.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.5.2, p. 228] -->
+</section>
+<section id="low-temperature-limit-and-the-t3-law" class="level3" data-number="8.8.4">
+<h3 data-number="8.8.4" class="anchored" data-anchor-id="low-temperature-limit-and-the-t3-law"><span class="header-section-number">8.8.4</span> Low-Temperature Limit and the <span class="math inline">\(T^3\)</span> Law</h3>
+<p>For <span class="math inline">\(T\ll\Theta_D\)</span>, the upper integration limit <span class="math inline">\(\Theta_D/T\)</span> is very large. We may replace it by infinity:</p>
+<p><span class="math display">\[
+\int_0^{\Theta_D/T}
+\frac{x^4e^x}{(e^x-1)^2} dx
+\simeq
+\int_0^\infty
+\frac{x^4e^x}{(e^x-1)^2} dx.
+\]</span></p>
+<p>The integral has the value</p>
+<p><span class="math display">\[
+\int_0^\infty
+\frac{x^4e^x}{(e^x-1)^2} dx
 =
 \frac{4\pi^4}{15}.
 \]</span></p>
 <p>Therefore</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
 <p><span class="math display">\[
-C_V^{(D)}
-\approx
-\frac{12\pi^4}{5} r N k_B
-\left(\frac{T}{\Theta_D}\right)^3
-\qquad
-T\ll \Theta_D.
-\]</span></p>
-</div>
-</div>
-</div>
-<p>This is the <strong>Debye <span class="math inline">\(T^3\)</span> law</strong>.</p>
-<!-- [Sólyom, Sec. 12.3.2, Eqs. (12.3.35)–(12.3.37), p. 416; Ibach–Lüth, Sec. 5.3, Eq. (5.22), p. 118] -->
-<p>Why <span class="math inline">\(T^3\)</span>?</p>
-<ul>
-<li>in three dimensions, the acoustic DOS starts as <span class="math inline">\(g(\omega)\propto\omega^2\)</span>;</li>
-<li>the relevant thermally occupied frequencies satisfy <span class="math inline">\(\hbar\omega \lesssim k_B T\)</span>;</li>
-<li>counting modes up to <span class="math inline">\(\omega\sim T\)</span> therefore gives a phase-space factor <span class="math inline">\(\sim T^3\)</span>.</li>
-</ul>
-<p>So the low-temperature heat capacity is not an arbitrary curve fit. It is a direct fingerprint of three-dimensional acoustic phonons.</p>
-<!-- [Ibach–Lüth, Sec. 5.1, Eq. (5.7), p. 114; Sec. 5.3, discussion below Eq. (5.22), p. 118] -->
-</section>
-<section id="high-temperature-limit-dulongpetit-recovered-again" class="level3" data-number="8.4.4">
-<h3 data-number="8.4.4" class="anchored" data-anchor-id="high-temperature-limit-dulongpetit-recovered-again"><span class="header-section-number">8.4.4</span> High-Temperature Limit: Dulong–Petit Recovered Again</h3>
-<p>For <span class="math inline">\(T \gg \Theta_D\)</span>, the upper limit <span class="math inline">\(\Theta_D/T\)</span> is small, and the Bose factor may be expanded as <span class="math display">\[
-e^t-1 \approx t.
-\]</span></p>
-<p>Equivalently, each mode approaches the classical result <span class="math inline">\(\langle E\rangle \approx k_B T\)</span>. Since the total number of modes is <span class="math inline">\(3rN\)</span>, one recovers</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><span class="math display">\[
-C_V^{(D)}
-\longrightarrow
-3rN k_B,
-\qquad
-T\gg \Theta_D.
-\]</span></p>
-</div>
-</div>
-</div>
-<p>So both Einstein and Debye recover Dulong–Petit at high temperature, but only Debye gives the correct low-temperature asymptote.</p>
-<!-- [Sólyom, Sec. 12.3.2, Eq. (12.3.23) and following discussion, p. 414; Ibach–Lüth, Sec. 5.3, discussion below Eq. (5.21), p. 117] -->
-</section>
-<section id="what-the-debye-temperature-means" class="level3" data-number="8.4.5">
-<h3 data-number="8.4.5" class="anchored" data-anchor-id="what-the-debye-temperature-means"><span class="header-section-number">8.4.5</span> What the Debye Temperature Means</h3>
-<p>We can interpret the Debye temperature <span class="math inline">\(\Theta_D\)</span> in the following way:</p>
-<ul>
-<li><span class="math inline">\(\Theta_D\)</span> is the temperature scale associated with the Debye cutoff energy <span class="math inline">\(\hbar\omega_D\)</span>;</li>
-<li>it increases with increasing characteristic sound velocity and with stiffer bonding;</li>
-<li>it marks the crossover between the low-temperature acoustic regime and the high-temperature Dulong–Petit regime;</li>
-<li>it is model dependent.</li>
-</ul>
-<p>The last point matters in practice. Real solids do not have an exact Debye DOS over the whole spectrum, so a <span class="math inline">\(\Theta_D\)</span> extracted from the low-temperature <span class="math inline">\(T^3\)</span> coefficient need not coincide with a value inferred from fitting the full heat-capacity curve at higher temperature.</p>
-<!-- [Ibach–Lüth, Sec. 5.3, discussion after Eq. (5.22), p. 118; Sólyom, Sec. 12.2.1, Debye approximation as a low-frequency model, p. 401] -->
-</section>
-</section>
-<section id="data-literacy-how-to-read-low-temperature-heat-capacity-data" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="data-literacy-how-to-read-low-temperature-heat-capacity-data"><span class="header-section-number">8.5</span> Data Literacy: How to Read Low-Temperature Heat-Capacity Data</h2>
-<p>The Debye law becomes especially useful when it is converted into a fitting form.</p>
-<section id="insulators-extracting-the-phonon-coefficient" class="level3" data-number="8.5.1">
-<h3 data-number="8.5.1" class="anchored" data-anchor-id="insulators-extracting-the-phonon-coefficient"><span class="header-section-number">8.5.1</span> Insulators: Extracting the Phonon Coefficient</h3>
-<p>For a nonmetallic crystal at sufficiently low temperature, the leading lattice contribution is</p>
-<p><span class="math display">\[
-C_{V,m}
-\approx
-\beta_{\mathrm{LT}} T^3.
-\]</span></p>
-<p>Here <span class="math inline">\(C_{V,m}\)</span> is the molar heat capacity, and <span class="math inline">\(\beta_{\mathrm{LT}}\)</span> is the fitted low-temperature phonon coefficient. For one mole of the chosen chemical unit, the coefficient is</p>
-<p><span class="math display">\[
-\beta_{\mathrm{LT}}
+C_V^D
 =
 \frac{12\pi^4}{5}
-\frac{n_{\mathrm{at}} R}{\Theta_D^3}.
+Nk_B
+\left(\frac{T}{\Theta_D}\right)^3,
+\qquad
+T\ll\Theta_D.
 \]</span></p>
-<p>The integer <span class="math inline">\(n_{\mathrm{at}}\)</span> is the number of atoms in the chemical unit used to report the molar heat capacity. For a monatomic elemental solid quoted per mole of atoms, <span class="math inline">\(n_{\mathrm{at}}=1\)</span>.</p>
-<!-- [Ibach–Lüth, Sec. 5.3, Eq. (5.22), p. 118; adapted to molar notation] -->
-<p>Thus <span class="math display">\[
-\Theta_D
+<p>This is the Debye <span class="math inline">\(T^3\)</span> law.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.5.2, pp. 228-229] -->
+<p>A more direct low-temperature form is obtained by extending the acoustic integral to infinity:</p>
+<p><span class="math display">\[
+C_V
 =
+\frac{2\pi^2}{5}
+V k_B
 \left(
-\frac{12\pi^4 n_{\mathrm{at}} R}{5\beta_{\mathrm{LT}}}
-\right)^{1/3}.
+\frac{k_B T}{\hbar v_s}
+\right)^3.
 \]</span></p>
-<p>This is the standard route from a low-temperature fit to an effective Debye temperature.</p>
-</section>
-<section id="metals-why-plot-ct-versus-t2" class="level3" data-number="8.5.2">
-<h3 data-number="8.5.2" class="anchored" data-anchor-id="metals-why-plot-ct-versus-t2"><span class="header-section-number">8.5.2</span> Metals: Why Plot <span class="math inline">\(C/T\)</span> Versus <span class="math inline">\(T^2\)</span>?</h3>
-<p>In a metal, the low-temperature heat capacity contains both lattice and electronic pieces. Keeping only the leading terms,</p>
+<p>This expression shows explicitly that the low-temperature heat capacity is larger when the sound velocity is smaller. Softer materials have more low-frequency vibrational states.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.4, pp. 223-224] -->
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><span class="math display">\[
-C_{V,m}
-\approx
-\gamma T+\beta_{\mathrm{LT}} T^3.
-\]</span></p>
+<p>The <span class="math inline">\(T^3\)</span> law comes from counting low-energy acoustic modes in three dimensions. Since <span class="math inline">\(D(\omega)\propto \omega^2\)</span> and thermally active modes satisfy roughly <span class="math inline">\(\hbar\omega\lesssim k_BT\)</span>, the number of active modes grows as <span class="math inline">\(T^3\)</span>.</p>
 </div>
 </div>
 </div>
-<p>Dividing by <span class="math inline">\(T\)</span> gives</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><span class="math display">\[
-\frac{C_{V,m}}{T}
-\approx
-\gamma+\beta_{\mathrm{LT}} T^2.
-\]</span></p>
-</div>
-</div>
-</div>
-<p>Now the logic is purely graphical:</p>
-<ul>
-<li>plot <span class="math inline">\(C_{V,m}/T\)</span> on the vertical axis;</li>
-<li>plot <span class="math inline">\(T^2\)</span> on the horizontal axis;</li>
-<li>the intercept is <span class="math inline">\(\gamma\)</span>;</li>
-<li>the slope is <span class="math inline">\(\beta_{\mathrm{LT}}\)</span>.</li>
-</ul>
-<p>This is why <span class="math inline">\(C/T\)</span> versus <span class="math inline">\(T^2\)</span> is such a standard low-temperature analysis plot.</p>
-<!-- [Sólyom, Sec. 12.3.2, discussion of Fig. 12.8, p. 416] -->
-<p>The linear term <span class="math inline">\(\gamma T\)</span> is absent in ionic insulators but present in metals. It comes from the conduction electrons, not from the phonons. We only mention it here and will derive it in the upcoming lecture when we introduce the electron gas.</p>
-<!-- [Sólyom, Sec. 12.3.2, discussion below Eq. (12.3.37), p. 416] -->
-<div id="fig-ct-over-t2" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-argon-t3" class="figure quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ct-over-t2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure from [Sólyom, Sec. 12.3.2, Fig. 12.8, p. 417] -->
+<div aria-describedby="fig-argon-t3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross & Marx, Ch. 6, Fig. 6.8, p. 229] -->
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ct-over-t2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8.3: <strong>Figure placeholder.</strong> Low-temperature heat-capacity data plotted as <span class="math inline">\(C_V/T\)</span> versus <span class="math inline">\(T^2\)</span> for an ionic crystal and a metal. The insulating sample is nearly a straight line through the origin, whereas the metal shows a finite intercept from the electronic term.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-argon-t3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.8: : Figure: Molar heat capacity of solid argon plotted against <span class="math inline">\(T^3\)</span>. The approximately straight line demonstrates the Debye <span class="math inline">\(T^3\)</span> law at low temperature.
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="what-a-straight-line-does-and-does-not-mean" class="level3" data-number="8.5.3">
-<h3 data-number="8.5.3" class="anchored" data-anchor-id="what-a-straight-line-does-and-does-not-mean"><span class="header-section-number">8.5.3</span> What a Straight Line Does and Does Not Mean</h3>
-<p>A straight line in <span class="math inline">\(C/T\)</span> versus <span class="math inline">\(T^2\)</span> means:</p>
-<ul>
-<li>the data are in a regime where the leading terms <span class="math inline">\(\gamma T\)</span> and <span class="math inline">\(\beta_{\mathrm{LT}}T^3\)</span> dominate;</li>
-<li>the phonon part is consistent with Debye’s low-temperature asymptote;</li>
-<li>one can extract <span class="math inline">\(\gamma\)</span> and <span class="math inline">\(\beta_{\mathrm{LT}}\)</span> with minimal modeling.</li>
-</ul>
-<p>It does <strong>not</strong> mean:</p>
-<ul>
-<li>the Debye model is exact at all temperatures;</li>
-<li>the full phonon DOS is featureless;</li>
-<li>the same <span class="math inline">\(\Theta_D\)</span> must fit the entire heat-capacity curve.</li>
-</ul>
-<p>That last point is important whenever one compares low-temperature fits with room-temperature material tables.</p>
-<!-- [Ibach–Lüth, Sec. 5.3, p. 118; Sólyom, Sec. 12.3.2, pp. 416–417] -->
 </section>
-<section id="experimental-note" class="level3" data-number="8.5.4">
-<h3 data-number="8.5.4" class="anchored" data-anchor-id="experimental-note"><span class="header-section-number">8.5.4</span> Experimental Note</h3>
-<p>Strictly speaking, the derivations above concern <span class="math inline">\(C_V\)</span>. In many low-temperature solid-state measurements, the experimentally accessible quantity is closer to <span class="math inline">\(C_P\)</span>, but at low temperature the difference is usually very small, so the same fitting logic is routinely applied. Within the strictly harmonic approximation, the two are equal.</p>
-<!-- [Ibach–Lüth, Sec. 5.3, discussion below Eq. (5.16), p. 116] -->
+<section id="meaning-of-the-debye-temperature" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="meaning-of-the-debye-temperature"><span class="header-section-number">8.9</span> Meaning of the Debye Temperature</h2>
+<p>The Debye temperature is not a phase-transition temperature. It is a characteristic temperature scale for lattice vibrations:</p>
+<p><span class="math display">\[
+\Theta_D
+=
+\frac{\hbar\omega_D}{k_B}.
+\]</span></p>
+<p>It separates two limiting regimes:</p>
+<p><span class="math display">\[
+T&lt;\Theta_D:
+\quad
+\text{quantum regime; modes progressively freeze out},
+\]</span></p>
+<p><span class="math display">\[
+T&gt;\Theta_D:
+\quad
+\text{classical regime; most modes are thermally active}.
+\]</span></p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.5.2, p. 229] -->
+<p>Large <span class="math inline">\(\Theta_D\)</span> usually indicates high characteristic phonon frequencies. This often correlates with stiff bonding and high sound velocity. Diamond, for example, has a very high Debye temperature because its bonds are stiff and its atoms are light.</p>
+<div id="fig-debye-temperatures" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-debye-temperatures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross & Marx, Ch. 6, Fig. 6.9, p. 231] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-debye-temperatures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.9: : Figure: Debye temperatures and thermal conductivities of the chemical elements. The Debye temperature provides a compact measure of characteristic lattice-vibration frequencies.
+</figcaption>
+</figure>
+</div>
 </section>
+<section id="phonon-number-and-zero-point-energy" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="phonon-number-and-zero-point-energy"><span class="header-section-number">8.10</span> Phonon Number and Zero-Point Energy</h2>
+<p>The number of thermally excited phonons is</p>
+<p><span class="math display">\[
+N_{\mathrm{ph}}
+=
+\int_0^{\omega_D}
+D(\omega)\langle n(\omega,T)\rangle d\omega.
+\]</span></p>
+<p>In the Debye model for a three-dimensional crystal,</p>
+<p><span class="math display">\[
+D(\omega)
+=
+\frac{3V}{2\pi^2}
+\frac{\omega^2}{v_s^3}.
+\]</span></p>
+<p>Substituting the Bose-Einstein occupation gives</p>
+<p><span class="math display">\[
+N_{\mathrm{ph}}
+=
+\frac{3V}{2\pi^2v_s^3}
+\left(\frac{k_B T}{\hbar}\right)^3
+\int_0^{\Theta_D/T}
+\frac{x^2}{e^x-1} dx.
+\]</span></p>
+<p>From this expression one obtains</p>
+<p><span class="math display">\[
+N_{\mathrm{ph}}
+\propto
+\begin{cases}
+T^3, &amp; T\ll\Theta_D,\\
+T, &amp; T\gg\Theta_D.
+\end{cases}
+\]</span></p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.6, p. 230] -->
+<p>The zero-point energy in the Debye model is</p>
+<p><span class="math display">\[
+U_0
+=
+\int_0^{\omega_D}
+\frac{\hbar\omega}{2}
+D(\omega) d\omega.
+\]</span></p>
+<p>For a three-dimensional Debye solid this gives</p>
+<p><span class="math display">\[
+U_0
+=
+\frac{9}{8}Nk_B\Theta_D.
+\]</span></p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.6, pp. 230-231] -->
+<p>The zero-point energy contributes to the internal energy, but in the harmonic approximation it does not contribute to <span class="math inline">\(C_V\)</span>, because it is independent of temperature.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The heat capacity does not measure the absolute internal energy. It measures how the internal energy changes with temperature. This is why the large static lattice energy and the zero-point energy drop out of <span class="math inline">\(C_V\)</span> in the harmonic approximation.</p>
+</div>
+</div>
 </section>
-<section id="bridge-to-the-next-lecture-why-the-pure-phonon-picture-is-not-the-whole-story" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="bridge-to-the-next-lecture-why-the-pure-phonon-picture-is-not-the-whole-story"><span class="header-section-number">8.6</span> Bridge to the Next Lecture: Why the Pure Phonon Picture Is Not the Whole Story</h2>
-<p>Today’s main message is that the harmonic phonon gas already explains two cornerstone facts:</p>
+<section id="optional-dimensionality-and-the-low-temperature-power-law" class="level2" data-number="8.11">
+<h2 data-number="8.11" class="anchored" data-anchor-id="optional-dimensionality-and-the-low-temperature-power-law"><span class="header-section-number">8.11</span> Optional: Dimensionality and the Low-Temperature Power Law</h2>
+<p>The Debye <span class="math inline">\(T^3\)</span> law is specific to three-dimensional crystals. The underlying reason is the low-frequency acoustic density of states. In <span class="math inline">\(d\)</span> dimensions, a linear acoustic dispersion gives approximately</p>
+<p><span class="math display">\[
+D(\omega)\propto \omega^{d-1}.
+\]</span></p>
+<p>Therefore the low-temperature lattice heat capacity scales as</p>
+<p><span class="math display">\[
+C_V(T)\propto T^d.
+\]</span></p>
+<p>For a two-dimensional crystal or adsorbed monolayer, one expects</p>
+<p><span class="math display">\[
+C_V^{(2)}(T)
+\propto
+T^2.
+\]</span></p>
+<p>This behavior has been observed in monolayer adsorbate films on graphite, where the adsorbed atoms form effectively two-dimensional crystals.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.5.2, pp. 229-230] -->
+</section>
+<section id="optional-analogy-between-phonons-and-photons" class="level2" data-number="8.12">
+<h2 data-number="8.12" class="anchored" data-anchor-id="optional-analogy-between-phonons-and-photons"><span class="header-section-number">8.12</span> Optional: Analogy Between Phonons and Photons</h2>
+<p>Phonons in the Debye approximation and photons in blackbody radiation are described by very similar mathematics. Both are bosonic excitations with no conserved particle number and with a linear dispersion:</p>
+<p><span class="math display">\[
+\omega=v_s q
+\quad
+\text{for acoustic phonons},
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\omega=ck
+\quad
+\text{for photons}.
+\]</span></p>
+<p>For photons, the same counting of states leads to the Planck radiation law. For phonons, it leads to the Debye low-temperature heat capacity.</p>
+<p>The analogy is useful, but not exact. Photons have two transverse polarizations and an exactly linear dispersion in vacuum. Acoustic phonons in a three-dimensional crystal have three acoustic branches, and their dispersion is only approximately linear at long wavelength.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.1.7, pp. 231-233] -->
+</section>
+<section id="bridge-to-the-next-topic-anharmonicity-and-thermal-expansion" class="level2" data-number="8.13">
+<h2 data-number="8.13" class="anchored" data-anchor-id="bridge-to-the-next-topic-anharmonicity-and-thermal-expansion"><span class="header-section-number">8.13</span> Bridge to the Next Topic: Anharmonicity and Thermal Expansion</h2>
+<p>In this lecture we treated the lattice as a set of harmonic normal modes. This explains the central features of lattice heat capacity:</p>
 <ul>
-<li>the Dulong–Petit limit at high temperature;</li>
-<li>the <span class="math inline">\(T^3\)</span> lattice law at low temperature.</li>
+<li>the Dulong-Petit law at high temperature;</li>
+<li>the freezing out of high-frequency modes at low temperature;</li>
+<li>the Debye <span class="math inline">\(T^3\)</span> law for three-dimensional acoustic phonons.</li>
 </ul>
-<p>But real solids often show additional structure:</p>
-<ul>
-<li>metals carry a linear electronic term <span class="math inline">\(\gamma T\)</span> at low temperature;</li>
-<li>anharmonicity becomes important at higher temperature;</li>
-<li>then thermal expansion appears, phonons acquire finite lifetimes, and eventually <span class="math inline">\(C_P\)</span> and <span class="math inline">\(C_V\)</span> are no longer effectively identical.</li>
-</ul>
-<p>So the next conceptual step is to consider the contribution from electrons and anharmonic effects.</p>
-<!-- [Ibach–Lüth, Secs. 5.3–5.4, pp. 116–119; Sólyom, Sec. 12.3.2, p. 416] -->
+<p>However, a purely harmonic crystal has important limitations. It predicts no thermal expansion, no phonon-phonon interactions, no finite phonon lifetime, and <span class="math inline">\(C_p=C_V\)</span>. Real solids do expand when heated, and phonons scatter from one another. These effects require anharmonic terms in the interatomic potential.</p>
+<p>The next lecture therefore moves from harmonic lattice thermodynamics to anharmonic lattice effects: thermal expansion, the relation between <span class="math inline">\(C_p\)</span> and <span class="math inline">\(C_V\)</span>, and ultimately lattice thermal conductivity.</p>
+<!-- [Gross & Marx, Ch. 6, Sec. 6.2, pp. 233-236; Sec. 6.3, pp. 237-243] -->
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -833,53 +1389,116 @@ Figure&nbsp;8.3: <strong>Figure placeholder.</strong> Low-temperature heat-capac
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>The heat capacity of a harmonic crystal is determined by the phonon DOS together with Bose statistics.</li>
-<li>The Einstein model fixes the classical overestimate of specific heat but misses the low-frequency acoustic modes.</li>
-<li>The Debye model succeeds at low temperature because it builds in an acoustic DOS that starts quadratically in frequency.</li>
-<li>The low-temperature <span class="math inline">\(T^3\)</span> law is a phase-space result for three-dimensional acoustic phonons.</li>
-<li>The Dulong–Petit limit is recovered when all vibrational modes are thermally populated.</li>
-<li>The Debye temperature is a crossover scale and an effective stiffness measure, not a phase-transition temperature.</li>
-<li>In low-temperature experiments, the slope of <span class="math inline">\(C/T\)</span> versus <span class="math inline">\(T^2\)</span> isolates the phonon coefficient, while the intercept isolates the electronic one.</li>
-<li>A single fitted Debye temperature should always be interpreted together with the temperature range from which it was extracted.</li>
+<li>Heat capacity measures the temperature derivative of internal energy, not the absolute internal energy.</li>
+<li>The Dulong-Petit law is the classical high-temperature limit of lattice vibrations.</li>
+<li>Classical equipartition fails at low temperature because phonon excitations are quantized.</li>
+<li>The Bose-Einstein occupation factor determines which phonon modes are thermally active.</li>
+<li>The Einstein model captures quantum freezing but misses the acoustic low-frequency spectrum.</li>
+<li>The Debye model succeeds at low temperature because it keeps the acoustic modes and counts them correctly.</li>
+<li>The Debye <span class="math inline">\(T^3\)</span> law is a direct consequence of three-dimensional acoustic phonon phase space.</li>
+<li>The Debye temperature is a characteristic lattice-vibration scale, not a sharp transition temperature.</li>
 </ul>
 </div>
 </div>
 </section>
-<section id="problem-set" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">8.7</span> Problem Set</h2>
+<section id="problem-set" class="level2" data-number="8.14">
+<h2 data-number="8.14" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">8.14</span> Problem Set</h2>
+<section id="problem-1-definitions-and-thermodynamic-meaning" class="level3" data-number="8.14.1">
+<h3 data-number="8.14.1" class="anchored" data-anchor-id="problem-1-definitions-and-thermodynamic-meaning"><span class="header-section-number">8.14.1</span> Problem 1: Definitions and Thermodynamic Meaning</h3>
+<p>A crystalline solid has heat capacity <span class="math inline">\(C\)</span>, molar heat capacity <span class="math inline">\(c_m\)</span>, and heat capacities <span class="math inline">\(C_V\)</span> and <span class="math inline">\(C_p\)</span>.</p>
 <ol type="1">
-<li><p><strong>Einstein asymptotics.</strong> Starting from <span class="math display">\[
-C_V^{(E)}
-=
-3rN k_B
-\frac{x_E^2 e^{x_E}}{(e^{x_E}-1)^2},
-\qquad
-x_E=\frac{\Theta_E}{T},
-\]</span> derive the high-temperature and low-temperature asymptotic forms. State clearly which physical feature of the model causes the low-temperature behavior.</p></li>
-<li><p><strong>Debye <span class="math inline">\(T^3\)</span> law.</strong> Starting from <span class="math display">\[
-C_V^{(D)}
-=
-9rN k_B
-\left(\frac{T}{\Theta_D}\right)^3
-\int_{0}^{\Theta_D/T} dt\
-\frac{t^4 e^t}{(e^t-1)^2},
-\]</span> show that for <span class="math inline">\(T\ll\Theta_D\)</span>, <span class="math display">\[
-C_V^{(D)}
-\approx
-\frac{12\pi^4}{5},rN k_B
-\left(\frac{T}{\Theta_D}\right)^3.
-\]</span></p></li>
-<li><p><strong>Estimating <span class="math inline">\(\Theta_D\)</span> from a fit.</strong> A monatomic metal is fitted at low temperature by <span class="math display">\[
-\frac{C_{V,m}}{T}
-=
-18.0 \mathrm{mJ\ mol^{-1}K^{-2}}
-+
-0.20 \mathrm{mJ\ mol^{-1}K^{-4}} T^2.
-\]</span> Identify <span class="math inline">\(\gamma\)</span> and <span class="math inline">\(\beta_{\mathrm{LT}}\)</span>. Then estimate the Debye temperature, assuming the heat capacity is quoted per mole of atoms.</p></li>
-<li><p><strong>Why <span class="math inline">\(C/T\)</span> versus <span class="math inline">\(T^2\)</span>?</strong> Explain why an insulating crystal and a metal behave differently in a <span class="math inline">\(C/T\)</span> versus <span class="math inline">\(T^2\)</span> plot at low temperature. What information is contained in the slope and in the intercept?</p></li>
+<li>Define <span class="math inline">\(C\)</span>, <span class="math inline">\(c_m\)</span>, <span class="math inline">\(C_V\)</span>, and <span class="math inline">\(C_p\)</span>.</li>
+<li>Explain why <span class="math inline">\(C_V\)</span> is directly related to the internal energy.</li>
+<li>Explain physically why <span class="math inline">\(C_p\)</span> is usually slightly larger than <span class="math inline">\(C_V\)</span>.</li>
 </ol>
+</section>
+<section id="problem-2-dulong-petit-law" class="level3" data-number="8.14.2">
+<h3 data-number="8.14.2" class="anchored" data-anchor-id="problem-2-dulong-petit-law"><span class="header-section-number">8.14.2</span> Problem 2: Dulong-Petit Law</h3>
+<p>Consider a crystal with <span class="math inline">\(N\)</span> unit cells and <span class="math inline">\(r'\)</span> atoms per unit cell.</p>
+<ol type="1">
+<li>Use classical equipartition to derive the lattice internal energy <span class="math display">\[
+U
+=
+U_{\mathrm{eq}}
++
+3r'Nk_BT.
+\]</span></li>
+<li>Derive the Dulong-Petit law for <span class="math inline">\(C_V\)</span>.</li>
+<li>Give the molar heat capacity for one mole of unit cells.</li>
+</ol>
+</section>
+<section id="problem-3-freezing-out-of-a-quantum-oscillator" class="level3" data-number="8.14.3">
+<h3 data-number="8.14.3" class="anchored" data-anchor-id="problem-3-freezing-out-of-a-quantum-oscillator"><span class="header-section-number">8.14.3</span> Problem 3: Freezing Out of a Quantum Oscillator</h3>
+<p>A phonon mode has angular frequency <span class="math inline">\(\omega\)</span>.</p>
+<ol type="1">
+<li>Write down the energy eigenvalues <span class="math inline">\(E_n\)</span> of the harmonic oscillator.</li>
+<li>Write down the Bose-Einstein occupation number <span class="math inline">\(\langle n\rangle\)</span>.</li>
+<li>Explain what happens when <span class="math inline">\(\hbar\omega\gg k_BT\)</span>.</li>
+<li>Explain what happens when <span class="math inline">\(\hbar\omega\ll k_BT\)</span>.</li>
+</ol>
+</section>
+<section id="problem-4-einstein-approximation" class="level3" data-number="8.14.4">
+<h3 data-number="8.14.4" class="anchored" data-anchor-id="problem-4-einstein-approximation"><span class="header-section-number">8.14.4</span> Problem 4: Einstein Approximation</h3>
+<p>In the Einstein approximation, all <span class="math inline">\(3N\)</span> normal modes of a monatomic crystal have the same frequency <span class="math inline">\(\omega_E\)</span>.</p>
+<ol type="1">
+<li>Write the Einstein density of states <span class="math inline">\(D(\omega)\)</span>.</li>
+<li>Derive the Einstein heat capacity <span class="math display">\[
+C_V^{E}
+=
+3Nk_B
+\left(\frac{\Theta_E}{T}\right)^2
+\frac{e^{\Theta_E/T}}
+{(e^{\Theta_E/T}-1)^2}.
+\]</span></li>
+<li>Derive the high-temperature limit.</li>
+<li>Derive the low-temperature limit and explain why it is not the observed Debye <span class="math inline">\(T^3\)</span> law.</li>
+</ol>
+</section>
+<section id="problem-5-debye-wave-vector-and-debye-temperature" class="level3" data-number="8.14.5">
+<h3 data-number="8.14.5" class="anchored" data-anchor-id="problem-5-debye-wave-vector-and-debye-temperature"><span class="header-section-number">8.14.5</span> Problem 5: Debye Wave Vector and Debye Temperature</h3>
+<p>For a monatomic crystal of volume <span class="math inline">\(V\)</span> with <span class="math inline">\(N\)</span> unit cells, the Debye approximation replaces the first Brillouin zone by a sphere of radius <span class="math inline">\(q_D\)</span>.</p>
+<ol type="1">
+<li>Derive <span class="math display">\[
+q_D
+=
+\left(
+6\pi^2\frac{N}{V}
+\right)^{1/3}.
+\]</span></li>
+<li>If the averaged sound velocity is <span class="math inline">\(v_s\)</span>, derive <span class="math display">\[
+\Theta_D
+=
+\frac{\hbar v_s}{k_B}
+\left(
+6\pi^2\frac{N}{V}
+\right)^{1/3}.
+\]</span></li>
+<li>Explain in words what physical information is contained in <span class="math inline">\(\Theta_D\)</span>.</li>
+</ol>
+</section>
+<section id="problem-6-debye-t3-law" class="level3" data-number="8.14.6">
+<h3 data-number="8.14.6" class="anchored" data-anchor-id="problem-6-debye-t3-law"><span class="header-section-number">8.14.6</span> Problem 6: Debye <span class="math inline">\(T^3\)</span> Law</h3>
+<p>Starting from</p>
+<p><span class="math display">\[
+C_V^D
+=
+9Nk_B
+\left(\frac{T}{\Theta_D}\right)^3
+\int_0^{\Theta_D/T}
+\frac{x^4e^x}{(e^x-1)^2} dx,
+\]</span></p>
+<p>show that for <span class="math inline">\(T\ll\Theta_D\)</span>,</p>
+<p><span class="math display">\[
+C_V^D
+=
+\frac{12\pi^4}{5}
+Nk_B
+\left(\frac{T}{\Theta_D}\right)^3.
+\]</span></p>
+<p>Explain why this result is expected for a three-dimensional crystal with acoustic phonons.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1290,8 +1909,8 @@ C_V^{(D)}
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./lecture_07.html" class="pagination-link" aria-label="Phonons I">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phonons I</span></span>
+      <a href="./lecture_07.html" class="pagination-link" aria-label="Phonons">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phonons</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
