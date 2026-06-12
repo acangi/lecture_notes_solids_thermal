@@ -125,7 +125,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title"><span id="sec-specific-heat" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Specific Heat</span></span></h1>
+      <h1 class="title"><span id="sec-lecture-08" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Specific Heat</span></span></h1>
                       </div>
   </div>
     
@@ -1384,37 +1384,54 @@ T^2.
 <section id="problem-set" class="level2" data-number="8.14">
 <h2 data-number="8.14" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">8.14</span> Problem Set</h2>
 <ol type="1">
-<li><p><strong>Definitions and Thermodynamic Meaning.</strong> A crystalline solid has heat capacity <span class="math inline">\(C\)</span>, molar heat capacity <span class="math inline">\(c_m\)</span>, and heat capacities <span class="math inline">\(C_V\)</span> and <span class="math inline">\(C_p\)</span>. A. Define <span class="math inline">\(C\)</span>, <span class="math inline">\(c_m\)</span>, <span class="math inline">\(C_V\)</span>, and <span class="math inline">\(C_p\)</span>. B. Explain why <span class="math inline">\(C_V\)</span> is directly related to the internal energy. C. Explain physically why <span class="math inline">\(C_p\)</span> is usually slightly larger than <span class="math inline">\(C_V\)</span>.</p></li>
-<li><p><strong>Dulong-Petit Law.</strong> Consider a crystal with <span class="math inline">\(N\)</span> unit cells and <span class="math inline">\(r'\)</span> atoms per unit cell. A. Use classical equipartition to derive the lattice internal energy <span class="math display">\[
+<li><p><strong>Definitions and Thermodynamic Meaning.</strong> A crystalline solid has heat capacity <span class="math inline">\(C\)</span>, molar heat capacity <span class="math inline">\(c_m\)</span>, and heat capacities <span class="math inline">\(C_V\)</span> and <span class="math inline">\(C_p\)</span>.</p>
+<p><strong>A.</strong> Define <span class="math inline">\(C\)</span>, <span class="math inline">\(c_m\)</span>, <span class="math inline">\(C_V\)</span>, and <span class="math inline">\(C_p\)</span>.</p>
+<p><strong>B.</strong> Explain why <span class="math inline">\(C_V\)</span> is directly related to the internal energy.</p>
+<p><strong>C.</strong> Explain physically why <span class="math inline">\(C_p\)</span> is usually slightly larger than <span class="math inline">\(C_V\)</span>.</p></li>
+<li><p><strong>Dulong-Petit Law.</strong> Consider a crystal with <span class="math inline">\(N\)</span> unit cells and <span class="math inline">\(r'\)</span> atoms per unit cell.</p>
+<p><strong>A.</strong> Use classical equipartition to derive the lattice internal energy <span class="math display">\[
 U
 =
 U_{\mathrm{eq}}
 +
 3r'Nk_BT.
-\]</span> B. Derive the Dulong-Petit law for <span class="math inline">\(C_V\)</span>. C. Give the molar heat capacity for one mole of unit cells.</p></li>
-<li><p><strong>Freezing Out of a Quantum Oscillator.</strong> A phonon mode has angular frequency <span class="math inline">\(\omega\)</span>. A. Write down the energy eigenvalues <span class="math inline">\(E_n\)</span> of the harmonic oscillator. B. Write down the Bose-Einstein occupation number <span class="math inline">\(\langle n\rangle\)</span>. C. Explain what happens when <span class="math inline">\(\hbar\omega\gg k_BT\)</span>. D. Explain what happens when <span class="math inline">\(\hbar\omega\ll k_BT\)</span>.</p></li>
-<li><p><strong>Einstein Approximation.</strong> In the Einstein approximation, all <span class="math inline">\(3N\)</span> normal modes of a monatomic crystal have the same frequency <span class="math inline">\(\omega_E\)</span>. A. Write the Einstein density of states <span class="math inline">\(D(\omega)\)</span>. B. Derive the Einstein heat capacity <span class="math display">\[
+\]</span></p>
+<p><strong>B.</strong> Derive the Dulong-Petit law for <span class="math inline">\(C_V\)</span>.</p>
+<p><strong>C.</strong> Give the molar heat capacity for one mole of unit cells.</p></li>
+<li><p><strong>Freezing Out of a Quantum Oscillator.</strong> A phonon mode has angular frequency <span class="math inline">\(\omega\)</span>.</p>
+<p><strong>A.</strong> Write down the energy eigenvalues <span class="math inline">\(E_n\)</span> of the harmonic oscillator.</p>
+<p><strong>B.</strong> Write down the Bose-Einstein occupation number <span class="math inline">\(\langle n\rangle\)</span>.</p>
+<p><strong>C.</strong> Explain what happens when <span class="math inline">\(\hbar\omega\gg k_BT\)</span>.</p>
+<p><strong>D.</strong> Explain what happens when <span class="math inline">\(\hbar\omega\ll k_BT\)</span>.</p></li>
+<li><p><strong>Einstein Approximation.</strong> In the Einstein approximation, all <span class="math inline">\(3N\)</span> normal modes of a monatomic crystal have the same frequency <span class="math inline">\(\omega_E\)</span>.</p>
+<p><strong>A.</strong> Write the Einstein density of states <span class="math inline">\(D(\omega)\)</span>.</p>
+<p><strong>B.</strong> Derive the Einstein heat capacity <span class="math display">\[
 C_V^{E}
 =
 3Nk_B
 \left(\frac{\Theta_E}{T}\right)^2
 \frac{e^{\Theta_E/T}}
 {(e^{\Theta_E/T}-1)^2}.
-\]</span> C. Derive the high-temperature limit. D. Derive the low-temperature limit and explain why it is not the observed Debye <span class="math inline">\(T^3\)</span> law.</p></li>
-<li><p><strong>Debye Wave Vector and Debye Temperature.</strong> For a monatomic crystal of volume <span class="math inline">\(V\)</span> with <span class="math inline">\(N\)</span> unit cells, the Debye approximation replaces the first Brillouin zone by a sphere of radius <span class="math inline">\(q_D\)</span>. A. Derive <span class="math display">\[
+\]</span></p>
+<p><strong>C.</strong> Derive the high-temperature limit.</p>
+<p><strong>D.</strong> Derive the low-temperature limit and explain why it is not the observed Debye <span class="math inline">\(T^3\)</span> law.</p></li>
+<li><p><strong>Debye Wave Vector and Debye Temperature.</strong> For a monatomic crystal of volume <span class="math inline">\(V\)</span> with <span class="math inline">\(N\)</span> unit cells, the Debye approximation replaces the first Brillouin zone by a sphere of radius <span class="math inline">\(q_D\)</span>.</p>
+<p><strong>A.</strong> Derive <span class="math display">\[
 q_D
 =
 \left(
 6\pi^2\frac{N}{V}
 \right)^{1/3}.
-\]</span> B. If the averaged sound velocity is <span class="math inline">\(v_s\)</span>, derive <span class="math display">\[
+\]</span></p>
+<p><strong>B.</strong> If the averaged sound velocity is <span class="math inline">\(v_s\)</span>, derive <span class="math display">\[
 \Theta_D
 =
 \frac{\hbar v_s}{k_B}
 \left(
 6\pi^2\frac{N}{V}
 \right)^{1/3}.
-\]</span> C. Explain in words what physical information is contained in <span class="math inline">\(\Theta_D\)</span>.</p></li>
+\]</span></p>
+<p><strong>C.</strong> Explain in words what physical information is contained in <span class="math inline">\(\Theta_D\)</span>.</p></li>
 <li><p><strong>Debye <span class="math inline">\(T^3\)</span> Law.</strong> Starting from <span class="math display">\[
 C_V^D
 =
