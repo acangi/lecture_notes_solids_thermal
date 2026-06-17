@@ -1,4 +1,3 @@
-```yaml
 cff-version: 1.2.0
 message: "If you use these lecture notes, please cite them using the metadata from this file."
 
@@ -31,4 +30,3 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.xxxxxxx"
     description: "Concept DOI for the lecture-note project as a whole."
-```
