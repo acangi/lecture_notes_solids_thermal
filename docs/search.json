@@ -94,7 +94,17 @@
     "href": "index.html#citation-information",
     "title": "Fundamentals of Solid-State Physics: Thermal Properties",
     "section": "Citation Information",
-    "text": "Citation Information\nWill be added later.",
+    "text": "Citation Information",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-cite",
+    "href": "index.html#how-to-cite",
+    "title": "Fundamentals of Solid-State Physics: Thermal Properties",
+    "section": "How to cite",
+    "text": "How to cite\nPlease cite these lecture notes using the project DOI:\nCangi, A. Fundamentals in Solid-State Physics – Thermal Properties. Zenodo. https://doi.org/10.5281/zenodo.20733047",
     "crumbs": [
       "Preface"
     ]
@@ -1044,7 +1054,7 @@
     "href": "lecture_08.html#problem-set",
     "title": "8  Specific Heat",
     "section": "8.14 Problem Set",
-    "text": "8.14 Problem Set\n\nDefinitions and Thermodynamic Meaning. A crystalline solid has heat capacity \\(C\\), molar heat capacity \\(c_m\\), and heat capacities \\(C_V\\) and \\(C_p\\).\nA. Define \\(C\\), \\(c_m\\), \\(C_V\\), and \\(C_p\\).\nB. Explain why \\(C_V\\) is directly related to the internal energy.\nC. Explain physically why \\(C_p\\) is usually slightly larger than \\(C_V\\).\nDulong-Petit Law. Consider a crystal with \\(N\\) unit cells and \\(r'\\) atoms per unit cell.\nA. Use classical equipartition to derive the lattice internal energy \\[\nU\n=\nU_{\\mathrm{eq}}\n+\n3r'Nk_BT.\n\\]\nB. Derive the Dulong-Petit law for \\(C_V\\).\nC. Give the molar heat capacity for one mole of unit cells.\nFreezing Out of a Quantum Oscillator. A phonon mode has angular frequency \\(\\omega\\).\nA. Write down the energy eigenvalues \\(E_n\\) of the harmonic oscillator.\nB. Write down the Bose-Einstein occupation number \\(\\langle n\\rangle\\).\nC. Explain what happens when \\(\\hbar\\omega\\gg k_BT\\).\nD. Explain what happens when \\(\\hbar\\omega\\ll k_BT\\).\nEinstein Approximation. In the Einstein approximation, all \\(3N\\) normal modes of a monatomic crystal have the same frequency \\(\\omega_E\\).\nA. Write the Einstein density of states \\(D(\\omega)\\).\nB. Derive the Einstein heat capacity \\[\nC_V^{E}\n=\n3Nk_B\n\\left(\\frac{\\Theta_E}{T}\\right)^2\n\\frac{e^{\\Theta_E/T}}\n{(e^{\\Theta_E/T}-1)^2}.\n\\]\nC. Derive the high-temperature limit.\nD. Derive the low-temperature limit and explain why it is not the observed Debye \\(T^3\\) law.\nDebye Wave Vector and Debye Temperature. For a monatomic crystal of volume \\(V\\) with \\(N\\) unit cells, the Debye approximation replaces the first Brillouin zone by a sphere of radius \\(q_D\\).\nA. Derive \\[\nq_D\n=\n\\left(\n6\\pi^2\\frac{N}{V}\n\\right)^{1/3}.\n\\]\nB. If the averaged sound velocity is \\(v_s\\), derive \\[\n\\Theta_D\n=\n\\frac{\\hbar v_s}{k_B}\n\\left(\n6\\pi^2\\frac{N}{V}\n\\right)^{1/3}.\n\\]\nC. Explain in words what physical information is contained in \\(\\Theta_D\\).\nDebye \\(T^3\\) Law. Starting from \\[\nC_V^D\n=\n9Nk_B\n\\left(\\frac{T}{\\Theta_D}\\right)^3\n\\int_0^{\\Theta_D/T}\n\\frac{x^4e^x}{(e^x-1)^2} dx,\n\\] show that for \\(T\\ll\\Theta_D\\), \\[\nC_V^D\n=\n\\frac{12\\pi^4}{5}\nNk_B\n\\left(\\frac{T}{\\Theta_D}\\right)^3.\n\\] Explain why this result is expected for a three-dimensional crystal with acoustic phonons.",
+    "text": "8.14 Problem Set\n\nDefinitions and Thermodynamic Meaning. A crystalline solid has heat capacity \\(C\\), molar heat capacity \\(c_m\\), and heat capacities \\(C_V\\) and \\(C_p\\).\nA. Define \\(C\\), \\(c_m\\), \\(C_V\\), and \\(C_p\\).\nB. Explain why \\(C_V\\) is directly related to the internal energy.\nC. Explain physically why \\(C_p\\) is usually slightly larger than \\(C_V\\).\nDulong-Petit Law. Consider a crystal with \\(N\\) unit cells and \\(r'\\) atoms per unit cell.\nA. Use classical equipartition to derive the lattice internal energy \\[\nU\n=\nU_{\\mathrm{eq}}\n+\n3r'Nk_BT.\n\\]\nB. Derive the Dulong-Petit law for \\(C_V\\).\nC. Give the molar heat capacity for one mole of unit cells.\nEinstein Approximation. In the Einstein approximation, all \\(3N\\) normal modes of a monatomic crystal have the same frequency \\(\\omega_E\\).\nA. Write the Einstein density of states \\(D(\\omega)\\).\nB. Derive the Einstein heat capacity \\[\nC_V^{E}\n=\n3Nk_B\n\\left(\\frac{\\Theta_E}{T}\\right)^2\n\\frac{e^{\\Theta_E/T}}\n{(e^{\\Theta_E/T}-1)^2}.\n\\]\nC. Derive the high-temperature limit.\nD. Derive the low-temperature limit and explain why it is not the observed Debye \\(T^3\\) law.\nDebye Wave Vector and Debye Temperature. For a monatomic crystal of volume \\(V\\) with \\(N\\) unit cells, the Debye approximation replaces the first Brillouin zone by a sphere of radius \\(q_D\\).\nA. Derive \\[\nq_D\n=\n\\left(\n6\\pi^2\\frac{N}{V}\n\\right)^{1/3}.\n\\]\nB. If the averaged sound velocity is \\(v_s\\), derive \\[\n\\Theta_D\n=\n\\frac{\\hbar v_s}{k_B}\n\\left(\n6\\pi^2\\frac{N}{V}\n\\right)^{1/3}.\n\\]\nC. Explain in words what physical information is contained in \\(\\Theta_D\\).\nDebye \\(T^3\\) Law. Starting from \\[\nC_V^D\n=\n9Nk_B\n\\left(\\frac{T}{\\Theta_D}\\right)^3\n\\int_0^{\\Theta_D/T}\n\\frac{x^4e^x}{(e^x-1)^2} dx,\n\\] show that for \\(T\\ll\\Theta_D\\), \\[\nC_V^D\n=\n\\frac{12\\pi^4}{5}\nNk_B\n\\left(\\frac{T}{\\Theta_D}\\right)^3.\n\\] Explain why this result is expected for a three-dimensional crystal with acoustic phonons.",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Specific Heat</span>"
     ]

@@ -28,5 +28,5 @@ repository-code: "https://github.com/acangi/lecture_notes_solids_thermal"
 
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.xxxxxxx"
+    value: "10.5281/zenodo.20733047"
     description: "Concept DOI for the lecture-note project as a whole."
