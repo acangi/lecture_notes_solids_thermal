@@ -224,7 +224,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lecture_10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Thermal Transport by Phonons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Thermal Conductivity</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -247,8 +247,8 @@ window.Quarto = {
   <li><a href="#why-we-need-a-density-of-states" id="toc-why-we-need-a-density-of-states" class="nav-link" data-scroll-target="#why-we-need-a-density-of-states"><span class="header-section-number">7.2</span> Why We Need a Density of States</a></li>
   <li><a href="#boundary-conditions-and-allowed-wavevectors" id="toc-boundary-conditions-and-allowed-wavevectors" class="nav-link" data-scroll-target="#boundary-conditions-and-allowed-wavevectors"><span class="header-section-number">7.3</span> Boundary Conditions and Allowed Wavevectors</a>
   <ul class="collapse">
-  <li><a href="#fixed-ends-in-one-dimension" id="toc-fixed-ends-in-one-dimension" class="nav-link" data-scroll-target="#fixed-ends-in-one-dimension"><span class="header-section-number">7.3.1</span> Fixed Ends in One Dimension</a></li>
-  <li><a href="#periodic-boundary-conditions-in-one-dimension" id="toc-periodic-boundary-conditions-in-one-dimension" class="nav-link" data-scroll-target="#periodic-boundary-conditions-in-one-dimension"><span class="header-section-number">7.3.2</span> Periodic Boundary Conditions in One Dimension</a></li>
+  <li><a href="#dirichlet-boundary-conditions-fixed-ends-in-one-dimension" id="toc-dirichlet-boundary-conditions-fixed-ends-in-one-dimension" class="nav-link" data-scroll-target="#dirichlet-boundary-conditions-fixed-ends-in-one-dimension"><span class="header-section-number">7.3.1</span> Dirichlet Boundary Conditions: Fixed Ends in One Dimension</a></li>
+  <li><a href="#bornvon-karman-boundary-conditions-periodic-boundary-conditions-in-one-dimension" id="toc-bornvon-karman-boundary-conditions-periodic-boundary-conditions-in-one-dimension" class="nav-link" data-scroll-target="#bornvon-karman-boundary-conditions-periodic-boundary-conditions-in-one-dimension"><span class="header-section-number">7.3.2</span> Born–von Karman Boundary Conditions: Periodic Boundary Conditions in One Dimension</a></li>
   </ul></li>
   <li><a href="#mode-counting-in-three-dimensional-reciprocal-space" id="toc-mode-counting-in-three-dimensional-reciprocal-space" class="nav-link" data-scroll-target="#mode-counting-in-three-dimensional-reciprocal-space"><span class="header-section-number">7.4</span> Mode Counting in Three-Dimensional Reciprocal Space</a>
   <ul class="collapse">
@@ -481,8 +481,8 @@ window.Quarto = {
 <p>A real crystal is finite. Therefore not every wavevector is allowed. Boundary conditions select a discrete set of wavevectors, and this discreteness is the starting point for mode counting.</p>
 <p>For a macroscopic crystal, the detailed physical boundary condition at the surface should not affect bulk thermodynamic quantities. We therefore choose mathematically convenient boundary conditions, provided they give the correct density of allowed modes in the large-system limit.</p>
 <!-- [Gross-Marx, Ch. 5, Sec. 5.3.1, pp. 191-194] -->
-<section id="fixed-ends-in-one-dimension" class="level3" data-number="7.3.1">
-<h3 data-number="7.3.1" class="anchored" data-anchor-id="fixed-ends-in-one-dimension"><span class="header-section-number">7.3.1</span> Fixed Ends in One Dimension</h3>
+<section id="dirichlet-boundary-conditions-fixed-ends-in-one-dimension" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="dirichlet-boundary-conditions-fixed-ends-in-one-dimension"><span class="header-section-number">7.3.1</span> Dirichlet Boundary Conditions: Fixed Ends in One Dimension</h3>
 <p>Consider a one-dimensional chain with lattice spacing <span class="math inline">\(a\)</span>. The equilibrium positions are</p>
 <p><span class="math display">\[
 x_n=na,
@@ -592,8 +592,8 @@ Figure&nbsp;7.2: <strong>Figure:</strong> Standing-wave modes of a short fixed-e
 </div>
 <!-- [Gross-Marx, Ch. 5, Sec. 5.3.1.1, pp. 192-193] -->
 </section>
-<section id="periodic-boundary-conditions-in-one-dimension" class="level3" data-number="7.3.2">
-<h3 data-number="7.3.2" class="anchored" data-anchor-id="periodic-boundary-conditions-in-one-dimension"><span class="header-section-number">7.3.2</span> Periodic Boundary Conditions in One Dimension</h3>
+<section id="bornvon-karman-boundary-conditions-periodic-boundary-conditions-in-one-dimension" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="bornvon-karman-boundary-conditions-periodic-boundary-conditions-in-one-dimension"><span class="header-section-number">7.3.2</span> Born–von Karman Boundary Conditions: Periodic Boundary Conditions in One Dimension</h3>
 <p>Fixed boundaries are physically intuitive, but they make the algebra slightly inconvenient because they produce standing waves. For bulk crystals we usually use periodic, or cyclic, Born-von Karman boundary conditions.</p>
 <p>The condition is</p>
 <p><span class="math display">\[

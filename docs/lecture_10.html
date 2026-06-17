@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; Thermal Transport by Phonons – Fundamentals of Solid-State Physics: Thermal Properties</title>
+<title>10&nbsp; Thermal Conductivity – Fundamentals of Solid-State Physics: Thermal Properties</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lecture_10.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Thermal Transport by Phonons</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lecture_10.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Thermal Conductivity</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -125,7 +125,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title"><span id="sec-lecture-10" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Thermal Transport by Phonons</span></span></h1>
+      <h1 class="title"><span id="sec-lecture-10" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Thermal Conductivity</span></span></h1>
                       </div>
   </div>
     
@@ -224,7 +224,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lecture_10.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Thermal Transport by Phonons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Thermal Conductivity</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -244,35 +244,48 @@ window.Quarto = {
    
   <ul>
   <li><a href="#roadmap" id="toc-roadmap" class="nav-link active" data-scroll-target="#roadmap"><span class="header-section-number">10.1</span> Roadmap</a></li>
-  <li><a href="#from-fouriers-law-to-thermal-diffusivity" id="toc-from-fouriers-law-to-thermal-diffusivity" class="nav-link" data-scroll-target="#from-fouriers-law-to-thermal-diffusivity"><span class="header-section-number">10.2</span> From Fourier’s Law to Thermal Diffusivity</a></li>
-  <li><a href="#microscopic-picture-phonons-carry-heat" id="toc-microscopic-picture-phonons-carry-heat" class="nav-link" data-scroll-target="#microscopic-picture-phonons-carry-heat"><span class="header-section-number">10.3</span> Microscopic Picture: Phonons Carry Heat</a>
+  <li><a href="#definition-of-thermal-conductivity" id="toc-definition-of-thermal-conductivity" class="nav-link" data-scroll-target="#definition-of-thermal-conductivity"><span class="header-section-number">10.2</span> Definition of Thermal Conductivity</a></li>
+  <li><a href="#phonon-heat-current" id="toc-phonon-heat-current" class="nav-link" data-scroll-target="#phonon-heat-current"><span class="header-section-number">10.3</span> Phonon Heat Current</a>
   <ul class="collapse">
-  <li><a href="#heat-current-in-terms-of-phonon-modes" id="toc-heat-current-in-terms-of-phonon-modes" class="nav-link" data-scroll-target="#heat-current-in-terms-of-phonon-modes"><span class="header-section-number">10.3.1</span> Heat Current in Terms of Phonon Modes</a></li>
-  <li><a href="#relaxation-time-approximation" id="toc-relaxation-time-approximation" class="nav-link" data-scroll-target="#relaxation-time-approximation"><span class="header-section-number">10.3.2</span> Relaxation-Time Approximation</a></li>
+  <li><a href="#energy-carried-by-a-mode" id="toc-energy-carried-by-a-mode" class="nav-link" data-scroll-target="#energy-carried-by-a-mode"><span class="header-section-number">10.3.1</span> Energy Carried by a Mode</a></li>
+  <li><a href="#local-equilibrium-and-the-relaxation-time-approximation" id="toc-local-equilibrium-and-the-relaxation-time-approximation" class="nav-link" data-scroll-target="#local-equilibrium-and-the-relaxation-time-approximation"><span class="header-section-number">10.3.2</span> Local Equilibrium and the Relaxation-Time Approximation</a></li>
   </ul></li>
-  <li><a href="#scattering-mechanisms-and-regimes" id="toc-scattering-mechanisms-and-regimes" class="nav-link" data-scroll-target="#scattering-mechanisms-and-regimes"><span class="header-section-number">10.4</span> Scattering Mechanisms and Regimes</a>
+  <li><a href="#kinetic-theory-expression-for-kappa" id="toc-kinetic-theory-expression-for-kappa" class="nav-link" data-scroll-target="#kinetic-theory-expression-for-kappa"><span class="header-section-number">10.4</span> Kinetic-Theory Expression for <span class="math inline">\(\kappa\)</span></a>
   <ul class="collapse">
-  <li><a href="#matthiessens-rule" id="toc-matthiessens-rule" class="nav-link" data-scroll-target="#matthiessens-rule"><span class="header-section-number">10.4.1</span> Matthiessen’s Rule</a></li>
-  <li><a href="#boundary-scattering-the-casimir-regime" id="toc-boundary-scattering-the-casimir-regime" class="nav-link" data-scroll-target="#boundary-scattering-the-casimir-regime"><span class="header-section-number">10.4.2</span> Boundary Scattering: The Casimir Regime</a></li>
-  <li><a href="#point-defects-isotopes-and-alloys" id="toc-point-defects-isotopes-and-alloys" class="nav-link" data-scroll-target="#point-defects-isotopes-and-alloys"><span class="header-section-number">10.4.3</span> Point Defects, Isotopes, and Alloys</a></li>
-  <li><a href="#normal-and-umklapp-processes" id="toc-normal-and-umklapp-processes" class="nav-link" data-scroll-target="#normal-and-umklapp-processes"><span class="header-section-number">10.4.4</span> Normal and Umklapp Processes</a></li>
-  <li><a href="#thermal-activation-of-umklapp-scattering" id="toc-thermal-activation-of-umklapp-scattering" class="nav-link" data-scroll-target="#thermal-activation-of-umklapp-scattering"><span class="header-section-number">10.4.5</span> Thermal Activation of Umklapp Scattering</a></li>
+  <li><a href="#kinetic-gas-interpretation" id="toc-kinetic-gas-interpretation" class="nav-link" data-scroll-target="#kinetic-gas-interpretation"><span class="header-section-number">10.4.1</span> Kinetic-Gas Interpretation</a></li>
   </ul></li>
-  <li><a href="#why-crystals-peak-typical-kappat-in-insulating-crystals" id="toc-why-crystals-peak-typical-kappat-in-insulating-crystals" class="nav-link" data-scroll-target="#why-crystals-peak-typical-kappat-in-insulating-crystals"><span class="header-section-number">10.5</span> Why Crystals Peak: Typical <span class="math inline">\(\kappa(T)\)</span> in Insulating Crystals</a>
+  <li><a href="#what-limits-the-mean-free-path" id="toc-what-limits-the-mean-free-path" class="nav-link" data-scroll-target="#what-limits-the-mean-free-path"><span class="header-section-number">10.5</span> What Limits the Mean Free Path?</a>
   <ul class="collapse">
-  <li><a href="#high-temperatures" id="toc-high-temperatures" class="nav-link" data-scroll-target="#high-temperatures"><span class="header-section-number">10.5.1</span> High Temperatures</a></li>
-  <li><a href="#intermediate-temperatures" id="toc-intermediate-temperatures" class="nav-link" data-scroll-target="#intermediate-temperatures"><span class="header-section-number">10.5.2</span> Intermediate Temperatures</a></li>
-  <li><a href="#low-temperatures" id="toc-low-temperatures" class="nav-link" data-scroll-target="#low-temperatures"><span class="header-section-number">10.5.3</span> Low Temperatures</a></li>
-  <li><a href="#purity-dependence" id="toc-purity-dependence" class="nav-link" data-scroll-target="#purity-dependence"><span class="header-section-number">10.5.4</span> Purity Dependence</a></li>
+  <li><a href="#matthiessens-rule" id="toc-matthiessens-rule" class="nav-link" data-scroll-target="#matthiessens-rule"><span class="header-section-number">10.5.1</span> Matthiessen’s Rule</a></li>
+  <li><a href="#defect-and-boundary-scattering" id="toc-defect-and-boundary-scattering" class="nav-link" data-scroll-target="#defect-and-boundary-scattering"><span class="header-section-number">10.5.2</span> Defect and Boundary Scattering</a></li>
+  <li><a href="#isotope-scattering" id="toc-isotope-scattering" class="nav-link" data-scroll-target="#isotope-scattering"><span class="header-section-number">10.5.3</span> Isotope Scattering</a></li>
   </ul></li>
-  <li><a href="#why-glasses-plateau" id="toc-why-glasses-plateau" class="nav-link" data-scroll-target="#why-glasses-plateau"><span class="header-section-number">10.6</span> Why Glasses Plateau</a>
+  <li><a href="#normal-and-umklapp-processes" id="toc-normal-and-umklapp-processes" class="nav-link" data-scroll-target="#normal-and-umklapp-processes"><span class="header-section-number">10.6</span> Normal and Umklapp Processes</a>
   <ul class="collapse">
-  <li><a href="#high-temperature-regime" id="toc-high-temperature-regime" class="nav-link" data-scroll-target="#high-temperature-regime"><span class="header-section-number">10.6.1</span> High-Temperature Regime</a></li>
-  <li><a href="#plateau-regime" id="toc-plateau-regime" class="nav-link" data-scroll-target="#plateau-regime"><span class="header-section-number">10.6.2</span> Plateau Regime</a></li>
-  <li><a href="#low-temperature-regime" id="toc-low-temperature-regime" class="nav-link" data-scroll-target="#low-temperature-regime"><span class="header-section-number">10.6.3</span> Low-Temperature Regime</a></li>
+  <li><a href="#normal-processes" id="toc-normal-processes" class="nav-link" data-scroll-target="#normal-processes"><span class="header-section-number">10.6.1</span> Normal Processes</a></li>
+  <li><a href="#umklapp-processes" id="toc-umklapp-processes" class="nav-link" data-scroll-target="#umklapp-processes"><span class="header-section-number">10.6.2</span> Umklapp Processes</a></li>
   </ul></li>
-  <li><a href="#outlook-on-the-next-lecture-from-lattice-to-total-thermal-transport" id="toc-outlook-on-the-next-lecture-from-lattice-to-total-thermal-transport" class="nav-link" data-scroll-target="#outlook-on-the-next-lecture-from-lattice-to-total-thermal-transport"><span class="header-section-number">10.7</span> Outlook on the Next Lecture: From Lattice to Total Thermal Transport</a></li>
-  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">10.8</span> Problem Set</a></li>
+  <li><a href="#temperature-dependence-of-thermal-conductivity-in-crystals" id="toc-temperature-dependence-of-thermal-conductivity-in-crystals" class="nav-link" data-scroll-target="#temperature-dependence-of-thermal-conductivity-in-crystals"><span class="header-section-number">10.7</span> Temperature Dependence of Thermal Conductivity in Crystals</a>
+  <ul class="collapse">
+  <li><a href="#high-temperatures" id="toc-high-temperatures" class="nav-link" data-scroll-target="#high-temperatures"><span class="header-section-number">10.7.1</span> High Temperatures</a></li>
+  <li><a href="#intermediate-temperatures" id="toc-intermediate-temperatures" class="nav-link" data-scroll-target="#intermediate-temperatures"><span class="header-section-number">10.7.2</span> Intermediate Temperatures</a></li>
+  <li><a href="#low-temperatures" id="toc-low-temperatures" class="nav-link" data-scroll-target="#low-temperatures"><span class="header-section-number">10.7.3</span> Low Temperatures</a></li>
+  </ul></li>
+  <li><a href="#spontaneous-decay-of-phonons" id="toc-spontaneous-decay-of-phonons" class="nav-link" data-scroll-target="#spontaneous-decay-of-phonons"><span class="header-section-number">10.8</span> Spontaneous Decay of Phonons</a></li>
+  <li><a href="#thermal-conductivity-in-amorphous-solids" id="toc-thermal-conductivity-in-amorphous-solids" class="nav-link" data-scroll-target="#thermal-conductivity-in-amorphous-solids"><span class="header-section-number">10.9</span> Thermal Conductivity in Amorphous Solids</a>
+  <ul class="collapse">
+  <li><a href="#high-temperature-regime" id="toc-high-temperature-regime" class="nav-link" data-scroll-target="#high-temperature-regime"><span class="header-section-number">10.9.1</span> High-Temperature Regime</a></li>
+  <li><a href="#plateau-regime" id="toc-plateau-regime" class="nav-link" data-scroll-target="#plateau-regime"><span class="header-section-number">10.9.2</span> Plateau Regime</a></li>
+  <li><a href="#very-low-temperatures-and-two-level-systems" id="toc-very-low-temperatures-and-two-level-systems" class="nav-link" data-scroll-target="#very-low-temperatures-and-two-level-systems"><span class="header-section-number">10.9.3</span> Very Low Temperatures and Two-Level Systems</a></li>
+  </ul></li>
+  <li><a href="#thermal-transport-in-a-one-dimensional-solid" id="toc-thermal-transport-in-a-one-dimensional-solid" class="nav-link" data-scroll-target="#thermal-transport-in-a-one-dimensional-solid"><span class="header-section-number">10.10</span> Thermal Transport in a One-Dimensional Solid</a>
+  <ul class="collapse">
+  <li><a href="#heat-current-in-one-dimension" id="toc-heat-current-in-one-dimension" class="nav-link" data-scroll-target="#heat-current-in-one-dimension"><span class="header-section-number">10.10.1</span> Heat Current in One Dimension</a></li>
+  <li><a href="#quantum-of-thermal-conductance" id="toc-quantum-of-thermal-conductance" class="nav-link" data-scroll-target="#quantum-of-thermal-conductance"><span class="header-section-number">10.10.2</span> Quantum of Thermal Conductance</a></li>
+  </ul></li>
+  <li><a href="#take-home-messages" id="toc-take-home-messages" class="nav-link" data-scroll-target="#take-home-messages"><span class="header-section-number">10.11</span> Take-Home Messages</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">10.12</span> Problem Set</a></li>
+  <li><a href="#solutions-to-the-problem-set" id="toc-solutions-to-the-problem-set" class="nav-link" data-scroll-target="#solutions-to-the-problem-set"><span class="header-section-number">10.13</span> Solutions to the Problem Set</a></li>
   </ul>
 </nav>
     </div>
@@ -293,28 +306,31 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>By the end of this lecture, you should be able to:</p>
 <ul>
-<li>State Fourier’s law for heat transport in solids and define thermal diffusivity.</li>
-<li>Derive the kinetic-theory expression for lattice thermal conductivity from a phonon picture.</li>
-<li>Distinguish boundary, defect, isotope/alloy, normal, and umklapp scattering mechanisms.</li>
-<li>Use Matthiessen’s rule to discuss regimes and crossover scales in <span class="math inline">\(\kappa(T)\)</span>.</li>
-<li>Explain why crystalline insulators typically show a low-temperature peak in <span class="math inline">\(\kappa(T)\)</span>, whereas glasses often show a plateau.</li>
+<li>define thermal conductivity through Fourier’s law and distinguish scalar from tensor thermal conductivity;</li>
+<li>derive the kinetic-theory expression for lattice thermal conductivity from a phonon heat-current picture;</li>
+<li>explain how phonon heat capacity, group velocity, and mean free path control <span class="math inline">\(\kappa\)</span>;</li>
+<li>distinguish normal processes, umklapp processes, defect scattering, isotope scattering, and boundary scattering;</li>
+<li>explain the characteristic temperature dependence of <span class="math inline">\(\kappa(T)\)</span> in crystalline and amorphous solids;</li>
+<li>describe the quantized thermal conductance of a one-dimensional ballistic solid.</li>
 </ul>
 </div>
 </div>
 <section id="roadmap" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="roadmap"><span class="header-section-number">10.1</span> Roadmap</h2>
 <ul>
-<li>Start from the macroscopic description: heat current, Fourier’s law, and the diffusion equation.</li>
-<li>Build the microscopic picture: phonons as heat carriers and the relaxation-time approximation.</li>
-<li>Identify the scattering mechanisms that limit the phonon mean free path.</li>
-<li>Use those mechanisms to understand the characteristic temperature dependence of <span class="math inline">\(\kappa(T)\)</span> in crystals.</li>
-<li>Contrast crystalline and amorphous solids and prepare the transition to total thermal transport in real materials.</li>
+<li>Start from the macroscopic definition of thermal conductivity.</li>
+<li>Build the microscopic transport theory for a phonon gas in a weak temperature gradient.</li>
+<li>Identify the scattering processes that limit the phonon mean free path.</li>
+<li>Combine heat capacity and scattering to understand <span class="math inline">\(\kappa(T)\)</span> in crystals.</li>
+<li>Compare crystalline and amorphous solids.</li>
+<li>Close with ballistic heat transport in a one-dimensional solid.</li>
 </ul>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 21%">
-<col style="width: 78%">
+<col style="width: 26%">
+<col style="width: 73%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -324,580 +340,1210 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(\mathbf{J}_h\)</span></td>
-<td>heat current density</td>
+<td><span class="math inline">\(\mathbf J_h\)</span></td>
+<td>heat-current density</td>
 </tr>
 <tr class="even">
+<td><span class="math inline">\(J_{h,x}\)</span></td>
+<td><span class="math inline">\(x\)</span>-component of the heat-current density</td>
+</tr>
+<tr class="odd">
 <td><span class="math inline">\(\kappa\)</span></td>
-<td>lattice thermal conductivity</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(D_{th}\)</span></td>
-<td>thermal diffusivity</td>
+<td>thermal conductivity</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(c\)</span></td>
-<td>volumetric heat capacity entering the heat equation</td>
+<td><span class="math inline">\(\boldsymbol\kappa\)</span></td>
+<td>thermal-conductivity tensor</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(c_V\)</span></td>
-<td>constant-volume heat capacity per unit volume</td>
+<td><span class="math inline">\(T\)</span></td>
+<td>absolute temperature</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\omega_\lambda(q)\)</span></td>
-<td>phonon frequency of branch <span class="math inline">\(\lambda\)</span> and wave vector <span class="math inline">\(q\)</span></td>
+<td><span class="math inline">\(\nabla T\)</span></td>
+<td>temperature gradient</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(n_\lambda(q)\)</span></td>
-<td>phonon occupation number of mode <span class="math inline">\((q,\lambda)\)</span></td>
+<td><span class="math inline">\(V\)</span></td>
+<td>crystal volume</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\tau_\lambda(q)\)</span></td>
+<td><span class="math inline">\(A\)</span></td>
+<td>cross-sectional area</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(L\)</span></td>
+<td>sample length</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(d\)</span></td>
+<td>characteristic sample diameter or boundary-limited length scale</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(D\)</span></td>
+<td>transverse dimension of a low-dimensional structure</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(q\)</span></td>
+<td>phonon wave vector</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(r\)</span></td>
+<td>phonon branch or polarization index</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\omega_{qr}\)</span></td>
+<td>angular frequency of phonon mode <span class="math inline">\((q,r)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\hbar\)</span></td>
+<td>reduced Planck constant</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(h\)</span></td>
+<td>Planck constant</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(k_B\)</span></td>
+<td>Boltzmann constant</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\langle n_{qr}\rangle\)</span></td>
+<td>mean occupation number of phonon mode <span class="math inline">\((q,r)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\langle n\rangle^0\)</span></td>
+<td>local-equilibrium phonon occupation number</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\delta n\)</span></td>
+<td>deviation from local equilibrium</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(v_x(q,r)\)</span></td>
+<td><span class="math inline">\(x\)</span>-component of the phonon group velocity</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(v\)</span></td>
+<td>characteristic phonon group velocity</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(v_r(\omega)\)</span></td>
+<td>group velocity of branch <span class="math inline">\(r\)</span> at frequency <span class="math inline">\(\omega\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\tau\)</span></td>
 <td>phonon relaxation time</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(\ell_\lambda(q)\)</span></td>
-<td>phonon mean free path, <span class="math inline">\(\ell_\lambda(q)=v_\lambda(q)\tau_\lambda(q)\)</span></td>
+<td><span class="math inline">\(\ell\)</span></td>
+<td>phonon mean free path</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(v_{\lambda,x}(q)\)</span></td>
-<td><span class="math inline">\(x\)</span>-component of the phonon group velocity</td>
+<td><span class="math inline">\(c_V\)</span></td>
+<td>heat capacity per unit volume at constant volume</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(G\)</span></td>
-<td>reciprocal-lattice vector in three-phonon momentum conservation</td>
+<td>reciprocal-lattice vector</td>
 </tr>
 <tr class="even">
+<td><span class="math inline">\(Q\)</span></td>
+<td>total crystal momentum of the phonon gas</td>
+</tr>
+<tr class="odd">
 <td><span class="math inline">\(\Theta_D\)</span></td>
 <td>Debye temperature</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(n_D\)</span></td>
+<td>defect density</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\sigma\)</span></td>
+<td>scattering cross section</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\lambda_{\mathrm{th}}\)</span></td>
+<td>thermal phonon wavelength</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(T^\ast\)</span></td>
+<td>crossover temperature to reduced-dimensional phonon transport</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Z(q)\)</span></td>
+<td>density of allowed states in <span class="math inline">\(q\)</span>-space</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(D(\omega)\)</span></td>
+<td>density of states in frequency space</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(T_r\)</span></td>
+<td>transmission coefficient of one propagating mode</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(G_{\mathrm{th}}\)</span></td>
+<td>thermal conductance</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(G_0\)</span></td>
+<td>quantum of thermal conductance per ideal mode</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(N_i\)</span></td>
+<td>number of propagating one-dimensional vibrational modes</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(E_{12}\)</span></td>
+<td>energy splitting of a two-level system</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(n_{\mathrm{TLS}}\)</span></td>
+<td>density of two-level systems</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="from-fouriers-law-to-thermal-diffusivity" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="from-fouriers-law-to-thermal-diffusivity"><span class="header-section-number">10.2</span> From Fourier’s Law to Thermal Diffusivity</h2>
-<p><a href="lecture_09.html" class="quarto-xref">Lecture&nbsp;<span>9</span></a> ended with the statement that anharmonicity gives phonons finite lifetimes and therefore finite thermal resistance. We now turn that statement into a transport theory.</p>
-<p>The macroscopic constitutive law is Fourier’s law: <span class="math display">\[
-\mathbf{J}_h=-\boldsymbol{\kappa} \nabla T.
-\]</span></p>
-<p>Here <span class="math inline">\(\mathbf{J}_h\)</span> is the heat current density, <span class="math inline">\(\nabla T\)</span> is the temperature gradient, and <span class="math inline">\(\boldsymbol{\kappa}\)</span> is the thermal-conductivity tensor. In isotropic solids, <span class="math inline">\(\boldsymbol{\kappa}\)</span> reduces to the scalar <span class="math inline">\(\kappa\)</span>.</p>
-<!-- [Gross–Marx, Sec. 6.4.1, Eq. (6.4.1), p. 244; Ibach–Lüth, Sec. 5.6, Eq. (5.35), p. 123] -->
-<p>The minus sign enforces the physically correct direction: heat flows from hot to cold.</p>
-<p>A local energy-balance equation for a solid with no internal heat source reads <span class="math display">\[
-c \frac{\partial T}{\partial t}+\nabla\cdot \mathbf{J}_h=0.
-\]</span></p>
-<p>Here <span class="math inline">\(c\)</span> is the volumetric heat capacity relevant for the slow temperature field. In a solid, the difference between <span class="math inline">\(c_P\)</span> and <span class="math inline">\(c_V\)</span> is usually small, so in the present context one often writes <span class="math inline">\(c\simeq c_V\)</span>.</p>
-<p>Combining energy conservation with Fourier’s law gives <span class="math display">\[
-c \frac{\partial T}{\partial t}
+<section id="definition-of-thermal-conductivity" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="definition-of-thermal-conductivity"><span class="header-section-number">10.2</span> Definition of Thermal Conductivity</h2>
+<p>Heat transport in a solid can be carried by phonons, electrons, magnons, or other excitations. In this lecture we focus on the lattice contribution, which is the dominant heat-transport channel in insulating crystals and glasses.</p>
+<p>In metals, the electronic contribution is often larger. This does not mean that insulating crystals are necessarily poor heat conductors. At low temperatures, very pure dielectric crystals can have thermal conductivities comparable to or even larger than those of many metals.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4, p. 244] -->
+<p>The thermal conductivity <span class="math inline">\(\kappa\)</span> is defined by Fourier’s law, <span class="math display">\[
+\mathbf J_h
 =
-\nabla\cdot\left(\boldsymbol{\kappa} \nabla T\right).
+-\boldsymbol{\kappa} \nabla T.
 \]</span></p>
-<p>If <span class="math inline">\(\kappa\)</span> is spatially uniform and isotropic, this becomes the heat equation <span class="math display">\[
-\frac{\partial T}{\partial t}
+<p>Here <span class="math inline">\(\mathbf J_h\)</span> is the heat-current density and <span class="math inline">\(\nabla T\)</span> is the temperature gradient. The minus sign states that heat flows from hot to cold.</p>
+<p>For an isotropic solid, the tensor <span class="math inline">\(\boldsymbol\kappa\)</span> reduces to a scalar: <span class="math display">\[
+\mathbf J_h
 =
-D_{th} \nabla^2 T,
-\qquad
-D_{th}=\frac{\kappa}{c}.
+-\kappa \nabla T.
 \]</span></p>
-<p>Here <span class="math inline">\(D_{th}\)</span> is the thermal diffusivity. It measures how fast a temperature disturbance spreads, whereas <span class="math inline">\(\kappa\)</span> measures how much heat current is driven by a given gradient.</p>
-<!-- Standard consequence of Fourier’s law plus local energy conservation; Fourier’s law itself in [Gross–Marx, Sec. 6.4.1, p. 244; Ibach–Lüth, Sec. 5.6, p. 123] -->
-<p>Interpretation:</p>
-<ul>
-<li>large <span class="math inline">\(\kappa\)</span> does not automatically mean fast equilibration if the heat capacity is also large;</li>
-<li>diffusivity is the transport quantity most directly tied to a relaxation time for the temperature field;</li>
-<li>once we obtain <span class="math inline">\(\kappa\)</span> microscopically, we immediately also obtain <span class="math inline">\(D_{th}\)</span>.</li>
-</ul>
-<div id="fig-phonon-heat-current-schematic" class="figure quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-phonon-heat-current-schematic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure -->
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-phonon-heat-current-schematic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.1: <strong>Figure placeholder.</strong> Schematic geometry for heat flux in a slab.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="microscopic-picture-phonons-carry-heat" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="microscopic-picture-phonons-carry-heat"><span class="header-section-number">10.3</span> Microscopic Picture: Phonons Carry Heat</h2>
-<section id="heat-current-in-terms-of-phonon-modes" class="level3" data-number="10.3.1">
-<h3 data-number="10.3.1" class="anchored" data-anchor-id="heat-current-in-terms-of-phonon-modes"><span class="header-section-number">10.3.1</span> Heat Current in Terms of Phonon Modes</h3>
-<p>In the phonon picture, each mode <span class="math inline">\((q,\lambda)\)</span> carries energy <span class="math inline">\(\hbar\omega_\lambda(q)\)</span> and moves with group velocity <span class="math display">\[
-v_{\lambda,x}(q)=\frac{\partial \omega_\lambda(q)}{\partial q_x}.
-\]</span></p>
-<p>Here <span class="math inline">\(v_{\lambda,x}(q)\)</span> is the component of the group velocity along the transport direction <span class="math inline">\(x\)</span>.</p>
-<p>The microscopic heat current density in the <span class="math inline">\(x\)</span>-direction can therefore be written as <span class="math display">\[
+<p>In one-dimensional transport along <span class="math inline">\(x\)</span>, <span class="math display">\[
 J_{h,x}
 =
-\frac{1}{V}
-\sum_{q,\lambda}
-\hbar\omega_\lambda(q)
-\left[
-\frac{1}{2}+n_\lambda(q)
-\right]
-v_{\lambda,x}(q).
+-\kappa \frac{\partial T}{\partial x}.
 \]</span></p>
-<p>Here <span class="math inline">\(V\)</span> is the crystal volume and <span class="math inline">\(n_\lambda(q)\)</span> is the occupation number of mode <span class="math inline">\((q,\lambda)\)</span>.</p>
-<!-- [Gross–Marx, Sec. 6.4.2, Eq. (6.4.2), p. 245; Ibach–Lüth, Sec. 5.6, Eq. (5.36), p. 124] -->
-<p>In thermal equilibrium, <span class="math inline">\(J_{h,x}=0\)</span>. The reason is simple: <span class="math inline">\(n_\lambda(q)=n_\lambda(-q)\)</span>, while <span class="math inline">\(v_{\lambda,x}(q)=-v_{\lambda,x}(-q)\)</span>, so the contributions from opposite wave vectors cancel pairwise. The zero-point term <span class="math inline">\(\frac{1}{2}\hbar\omega\)</span> also cancels in transport.</p>
-<p>Hence only the deviation from local equilibrium contributes: <span class="math display">\[
-J_{h,x}
+<p>The unit of <span class="math inline">\(\kappa\)</span> is <span class="math display">\[
+[\kappa]
 =
-\frac{1}{V}
-\sum_{q,\lambda}
-\hbar\omega_\lambda(q)
-\delta n_\lambda(q)
-v_{\lambda,x}(q)
+\mathrm{W\, m^{-1}\, K^{-1}}.
 \]</span></p>
-<p>with <span class="math inline">\(\delta n_\lambda(q)=n_\lambda(q)-n_\lambda^{0}(q)\)</span> and <span class="math inline">\(n_\lambda^{0}(q)\)</span> is the Bose occupation number in local thermal equilibrium.</p>
-<!-- [Gross–Marx, Sec. 6.4.2, Eq. (6.4.3), p. 245; Ibach–Lüth, Sec. 5.6, Eq. (5.37), p. 124] -->
-</section>
-<section id="relaxation-time-approximation" class="level3" data-number="10.3.2">
-<h3 data-number="10.3.2" class="anchored" data-anchor-id="relaxation-time-approximation"><span class="header-section-number">10.3.2</span> Relaxation-Time Approximation</h3>
-<p>To determine <span class="math inline">\(\delta n_\lambda(q)\)</span>, we use a <strong>stationary Boltzmann equation in the relaxation-time approximation</strong>.</p>
-<p>This means we first define occupation number in terms of two contributions: <span class="math display">\[
-\begin{align}
-&amp; \frac{\partial n_\lambda}{\partial t}
-=
-\left(\frac{\partial n_\lambda}{\partial t}\right)_{\mathrm{diff}}
-+
-\left(\frac{\partial n_\lambda}{\partial t}\right)_{\mathrm{scatt}},\\
-&amp; \left(\frac{\partial n_\lambda}{\partial t}\right)_{\mathrm{scatt}}
-=
--\frac{\delta n_\lambda(q)}{\tau_\lambda(q)},
-\end{align}
-\]</span></p>
-<p>where <span class="math inline">\(\tau_\lambda(q)\)</span> is the relaxation time of mode <span class="math inline">\((q,\lambda)\)</span>.</p>
-<p>Furthermore, we consider only stationary states, i.e., <span class="math inline">\(\frac{\partial n_\lambda}{\partial t}=0\)</span>.</p>
-<!-- [Gross–Marx, Sec. 6.4.2, Eqs. (6.4.4)–(6.4.5), pp. 245–246; Ibach–Lüth, Sec. 5.6, Eqs. (5.38)–(5.39), p. 124] -->
-<p>For a weak temperature gradient along <span class="math inline">\(x\)</span>, <span class="math display">\[
-\left(\frac{\partial n_\lambda}{\partial t}\right)_{\mathrm{diff}}
-=
--v_{\lambda,x}(q)
-\frac{\partial n_\lambda^{0}(q)}{\partial T}
-\frac{\partial T}{\partial x}.
-\]</span></p>
-<p>This means that phonons arriving at <span class="math inline">\(x\)</span> carry the occupation of a neighboring region with slightly different temperature.</p>
-<!-- [Gross–Marx, Sec. 6.4.2, Eq. (6.4.6), p. 246; Ibach–Lüth, Sec. 5.6, Eq. (5.40), p. 125] -->
-<p>Combining the two terms gives <span class="math display">\[
-\delta n_\lambda(q)
-=
--\tau_\lambda(q)
-v_{\lambda,x}(q)
-\frac{\partial n_\lambda^{0}(q)}{\partial T}
-\frac{\partial T}{\partial x}.
-\]</span></p>
-<p>Substituting into the heat-current formula yields <span class="math display">\[
-J_{h,x}
-=
--\frac{1}{V}
-\sum_{q,\lambda}
-\hbar\omega_\lambda(q)
-\tau_\lambda(q)
-v_{\lambda,x}^2(q)
-\frac{\partial n_\lambda^{0}(q)}{\partial T}
-\frac{\partial T}{\partial x}.
-\]</span></p>
-<p>Comparison with Fourier’s law gives the mode-sum expression <span class="math display">\[
-\kappa
-=
-\frac{1}{V}
-\sum_{q,\lambda}
-\hbar\omega_\lambda(q)
-\tau_\lambda(q)
-v_{\lambda,x}^2(q)
-\frac{\partial n_\lambda^{0}(q)}{\partial T}.
-\]</span></p>
-<!-- [Gross–Marx, Sec. 6.4.2, Eq. (6.4.7), p. 246; Ibach–Lüth, Sec. 5.6, Eq. (5.41), p. 125] -->
-<p>For a cubic or isotropic solid, <span class="math display">\[
-\langle v_{\lambda,x}^2(q)\rangle=\frac{1}{3}v_\lambda^2(q),
-\]</span> so <span class="math display">\[
-\kappa
-=
-\frac{1}{3V}
-\sum_{q,\lambda}
-\hbar\omega_\lambda(q)
-v_\lambda^2(q)
-\tau_\lambda(q)
-\frac{\partial n_\lambda^{0}(q)}{\partial T}.
-\]</span></p>
-<!-- [Gross–Marx, Sec. 6.4.2, Eq. (6.4.8), p. 246; Ibach–Lüth, Sec. 5.6, Eq. (5.42), p. 125] -->
-<p>Now define the mode contribution to the volumetric heat capacity as <span class="math display">\[
-c_{V,\lambda}(q)
-=
-\frac{1}{V}
-\hbar\omega_\lambda(q)
-\frac{\partial n_\lambda^{0}(q)}{\partial T}.
-\]</span></p>
-<p>Then <span class="math display">\[
-\kappa
-=
-\frac{1}{3}
-\sum_{q,\lambda}
-c_{V,\lambda}(q)
-v_\lambda^2(q)
-\tau_\lambda(q).
-\]</span></p>
-<p>If we introduce the mean free path <span class="math display">\[
-\ell_\lambda(q)=v_\lambda(q)\tau_\lambda(q),
-\]</span> the same result can be written as <span class="math display">\[
-\kappa
-=
-\frac{1}{3}
-\sum_{q,\lambda}
-c_{V,\lambda}(q)
-v_\lambda(q)
-\ell_\lambda(q).
-\]</span></p>
-<p>In a one-velocity kinetic picture, this simplifies to the following expression for the <strong>thermal conductivity</strong>:</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.1, Eq. (6.4.1), p. 244] -->
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><span class="math display">\[
-\kappa \simeq \frac{1}{3}c_V v \ell.
-\]</span></p>
+<p>Thermal conductivity is not an equilibrium property. It describes a nonequilibrium response: a heat current appears because the temperature is not spatially uniform.</p>
 </div>
 </div>
 </div>
-<p>Here <span class="math inline">\(c_V\)</span> is the total volumetric heat capacity of the heat-carrying modes, <span class="math inline">\(v\)</span> is a characteristic group velocity, and <span class="math inline">\(\ell\)</span> is a characteristic phonon mean free path.</p>
-<!-- [Gross–Marx, Sec. 6.4.2, Eq. (6.4.9), p. 246; Eq. (6.4.10), p. 246; Ibach–Lüth, Sec. 5.6, Eq. (5.43), p. 125] -->
-<p>This immediately gives a microscopic interpretation of thermal diffusivity: <span class="math display">\[
-D_{th}
+<p>A useful analogy is a gas between a hot wall and a cold wall. Molecules arriving from the hot side carry, on average, more energy than molecules arriving from the cold side. A phonon gas behaves similarly: phonons moving from hotter regions carry more vibrational energy than phonons moving from colder regions.</p>
+<p>In a solid with no net particle flow, there may be equal numbers of carriers moving left and right, but their average energies differ. That energy imbalance produces the heat current.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.1, p. 244] -->
+<div id="fig-heat-current-geometry" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-heat-current-geometry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.14, p. 245] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-heat-current-geometry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.1: <strong>Figure:</strong> Geometry for deriving the heat current through a cross-sectional area <span class="math inline">\(A\)</span>. During a time interval <span class="math inline">\(\tau\)</span>, phonons with velocity component <span class="math inline">\(v_x\)</span> cross the area from a slab of thickness <span class="math inline">\(v_x\tau\)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="phonon-heat-current" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="phonon-heat-current"><span class="header-section-number">10.3</span> Phonon Heat Current</h2>
+<section id="energy-carried-by-a-mode" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="energy-carried-by-a-mode"><span class="header-section-number">10.3.1</span> Energy Carried by a Mode</h3>
+<p>A phonon mode <span class="math inline">\((q,r)\)</span> has energy quantum <span class="math inline">\(\hbar\omega_{qr}\)</span>. Its propagation velocity is the group velocity, <span class="math display">\[
+v_x(q,r)
 =
-\frac{\kappa}{c}
-\simeq
-\frac{1}{3}v\ell
-\]</span> if <span class="math inline">\(c\simeq c_V\)</span> for the relevant temperature range.</p>
-<p>Sanity checks:</p>
-<ul>
-<li>phonons with small group velocity contribute little, even if they are strongly occupied;</li>
-<li>optical phonons and zone-edge modes therefore tend to carry heat poorly;</li>
-<li>the central transport problem is to determine which modes are occupied and how far they travel before scattering.</li>
-</ul>
-<div id="fig-phonon-heat-current-schematic" class="figure quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-phonon-heat-current-schematic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure from [Gross–Marx, Sec. 6.4.2, Fig. 6.14, p. 245; Ibach–Lüth, Sec. 5.6, Fig. 5.5, p. 124] -->
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-phonon-heat-current-schematic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.2: <strong>Figure placeholder.</strong> Schematic geometry for deriving the phonon heat current through a cross section: modes with group velocity pointing along <span class="math inline">\(x\)</span> transport the energy contained in a slab of thickness <span class="math inline">\(v_x\tau\)</span>.
-</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="scattering-mechanisms-and-regimes" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="scattering-mechanisms-and-regimes"><span class="header-section-number">10.4</span> Scattering Mechanisms and Regimes</h2>
-<p>The formula <span class="math display">\[
-\kappa \simeq \frac{1}{3}c_V v \ell
-\]</span> shows that the temperature dependence of <span class="math inline">\(\kappa\)</span> is controlled mainly by two ingredients:</p>
-<ul>
-<li>the heat capacity <span class="math inline">\(c_V(T)\)</span>;</li>
-<li>the mean free path <span class="math inline">\(\ell(T)\)</span>.</li>
-</ul>
-<p><a href="lecture_08.html" class="quarto-xref">Lecture&nbsp;<span>8</span></a> already established the behavior of <span class="math inline">\(c_V(T)\)</span>. The new physics in this lecture is due to <span class="math inline">\(\ell(T)\)</span>.</p>
-<section id="matthiessens-rule" class="level3" data-number="10.4.1">
-<h3 data-number="10.4.1" class="anchored" data-anchor-id="matthiessens-rule"><span class="header-section-number">10.4.1</span> Matthiessen’s Rule</h3>
-<p>If several scattering mechanisms act independently, the total scattering rate is approximately additive: <span class="math display">\[
-\frac{1}{\tau}
-=
-\frac{1}{\tau_B}
-+
-\frac{1}{\tau_D}
-+
-\frac{1}{\tau_I}
-+
-\frac{1}{\tau_U}
-+\cdots
-\]</span> or, equivalently, <span class="math display">\[
-\frac{1}{\ell}
-=
-\frac{1}{\ell_B}
-+
-\frac{1}{\ell_D}
-+
-\frac{1}{\ell_I}
-+
-\frac{1}{\ell_U}
-+\cdots.
+\frac{\partial \omega_{qr}}{\partial q_x}.
 \]</span></p>
-<p>Here the subscripts denote boundary, defect, isotope/alloy, and umklapp scattering.</p>
-<!-- [Gross–Marx, Sec. 6.4.3.1, Eq. (6.4.14), p. 248] -->
-<p>Interpretation: the shortest relevant mean free path dominates.</p>
-</section>
-<section id="boundary-scattering-the-casimir-regime" class="level3" data-number="10.4.2">
-<h3 data-number="10.4.2" class="anchored" data-anchor-id="boundary-scattering-the-casimir-regime"><span class="header-section-number">10.4.2</span> Boundary Scattering: The Casimir Regime</h3>
-<p>At sufficiently low temperature, intrinsic phonon-phonon scattering becomes weak and the mean free path is cut off by the sample size or by surface roughness: <span class="math display">\[
-\ell_B \sim d.
-\]</span></p>
-<p>Here <span class="math inline">\(d\)</span> is a characteristic sample dimension. This is the boundary-limited or Casimir regime.</p>
-<!-- [Gross–Marx, Sec. 6.4.3.2, discussion of the Casimir regime, p. 250; Ibach–Lüth, Sec. 5.6, pp. 125–127] -->
-<p>Consequences:</p>
-<ul>
-<li><span class="math inline">\(\ell_B\)</span> is approximately temperature independent;</li>
-<li>sample geometry and surface quality matter directly;</li>
-<li>with <span class="math inline">\(c_V\propto T^3\)</span> at low <span class="math inline">\(T\)</span>, one obtains <span class="math inline">\(\kappa\propto T^3\)</span> in a clean crystal.</li>
-</ul>
-</section>
-<section id="point-defects-isotopes-and-alloys" class="level3" data-number="10.4.3">
-<h3 data-number="10.4.3" class="anchored" data-anchor-id="point-defects-isotopes-and-alloys"><span class="header-section-number">10.4.3</span> Point Defects, Isotopes, and Alloys</h3>
-<p>Point defects distort the local mass or force-constant pattern and scatter phonons. For small defects, the scattering is Rayleigh-like, which gives approximately <span class="math display">\[
-\ell_D^{-1}\propto n_D \omega^4.
-\]</span></p>
-<p>Here <span class="math inline">\(n_D\)</span> is the defect density and <span class="math inline">\(\omega\)</span> is the phonon frequency.</p>
-<!-- [Gross–Marx, Sec. 6.4.3.1, Eq. (6.4.17), p. 249] -->
-<p>Thus high-frequency phonons are scattered especially strongly.</p>
-<p>The same logic applies to isotopes: random mass disorder breaks perfect periodicity and limits <span class="math inline">\(\ell\)</span>. Alloy disorder is an even stronger version of this effect, because it introduces both mass and local bonding disorder. In practice:</p>
-<ul>
-<li>isotope purification raises the peak value of <span class="math inline">\(\kappa\)</span>;</li>
-<li>alloying strongly suppresses <span class="math inline">\(\kappa\)</span>;</li>
-<li>disorder mainly removes long mean-free-path phonons.</li>
-</ul>
-</section>
-<section id="normal-and-umklapp-processes" class="level3" data-number="10.4.4">
-<h3 data-number="10.4.4" class="anchored" data-anchor-id="normal-and-umklapp-processes"><span class="header-section-number">10.4.4</span> Normal and Umklapp Processes</h3>
-<p>Three-phonon scattering is enabled by anharmonicity. The momentum-conservation condition has two forms: <span class="math display">\[
-q_1+q_2=q_3
-\qquad
-\text{(normal process)},
-\]</span> <span class="math display">\[
-q_1+q_2=q_3+G
-\qquad
-\text{(umklapp process)}.
-\]</span></p>
-<p>Here <span class="math inline">\(G\)</span> is a reciprocal-lattice vector.</p>
-<!-- [Gross–Marx, Sec. 6.4.3.1, discussion around Eq. (6.4.16), p. 249; Ibach–Lüth, Sec. 5.6, Eq. (5.44), pp. 125–126] -->
-<p>The key distinction is not merely geometric but transport-theoretic.</p>
-<p>For normal processes, the total crystal momentum of the phonon gas is conserved: <span class="math display">\[
-Q=\sum_{q,\lambda} n_\lambda(q),\hbar q=\mathrm{const}.
-\]</span></p>
-<p>Within the simple kinetic picture used here, normal processes redistribute phonons but do not directly relax the net heat-carrying drift.</p>
-<!-- [Gross–Marx, Sec. 6.4.3.1, Eq. (6.4.16), p. 249] -->
-<p>Umklapp processes are different: they transfer crystal momentum to the lattice through <span class="math inline">\(G\)</span>, so they do relax the drifting phonon distribution and generate thermal resistance.</p>
-<p>This is the central microscopic answer to the question: <strong>why is lattice thermal conductivity finite in a perfect crystal at all?</strong></p>
-</section>
-<section id="thermal-activation-of-umklapp-scattering" class="level3" data-number="10.4.5">
-<h3 data-number="10.4.5" class="anchored" data-anchor-id="thermal-activation-of-umklapp-scattering"><span class="header-section-number">10.4.5</span> Thermal Activation of Umklapp Scattering</h3>
-<p>Umklapp processes require large enough wave vectors that the sum of incoming phonon wave vectors can leave the first Brillouin zone. For that reason, they are thermally activated at low temperature.</p>
-<p>We can express this as <span class="math display">\[
-\tau_U^{-1}(T)\propto e^{-\Theta_D/(bT)},
-\]</span> with <span class="math inline">\(b\)</span> of order unity, often close to <span class="math inline">\(2\)</span> in simple estimates.</p>
-<!-- [Gross–Marx, Sec. 6.4.3.2, Eqs. (6.4.18)–(6.4.21), pp. 249–250; Ibach–Lüth, Sec. 5.6, Eq. (5.45), p. 127] -->
-<p>Hence:</p>
-<ul>
-<li>at high <span class="math inline">\(T\)</span>, umklapp scattering is abundant and strong;</li>
-<li>on cooling, umklapp scattering collapses rapidly;</li>
-<li>once it becomes weaker than defect or boundary scattering, those extrinsic mechanisms set the scale of <span class="math inline">\(\ell\)</span>.</li>
-</ul>
-<div id="fig-normal-umklapp" class="figure quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-normal-umklapp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure from [Ibach–Lüth, Sec. 5.6, Fig. 5.6, p. 126] -->
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-normal-umklapp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.3: <strong>Figure placeholder.</strong> Normal and umklapp three-phonon processes in the Brillouin zone, emphasizing that umklapp scattering can reverse the direction of net energy transport and thereby create thermal resistance.
-</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="why-crystals-peak-typical-kappat-in-insulating-crystals" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="why-crystals-peak-typical-kappat-in-insulating-crystals"><span class="header-section-number">10.5</span> Why Crystals Peak: Typical <span class="math inline">\(\kappa(T)\)</span> in Insulating Crystals</h2>
-<p>We now combine the scattering mechanisms with the known phonon heat capacity.</p>
-<section id="high-temperatures" class="level3" data-number="10.5.1">
-<h3 data-number="10.5.1" class="anchored" data-anchor-id="high-temperatures"><span class="header-section-number">10.5.1</span> High Temperatures</h3>
-<p>For <span class="math inline">\(T\gtrsim \Theta_D\)</span>, the phonon heat capacity is approximately constant, <span class="math inline">\(c_V\approx \mathrm{const}\)</span>, while umklapp scattering dominates and typically gives <span class="math display">\[
-\ell_U\propto \frac{1}{T}.
-\]</span></p>
-<p>Therefore <span class="math display">\[
-\kappa(T)\propto \frac{1}{T}
-\]</span> at sufficiently high temperature.</p>
-<!-- [Gross–Marx, Sec. 6.4.3.2, Eq. (6.4.22), p. 250] -->
-</section>
-<section id="intermediate-temperatures" class="level3" data-number="10.5.2">
-<h3 data-number="10.5.2" class="anchored" data-anchor-id="intermediate-temperatures"><span class="header-section-number">10.5.2</span> Intermediate Temperatures</h3>
-<p>Upon cooling from room temperature, the decrease in umklapp scattering is initially stronger than the decrease in <span class="math inline">\(c_V\)</span>. As a result, <span class="math inline">\(\ell\)</span> grows quickly and <span class="math inline">\(\kappa\)</span> rises.</p>
-<p>This is the regime where high-purity crystals can become excellent heat conductors.</p>
-</section>
-<section id="low-temperatures" class="level3" data-number="10.5.3">
-<h3 data-number="10.5.3" class="anchored" data-anchor-id="low-temperatures"><span class="header-section-number">10.5.3</span> Low Temperatures</h3>
-<p>Once intrinsic phonon-phonon scattering has become weak, defect and boundary scattering take over. In a clean specimen with boundary-limited transport, <span class="math inline">\(\ell\simeq d\)</span> is nearly constant and the low-temperature Debye law gives <span class="math display">\[
-c_V\propto T^3
-\qquad\Longrightarrow\qquad
-\kappa\propto T^3.
-\]</span></p>
-<p>Thus the crystal shows a characteristic maximum in <span class="math inline">\(\kappa(T)\)</span> between the low-temperature <span class="math inline">\(T^3\)</span> rise and the high-temperature <span class="math inline">\(1/T\)</span> fall.</p>
-<!-- [Gross–Marx, Sec. 6.4.3.2, Eq. (6.4.22), p. 250; Ibach–Lüth, Sec. 5.6, p. 127] -->
-<p>This is why crystalline insulators typically peak:</p>
-<ul>
-<li>cooling suppresses umklapp resistance and initially increases <span class="math inline">\(\kappa\)</span>;</li>
-<li>further cooling eventually suppresses the heat capacity itself;</li>
-<li>the competition forces a maximum.</li>
-</ul>
-</section>
-<section id="purity-dependence" class="level3" data-number="10.5.4">
-<h3 data-number="10.5.4" class="anchored" data-anchor-id="purity-dependence"><span class="header-section-number">10.5.4</span> Purity Dependence</h3>
-<p>Because isotope and defect scattering truncate <span class="math inline">\(\ell\)</span>, cleaner samples show:</p>
-<ul>
-<li>a larger peak value of <span class="math inline">\(\kappa\)</span>;</li>
-<li>a peak shifted to lower temperature or made sharper;</li>
-<li>stronger sensitivity to sample size in the boundary-limited regime.</li>
-</ul>
-<p>That is why isotope-pure Si and Ge show such dramatic improvements over natural-abundance material.</p>
-<!-- [Gross–Marx, Sec. 6.4.3.2, discussion of Figs. 6.15 and 6.16, pp. 250–252] -->
-<div id="fig-kappa-si-ge" class="figure quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-kappa-si-ge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure from [Gross–Marx, Sec. 6.4.3.2, Figs. 6.15 and 6.16, pp. 251–252] -->
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kappa-si-ge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.4: <strong>Figure placeholder.</strong> Temperature dependence of <span class="math inline">\(\kappa(T)\)</span> in high-purity and isotope-pure Si and Ge, showing the pronounced crystalline peak and the strong enhancement produced by isotope purification.
-</figcaption>
-</figure>
-</div>
-<div id="fig-defect-suppressed-kappa" class="figure quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-defect-suppressed-kappa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure from [Gross–Marx, Sec. 6.4.3.2, Fig. 6.17, p. 252] -->
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-defect-suppressed-kappa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.5: <strong>Figure placeholder.</strong> Reduction of the thermal-conductivity peak by increasing defect density in NaF, illustrating directly how elastic disorder shortens the phonon mean free path.
-</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="why-glasses-plateau" class="level2" data-number="10.6">
-<h2 data-number="10.6" class="anchored" data-anchor-id="why-glasses-plateau"><span class="header-section-number">10.6</span> Why Glasses Plateau</h2>
-<p>The behavior of amorphous solids is qualitatively different because long-range translational order is absent. As a result, the plane-wave phonon picture becomes progressively less reliable once the mean free path approaches the wavelength.</p>
-<p>Experimentally, many glasses show three regimes.</p>
-<section id="high-temperature-regime" class="level3" data-number="10.6.1">
-<h3 data-number="10.6.1" class="anchored" data-anchor-id="high-temperature-regime"><span class="header-section-number">10.6.1</span> High-Temperature Regime</h3>
-<p>At high temperature, the dominant vibrational wavelength is already very short, and estimates of <span class="math inline">\(\ell\)</span> can become comparable to or even smaller than the wavelength itself. In that regime, the usual weakly scattered-phonon picture is no longer fully satisfactory.</p>
-<!-- [Gross–Marx, Sec. 6.4.5, p. 253] -->
-</section>
-<section id="plateau-regime" class="level3" data-number="10.6.2">
-<h3 data-number="10.6.2" class="anchored" data-anchor-id="plateau-regime"><span class="header-section-number">10.6.2</span> Plateau Regime</h3>
-<p>At intermediate temperatures, many glasses show an extended plateau in <span class="math inline">\(\kappa(T)\)</span>.</p>
-<p>This is the essential point: in the same temperature window, the heat capacity still rises appreciably. Therefore a nearly constant <span class="math inline">\(\kappa\)</span> implies that the effective mean free path must decrease strongly with temperature: <span class="math display">\[
-\kappa \sim \frac{1}{3}c_V v \ell
-\qquad\Rightarrow\qquad
-\ell(T)\ \text{must fall as}\ c_V(T)\ \text{rises}.
-\]</span></p>
-<p>The plateau is evidence for strong disorder-induced scattering, with proposed mechanisms including scattering from disorder, localization tendencies, and coupling to soft modes.</p>
-<!-- [Gross–Marx, Sec. 6.4.5, p. 253] -->
-<p>So the intuitive picture between crystalline and amorphous solids is:</p>
-<ul>
-<li><strong>crystals peak</strong> because their mean free path grows enormously on cooling before <span class="math inline">\(c_V\)</span> collapses;</li>
-<li><strong>glasses plateau</strong> because disorder keeps <span class="math inline">\(\ell\)</span> short and strongly temperature dependent even where <span class="math inline">\(c_V\)</span> is still rising.</li>
-</ul>
-</section>
-<section id="low-temperature-regime" class="level3" data-number="10.6.3">
-<h3 data-number="10.6.3" class="anchored" data-anchor-id="low-temperature-regime"><span class="header-section-number">10.6.3</span> Low-Temperature Regime</h3>
-<p>At very low temperature, amorphous solids often show approximately <span class="math display">\[
-\kappa(T)\propto T^2.
-\]</span></p>
-<p>This differs from the crystalline <span class="math inline">\(T^3\)</span> law and is commonly associated with resonant scattering of long-wavelength vibrations from tunneling two-level systems.</p>
-<!-- [Gross–Marx, Sec. 6.4.5, Eqs. (6.4.24)–(6.4.25), p. 254] -->
-<details>
-<summary>
-<strong>Optional / Further Reading: Why Many Glasses Show a <span class="math inline">\(T^2\)</span> Law at Very Low Temperature</strong>
-</summary>
-<p>A standard phenomenology introduces a broad distribution of tunneling two-level systems in the disordered structure. Long-wavelength phonons can resonantly exchange energy with those defects. The common argument is that the resulting scattering rate scales roughly linearly with <span class="math inline">\(T\)</span>, while the phonon heat capacity still scales as <span class="math inline">\(T^3\)</span>, which leads to <span class="math display">\[
-\kappa(T)\propto T^2.
-\]</span></p>
-<p>This mechanism is not needed for the main kinetic-theory derivation of <span class="math inline">\(\kappa\)</span>, but it explains why amorphous solids do not revert to the crystalline <span class="math inline">\(T^3\)</span> law at the lowest temperatures.</p>
-<!-- [Gross–Marx, Sec. 6.4.5, Eqs. (6.4.24)–(6.4.25), p. 254] -->
-</details>
-<div id="fig-crystal-vs-glass" class="figure quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-crystal-vs-glass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<!-- Placeholder: insert figure from [Gross–Marx, Sec. 6.4.5, Fig. 6.18, p. 253; alternatively Ibach–Lüth, Sec. 5.6, Fig. 5.7, p. 127] -->
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-crystal-vs-glass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.6: <strong>Figure placeholder.</strong> Comparison of <span class="math inline">\(\kappa(T)\)</span> for crystalline and amorphous <span class="math inline">\(\mathrm{SiO_2}\)</span>, highlighting the crystalline peak and the amorphous plateau.
-</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="outlook-on-the-next-lecture-from-lattice-to-total-thermal-transport" class="level2" data-number="10.7">
-<h2 data-number="10.7" class="anchored" data-anchor-id="outlook-on-the-next-lecture-from-lattice-to-total-thermal-transport"><span class="header-section-number">10.7</span> Outlook on the Next Lecture: From Lattice to Total Thermal Transport</h2>
-<p>In this lecture we treated phonons as the only heat carriers, which is the correct starting point for insulating crystals and glasses.</p>
-<p>In metals and doped semiconductors, however, the total thermal conductivity is the sum of multiple channels: <span class="math display">\[
-\kappa_{\mathrm{tot}}=\kappa_{ph}+\kappa_e+\cdots.
-\]</span></p>
-<p>Here <span class="math inline">\(\kappa_{ph}\)</span> is the lattice contribution and <span class="math inline">\(\kappa_e\)</span> is the electronic contribution:</p>
-<ul>
-<li>the phonon part is controlled by heat capacity, group velocity, and scattering;</li>
-<li>the electronic part will be controlled by band structure, carrier statistics, and momentum-relaxing collisions;</li>
-<li>in good metals, <span class="math inline">\(\kappa_e\)</span> often dominates, whereas in insulators the present lecture gives the whole story to leading order.</li>
-</ul>
-<p>The next lecture will therefore extend thermal transport from insulating lattices to conducting solids, where heat and charge transport become linked.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Take-Home Messages
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Fourier’s law describes heat flow macroscopically, while thermal diffusivity describes the time evolution of temperature disturbances.</li>
-<li>In a phonon gas, the heat current vanishes in equilibrium and appears only because a temperature gradient skews the phonon occupations.</li>
-<li>The central kinetic result is that lattice thermal conductivity is set by heat capacity, phonon speed, and mean free path.</li>
-<li>Boundary scattering dominates in very clean samples at low temperature, defect and isotope/alloy scattering suppress long mean free paths, and umklapp scattering controls the high-temperature resistance of crystals.</li>
-<li>In the simple transport picture used here, normal processes redistribute phonons but do not directly relax the net heat current, whereas umklapp processes do.</li>
-<li>Crystalline insulators peak in <span class="math inline">\(\kappa(T)\)</span> because umklapp scattering weakens strongly on cooling before the phonon heat capacity collapses.</li>
-<li>Glasses plateau because structural disorder keeps the effective mean free path short and strongly temperature dependent over a broad temperature range.</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="problem-set" class="level2" data-number="10.8">
-<h2 data-number="10.8" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">10.8</span> Problem Set</h2>
-<ol type="1">
-<li><p><strong>Heat Equation and Thermal Diffusivity.</strong> Starting from Fourier’s law and local energy conservation, derive the heat equation for a homogeneous isotropic solid and identify the thermal diffusivity.</p></li>
-<li><p><strong>Kinetic-Theory Form of Thermal Conductivity.</strong> Starting from <span class="math display">\[
+<p>The heat current in the <span class="math inline">\(x\)</span>-direction is obtained by summing the energy carried by all modes, weighted by their velocity component: <span class="math display">\[
 J_{h,x}
 =
 \frac{1}{V}
-\sum_{q,\lambda}
-\hbar\omega_\lambda(q)
-\delta n_\lambda(q)
-v_{\lambda,x}(q)
-\]</span> together with <span class="math display">\[
-\delta n_\lambda(q)
+\sum_{q,r}
+\hbar\omega_{qr}
+\left(
+\frac{1}{2}
++
+\langle n_{qr}\rangle
+\right)
+v_x(q,r).
+\]</span></p>
+<p>The factor <span class="math inline">\(\frac{1}{2}\)</span> is the zero-point contribution of each harmonic oscillator.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.2, Eq. (6.4.2), p. 245] -->
+<p>In thermal equilibrium, <span class="math display">\[
+J_{h,x}=0.
+\]</span></p>
+<p>The cancellation follows from two facts:</p>
+<p><span class="math display">\[
+\langle n_{qr}\rangle
 =
--\tau_\lambda(q)
-v_{\lambda,x}(q)
-\frac{\partial n_\lambda^{0}(q)}{\partial T}
+\langle n_{-q,r}\rangle,
+\]</span></p>
+<p>but <span class="math display">\[
+v_x(q,r)
+=
+-v_x(-q,r).
+\]</span></p>
+<p>Thus each mode moving to the right is balanced by a mode moving to the left. The zero-point term also cancels pairwise and does not produce a heat current.</p>
+<p>A finite heat current requires a deviation from local equilibrium. We therefore write <span class="math display">\[
+\delta n
+= \langle n\rangle - \langle n\rangle^0,
+\]</span></p>
+<p>where <span class="math inline">\(\langle n\rangle^0\)</span> is the local-equilibrium Bose-Einstein occupation number at the local temperature. The heat current becomes <span class="math display">\[
+J_{h,x}
+=
+\frac{1}{V}
+\sum_{q,r}
+\hbar\omega_{qr}
+\left(
+\langle n\rangle
+-
+\langle n\rangle^0
+\right)
+v_x(q,r).
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.2, Eq. (6.4.3), p. 245] -->
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Only the asymmetric part of the phonon distribution carries heat. Equilibrium phonons store energy, but they do not transport net heat.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="local-equilibrium-and-the-relaxation-time-approximation" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="local-equilibrium-and-the-relaxation-time-approximation"><span class="header-section-number">10.3.2</span> Local Equilibrium and the Relaxation-Time Approximation</h3>
+<p>We assume that the temperature varies slowly on microscopic length scales. Then each small region of the solid can still be assigned a local temperature <span class="math inline">\(T(x)\)</span> and a local-equilibrium occupation <span class="math inline">\(\langle n\rangle^0[T(x)]\)</span>.</p>
+<p>The occupation number changes by two mechanisms:</p>
+<ol type="1">
+<li>phonons move into and out of the region;</li>
+<li>scattering processes relax the distribution back toward local equilibrium.</li>
+</ol>
+<p>This is expressed as <span class="math display">\[
+\frac{d\langle n\rangle}{dt}
+=
+\left(
+\frac{\partial \langle n\rangle}{\partial t}
+\right)_{\mathrm{Diffusion}}
++
+\left(
+\frac{\partial \langle n\rangle}{\partial t}
+\right)_{\mathrm{Scattering}}.
+\]</span></p>
+<p>For a stationary state, <span class="math display">\[
+\frac{d\langle n\rangle}{dt}=0.
+\]</span></p>
+<p>The relaxation-time approximation writes the scattering term as <span class="math display">\[
+\left(
+\frac{\partial \langle n\rangle}{\partial t}
+\right)_{\mathrm{Scattering}}
+=
+-
+\frac{
+\langle n\rangle-\langle n\rangle^0
+}{\tau}.
+\]</span></p>
+<p>Here <span class="math inline">\(\tau\)</span> is the relaxation time. It measures how rapidly scattering processes erase the nonequilibrium part of the distribution.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.2, Eqs. (6.4.4)-(6.4.5), pp. 245-246] -->
+<p>For the diffusion term, consider phonons arriving at position <span class="math inline">\(x\)</span> from the earlier position <span class="math inline">\(x-v_x\Delta t\)</span>. Expanding for small <span class="math inline">\(\Delta t\)</span> gives <span class="math display">\[
+\left(
+\frac{\partial \langle n\rangle}{\partial t}
+\right)_{\mathrm{Diffusion}}
+=-v_x
+\frac{\partial \langle n\rangle}{\partial x}.
+\]</span></p>
+<p>Using local equilibrium, <span class="math display">\[
+\frac{\partial \langle n\rangle}{\partial x}
+\simeq
+\frac{\partial \langle n\rangle^0}{\partial T}
+\frac{\partial T}{\partial x},
+\]</span></p>
+<p>so that <span class="math display">\[
+\left(
+\frac{\partial \langle n\rangle}{\partial t}
+\right)_{\mathrm{Diffusion}}
+=
+-v_x
+\frac{\partial \langle n\rangle^0}{\partial T}
+\frac{\partial T}{\partial x}.
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.2, Eq. (6.4.6), p. 246] -->
+<p>Combining the stationary condition with the relaxation ansatz yields <span class="math display">\[
+0=
+-v_x
+\frac{\partial \langle n\rangle^0}{\partial T}
 \frac{\partial T}{\partial x}
-\]</span> derive the isotropic result <span class="math display">\[
+-
+\frac{
+\langle n\rangle-\langle n\rangle^0
+}{\tau}.
+\]</span></p>
+<p>Therefore <span class="math display">\[
+\langle n\rangle-\langle n\rangle^0
+=
+-\tau\, v_x
+\frac{\partial \langle n\rangle^0}{\partial T}
+\frac{\partial T}{\partial x}.
+\]</span></p>
+<p>This result has a simple interpretation. A phonon carries information about the temperature at its last scattering event. The longer the time <span class="math inline">\(\tau\)</span> between scattering events, the larger the imbalance produced by a given temperature gradient.</p>
+</section>
+</section>
+<section id="kinetic-theory-expression-for-kappa" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="kinetic-theory-expression-for-kappa"><span class="header-section-number">10.4</span> Kinetic-Theory Expression for <span class="math inline">\(\kappa\)</span></h2>
+<p>Substituting the nonequilibrium occupation into the heat-current expression gives <span class="math display">\[
+J_{h,x}
+=
+-
+\frac{1}{V}
+\sum_{q,r}
+\hbar\, \omega_{qr}\, \tau\, v_x^2
+\frac{\partial \langle n\rangle^0}{\partial T}
+\frac{\partial T}{\partial x}.
+\]</span></p>
+<p>Comparison with Fourier’s law, <span class="math display">\[
+J_{h,x}
+=
+-\kappa
+\frac{\partial T}{\partial x},
+\]</span></p>
+<p>gives <span class="math display">\[
+\kappa
+=
+\frac{1}{V}
+\sum_{q,r}
+\hbar\, \omega_{qr}\, \tau\, v_x^2
+\frac{\partial \langle n\rangle^0}{\partial T}.
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.2, Eq. (6.4.7), p. 246] -->
+<p>For a cubic or isotropic solid, <span class="math display">\[
+\langle v_x^2\rangle
+=
+\frac{1}{3}v^2.
+\]</span></p>
+<p>Thus <span class="math display">\[
+J_{h,x}
+=-
+\frac{1}{3V}
+\sum_{q,r}
+\hbar\omega_{qr}\, \tau\, v^2\,
+\frac{\partial \langle n\rangle^0}{\partial T}
+\frac{\partial T}{\partial x}.
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.2, Eq. (6.4.8), p. 246] -->
+<p>The heat capacity per unit volume is <span class="math display">\[
+c_V
+=
+\frac{1}{V}
+\sum_{q,r}
+\hbar\, \omega_{qr}\,
+\frac{\partial \langle n\rangle^0}{\partial T}.
+\]</span></p>
+<p>Introducing the mean free path <span class="math display">\[
+\ell
+=
+v\tau,
+\]</span></p>
+<p>we obtain the central kinetic result: <span class="math display">\[
+\boxed{
 \kappa
 =
 \frac{1}{3}
-\sum_{q,\lambda}
-c_{V,\lambda}(q)
-v_\lambda^2(q)
-\tau_\lambda(q).
-\]</span></p></li>
-<li><p><strong>Matthiessen’s Rule.</strong> Suppose <span class="math display">\[
-\frac{1}{\ell(T)}
+c_V v\ell
+}
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.2, Eq. (6.4.9), p. 246] -->
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Thermal conductivity is large when many modes are thermally active, move rapidly, and travel far before scattering.</p>
+</div>
+</div>
+</div>
+<p>The three factors have distinct meanings:</p>
+<ul>
+<li><span class="math inline">\(c_V\)</span> measures how much vibrational energy is available to transport;</li>
+<li><span class="math inline">\(v\)</span> measures how fast the energy propagates;</li>
+<li><span class="math inline">\(\ell\)</span> measures how far the energy travels before its direction or momentum is randomized.</li>
+</ul>
+<p>A more detailed expression keeps the branch and frequency dependence: <span class="math display">\[
+\kappa
 =
-\frac{1}{d}
+\frac{1}{3}
+\sum_r
+\int
+\frac{dc_{V,r}}{d\omega}
+v_r(\omega)
+\ell_r(\omega)
+d\omega.
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.2, Eq. (6.4.10), pp. 246-247] -->
+<p>This form shows why optical phonons and zone-edge acoustic phonons often contribute weakly to heat transport: they may be occupied, but their group velocities are small.</p>
+<section id="kinetic-gas-interpretation" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="kinetic-gas-interpretation"><span class="header-section-number">10.4.1</span> Kinetic-Gas Interpretation</h3>
+<p>The same expression can be understood without the full mode sum.</p>
+<p>Consider phonons as particles in a gas. A phonon typically travels a distance <span class="math inline">\(\ell\)</span> between scattering events. If the temperature gradient is <span class="math inline">\(dT/dx\)</span>, then the temperature difference sampled over one free path is approximately <span class="math display">\[
+\Delta T
+\simeq
+\ell
+\frac{dT}{dx}.
+\]</span></p>
+<p>The energy imbalance transported by moving phonons is proportional to <span class="math inline">\(c_V\Delta T\)</span>. Multiplying by a characteristic velocity and averaging over directions gives <span class="math display">\[
+J_{h,x}
+=
+-\frac{1}{3}c_V v\ell
+\frac{dT}{dx}.
+\]</span></p>
+<p>This again gives <span class="math display">\[
+\kappa
+=
+\frac{1}{3}c_Vv\ell.
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.2.1, Eqs. (6.4.11)-(6.4.13), p. 247] -->
+<p>The factor <span class="math inline">\(\frac{1}{3}\)</span> is geometric. In three dimensions only one third of the squared velocity contributes, on average, to transport along a chosen axis.</p>
+</section>
+</section>
+<section id="what-limits-the-mean-free-path" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="what-limits-the-mean-free-path"><span class="header-section-number">10.5</span> What Limits the Mean Free Path?</h2>
+<p>The temperature dependence of <span class="math inline">\(\kappa\)</span> is controlled mainly by two factors: <span class="math display">\[
+\kappa(T)
+\simeq
+\frac{1}{3}c_V(T)v\ell(T).
+\]</span></p>
+<p>The heat capacity <span class="math inline">\(c_V(T)\)</span> was discussed in the preceding lectures. The new question is the behavior of <span class="math inline">\(\ell(T)\)</span>.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3, pp. 247-248] -->
+<section id="matthiessens-rule" class="level3" data-number="10.5.1">
+<h3 data-number="10.5.1" class="anchored" data-anchor-id="matthiessens-rule"><span class="header-section-number">10.5.1</span> Matthiessen’s Rule</h3>
+<p>In nonmetals, the most important phonon scattering mechanisms are:</p>
+<ul>
+<li>phonon-phonon scattering;</li>
+<li>scattering from defects, impurities, isotopes, and surfaces.</li>
+</ul>
+<p>If several independent scattering mechanisms are active, their inverse mean free paths add: <span class="math display">\[
+\frac{1}{\ell}
+=
+\frac{1}{\ell_1}
 +
-A\omega^4
+\frac{1}{\ell_2}
 +
-\frac{B}{T}
-\]</span> is used as a schematic model for boundary, defect, and high-temperature umklapp scattering. Explain which term dominates at low and high temperature, and what qualitative shape you expect for <span class="math inline">\(\kappa(T)\)</span>.</p></li>
-<li><p><strong>Normal Versus Umklapp.</strong> Explain why normal three-phonon processes do not directly produce thermal resistance in the simple kinetic picture, whereas umklapp processes do.</p></li>
-<li><p><strong>Crystals Versus Glasses.</strong> Using the kinetic relation <span class="math inline">\(\kappa\sim \frac{1}{3}c_Vv\ell\)</span>, explain in words why crystals can show a pronounced maximum in <span class="math inline">\(\kappa(T)\)</span> while glasses often show a plateau instead.</p></li>
+\frac{1}{\ell_3}
++\cdots.
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.1, Eq. (6.4.14), p. 248] -->
+<p>This is the phonon analogue of Matthiessen’s rule. The strongest scattering channel usually dominates because the shortest mean free path gives the largest inverse mean free path.</p>
+</section>
+<section id="defect-and-boundary-scattering" class="level3" data-number="10.5.2">
+<h3 data-number="10.5.2" class="anchored" data-anchor-id="defect-and-boundary-scattering"><span class="header-section-number">10.5.2</span> Defect and Boundary Scattering</h3>
+<p>Defects and surfaces break translational invariance. They scatter phonons and limit <span class="math inline">\(\ell\)</span> even if phonon-phonon scattering is weak.</p>
+<p>For a fixed defect density <span class="math inline">\(n_D\)</span> and scattering cross section <span class="math inline">\(\sigma\)</span>, <span class="math display">\[
+\ell
+\propto
+\frac{1}{n_D\sigma}.
+\]</span></p>
+<p>For point defects smaller than the phonon wavelength, Rayleigh-type scattering gives approximately <span class="math display">\[
+\sigma
+\simeq
+\pi a^2(aq)^4,
+\]</span></p>
+<p>where <span class="math inline">\(a\)</span> is the characteristic size of the scattering center. With <span class="math inline">\(\omega\propto q\)</span> for acoustic phonons, <span class="math display">\[
+\ell
+\propto
+\frac{1}{n_D\omega^4}.
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.1, Eq. (6.4.17), p. 249] -->
+<p>Thus point defects scatter high-frequency phonons much more strongly than low-frequency phonons.</p>
+<p>At sufficiently low temperature, intrinsic phonon-phonon scattering becomes so weak that the mean free path can be limited by the sample dimensions: <span class="math display">\[
+\ell
+\simeq
+d.
+\]</span></p>
+<p>This is the Casimir regime. In this regime the thermal conductivity depends on sample geometry and surface quality.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.2, p. 250] -->
+</section>
+<section id="isotope-scattering" class="level3" data-number="10.5.3">
+<h3 data-number="10.5.3" class="anchored" data-anchor-id="isotope-scattering"><span class="header-section-number">10.5.3</span> Isotope Scattering</h3>
+<p>Even an otherwise perfect crystal can scatter phonons if it contains a random distribution of isotopes. Isotopes occupy the same crystallographic sites, but they have different masses. The periodicity of the mass distribution is therefore imperfect.</p>
+<p>The effect is experimentally large in materials such as Si and Ge. Isotopically purified crystals can have much larger peak thermal conductivities than natural-abundance crystals.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.2, discussion of Figs. 6.15 and 6.16, pp. 250-252] -->
+<div id="fig-si-ge-kappa" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-si-ge-kappa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Figs. 6.15 and 6.16, p. 251] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-si-ge-kappa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.2: <strong>Figure:</strong> Temperature dependence of the thermal conductivity of Si and Ge. The comparison between natural and isotopically purified samples shows how mass disorder suppresses the thermal-conductivity peak.
+</figcaption>
+</figure>
+</div>
+<div id="fig-naf-defects" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-naf-defects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.17, p. 252] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-naf-defects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.3: <strong>Figure:</strong> Thermal conductivity of NaF with different defect densities produced by irradiation. Increasing the defect density reduces the maximum thermal conductivity by shortening the phonon mean free path.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="normal-and-umklapp-processes" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="normal-and-umklapp-processes"><span class="header-section-number">10.6</span> Normal and Umklapp Processes</h2>
+<p>Phonon-phonon scattering is caused by anharmonicity. In a perfectly harmonic crystal, normal modes do not interact and phonons would have infinite lifetimes. Real crystals are anharmonic, so phonons can scatter from one another.</p>
+<p>The most important anharmonic scattering events are often three-phonon processes. Two phonons can combine into one, or one phonon can decay into two.</p>
+<p>For a three-phonon process, energy conservation requires <span class="math display">\[
+\hbar\omega_3
+=
+\hbar\omega_1
++
+\hbar\omega_2.
+\]</span></p>
+<p>Wave-vector conservation in a crystal has the form <span class="math display">\[
+q_3+G
+=
+q_1+q_2,
+\]</span></p>
+<p>where <span class="math inline">\(G\)</span> is a reciprocal-lattice vector chosen so that the resulting phonon wave vector lies in the first Brillouin zone.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.2.1.2, Eqs. (6.2.10)-(6.2.11), p. 236] -->
+<section id="normal-processes" class="level3" data-number="10.6.1">
+<h3 data-number="10.6.1" class="anchored" data-anchor-id="normal-processes"><span class="header-section-number">10.6.1</span> Normal Processes</h3>
+<p>For a normal process, <span class="math display">\[
+G=0,
+\]</span></p>
+<p>so <span class="math display">\[
+q_1+q_2=q_3.
+\]</span></p>
+<p>The total crystal momentum of the phonon gas is conserved: <span class="math display">\[
+Q
+=
+\sum_{q,r}
+\langle n_{qr}\rangle\hbar q_r
+=
+\mathrm{const}.
+\]</span></p>
+<p>Normal processes redistribute energy and momentum among phonons, but they do not directly relax the net drift of the phonon gas.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.1, Eq. (6.4.16), p. 249] -->
+<p>A useful analogy is a crowd moving down a corridor. People may bump into one another and exchange positions, but if the crowd as a whole keeps moving forward, those internal collisions do not stop the flow.</p>
+</section>
+<section id="umklapp-processes" class="level3" data-number="10.6.2">
+<h3 data-number="10.6.2" class="anchored" data-anchor-id="umklapp-processes"><span class="header-section-number">10.6.2</span> Umklapp Processes</h3>
+<p>For an umklapp process, <span class="math display">\[
+G\ne 0.
+\]</span></p>
+<p>The condition can be written as <span class="math display">\[
+q_1+q_2=q_3+G.
+\]</span></p>
+<p>The reciprocal-lattice vector represents crystal momentum transferred to the lattice. Therefore the total momentum of the phonon gas can change, and the heat current can relax.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.1, pp. 248-249] -->
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Normal processes help establish local equilibrium within the phonon gas. Umklapp processes produce thermal resistance because they transfer crystal momentum to the lattice.</p>
+</div>
+</div>
+</div>
+<div id="fig-normal-umklapp" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-normal-umklapp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.11, p. 237] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-normal-umklapp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.4: <strong>Figure:</strong> Normal and umklapp three-phonon processes in a two-dimensional Brillouin zone. In an umklapp process, adding a reciprocal-lattice vector folds the final wave vector back into the first Brillouin zone and can reverse the direction of the group velocity.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="temperature-dependence-of-thermal-conductivity-in-crystals" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="temperature-dependence-of-thermal-conductivity-in-crystals"><span class="header-section-number">10.7</span> Temperature Dependence of Thermal Conductivity in Crystals</h2>
+<section id="high-temperatures" class="level3" data-number="10.7.1">
+<h3 data-number="10.7.1" class="anchored" data-anchor-id="high-temperatures"><span class="header-section-number">10.7.1</span> High Temperatures</h3>
+<p>At high temperature, roughly <span class="math inline">\(T\gg \Theta_D\)</span>, the phonon heat capacity approaches the Dulong-Petit limit and is approximately temperature independent: <span class="math display">\[
+c_V
+\simeq
+\mathrm{const}.
+\]</span></p>
+<p>Umklapp scattering is then frequent. In a simple estimate, <span class="math display">\[
+\ell
+\propto
+\frac{\Theta_D}{T}.
+\]</span></p>
+<p>Therefore <span class="math display">\[
+\kappa
+\propto
+\frac{1}{T}.
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.2, Eqs. (6.4.20)-(6.4.22), p. 250] -->
+<p>At high temperature, thermal resistance grows because the phonon gas becomes dense: phonons collide more often, and umklapp events are common.</p>
+</section>
+<section id="intermediate-temperatures" class="level3" data-number="10.7.2">
+<h3 data-number="10.7.2" class="anchored" data-anchor-id="intermediate-temperatures"><span class="header-section-number">10.7.2</span> Intermediate Temperatures</h3>
+<p>Upon cooling from high temperature, umklapp scattering becomes less probable. The mean free path increases rapidly. Over a broad intermediate range, this increase in <span class="math inline">\(\ell\)</span> can dominate over the decrease in <span class="math inline">\(c_V\)</span>.</p>
+<p>As a result, <span class="math inline">\(\kappa(T)\)</span> rises as temperature is lowered.</p>
+<p>The rough condition for umklapp scattering is that the sum of incoming wave vectors must be large enough to reach a Brillouin-zone boundary: <span class="math display">\[
+q_1+q_2
+\gtrsim
+\frac{1}{2}G.
+\]</span></p>
+<p>In the Debye estimate, this requires phonons with energies of order <span class="math inline">\(k_B\Theta_D/2\)</span>. Their occupation is approximately <span class="math display">\[
+\langle n\rangle
+=
+\frac{1}{e^{\Theta_D/(2T)}-1}.
+\]</span></p>
+<p>Thus, for <span class="math inline">\(T\ll\Theta_D\)</span>, <span class="math display">\[
+\langle n\rangle
+\propto
+e^{-\Theta_D/(2T)}.
+\]</span></p>
+<p>Consequently, the mean free path associated with umklapp scattering grows approximately exponentially on cooling.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.2, Eqs. (6.4.18)-(6.4.21), pp. 249-250] -->
+</section>
+<section id="low-temperatures" class="level3" data-number="10.7.3">
+<h3 data-number="10.7.3" class="anchored" data-anchor-id="low-temperatures"><span class="header-section-number">10.7.3</span> Low Temperatures</h3>
+<p>At sufficiently low temperature, umklapp scattering becomes very weak. The mean free path is then limited by defects, isotopes, or boundaries.</p>
+<p>For a clean crystal in the boundary-limited regime, <span class="math display">\[
+\ell
+\simeq
+d
+=
+\mathrm{const}.
+\]</span></p>
+<p>The Debye heat capacity of acoustic phonons behaves as <span class="math display">\[
+c_V
+\propto
+T^3.
+\]</span></p>
+<p>Therefore <span class="math display">\[
+\kappa
+\propto
+T^3.
+\]</span></p>
+<p>The full qualitative behavior of a clean insulating crystal is therefore:</p>
+<p><span class="math display">\[
+\kappa
+\propto
+\begin{cases}
+T^3, &amp; \text{very low } T \text{ with boundary or defect limitation},\\
+T^n e^{\Theta_D/T}, &amp; \text{low to intermediate } T \text{ with activated umklapp scattering},\\
+1/T, &amp; \text{high } T \text{ with strong phonon-phonon scattering}.
+\end{cases}
+\]</span></p>
+<p>Here <span class="math inline">\(n\)</span> is a model-dependent exponent, typically between <span class="math inline">\(0\)</span> and <span class="math inline">\(3\)</span> in simple estimates.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.2, Eq. (6.4.22), p. 250] -->
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The peak in <span class="math inline">\(\kappa(T)\)</span> is a competition: cooling suppresses umklapp scattering and increases <span class="math inline">\(\ell\)</span>, but further cooling suppresses the phonon heat capacity.</p>
+</div>
+</div>
+</div>
+<div id="fig-crystal-kappa-peak" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-crystal-kappa-peak-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.15, p. 251] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-crystal-kappa-peak-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.5: <strong>Figure:</strong> Thermal conductivity of high-purity Si. The low-temperature rise, maximum, and high-temperature decrease illustrate the typical behavior of a crystalline insulator.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="spontaneous-decay-of-phonons" class="level2" data-number="10.8">
+<h2 data-number="10.8" class="anchored" data-anchor-id="spontaneous-decay-of-phonons"><span class="header-section-number">10.8</span> Spontaneous Decay of Phonons</h2>
+<p>At very low temperature, one might expect phonons to live indefinitely because there are almost no thermally excited phonons left to scatter from. This expectation is not completely correct.</p>
+<p>Zero-point fluctuations remain even at <span class="math inline">\(T=0\)</span>. A phonon can interact with these fluctuations and decay through anharmonic three-phonon processes.</p>
+<p>For spontaneous decay, the scattering cross section scales as <span class="math display">\[
+\sigma
+\propto
+\omega^3.
+\]</span></p>
+<p>Since the density of available final states scales as <span class="math display">\[
+D(\omega)
+\propto
+\omega^2,
+\]</span></p>
+<p>one obtains <span class="math display">\[
+\ell
+\propto
+\tau
+\propto
+\frac{1}{\omega^5}.
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.4, Eq. (6.4.23), pp. 252-253] -->
+<p>This mechanism is relevant mainly for high-frequency phonons. Long-wavelength, low-frequency acoustic phonons can still have very long lifetimes.</p>
+</section>
+<section id="thermal-conductivity-in-amorphous-solids" class="level2" data-number="10.9">
+<h2 data-number="10.9" class="anchored" data-anchor-id="thermal-conductivity-in-amorphous-solids"><span class="header-section-number">10.9</span> Thermal Conductivity in Amorphous Solids</h2>
+<p>The preceding discussion assumed a crystalline solid, where phonons can be labeled by wave vector and branch. In amorphous solids, long-range translational symmetry is absent. The phonon picture remains useful for long-wavelength vibrations, but it becomes less reliable when the mean free path becomes comparable to the wavelength.</p>
+<p>Experiments on amorphous solids show behavior very different from crystalline solids.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.5, p. 253] -->
+<div id="fig-glass-vs-crystal" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-glass-vs-crystal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.18, p. 253] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-glass-vs-crystal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.6: <strong>Figure:</strong> Thermal conductivity of crystalline and amorphous <span class="math inline">\(\mathrm{SiO_2}\)</span>. The crystal shows a pronounced peak, whereas the glass shows a broad plateau and a different low-temperature power law.
+</figcaption>
+</figure>
+</div>
+<section id="high-temperature-regime" class="level3" data-number="10.9.1">
+<h3 data-number="10.9.1" class="anchored" data-anchor-id="high-temperature-regime"><span class="header-section-number">10.9.1</span> High-Temperature Regime</h3>
+<p>At high temperature, the dominant vibrational wavelengths in amorphous solids can be of order <span class="math inline">\(1,\mathrm{nm}\)</span>. Estimates from the measured thermal conductivity can give mean free paths below or comparable to this wavelength.</p>
+<p>In that situation, the picture of well-defined weakly scattered phonons becomes questionable. Heat transport is then better viewed as energy diffusion through a disordered vibrational network rather than as transport by long-lived plane-wave phonons.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.5, p. 253] -->
+</section>
+<section id="plateau-regime" class="level3" data-number="10.9.2">
+<h3 data-number="10.9.2" class="anchored" data-anchor-id="plateau-regime"><span class="header-section-number">10.9.2</span> Plateau Regime</h3>
+<p>At intermediate temperatures, many amorphous solids show an approximate plateau in <span class="math inline">\(\kappa(T)\)</span>.</p>
+<p>From <span class="math display">\[
+\kappa
+\simeq
+\frac{1}{3}c_Vv\ell,
+\]</span></p>
+<p>a plateau means that the growth of <span class="math inline">\(c_V\)</span> must be compensated by a decrease of <span class="math inline">\(\ell\)</span>.</p>
+<p>Possible mechanisms include:</p>
+<ul>
+<li>strong scattering from structural disorder;</li>
+<li>localization tendencies of vibrational modes;</li>
+<li>scattering from soft local modes.</li>
+</ul>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.5, p. 253] -->
+<p>The contrast with crystals is direct. In a clean crystal, cooling can make <span class="math inline">\(\ell\)</span> extremely long. In a glass, disorder keeps <span class="math inline">\(\ell\)</span> short over a wide range of temperatures.</p>
+</section>
+<section id="very-low-temperatures-and-two-level-systems" class="level3" data-number="10.9.3">
+<h3 data-number="10.9.3" class="anchored" data-anchor-id="very-low-temperatures-and-two-level-systems"><span class="header-section-number">10.9.3</span> Very Low Temperatures and Two-Level Systems</h3>
+<p>At very low temperatures, many amorphous solids show approximately <span class="math display">\[
+\kappa
+\propto
+T^2.
+\]</span></p>
+<p>This differs from the crystalline boundary-limited result <span class="math inline">\(\kappa\propto T^3\)</span>.</p>
+<p>A common explanation uses tunneling two-level systems in the disordered structure. These may be local atomic configurations that can tunnel between two nearly equivalent positions.</p>
+<p>If the two levels are separated by energy <span class="math inline">\(E_{12}\)</span>, resonant phonon scattering is strongest when <span class="math display">\[
+E_{12}
+=
+\hbar\omega.
+\]</span></p>
+<p>The occupation difference between the two levels is <span class="math display">\[
+\delta n
+= n_2-n_1
+= n_{\mathrm{TLS}}
+\tanh
+\left(
+\frac{E_{12}}{2k_BT}
+\right)
+=
+n_{\mathrm{TLS}}
+\tanh
+\left(
+\frac{\hbar\omega}{2k_BT}
+\right).
+\]</span></p>
+<p>For the phonons that dominate heat transport, <span class="math inline">\(\hbar\omega\sim k_BT\)</span>, so this occupation difference is only weakly temperature dependent. If the scattering rate scales approximately as <span class="math inline">\(1/\ell\propto T\)</span> while <span class="math inline">\(c_V\propto T^3\)</span>, then <span class="math display">\[
+\kappa
+=
+\frac{1}{3}c_Vv\ell
+\propto
+T^2.
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.5, Eqs. (6.4.24)-(6.4.25), p. 254] -->
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The low-temperature thermal conductivity of glasses is a signature of disorder physics, not merely a modified Debye law.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="thermal-transport-in-a-one-dimensional-solid" class="level2" data-number="10.10">
+<h2 data-number="10.10" class="anchored" data-anchor-id="thermal-transport-in-a-one-dimensional-solid"><span class="header-section-number">10.10</span> Thermal Transport in a One-Dimensional Solid</h2>
+<p>Modern micro- and nanostructures can confine phonons so strongly that only a small number of transverse modes remain thermally active.</p>
+<p>The relevant length scale is the thermal wavelength <span class="math inline">\(\lambda_{\mathrm{th}}\)</span>, defined by <span class="math display">\[
+\hbar\omega_{\mathrm{th}}
+= \frac{2\pi\hbar v}{\lambda_{\mathrm{th}}}
+= k_BT.
+\]</span></p>
+<p>Vibrational modes with wavelengths shorter than this are not thermally occupied. If a transverse dimension <span class="math inline">\(D\)</span> satisfies <span class="math display">\[
+D
+\le
+\frac{\lambda_{\mathrm{th}}}{2},
+\]</span></p>
+<p>then motion in that direction is effectively frozen out.</p>
+<p>The corresponding crossover temperature is <span class="math display">\[
+T^\ast
+=
+\frac{hv}{2k_BD}.
+\]</span></p>
+<p>For <span class="math inline">\(v\simeq 5000,\mathrm{m/s}\)</span> and <span class="math inline">\(D\simeq 100,\mathrm{nm}\)</span>, this gives a crossover temperature of order <span class="math inline">\(1,\mathrm{K}\)</span>.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.6, Eqs. (6.4.26)-(6.4.27), p. 254] -->
+<div id="fig-one-dimensional-bridge" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-one-dimensional-bridge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.19, p. 255] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-one-dimensional-bridge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.7: <strong>Figure:</strong> One-dimensional thermal transport through a narrow bridge connecting a hot reservoir at temperature <span class="math inline">\(T_1\)</span> and a cold reservoir at temperature <span class="math inline">\(T_2&lt;T_1\)</span>.
+</figcaption>
+</figure>
+</div>
+<section id="heat-current-in-one-dimension" class="level3" data-number="10.10.1">
+<h3 data-number="10.10.1" class="anchored" data-anchor-id="heat-current-in-one-dimension"><span class="header-section-number">10.10.1</span> Heat Current in One Dimension</h3>
+<p>Consider a one-dimensional bridge of length <span class="math inline">\(L\)</span> between two reservoirs at temperatures <span class="math inline">\(T_1\)</span> and <span class="math inline">\(T_2&lt;T_1\)</span>.</p>
+<p>The heat current is <span class="math display">\[
+J_{h,x}
+=
+\frac{1}{L}
+\sum_{q,r}
+\hbar\omega_{qr}
+\left(
+\langle n_1\rangle
+-
+\langle n_2\rangle
+\right)
+v_{x,qr}.
+\]</span></p>
+<p>Here <span class="math inline">\(\langle n_1\rangle\)</span> and <span class="math inline">\(\langle n_2\rangle\)</span> are the thermal occupation numbers imposed by the hot and cold reservoirs.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.6.1, Eq. (6.4.28), p. 255] -->
+<p>Using the one-dimensional density of states <span class="math display">\[
+Z^{(1)}(q)
+=
+\frac{L}{2\pi},
+\]</span></p>
+<p>and the relation <span class="math display">\[
+Z(q)\,dq
+=
+D(\omega)\,d\omega,
+\]</span></p>
+<p>we obtain <span class="math display">\[
+D(\omega)
+=
+\frac{L}{2\pi}
+\frac{1}{v_{x,qr}}.
+\]</span></p>
+<p>The group velocity cancels in the current, giving <span class="math display">\[
+J_{h,x}
+=
+\frac{1}{2\pi}
+\sum_r
+\int_0^\infty
+\hbar\omega_r
+\left(
+\langle n_1\rangle
+-
+\langle n_2\rangle
+\right)
+d\omega_r.
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.6.1, Eqs. (6.4.29)-(6.4.30), p. 255] -->
+<p>The cancellation of velocity is important. A slower mode has a larger density of states, and these two effects compensate in the ballistic one-dimensional limit.</p>
+</section>
+<section id="quantum-of-thermal-conductance" class="level3" data-number="10.10.2">
+<h3 data-number="10.10.2" class="anchored" data-anchor-id="quantum-of-thermal-conductance"><span class="header-section-number">10.10.2</span> Quantum of Thermal Conductance</h3>
+<p>In the ballistic limit, the mean free path exceeds the bridge length: <span class="math display">\[
+\ell &gt; L.
+\]</span></p>
+<p>Phonons emitted by one reservoir reach the other reservoir without backscattering. In linear response, for <span class="math inline">\(\Delta T=T_1-T_2\)</span>, the thermal conductance is <span class="math display">\[
+G_{\mathrm{th}}
+\equiv
+\frac{J_{h,x}}{\Delta T}.
+\]</span></p>
+<p>Using <span class="math display">\[
+x
+=
+\frac{\hbar\omega}{k_BT},
+\]</span></p>
+<p>one obtains <span class="math display">\[
+G_{\mathrm{th}}
+=
+\frac{k_B^2T}{h}
+\sum_r
+T_r
+\int_0^\infty
+\frac{x^2e^x}{(e^x-1)^2}
+dx.
+\]</span></p>
+<p>The integral is <span class="math display">\[
+\int_0^\infty
+\frac{x^2e^x}{(e^x-1)^2} dx
+=
+\frac{\pi^2}{3}.
+\]</span></p>
+<p>Therefore <span class="math display">\[
+G_{\mathrm{th}}
+= \sum_r T_r
+\frac{\pi^2k_B^2T}{3h}.
+\]</span></p>
+<p>For an ideal mode with <span class="math inline">\(T_r=1\)</span>, the contribution is <span class="math display">\[
+G_0
+= \frac{\pi^2k_B^2T}{3h}.
+\]</span></p>
+<p>This is the quantum of thermal conductance per mode.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.6.1, Eqs. (6.4.31)-(6.4.33), p. 256] -->
+<p>If <span class="math inline">\(N_i\)</span> modes are perfectly transmitted, <span class="math display">\[
+G_{\mathrm{th}}
+= N_iG_0.
+\]</span></p>
+<p>In the nanostructure discussed in the textbook, each bridge contributes four vibrational modes, and four bridges act in parallel. The low-temperature conductance is therefore expected to approach <span class="math inline">\(16G_0\)</span>.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.6.1, Fig. 6.20, pp. 256-257] -->
+<div id="fig-thermal-conductance-quantum" class="figure quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-thermal-conductance-quantum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.20, p. 256] -->
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-thermal-conductance-quantum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.8: <strong>Figure:</strong> Measurement of the thermal conductance quantum in a nanostructured one-dimensional phonon system. The conductance approaches the expected value from the number of transmitted vibrational modes.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="take-home-messages" class="level2" data-number="10.11">
+<h2 data-number="10.11" class="anchored" data-anchor-id="take-home-messages"><span class="header-section-number">10.11</span> Take-Home Messages</h2>
+<ul>
+<li>Thermal conductivity is a nonequilibrium response to a temperature gradient.</li>
+<li>In an insulating crystal, heat is carried mainly by phonons.</li>
+<li>Equilibrium phonons store energy but do not carry net heat current.</li>
+<li>Large lattice thermal conductivity requires thermally active modes, large group velocities, and long mean free paths.</li>
+<li>Normal phonon processes redistribute momentum inside the phonon gas, whereas umklapp processes relax the heat current.</li>
+<li>Crystalline insulators show a thermal-conductivity peak because scattering weakens on cooling before the heat capacity collapses.</li>
+<li>Disorder suppresses the phonon mean free path and gives amorphous solids their characteristic plateau.</li>
+<li>A one-dimensional ballistic solid has a universal thermal conductance per transmitted vibrational mode.</li>
+</ul>
+</section>
+<section id="problem-set" class="level2" data-number="10.12">
+<h2 data-number="10.12" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">10.12</span> Problem Set</h2>
+<ol type="1">
+<li><p><strong>Fourier’s Law and Units.</strong> Starting from <span class="math display">\[
+\mathbf J_h=-\kappa\nabla T,
+\]</span> determine the SI unit of <span class="math inline">\(\kappa\)</span>. Explain the physical meaning of the minus sign.</p></li>
+<li><p><strong>Derivation of the Kinetic Formula.</strong> Starting from <span class="math display">\[
+J_{h,x}
+=
+\frac{1}{V}
+\sum_{q,r}
+\hbar\, \omega_{qr}\,
+\delta n\,
+v_x,
+\]</span> with <span class="math display">\[
+\delta n
+=
+-\tau v_x
+\frac{\partial \langle n\rangle^0}{\partial T}
+\frac{\partial T}{\partial x},
+\]</span> derive <span class="math display">\[
+\kappa
+=
+\frac{1}{3}c_Vv\ell
+\]</span> for an isotropic solid with one characteristic phonon velocity and mean free path.</p></li>
+<li><p><strong>Normal and Umklapp Processes.</strong> Explain the difference between <span class="math display">\[
+q_1+q_2=q_3
+\]</span> and <span class="math display">\[
+q_1+q_2=q_3+G.
+\]</span> Which process directly produces thermal resistance in the simple phonon-gas picture?</p></li>
+<li><p><strong>Temperature Dependence in a Clean Crystal.</strong> Use <span class="math display">\[
+\kappa\simeq \frac{1}{3}c_Vv\ell
+\]</span> to explain why a clean insulating crystal can show <span class="math inline">\(\kappa\propto T^3\)</span> at very low temperature, a maximum at intermediate temperature, and approximately <span class="math inline">\(\kappa\propto 1/T\)</span> at high temperature.</p></li>
+<li><p><strong>Defect Scattering.</strong> For Rayleigh scattering from point defects, <span class="math display">\[
+\ell
+\propto
+\frac{1}{n_D\omega^4}.
+\]</span> Explain which phonons are most strongly affected and how increasing defect density changes the thermal-conductivity curve.</p></li>
+</ol>
+</section>
+<section id="solutions-to-the-problem-set" class="level2" data-number="10.13">
+<h2 data-number="10.13" class="anchored" data-anchor-id="solutions-to-the-problem-set"><span class="header-section-number">10.13</span> Solutions to the Problem Set</h2>
+<ol type="1">
+<li><p><strong>Fourier’s Law and Units</strong></p>
+<p>Fourier’s law is <span class="math display">\[
+\mathbf J_h
+=-\kappa\nabla T.
+\]</span></p>
+<p>The heat-current density has units <span class="math display">\[
+[\mathbf J_h]
+= \mathrm{W\,m^{-2}}.
+\]</span></p>
+<p>The temperature gradient has units <span class="math display">\[
+[\nabla T]
+=
+\mathrm{K\,m^{-1}}.
+\]</span></p>
+<p>Therefore <span class="math display">\[
+[\kappa]
+=
+\frac{\mathrm{W\,m^{-2}}}{\mathrm{K\,m^{-1}}}
+=
+\mathrm{W\,m^{-1}\,K^{-1}}.
+\]</span></p>
+<p>The minus sign means that heat flows from high temperature to low temperature. If temperature increases in the positive <span class="math inline">\(x\)</span>-direction, then the heat current points in the negative <span class="math inline">\(x\)</span>-direction.</p></li>
+<li><p><strong>Derivation of the Kinetic Formula</strong></p>
+<p>We start from <span class="math display">\[
+J_{h,x}
+=
+\frac{1}{V}
+\sum_{q,r}
+\hbar\omega_{qr}
+\delta n
+v_x.
+\]</span></p>
+<p>Insert <span class="math display">\[
+\delta n
+=
+-\tau v_x
+\frac{\partial \langle n\rangle^0}{\partial T}
+\frac{\partial T}{\partial x}.
+\]</span></p>
+<p>This gives <span class="math display">\[
+J_{h,x}
+=
+-\frac{1}{V}
+\sum_{q,r}
+\hbar\omega_{qr}
+\tau
+v_x^2
+\frac{\partial \langle n\rangle^0}{\partial T}
+\frac{\partial T}{\partial x}.
+\]</span></p>
+<p>Comparing with <span class="math display">\[
+J_{h,x}
+=
+-\kappa
+\frac{\partial T}{\partial x},
+\]</span></p>
+<p>we identify <span class="math display">\[
+\kappa
+=
+\frac{1}{V}
+\sum_{q,r}
+\hbar\omega_{qr}
+\tau
+v_x^2
+\frac{\partial \langle n\rangle^0}{\partial T}.
+\]</span></p>
+<p>For an isotropic solid, <span class="math display">\[
+\langle v_x^2\rangle
+=
+\frac{1}{3}v^2.
+\]</span></p>
+<p>Thus <span class="math display">\[
+\kappa
+=
+\frac{1}{3}
+v^2\tau
+\frac{1}{V}
+\sum_{q,r}
+\hbar\omega_{qr}
+\frac{\partial \langle n\rangle^0}{\partial T}.
+\]</span></p>
+<p>The sum is the heat capacity per unit volume: <span class="math display">\[
+c_V
+=
+\frac{1}{V}
+\sum_{q,r}
+\hbar\omega_{qr}
+\frac{\partial \langle n\rangle^0}{\partial T}.
+\]</span></p>
+<p>Therefore <span class="math display">\[
+\kappa
+=
+\frac{1}{3}c_Vv^2\tau.
+\]</span></p>
+<p>Using <span class="math display">\[
+\ell=v\tau,
+\]</span></p>
+<p>we obtain <span class="math display">\[
+\kappa
+=
+\frac{1}{3}c_Vv\ell.
+\]</span></p></li>
+<li><p><strong>Normal and Umklapp Processes</strong></p>
+<p>For a normal process, <span class="math display">\[
+q_1+q_2=q_3.
+\]</span></p>
+<p>The total crystal momentum of the phonon gas is conserved. Such processes redistribute phonons among modes, but in the simple kinetic picture they do not directly relax the drifting phonon distribution responsible for heat flow.</p>
+<p>For an umklapp process, <span class="math display">\[
+q_1+q_2=q_3+G,
+\]</span></p>
+<p>where <span class="math inline">\(G\)</span> is a reciprocal-lattice vector. The additional reciprocal-lattice vector means that crystal momentum is transferred to the lattice. The phonon gas can lose net drift momentum, so the heat current relaxes.</p>
+<p>Thus, in the simple phonon-gas picture, umklapp processes directly produce thermal resistance.</p></li>
+<li><p><strong>Temperature Dependence in a Clean Crystal</strong></p>
+<p>The kinetic expression is <span class="math display">\[
+\kappa
+\simeq
+\frac{1}{3}c_Vv\ell.
+\]</span></p>
+<p>At very low temperature, the phonon heat capacity follows the Debye law: <span class="math display">\[
+c_V
+\propto
+T^3.
+\]</span></p>
+<p>In a very clean crystal, the mean free path is often limited by the sample size, so <span class="math display">\[
+\ell \simeq d
+=
+\mathrm{const}.
+\]</span></p>
+<p>Therefore <span class="math display">\[
+\kappa
+\propto
+T^3.
+\]</span></p>
+<p>At intermediate temperature, increasing temperature activates more phonons but still does not make umklapp scattering fully dominant. The mean free path can become very large as umklapp scattering freezes out on cooling. This produces a maximum in <span class="math inline">\(\kappa(T)\)</span>.</p>
+<p>At high temperature, the heat capacity is approximately constant: <span class="math display">\[
+c_V
+\simeq
+\mathrm{const}.
+\]</span></p>
+<p>Umklapp scattering is strong and gives roughly <span class="math display">\[
+\ell
+\propto
+\frac{1}{T}.
+\]</span></p>
+<p>Therefore <span class="math display">\[
+\kappa
+\propto
+\frac{1}{T}.
+\]</span></p>
+<p>The peak appears because low-temperature heat capacity suppression and high-temperature umklapp scattering suppress <span class="math inline">\(\kappa\)</span> on opposite sides of the maximum.</p></li>
+<li><p><strong>Defect Scattering</strong></p>
+<p>Rayleigh-type point-defect scattering gives <span class="math display">\[
+\ell
+\propto
+\frac{1}{n_D\omega^4}.
+\]</span></p>
+<p>Thus high-frequency phonons are scattered most strongly because the inverse mean free path grows as <span class="math inline">\(\omega^4\)</span>.</p>
+<p>Increasing the defect density <span class="math inline">\(n_D\)</span> reduces the mean free path at all affected frequencies. Since <span class="math display">\[
+\kappa
+\simeq
+\frac{1}{3}c_Vv\ell,
+\]</span></p>
+<p>a shorter mean free path lowers the thermal conductivity. The peak in <span class="math inline">\(\kappa(T)\)</span> is reduced, and the material behaves less like an ideal clean crystal.</p></li>
 </ol>
 
 
