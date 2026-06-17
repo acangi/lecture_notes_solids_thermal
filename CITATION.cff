@@ -1,0 +1,34 @@
+```yaml
+cff-version: 1.2.0
+message: "If you use these lecture notes, please cite them using the metadata from this file."
+
+title: "Fundamentals in Solid-State Physics – Thermal Properties"
+
+authors:
+  - family-names: "Cangi"
+    given-names: "Attila"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+
+abstract: "Lecture notes for a university-level course on the thermal properties of solids, written as a Quarto book."
+
+keywords:
+  - solid-state physics
+  - thermal properties
+  - lattice vibrations
+  - phonons
+  - specific heat
+  - thermal expansion
+  - thermal conductivity
+  - lecture notes
+  - Quarto
+
+license: "CC-BY-4.0"
+
+url: "https://acangi.github.io/lecture_notes_solids_thermal/"
+repository-code: "https://github.com/acangi/lecture_notes_solids_thermal"
+
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.xxxxxxx"
+    description: "Concept DOI for the lecture-note project as a whole."
+```
