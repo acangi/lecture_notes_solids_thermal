@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -71,6 +106,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script data-goatcounter="https://acangi-lecture-solids-thermal.goatcounter.com/count" async="" src="https://gc.zgo.at/count.js"></script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -446,6 +483,201 @@ a,b,c\ge 0.
 \]</span></p>
 <p>The cubic term describes the asymmetry of the interatomic potential. This asymmetry is physically expected: atoms repel each other very strongly at short distances, while the potential becomes flatter at larger separations.</p>
 <p>The quartic term represents the next correction at larger amplitudes. In a realistic potential, higher-order terms ultimately stabilize the potential; the truncated expression is only meant as a local expansion around the equilibrium position.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="183" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 182;"><span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> U0 <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> umax <span class="op">=</span> <span class="fl">1.5</span><span class="op">;</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> container <span class="op">=</span> <span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="max-width: 850px; margin: 0 auto;"&gt;</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div style="</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="vs">        display: grid;</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="vs">        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="vs">        gap: 0.75rem 1.25rem;</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="vs">        margin-bottom: 1rem;</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="vs">      "&gt;</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;label&gt;</span></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="vs">          a = &lt;span data-readout="a"&gt;1.00&lt;/span&gt;&lt;br&gt;</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="vs">          &lt;input data-control="a" type="range" min="0" max="5" step="0.05" value="1"&gt;</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;/label&gt;</span></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;label&gt;</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="vs">          b = &lt;span data-readout="b"&gt;0.40&lt;/span&gt;&lt;br&gt;</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="vs">          &lt;input data-control="b" type="range" min="0" max="5" step="0.05" value="0.4"&gt;</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;/label&gt;</span></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;label&gt;</span></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="vs">          c = &lt;span data-readout="c"&gt;0.15&lt;/span&gt;&lt;br&gt;</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="vs">          &lt;input data-control="c" type="range" min="0" max="5" step="0.05" value="0.15"&gt;</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;/label&gt;</span></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/div&gt;</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;p data-status style="margin-bottom: 0.5rem;"&gt;&lt;/p&gt;</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div data-plot&gt;&lt;/div&gt;</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;p data-stationary style="font-size: 0.95em; margin-top: 0.5rem;"&gt;&lt;/p&gt;</span></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;</span></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="vs">  `</span><span class="op">;</span></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> controls <span class="op">=</span> {</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>    <span class="dt">a</span><span class="op">:</span> container<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'[data-control="a"]'</span>)<span class="op">,</span></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>    <span class="dt">b</span><span class="op">:</span> container<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'[data-control="b"]'</span>)<span class="op">,</span></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>    <span class="dt">c</span><span class="op">:</span> container<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'[data-control="c"]'</span>)</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> readouts <span class="op">=</span> {</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>    <span class="dt">a</span><span class="op">:</span> container<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'[data-readout="a"]'</span>)<span class="op">,</span></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>    <span class="dt">b</span><span class="op">:</span> container<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'[data-readout="b"]'</span>)<span class="op">,</span></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>    <span class="dt">c</span><span class="op">:</span> container<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'[data-readout="c"]'</span>)</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> status <span class="op">=</span> container<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"[data-status]"</span>)<span class="op">;</span></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> plotContainer <span class="op">=</span> container<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"[data-plot]"</span>)<span class="op">;</span></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> stationaryText <span class="op">=</span> container<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"[data-stationary]"</span>)<span class="op">;</span></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">potential</span>(u<span class="op">,</span> U0<span class="op">,</span> a<span class="op">,</span> b<span class="op">,</span> c) {</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> U0 <span class="op">+</span> a <span class="op">*</span> u <span class="op">**</span> <span class="dv">2</span> <span class="op">-</span> b <span class="op">*</span> u <span class="op">**</span> <span class="dv">3</span> <span class="op">-</span> c <span class="op">*</span> u <span class="op">**</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">harmonicPotential</span>(u<span class="op">,</span> U0<span class="op">,</span> a) {</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> U0 <span class="op">+</span> a <span class="op">*</span> u <span class="op">**</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">stationaryPoints</span>(U0<span class="op">,</span> a<span class="op">,</span> b<span class="op">,</span> c<span class="op">,</span> umax) {</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> eps <span class="op">=</span> <span class="fl">1e-12</span><span class="op">;</span></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> roots <span class="op">=</span> [<span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>    <span class="co">// dU/du = 2 a u - 3 b u^2 - 4 c u^3</span></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>    <span class="co">//       = u (2a - 3bu - 4cu^2)</span></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(c) <span class="op">&lt;</span> eps) {</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(b) <span class="op">&gt;</span> eps) {</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>        roots<span class="op">.</span><span class="fu">push</span>((<span class="dv">2</span> <span class="op">*</span> a) <span class="op">/</span> (<span class="dv">3</span> <span class="op">*</span> b))<span class="op">;</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> disc <span class="op">=</span> <span class="dv">9</span> <span class="op">*</span> b <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">32</span> <span class="op">*</span> a <span class="op">*</span> c<span class="op">;</span></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>      roots<span class="op">.</span><span class="fu">push</span>((<span class="op">-</span><span class="dv">3</span> <span class="op">*</span> b <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(disc)) <span class="op">/</span> (<span class="dv">8</span> <span class="op">*</span> c))<span class="op">;</span></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>      roots<span class="op">.</span><span class="fu">push</span>((<span class="op">-</span><span class="dv">3</span> <span class="op">*</span> b <span class="op">-</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(disc)) <span class="op">/</span> (<span class="dv">8</span> <span class="op">*</span> c))<span class="op">;</span></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>      <span class="kw">new</span> <span class="bu">Set</span>(</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>        roots</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>          <span class="op">.</span><span class="fu">filter</span>((u) <span class="kw">=&gt;</span> <span class="bu">Number</span><span class="op">.</span><span class="fu">isFinite</span>(u) <span class="op">&amp;&amp;</span> u <span class="op">&gt;=</span> <span class="op">-</span>umax <span class="op">&amp;&amp;</span> u <span class="op">&lt;=</span> umax)</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>          <span class="op">.</span><span class="fu">map</span>((u) <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(u <span class="op">*</span> <span class="fl">1e10</span>) <span class="op">/</span> <span class="fl">1e10</span>)</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">sort</span>((x<span class="op">,</span> y) <span class="kw">=&gt;</span> x <span class="op">-</span> y)</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">map</span>((u) <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>        <span class="dt">u</span><span class="op">:</span> u<span class="op">,</span></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>        <span class="dt">U</span><span class="op">:</span> <span class="fu">potential</span>(u<span class="op">,</span> U0<span class="op">,</span> a<span class="op">,</span> b<span class="op">,</span> c)</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>      }))<span class="op">;</span></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">update</span>() {</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> a <span class="op">=</span> <span class="bu">Number</span>(controls<span class="op">.</span><span class="at">a</span><span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> b <span class="op">=</span> <span class="bu">Number</span>(controls<span class="op">.</span><span class="at">b</span><span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> c <span class="op">=</span> <span class="bu">Number</span>(controls<span class="op">.</span><span class="at">c</span><span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>    readouts<span class="op">.</span><span class="at">a</span><span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> a<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>    readouts<span class="op">.</span><span class="at">b</span><span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> b<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>    readouts<span class="op">.</span><span class="at">c</span><span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> c<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> nPoints <span class="op">=</span> <span class="dv">501</span><span class="op">;</span></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> curve <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>({ <span class="dt">length</span><span class="op">:</span> nPoints }<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> u <span class="op">=</span> <span class="op">-</span>umax <span class="op">+</span> (<span class="dv">2</span> <span class="op">*</span> umax <span class="op">*</span> i) <span class="op">/</span> (nPoints <span class="op">-</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> {</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>        <span class="dt">u</span><span class="op">:</span> u<span class="op">,</span></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>        <span class="dt">U</span><span class="op">:</span> <span class="fu">potential</span>(u<span class="op">,</span> U0<span class="op">,</span> a<span class="op">,</span> b<span class="op">,</span> c)<span class="op">,</span></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Uharm</span><span class="op">:</span> <span class="fu">harmonicPotential</span>(u<span class="op">,</span> U0<span class="op">,</span> a)</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>      }<span class="op">;</span></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> points <span class="op">=</span> <span class="fu">stationaryPoints</span>(U0<span class="op">,</span> a<span class="op">,</span> b<span class="op">,</span> c<span class="op">,</span> umax)<span class="op">;</span></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>    status<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>      <span class="vs">`&lt;strong&gt;Current parameters:&lt;/strong&gt; `</span> <span class="op">+</span></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>      <span class="vs">`a = </span><span class="sc">${</span>a<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">, `</span> <span class="op">+</span></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>      <span class="vs">`b = </span><span class="sc">${</span>b<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">, `</span> <span class="op">+</span></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>      <span class="vs">`c = </span><span class="sc">${</span>c<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">.`</span><span class="op">;</span></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> plotWidth <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>      <span class="dv">320</span><span class="op">,</span></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>      <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(<span class="dv">850</span><span class="op">,</span> container<span class="op">.</span><span class="at">clientWidth</span> <span class="op">||</span> <span class="dv">850</span>)</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>    )<span class="op">;</span></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>    plotContainer<span class="op">.</span><span class="fu">replaceChildren</span>(</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>        <span class="dt">width</span><span class="op">:</span> plotWidth<span class="op">,</span></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>        <span class="dt">height</span><span class="op">:</span> <span class="dv">430</span><span class="op">,</span></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>          <span class="dt">label</span><span class="op">:</span> <span class="st">"displacement u"</span><span class="op">,</span></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>          <span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span>umax<span class="op">,</span> umax]</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>          <span class="dt">label</span><span class="op">:</span> <span class="st">"potential energy U(u)"</span><span class="op">,</span></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>          <span class="dt">nice</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>        <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>          Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])<span class="op">,</span></span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>          Plot<span class="op">.</span><span class="fu">line</span>(curve<span class="op">,</span> {</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"u"</span><span class="op">,</span></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"Uharm"</span><span class="op">,</span></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeOpacity</span><span class="op">:</span> <span class="fl">0.45</span><span class="op">,</span></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"5,5"</span></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>          })<span class="op">,</span></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>          Plot<span class="op">.</span><span class="fu">line</span>(curve<span class="op">,</span> {</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"u"</span><span class="op">,</span></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"U"</span><span class="op">,</span></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>          })<span class="op">,</span></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>          Plot<span class="op">.</span><span class="fu">dot</span>(points<span class="op">,</span> {</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"u"</span><span class="op">,</span></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"U"</span><span class="op">,</span></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>            <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>          })<span class="op">,</span></span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>          Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="dv">0</span>]<span class="op">,</span> {</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeOpacity</span><span class="op">:</span> <span class="fl">0.35</span></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>          })</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>      })</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>    )<span class="op">;</span></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>    stationaryText<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>      <span class="vs">`&lt;em&gt;Stationary points in the plotted interval:&lt;/em&gt; `</span> <span class="op">+</span></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>      (points<span class="op">.</span><span class="at">length</span> <span class="op">===</span> <span class="dv">0</span></span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>        <span class="op">?</span> <span class="st">"none."</span></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>        <span class="op">:</span> points</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">map</span>((p) <span class="kw">=&gt;</span> <span class="vs">`u = </span><span class="sc">${</span>p<span class="op">.</span><span class="at">u</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">, U = </span><span class="sc">${</span>p<span class="op">.</span><span class="at">U</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">`</span>)</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">join</span>(<span class="st">"; "</span>) <span class="op">+</span> <span class="st">"."</span>)<span class="op">;</span></span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Object</span><span class="op">.</span><span class="fu">values</span>(controls)<span class="op">.</span><span class="fu">forEach</span>((control) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>    control<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> update)<span class="op">;</span></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>  <span class="bu">window</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"resize"</span><span class="op">,</span> update)<span class="op">;</span></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="kw">typeof</span> invalidation <span class="op">!==</span> <span class="st">"undefined"</span>) {</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>    invalidation<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> <span class="bu">window</span><span class="op">.</span><span class="fu">removeEventListener</span>(<span class="st">"resize"</span><span class="op">,</span> update))<span class="op">;</span></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>  <span class="fu">update</span>()<span class="op">;</span></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> container<span class="op">;</span></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fig-anharmonic-potential" class="cell-output cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-anharmonic-potential-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="ojs-cell-1" data-nodetype="expression">
+
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anharmonic-potential-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9.2: Interactive local anharmonic potential. The sliders vary the anharmonic parameters in <span class="math inline">\(U(u)=U_0+a u^2-bu^3-cu^4\)</span>, with fixed <span class="math inline">\(U_0=0\)</span>. The dashed curve shows the harmonic reference <span class="math inline">\(U=U_0+a u^2\)</span>.
+</figcaption>
+</figure>
+</div>
+</div>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -529,7 +761,7 @@ q_3+G=q_1+q_2.
 <!-- Placeholder: insert figure from [Gross and Marx, Ch. 6, Fig. 6.11, p. 237] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-three-phonon-processes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9.2: <strong>Figure placeholder.</strong> Three-phonon normal and umklapp processes in a two-dimensional square lattice. The figure should show how adding a reciprocal-lattice vector returns the final wave vector to the first Brillouin zone.
+Figure&nbsp;9.3: <strong>Figure placeholder.</strong> Three-phonon normal and umklapp processes in a two-dimensional square lattice. The figure should show how adding a reciprocal-lattice vector returns the final wave vector to the first Brillouin zone.
 </figcaption>
 </figure>
 </div>
@@ -658,7 +890,7 @@ u+\beta b u^4+\beta c u^5+\cdots
 <!-- Placeholder: insert figure from [Gross and Marx, Ch. 6, Fig. 6.12, p. 239] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anharmonic-expansion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9.3: <strong>Figure placeholder.</strong> Thermal expansion caused by an anharmonic potential. At higher temperature, oscillator states with larger amplitudes are occupied, and their centers shift toward larger interatomic separation.
+Figure&nbsp;9.4: <strong>Figure placeholder.</strong> Thermal expansion caused by an anharmonic potential. At higher temperature, oscillator states with larger amplitudes are occupied, and their centers shift toward larger interatomic separation.
 </figcaption>
 </figure>
 </div>
@@ -878,7 +1110,7 @@ c_V\propto T^3.
 <!-- Placeholder: insert figure from [Gross and Marx, Ch. 6, Fig. 6.13, p. 243] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-silicon-expansion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9.4: <strong>Figure placeholder.</strong> Temperature dependence of the linear thermal expansion coefficient of silicon. The low-temperature sign change illustrates that different phonon modes can contribute with different signs.
+Figure&nbsp;9.5: <strong>Figure placeholder.</strong> Temperature dependence of the linear thermal expansion coefficient of silicon. The low-temperature sign change illustrates that different phonon modes can contribute with different signs.
 </figcaption>
 </figure>
 </div>
@@ -997,6 +1229,17 @@ q_3+G=q_1+q_2.
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgY29uc3QgVTAgPSAwO1xuICBjb25zdCB1bWF4ID0gMS41O1xuXG4gIGNvbnN0IGNvbnRhaW5lciA9IGh0bWxgXG4gICAgPGRpdiBzdHlsZT1cIm1heC13aWR0aDogODUwcHg7IG1hcmdpbjogMCBhdXRvO1wiPlxuICAgICAgPGRpdiBzdHlsZT1cIlxuICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdChhdXRvLWZpdCwgbWlubWF4KDIzMHB4LCAxZnIpKTtcbiAgICAgICAgZ2FwOiAwLjc1cmVtIDEuMjVyZW07XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDFyZW07XG4gICAgICBcIj5cbiAgICAgICAgPGxhYmVsPlxuICAgICAgICAgIGEgPSA8c3BhbiBkYXRhLXJlYWRvdXQ9XCJhXCI+MS4wMDwvc3Bhbj48YnI+XG4gICAgICAgICAgPGlucHV0IGRhdGEtY29udHJvbD1cImFcIiB0eXBlPVwicmFuZ2VcIiBtaW49XCIwXCIgbWF4PVwiNVwiIHN0ZXA9XCIwLjA1XCIgdmFsdWU9XCIxXCI+XG4gICAgICAgIDwvbGFiZWw+XG5cbiAgICAgICAgPGxhYmVsPlxuICAgICAgICAgIGIgPSA8c3BhbiBkYXRhLXJlYWRvdXQ9XCJiXCI+MC40MDwvc3Bhbj48YnI+XG4gICAgICAgICAgPGlucHV0IGRhdGEtY29udHJvbD1cImJcIiB0eXBlPVwicmFuZ2VcIiBtaW49XCIwXCIgbWF4PVwiNVwiIHN0ZXA9XCIwLjA1XCIgdmFsdWU9XCIwLjRcIj5cbiAgICAgICAgPC9sYWJlbD5cblxuICAgICAgICA8bGFiZWw+XG4gICAgICAgICAgYyA9IDxzcGFuIGRhdGEtcmVhZG91dD1cImNcIj4wLjE1PC9zcGFuPjxicj5cbiAgICAgICAgICA8aW5wdXQgZGF0YS1jb250cm9sPVwiY1wiIHR5cGU9XCJyYW5nZVwiIG1pbj1cIjBcIiBtYXg9XCI1XCIgc3RlcD1cIjAuMDVcIiB2YWx1ZT1cIjAuMTVcIj5cbiAgICAgICAgPC9sYWJlbD5cbiAgICAgIDwvZGl2PlxuXG4gICAgICA8cCBkYXRhLXN0YXR1cyBzdHlsZT1cIm1hcmdpbi1ib3R0b206IDAuNXJlbTtcIj48L3A+XG4gICAgICA8ZGl2IGRhdGEtcGxvdD48L2Rpdj5cbiAgICAgIDxwIGRhdGEtc3RhdGlvbmFyeSBzdHlsZT1cImZvbnQtc2l6ZTogMC45NWVtOyBtYXJnaW4tdG9wOiAwLjVyZW07XCI+PC9wPlxuICAgIDwvZGl2PlxuICBgO1xuXG4gIGNvbnN0IGNvbnRyb2xzID0ge1xuICAgIGE6IGNvbnRhaW5lci5xdWVyeVNlbGVjdG9yKCdbZGF0YS1jb250cm9sPVwiYVwiXScpLFxuICAgIGI6IGNvbnRhaW5lci5xdWVyeVNlbGVjdG9yKCdbZGF0YS1jb250cm9sPVwiYlwiXScpLFxuICAgIGM6IGNvbnRhaW5lci5xdWVyeVNlbGVjdG9yKCdbZGF0YS1jb250cm9sPVwiY1wiXScpXG4gIH07XG5cbiAgY29uc3QgcmVhZG91dHMgPSB7XG4gICAgYTogY29udGFpbmVyLnF1ZXJ5U2VsZWN0b3IoJ1tkYXRhLXJlYWRvdXQ9XCJhXCJdJyksXG4gICAgYjogY29udGFpbmVyLnF1ZXJ5U2VsZWN0b3IoJ1tkYXRhLXJlYWRvdXQ9XCJiXCJdJyksXG4gICAgYzogY29udGFpbmVyLnF1ZXJ5U2VsZWN0b3IoJ1tkYXRhLXJlYWRvdXQ9XCJjXCJdJylcbiAgfTtcblxuICBjb25zdCBzdGF0dXMgPSBjb250YWluZXIucXVlcnlTZWxlY3RvcihcIltkYXRhLXN0YXR1c11cIik7XG4gIGNvbnN0IHBsb3RDb250YWluZXIgPSBjb250YWluZXIucXVlcnlTZWxlY3RvcihcIltkYXRhLXBsb3RdXCIpO1xuICBjb25zdCBzdGF0aW9uYXJ5VGV4dCA9IGNvbnRhaW5lci5xdWVyeVNlbGVjdG9yKFwiW2RhdGEtc3RhdGlvbmFyeV1cIik7XG5cbiAgZnVuY3Rpb24gcG90ZW50aWFsKHUsIFUwLCBhLCBiLCBjKSB7XG4gICAgcmV0dXJuIFUwICsgYSAqIHUgKiogMiAtIGIgKiB1ICoqIDMgLSBjICogdSAqKiA0O1xuICB9XG5cbiAgZnVuY3Rpb24gaGFybW9uaWNQb3RlbnRpYWwodSwgVTAsIGEpIHtcbiAgICByZXR1cm4gVTAgKyBhICogdSAqKiAyO1xuICB9XG5cbiAgZnVuY3Rpb24gc3RhdGlvbmFyeVBvaW50cyhVMCwgYSwgYiwgYywgdW1heCkge1xuICAgIGNvbnN0IGVwcyA9IDFlLTEyO1xuICAgIGNvbnN0IHJvb3RzID0gWzBdO1xuXG4gICAgLy8gZFUvZHUgPSAyIGEgdSAtIDMgYiB1XjIgLSA0IGMgdV4zXG4gICAgLy8gICAgICAgPSB1ICgyYSAtIDNidSAtIDRjdV4yKVxuICAgIGlmIChNYXRoLmFicyhjKSA8IGVwcykge1xuICAgICAgaWYgKE1hdGguYWJzKGIpID4gZXBzKSB7XG4gICAgICAgIHJvb3RzLnB1c2goKDIgKiBhKSAvICgzICogYikpO1xuICAgICAgfVxuICAgIH0gZWxzZSB7XG4gICAgICBjb25zdCBkaXNjID0gOSAqIGIgKiogMiArIDMyICogYSAqIGM7XG4gICAgICByb290cy5wdXNoKCgtMyAqIGIgKyBNYXRoLnNxcnQoZGlzYykpIC8gKDggKiBjKSk7XG4gICAgICByb290cy5wdXNoKCgtMyAqIGIgLSBNYXRoLnNxcnQoZGlzYykpIC8gKDggKiBjKSk7XG4gICAgfVxuXG4gICAgcmV0dXJuIEFycmF5LmZyb20oXG4gICAgICBuZXcgU2V0KFxuICAgICAgICByb290c1xuICAgICAgICAgIC5maWx0ZXIoKHUpID0+IE51bWJlci5pc0Zpbml0ZSh1KSAmJiB1ID49IC11bWF4ICYmIHUgPD0gdW1heClcbiAgICAgICAgICAubWFwKCh1KSA9PiBNYXRoLnJvdW5kKHUgKiAxZTEwKSAvIDFlMTApXG4gICAgICApXG4gICAgKVxuICAgICAgLnNvcnQoKHgsIHkpID0+IHggLSB5KVxuICAgICAgLm1hcCgodSkgPT4gKHtcbiAgICAgICAgdTogdSxcbiAgICAgICAgVTogcG90ZW50aWFsKHUsIFUwLCBhLCBiLCBjKVxuICAgICAgfSkpO1xuICB9XG5cbiAgZnVuY3Rpb24gdXBkYXRlKCkge1xuICAgIGNvbnN0IGEgPSBOdW1iZXIoY29udHJvbHMuYS52YWx1ZSk7XG4gICAgY29uc3QgYiA9IE51bWJlcihjb250cm9scy5iLnZhbHVlKTtcbiAgICBjb25zdCBjID0gTnVtYmVyKGNvbnRyb2xzLmMudmFsdWUpO1xuXG4gICAgcmVhZG91dHMuYS50ZXh0Q29udGVudCA9IGEudG9GaXhlZCgyKTtcbiAgICByZWFkb3V0cy5iLnRleHRDb250ZW50ID0gYi50b0ZpeGVkKDIpO1xuICAgIHJlYWRvdXRzLmMudGV4dENvbnRlbnQgPSBjLnRvRml4ZWQoMik7XG5cbiAgICBjb25zdCBuUG9pbnRzID0gNTAxO1xuICAgIGNvbnN0IGN1cnZlID0gQXJyYXkuZnJvbSh7IGxlbmd0aDogblBvaW50cyB9LCAoXywgaSkgPT4ge1xuICAgICAgY29uc3QgdSA9IC11bWF4ICsgKDIgKiB1bWF4ICogaSkgLyAoblBvaW50cyAtIDEpO1xuICAgICAgcmV0dXJuIHtcbiAgICAgICAgdTogdSxcbiAgICAgICAgVTogcG90ZW50aWFsKHUsIFUwLCBhLCBiLCBjKSxcbiAgICAgICAgVWhhcm06IGhhcm1vbmljUG90ZW50aWFsKHUsIFUwLCBhKVxuICAgICAgfTtcbiAgICB9KTtcblxuICAgIGNvbnN0IHBvaW50cyA9IHN0YXRpb25hcnlQb2ludHMoVTAsIGEsIGIsIGMsIHVtYXgpO1xuXG4gICAgc3RhdHVzLmlubmVySFRNTCA9XG4gICAgICBgPHN0cm9uZz5DdXJyZW50IHBhcmFtZXRlcnM6PC9zdHJvbmc+IGAgK1xuICAgICAgYGEgPSAke2EudG9GaXhlZCgyKX0sIGAgK1xuICAgICAgYGIgPSAke2IudG9GaXhlZCgyKX0sIGAgK1xuICAgICAgYGMgPSAke2MudG9GaXhlZCgyKX0uYDtcblxuICAgIGNvbnN0IHBsb3RXaWR0aCA9IE1hdGgubWF4KFxuICAgICAgMzIwLFxuICAgICAgTWF0aC5taW4oODUwLCBjb250YWluZXIuY2xpZW50V2lkdGggfHwgODUwKVxuICAgICk7XG5cbiAgICBwbG90Q29udGFpbmVyLnJlcGxhY2VDaGlsZHJlbihcbiAgICAgIFBsb3QucGxvdCh7XG4gICAgICAgIHdpZHRoOiBwbG90V2lkdGgsXG4gICAgICAgIGhlaWdodDogNDMwLFxuICAgICAgICBncmlkOiB0cnVlLFxuICAgICAgICB4OiB7XG4gICAgICAgICAgbGFiZWw6IFwiZGlzcGxhY2VtZW50IHVcIixcbiAgICAgICAgICBkb21haW46IFstdW1heCwgdW1heF1cbiAgICAgICAgfSxcbiAgICAgICAgeToge1xuICAgICAgICAgIGxhYmVsOiBcInBvdGVudGlhbCBlbmVyZ3kgVSh1KVwiLFxuICAgICAgICAgIG5pY2U6IHRydWVcbiAgICAgICAgfSxcbiAgICAgICAgbWFya3M6IFtcbiAgICAgICAgICBQbG90LnJ1bGVZKFswXSksXG4gICAgICAgICAgUGxvdC5saW5lKGN1cnZlLCB7XG4gICAgICAgICAgICB4OiBcInVcIixcbiAgICAgICAgICAgIHk6IFwiVWhhcm1cIixcbiAgICAgICAgICAgIHN0cm9rZU9wYWNpdHk6IDAuNDUsXG4gICAgICAgICAgICBzdHJva2VEYXNoYXJyYXk6IFwiNSw1XCJcbiAgICAgICAgICB9KSxcbiAgICAgICAgICBQbG90LmxpbmUoY3VydmUsIHtcbiAgICAgICAgICAgIHg6IFwidVwiLFxuICAgICAgICAgICAgeTogXCJVXCIsXG4gICAgICAgICAgICBzdHJva2VXaWR0aDogMlxuICAgICAgICAgIH0pLFxuICAgICAgICAgIFBsb3QuZG90KHBvaW50cywge1xuICAgICAgICAgICAgeDogXCJ1XCIsXG4gICAgICAgICAgICB5OiBcIlVcIixcbiAgICAgICAgICAgIHI6IDRcbiAgICAgICAgICB9KSxcbiAgICAgICAgICBQbG90LnJ1bGVYKFswXSwge1xuICAgICAgICAgICAgc3Ryb2tlT3BhY2l0eTogMC4zNVxuICAgICAgICAgIH0pXG4gICAgICAgIF1cbiAgICAgIH0pXG4gICAgKTtcblxuICAgIHN0YXRpb25hcnlUZXh0LmlubmVySFRNTCA9XG4gICAgICBgPGVtPlN0YXRpb25hcnkgcG9pbnRzIGluIHRoZSBwbG90dGVkIGludGVydmFsOjwvZW0+IGAgK1xuICAgICAgKHBvaW50cy5sZW5ndGggPT09IDBcbiAgICAgICAgPyBcIm5vbmUuXCJcbiAgICAgICAgOiBwb2ludHNcbiAgICAgICAgICAgIC5tYXAoKHApID0+IGB1ID0gJHtwLnUudG9GaXhlZCgzKX0sIFUgPSAke3AuVS50b0ZpeGVkKDMpfWApXG4gICAgICAgICAgICAuam9pbihcIjsgXCIpICsgXCIuXCIpO1xuICB9XG5cbiAgT2JqZWN0LnZhbHVlcyhjb250cm9scykuZm9yRWFjaCgoY29udHJvbCkgPT4ge1xuICAgIGNvbnRyb2wuYWRkRXZlbnRMaXN0ZW5lcihcImlucHV0XCIsIHVwZGF0ZSk7XG4gIH0pO1xuXG4gIHdpbmRvdy5hZGRFdmVudExpc3RlbmVyKFwicmVzaXplXCIsIHVwZGF0ZSk7XG5cbiAgaWYgKHR5cGVvZiBpbnZhbGlkYXRpb24gIT09IFwidW5kZWZpbmVkXCIpIHtcbiAgICBpbnZhbGlkYXRpb24udGhlbigoKSA9PiB3aW5kb3cucmVtb3ZlRXZlbnRMaXN0ZW5lcihcInJlc2l6ZVwiLCB1cGRhdGUpKTtcbiAgfVxuXG4gIHVwZGF0ZSgpO1xuXG4gIHJldHVybiBjb250YWluZXI7XG59XG4ifV19
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
