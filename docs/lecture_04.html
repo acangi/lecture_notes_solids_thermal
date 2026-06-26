@@ -234,6 +234,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Electronic Contributions to Thermal Properties (optional)</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./global_notation_table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notation</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -406,7 +412,7 @@ window.Quarto = {
 <td>Bragg angle, half the total scattering angle</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(m\)</span></td>
+<td><span class="math inline">\(n_{\mathrm B}\)</span></td>
 <td>diffraction order in Bragg’s law</td>
 </tr>
 <tr class="even">
@@ -775,8 +781,8 @@ d_{hkl}
 </div>
 <div class="callout-body-container">
 <p><span class="math display">\[
-2d_{hkl}\sin\theta=m\lambda,
-\qquad m=1,2,3,\dots .
+2d_{hkl}\sin\theta=n_{\mathrm B}\lambda,
+\qquad n_{\mathrm B}=1,2,3,\dots .
 \]</span></p>
 </div>
 </div>
@@ -826,9 +832,9 @@ e^{i(\mathbf k'-\mathbf k)\cdot\mathbf R_n}=1 .
 <p><span class="math display">\[
 |\mathbf G|=2|\mathbf k|\sin\theta .
 \]</span></p>
-<p>Using <span class="math inline">\(|\mathbf k|=2\pi/\lambda\)</span> and <span class="math inline">\(|\mathbf G|=m 2\pi/d_{hkl}\)</span> gives</p>
+<p>Using <span class="math inline">\(|\mathbf k|=2\pi/\lambda\)</span> and <span class="math inline">\(|\mathbf G|=n_{\mathrm B} 2\pi/d_{hkl}\)</span> gives</p>
 <p><span class="math display">\[
-m\frac{2\pi}{d_{hkl}}
+n_{\mathrm B}\frac{2\pi}{d_{hkl}}
 = 2\frac{2\pi}{\lambda}\sin\theta .
 \]</span></p>
 <p>Thus</p>
@@ -839,7 +845,7 @@ m\frac{2\pi}{d_{hkl}}
 </div>
 <div class="callout-body-container">
 <p><span class="math display">\[
-2d_{hkl}\sin\theta=m\lambda .
+2d_{hkl}\sin\theta=n_{\mathrm B}\lambda .
 \]</span></p>
 </div>
 </div>
@@ -1140,7 +1146,7 @@ e^{-2\pi i(hu_j+kv_j+lw_j)} .
 <p>Then</p>
 <p><span class="math display">\[
 S_{hkl}
-=
+   =
 f_1+f_2e^{-i\pi(h+k+l)}.
 \]</span></p>
 <p>Hence</p>
@@ -1152,7 +1158,7 @@ f_1+f_2e^{-i\pi(h+k+l)}.
 <div class="callout-body-container">
 <p><span class="math display">\[
 S_{hkl}
-=
+   =
 \begin{cases}
 f_1+f_2, &amp; h+k+l \text{ even},\\
 f_1-f_2, &amp; h+k+l \text{ odd}.
@@ -1181,7 +1187,7 @@ f_1-f_2, &amp; h+k+l \text{ odd}.
 <div class="callout-body-container">
 <p><span class="math display">\[
 S_{hkl}
-=
+   =
 \begin{cases}
 2f, &amp; h+k+l \text{ even},\\
 0, &amp; h+k+l \text{ odd}.
@@ -1208,7 +1214,7 @@ S_{hkl}
 <p>For identical atoms,</p>
 <p><span class="math display">\[
 S_{hkl}
-=
+   =
 f
 \left[
 1
@@ -1229,7 +1235,7 @@ e^{-i\pi(h+k)}
 <div class="callout-body-container">
 <p><span class="math display">\[
 S_{hkl}
-=
+   =
 \begin{cases}
 4f, &amp; h,k,l \text{ all even or all odd},\\
 0, &amp; \text{mixed parity}.

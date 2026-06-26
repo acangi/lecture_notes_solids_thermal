@@ -234,6 +234,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Electronic Contributions to Thermal Properties (optional)</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./global_notation_table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notation</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -349,7 +355,7 @@ window.Quarto = {
 <td>momentum of nucleus <span class="math inline">\(k\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(m\)</span></td>
+<td><span class="math inline">\(m_{\mathrm e}\)</span></td>
 <td>electron mass</td>
 </tr>
 <tr class="even">
@@ -397,7 +403,7 @@ window.Quarto = {
 <td>equilibrium position of basis atom <span class="math inline">\(\alpha\)</span> inside a unit cell</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(M\)</span></td>
+<td><span class="math inline">\(r'\)</span></td>
 <td>number of atoms in the primitive cell</td>
 </tr>
 <tr class="even">
@@ -461,7 +467,7 @@ H = T_e + T_{\mathrm{ion}} + V_{ee} + V_{nn} + V_{en},
 </div>
 <p>with <span class="math display">\[
 \begin{aligned}
-T_e &amp;= \sum_{i=1}^{N_e}\frac{\mathbf p_i^2}{2m},\\
+T_e &amp;= \sum_{i=1}^{N_e}\frac{\mathbf p_i^2}{2m_{\mathrm e}},\\
 T_{\mathrm{ion}} &amp;= \sum_{k=1}^{N_n}\frac{\mathbf P_k^2}{2M_k},\\
 V_{ee} &amp;= \sum_{i&lt;j}\frac{e^2}{4\pi\varepsilon_0|\mathbf r_i-\mathbf r_j|},\\
 V_{nn} &amp;= \sum_{k&lt;l}\frac{Z_k Z_l e^2}{4\pi\varepsilon_0|\mathbf R_k-\mathbf R_l|},\\
@@ -487,16 +493,16 @@ H\Psi({\mathbf r_i},{\mathbf R_k})=E\Psi({\mathbf r_i},{\mathbf R_k}).
 H = H_a + T,
 \qquad
 T =
--\frac12\sum_k \frac{m}{M_k}\nabla_{\mathbf R_k}^2.
+-\frac12\sum_k \frac{m_{\mathrm e}}{M_k}\nabla_{\mathbf R_k}^2.
 \]</span></p>
 </div>
 </div>
 </div>
-<p>The adiabatic Hamiltonian <span class="math inline">\(H_a\)</span> contains the electronic kinetic energy and all Coulomb terms, but not the nuclear kinetic energy. The only small parameter that remains in the nuclear kinetic term is the mass ratio <span class="math inline">\(m/M_k\)</span>, which ranges from about <span class="math inline">\(1/1836\)</span> for hydrogen to much smaller values for heavier nuclei. Thus the nuclear kinetic energy is naturally treated as a slow perturbation of the electronic problem.</p>
+<p>The adiabatic Hamiltonian <span class="math inline">\(H_a\)</span> contains the electronic kinetic energy and all Coulomb terms, but not the nuclear kinetic energy. The only small parameter that remains in the nuclear kinetic term is the mass ratio <span class="math inline">\(m_{\mathrm e}/M_k\)</span>, which ranges from about <span class="math inline">\(1/1836\)</span> for hydrogen to much smaller values for heavier nuclei. Thus the nuclear kinetic energy is naturally treated as a slow perturbation of the electronic problem.</p>
 <p>A simple classical estimate expresses the same idea. Forces exerted between electrons and nuclei are equal and opposite, so typical accelerations scale as <span class="math display">\[
-M_k\ddot{\mathbf R}_k \sim m\ddot{\mathbf r}_i.
+M_k\ddot{\mathbf R}_k \sim m_{\mathrm e}\ddot{\mathbf r}_i.
 \]</span> The nuclei therefore move much more slowly than the electrons. In a harmonic restoring potential the characteristic nuclear frequencies scale as <span class="math display">\[
-\omega \propto \sqrt{\frac{m}{M_k}},
+\omega \propto \sqrt{\frac{m_{\mathrm e}}{M_k}},
 \]</span> when expressed in electronic atomic units.</p>
 <!-- [Gross–Marx, Ch. 5.1.1, Eq. (5.1.2)–(5.1.6), pp. 172–173] -->
 </section>
@@ -610,7 +616,7 @@ Figure&nbsp;5.1: <strong>Figure placeholder.</strong> Potential-energy curve for
 </section>
 <section id="geometry-and-indexing-of-a-crystal-with-a-basis" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="geometry-and-indexing-of-a-crystal-with-a-basis"><span class="header-section-number">5.4</span> Geometry and Indexing of a Crystal with a Basis</h2>
-<p>For a crystal with <span class="math inline">\(M\)</span> atoms in the primitive cell, we label cells by Bravais-lattice vectors <span class="math inline">\(\mathbf R_n\)</span> and basis atoms by <span class="math inline">\(\alpha=1,\dots,M\)</span>. The equilibrium position of atom <span class="math inline">\(\alpha\)</span> in cell <span class="math inline">\(n\)</span> is</p>
+<p>For a crystal with <span class="math inline">\(r'\)</span> atoms in the primitive cell, we label cells by Bravais-lattice vectors <span class="math inline">\(\mathbf R_n\)</span> and basis atoms by <span class="math inline">\(\alpha=1,\dots,r'\)</span>. The equilibrium position of atom <span class="math inline">\(\alpha\)</span> in cell <span class="math inline">\(n\)</span> is</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -853,7 +859,7 @@ F_{n\alpha i}
 C^{m\beta j}_{n\alpha i}
 u_{m\beta j}.
 \]</span></p>
-<p>Thus the crystal is a system of <span class="math inline">\(3MN\)</span> coupled linear oscillators if there are <span class="math inline">\(N\)</span> primitive cells and <span class="math inline">\(M\)</span> atoms per cell.</p>
+<p>Thus the crystal is a system of <span class="math inline">\(3r'N\)</span> coupled linear oscillators if there are <span class="math inline">\(N\)</span> primitive cells and <span class="math inline">\(r'\)</span> atoms per cell.</p>
 <!-- [Sólyom, Ch. 11.1.3, Eq. (11.1.20)–(11.1.21), Eq. (11.1.28), pp. 335–336; Ibach–Lüth, Ch. 4.2, Eq. (4.4), p. 83; Gross–Marx, Ch. 5.2.1, Eq. (5.2.1), pp. 176–177] -->
 <p><strong>Sanity Check:</strong> The equations are linear because we stopped at quadratic order in the potential. That linearity is exactly what makes a normal-mode decomposition possible.</p>
 </section>
@@ -939,7 +945,7 @@ e^{i\mathbf q\cdot(\mathbf R_m-\mathbf R_n)}.
 <!-- [Sólyom, Ch. 11.3.1, Eq. (11.3.1)–(11.3.5), pp. 355–356; Ibach–Lüth, Ch. 4.2, Eq. (4.5)–(4.8), pp. 83–84; Gross–Marx, Ch. 5.2.1, Eq. (5.2.3)–(5.2.5), p. 177] -->
 <section id="why-this-is-the-key-simplification" class="level3" data-number="5.7.1">
 <h3 data-number="5.7.1" class="anchored" data-anchor-id="why-this-is-the-key-simplification"><span class="header-section-number">5.7.1</span> Why This Is the Key Simplification</h3>
-<p>Translational symmetry decouples different wavevectors. For each fixed <span class="math inline">\(\mathbf q\)</span>, only the <span class="math inline">\(3M\)</span> displacement amplitudes inside the primitive cell remain coupled. The original <span class="math inline">\(3MN\)</span>-dimensional problem has therefore been reduced to diagonalizing a <span class="math inline">\(3M\times 3M\)</span> matrix for each <span class="math inline">\(\mathbf q\)</span>.</p>
+<p>Translational symmetry decouples different wavevectors. For each fixed <span class="math inline">\(\mathbf q\)</span>, only the <span class="math inline">\(3r'\)</span> displacement amplitudes inside the primitive cell remain coupled. The original <span class="math inline">\(3r'N\)</span>-dimensional problem has therefore been reduced to diagonalizing a <span class="math inline">\(3r'\times 3r'\)</span> matrix for each <span class="math inline">\(\mathbf q\)</span>.</p>
 <p>The equations of motion in the harmonic approximation is a standard matrix eigenvalue equation of the form</p>
 <p><span class="math display">\[
 D(\mathbf q)\mathbf A
@@ -948,8 +954,8 @@ D(\mathbf q)\mathbf A
 \]</span></p>
 <p>where:</p>
 <ul>
-<li><span class="math inline">\(D(\mathbf q)\)</span> is the <span class="math inline">\(3M\times 3M\)</span> dynamical matrix,</li>
-<li><span class="math inline">\(M\)</span> is the number of atoms in the primitive cell,</li>
+<li><span class="math inline">\(D(\mathbf q)\)</span> is the <span class="math inline">\(3r'\times 3r'\)</span> dynamical matrix,</li>
+<li><span class="math inline">\(r'\)</span> is the number of atoms in the primitive cell,</li>
 <li><span class="math inline">\(\mathbf A\)</span> is the vector of polarization amplitudes,</li>
 <li><span class="math inline">\(\omega^2\)</span> plays the role of the eigenvalue.</li>
 </ul>
@@ -975,13 +981,13 @@ B\mathbf x=0
 \det\left[D(\mathbf q)-\omega^2\mathbf 1\right]=0.
 \]</span></p>
 <p>This is called the secular equation.</p>
-<p>Because the dynamical matrix has dimension <span class="math inline">\(3M\times 3M\)</span>, the secular equation is a polynomial of degree <span class="math inline">\(3M\)</span> in <span class="math inline">\(\omega^2\)</span>. Consequently, for each wavevector <span class="math inline">\(\mathbf q\)</span>, there are <span class="math inline">\(3M\)</span> eigenvalues</p>
+<p>Because the dynamical matrix has dimension <span class="math inline">\(3r'\times 3r'\)</span>, the secular equation is a polynomial of degree <span class="math inline">\(3r'\)</span> in <span class="math inline">\(\omega^2\)</span>. Consequently, for each wavevector <span class="math inline">\(\mathbf q\)</span>, there are <span class="math inline">\(3r'\)</span> eigenvalues</p>
 <p><span class="math display">\[
 \omega_\lambda^2(\mathbf q),
 \qquad
-\lambda=1,\dots,3M,
+\lambda=1,\dots,3r',
 \]</span></p>
-<p>corresponding to the <span class="math inline">\(3M\)</span> phonon branches of the crystal. Each eigenvalue has an associated eigenvector giving the polarization pattern of that vibrational mode.</p>
+<p>corresponding to the <span class="math inline">\(3r'\)</span> phonon branches of the crystal. Each eigenvalue has an associated eigenvector giving the polarization pattern of that vibrational mode.</p>
 <p>For a simple <span class="math inline">\(2\times2\)</span> matrix,</p>
 <p><span class="math display">\[
 \begin{pmatrix}
@@ -1033,9 +1039,9 @@ D(\mathbf q+\mathbf G)=D(\mathbf q).
 </section>
 <section id="branch-counting-and-mode-classification" class="level2" data-number="5.8">
 <h2 data-number="5.8" class="anchored" data-anchor-id="branch-counting-and-mode-classification"><span class="header-section-number">5.8</span> Branch Counting and Mode Classification</h2>
-<p>For each <span class="math inline">\(\mathbf q\)</span>, the dynamical matrix has dimension <span class="math inline">\(3M\times 3M\)</span>. Therefore a crystal with <span class="math inline">\(M\)</span> atoms in the primitive cell has</p>
+<p>For each <span class="math inline">\(\mathbf q\)</span>, the dynamical matrix has dimension <span class="math inline">\(3r'\times 3r'\)</span>. Therefore a crystal with <span class="math inline">\(r'\)</span> atoms in the primitive cell has</p>
 <p><span class="math display">\[
-3M
+3r'
 \]</span></p>
 <p>vibrational branches.</p>
 <!-- [Gross–Marx, Ch. 5.2.4.2, Eq. (5.2.49), p. 190] -->
@@ -1052,7 +1058,7 @@ D(\mathbf q+\mathbf G)=D(\mathbf q).
 <section id="optical-branches" class="level3" data-number="5.8.2">
 <h3 data-number="5.8.2" class="anchored" data-anchor-id="optical-branches"><span class="header-section-number">5.8.2</span> Optical Branches</h3>
 <p>The remaining <span class="math display">\[
-3M-3
+3r'-3
 \]</span> branches are optical branches. They have finite frequency at <span class="math inline">\(\mathbf q=\mathbf 0\)</span> in general and correspond to <strong>internal motion of the basis</strong> rather than rigid translation of the crystal.</p>
 <p>For a two-atom basis, the long-wavelength optical motion satisfies <span class="math display">\[
 M_1 \mathbf u_1 + M_2 \mathbf u_2 = 0.
@@ -1095,7 +1101,7 @@ Figure&nbsp;5.5: <strong>Figure placeholder.</strong> Example phonon branches of
 <section id="sanity-checks" class="level3" data-number="5.8.4">
 <h3 data-number="5.8.4" class="anchored" data-anchor-id="sanity-checks"><span class="header-section-number">5.8.4</span> Sanity Checks</h3>
 <ul>
-<li>If <span class="math inline">\(M=1\)</span>, then <span class="math inline">\(3M-3=0\)</span>: a crystal with a one-atom primitive cell has no optical branches.</li>
+<li>If <span class="math inline">\(r'=1\)</span>, then <span class="math inline">\(3r'-3=0\)</span>: a crystal with a one-atom primitive cell has no optical branches.</li>
 <li>If <span class="math inline">\(M&gt;1\)</span>, optical branches are possible because the basis has internal degrees of freedom.</li>
 <li>The existence of three acoustic branches is tied directly to the three independent rigid translations of a three-dimensional crystal.</li>
 <li>Degeneracies can occur along high-symmetry directions; for example, the two transverse branches may be degenerate in special directions of a cubic crystal.</li>

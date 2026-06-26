@@ -234,6 +234,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Electronic Contributions to Thermal Properties (optional)</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./global_notation_table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notation</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -356,11 +362,11 @@ window.Quarto = {
 <td>displacements of the two atom types in cell <span class="math inline">\(n\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(C_p\)</span></td>
+<td><span class="math inline">\(\Phi_p\)</span></td>
 <td>coupling constant between planes separated by <span class="math inline">\(p a\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(C_1\)</span></td>
+<td><span class="math inline">\(\Phi_1\)</span></td>
 <td>nearest-neighbor coupling constant for a one-atomic basis</td>
 </tr>
 <tr class="even">
@@ -488,12 +494,12 @@ Note
 <p>Let <span class="math inline">\(u_n\)</span> denote the displacement of plane <span class="math inline">\(n\)</span>. The force exerted on plane <span class="math inline">\(n\)</span> by plane <span class="math inline">\(n+p\)</span> is proportional to the relative displacement <span class="math inline">\(u_{n+p}-u_n\)</span>. Summing over all planes gives <span class="math display">\[
 F_n
 =
-\sum_p C_p(u_{n+p}-u_n).
+\sum_p \Phi_p(u_{n+p}-u_n).
 \]</span></p>
 <p>Newton’s equation is therefore <span class="math display">\[
 M\frac{\partial^2u_n}{\partial t^2}
 -
-\sum_p C_p(u_{n+p}-u_n)
+\sum_p \Phi_p(u_{n+p}-u_n)
 =0.
 \]</span></p>
 <p>We see that a uniform translation <span class="math inline">\(u_n=\mathrm{const.}\)</span> produces no restoring force.</p>
@@ -527,18 +533,18 @@ u_n e^{\mathrm i qpa}.
 <p>Substitution gives <span class="math display">\[
 -\omega^2 M
 -
-\sum_p C_p\left(e^{\mathrm i qpa}-1\right)
+\sum_p \Phi_p\left(e^{\mathrm i qpa}-1\right)
 =0.
 \]</span></p>
-<p>Using inversion symmetry, <span class="math inline">\(C_{-p}=C_p\)</span>, this becomes <span class="math display">\[
+<p>Using inversion symmetry, <span class="math inline">\(C_{-p}=\Phi_p\)</span>, this becomes <span class="math display">\[
 -\omega^2 M
 =
 \sum_{p=1}^{\infty}
-C_p
+\Phi_p
 \left(e^{\mathrm i qpa}+e^{-\mathrm i qpa}-2\right)
 =
 2\sum_{p=1}^{\infty}
-C_p\left(\cos qpa-1\right).
+\Phi_p\left(\cos qpa-1\right).
 \]</span></p>
 <p>Hence</p>
 <div class="callout callout-style-simple callout-note no-icon">
@@ -552,12 +558,12 @@ C_p\left(\cos qpa-1\right).
 =
 \frac{2}{M}
 \sum_{p=1}^{\infty}
-C_p\left(1-\cos qpa\right).
+\Phi_p\left(1-\cos qpa\right).
 \]</span></p>
 </div>
 </div>
 </div>
-<p>This is the longitudinal dispersion relation for a one-atomic basis with arbitrary plane-plane couplings <span class="math inline">\(C_p\)</span>.</p>
+<p>This is the longitudinal dispersion relation for a one-atomic basis with arbitrary plane-plane couplings <span class="math inline">\(\Phi_p\)</span>.</p>
 <!-- [Gross–Marx, Ch. 5, Sec. 5.2.2.1, Eq. (5.2.9)–(5.2.12), p. 179] -->
 </section>
 <section id="nearest-neighbor-approximation" class="level3" data-number="6.3.3">
@@ -575,11 +581,11 @@ Note
 <p>Keeping only the nearest-neighbor coupling gives the simplest analytic form of the acoustic phonon dispersion.</p>
 </div>
 </div>
-<p>If only nearest-neighbor planes are coupled, then <span class="math inline">\(C_1\neq 0\)</span> and all other <span class="math inline">\(C_p\)</span> vanish. The dispersion reduces to <span class="math display">\[
+<p>If only nearest-neighbor planes are coupled, then <span class="math inline">\(\Phi_1\neq 0\)</span> and all other <span class="math inline">\(\Phi_p\)</span> vanish. The dispersion reduces to <span class="math display">\[
 \omega^2(q)
 =
-\frac{2C_1}{M}(1-\cos qa)
-=\frac{4C_1}{M}\sin^2\frac{qa}{2}.
+\frac{2\Phi_1}{M}(1-\cos qa)
+=\frac{4\Phi_1}{M}\sin^2\frac{qa}{2}.
 \]</span></p>
 <p>For <span class="math inline">\(0\le q\le \pi/a\)</span>,</p>
 <div class="callout callout-style-simple callout-note no-icon">
@@ -591,7 +597,7 @@ Note
 <p><span class="math display">\[
 \omega(q)
 =
-2\sqrt{\frac{C_1}{M}}\sin\frac{qa}{2}.
+2\sqrt{\frac{\Phi_1}{M}}\sin\frac{qa}{2}.
 \]</span></p>
 </div>
 </div>
@@ -651,7 +657,7 @@ q=\frac{\pi}{a},
 \]</span> the frequency reaches <span class="math display">\[
 \omega_{\max}
 =
-\sqrt{\frac{4C_1}{M}}.
+\sqrt{\frac{4\Phi_1}{M}}.
 \]</span></p>
 <p>The group velocity is <span class="math display">\[
 v_g
@@ -661,7 +667,7 @@ v_g
 <p>For the one-dimensional nearest-neighbor dispersion, <span class="math display">\[
 v_g(q)
 =
-\sqrt{\frac{C_1a^2}{M}}\cos\frac{qa}{2}
+\sqrt{\frac{\Phi_1a^2}{M}}\cos\frac{qa}{2}
 \qquad
 (0\le q\le \pi/a).
 \]</span></p>
@@ -680,7 +686,7 @@ v_g\left(\frac{\pi}{a}\right)=0.
 \]</span> and therefore <span class="math display">\[
 \omega(q)
 \simeq
-\sqrt{\frac{C_1a^2}{M}} q.
+\sqrt{\frac{\Phi_1a^2}{M}} q.
 \]</span></p>
 <p>This is a linear acoustic dispersion, <span class="math display">\[
 \omega(q)=v_s q,
@@ -694,7 +700,7 @@ v_g\left(\frac{\pi}{a}\right)=0.
 <p><span class="math display">\[
 v_s
 =
-\sqrt{\frac{C_1a^2}{M}}.
+\sqrt{\frac{\Phi_1a^2}{M}}.
 \]</span></p>
 </div>
 </div>
@@ -733,11 +739,11 @@ u(x,t)
 <p>For nearest-neighbor coupling, <span class="math display">\[
 M\frac{\partial^2u}{\partial t^2}
 =
-C_1\left[u(x+a,t)+u(x-a,t)-2u(x,t)\right],
+\Phi_1\left[u(x+a,t)+u(x-a,t)-2u(x,t)\right],
 \]</span> so <span class="math display">\[
 \frac{\partial^2u}{\partial t^2}
 =
-\frac{C_1a^2}{M}
+\frac{\Phi_1a^2}{M}
 \frac{\partial^2u}{\partial x^2}
 =
 v_s^2
@@ -822,7 +828,7 @@ Note
 <p>In three-dimensional crystals, lattice vibrations are characterized not only by their wavevector but also by their polarization.</p>
 </div>
 </div>
-<p>For transverse vibrations of a one-atomic basis, the derivation is analogous, but the coupling constants <span class="math inline">\(C_p\)</span> are generally different from the longitudinal ones. Purely longitudinal and purely transverse waves occur only for propagation along suitable symmetry directions. In a cubic crystal these include the <span class="math inline">\([100]\)</span>, <span class="math inline">\([110]\)</span>, and <span class="math inline">\([111]\)</span> directions. For general propagation directions, the atomic displacements need not be exactly parallel or perpendicular to <span class="math inline">\(\mathbf q\)</span>, and the polarization is mixed.</p>
+<p>For transverse vibrations of a one-atomic basis, the derivation is analogous, but the coupling constants <span class="math inline">\(\Phi_p\)</span> are generally different from the longitudinal ones. Purely longitudinal and purely transverse waves occur only for propagation along suitable symmetry directions. In a cubic crystal these include the <span class="math inline">\([100]\)</span>, <span class="math inline">\([110]\)</span>, and <span class="math inline">\([111]\)</span> directions. For general propagation directions, the atomic displacements need not be exactly parallel or perpendicular to <span class="math inline">\(\mathbf q\)</span>, and the polarization is mixed.</p>
 <!-- [Gross–Marx, Ch. 5, Sec. 5.2.2.4–5.2.2.5, pp. 182–183] -->
 </section>
 </section>
@@ -1297,17 +1303,17 @@ Z(\mathbf q)
 <li><p><strong>One-Atomic Basis With General Couplings.</strong> Starting from <span class="math display">\[
 M\frac{\partial^2u_n}{\partial t^2}
 -
-\sum_p C_p(u_{n+p}-u_n)
+\sum_p \Phi_p(u_{n+p}-u_n)
 =0,
 \]</span> insert <span class="math inline">\(u_n=Ae^{\mathrm i(qna-\omega t)}\)</span> and derive <span class="math display">\[
 \omega^2(q)
 =
 \frac{2}{M}
 \sum_{p=1}^{\infty}
-C_p(1-\cos qpa).
+\Phi_p(1-\cos qpa).
 \]</span> Then specialize to nearest-neighbor coupling.</p></li>
 <li><p><strong>Group Velocity and the Sound Limit.</strong> For the nearest-neighbor one-atomic basis, <span class="math display">\[
-\omega(q)=2\sqrt{\frac{C_1}{M}}\sin\frac{qa}{2}
+\omega(q)=2\sqrt{\frac{\Phi_1}{M}}\sin\frac{qa}{2}
 \qquad
 (0\le q\le \pi/a),
 \]</span> compute <span class="math inline">\(v_g(q)\)</span>. Evaluate the limits <span class="math inline">\(q\to0\)</span> and <span class="math inline">\(q\to\pi/a\)</span>, and interpret the results.</p></li>

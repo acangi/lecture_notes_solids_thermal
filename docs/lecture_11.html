@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./global_notation_table.html" rel="next">
 <link href="./lecture_10.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -233,6 +234,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Electronic Contributions to Thermal Properties (optional)</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./global_notation_table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notation</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -350,7 +357,7 @@ window.Quarto = {
 <td>conduction-electron density</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(m\)</span></td>
+<td><span class="math inline">\(m_{\mathrm e}\)</span></td>
 <td>electron mass in the free-electron model</td>
 </tr>
 <tr class="odd">
@@ -418,11 +425,11 @@ window.Quarto = {
 <td>Sommerfeld coefficient of the electronic heat capacity</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(J_q\)</span></td>
+<td><span class="math inline">\(\mathbf J_{\mathrm e}\)</span></td>
 <td>electrical current density</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(J_h\)</span></td>
+<td><span class="math inline">\(\mathbf J_h\)</span></td>
 <td>heat-current density</td>
 </tr>
 <tr class="odd">
@@ -462,7 +469,7 @@ window.Quarto = {
 <td>electronic thermal conductivity</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(L\)</span></td>
+<td><span class="math inline">\(L_0\)</span></td>
 <td>Lorenz number</td>
 </tr>
 <tr class="odd">
@@ -494,7 +501,7 @@ window.Quarto = {
 <h3 data-number="11.3.1" class="anchored" data-anchor-id="ground-state-scales"><span class="header-section-number">11.3.1</span> Ground-State Scales</h3>
 <p>For free electrons, the energy is</p>
 <p><span class="math display">\[
-E(k)=\frac{\hbar^2 k^2}{2m}.
+E(k)=\frac{\hbar^2 k^2}{2m_{\mathrm e}}.
 \]</span></p>
 <p>At <span class="math inline">\(T=0\)</span>, the Pauli principle fills all one-electron states from the bottom of the band up to the Fermi energy <span class="math inline">\(E_F\)</span>. In three dimensions the occupied states form a sphere in <span class="math inline">\(k\)</span>-space, the Fermi sphere. Its radius is the Fermi wave vector</p>
 <p><span class="math display">\[
@@ -502,11 +509,11 @@ k_F=(3\pi^2 n)^{1/3}.
 \]</span></p>
 <p>The associated Fermi energy, Fermi temperature, and Fermi velocity are</p>
 <p><span class="math display">\[
-E_F=\frac{\hbar^2 k_F^2}{2m},
+E_F=\frac{\hbar^2 k_F^2}{2m_{\mathrm e}},
 \qquad
 T_F=\frac{E_F}{k_B},
 \qquad
-v_F=\frac{\hbar k_F}{m}.
+v_F=\frac{\hbar k_F}{m_{\mathrm e}}.
 \]</span></p>
 <p>For typical metals,</p>
 <p><span class="math display">\[
@@ -542,7 +549,7 @@ D(E)
 =
 \frac{V}{2\pi^2}
 \left(
-\frac{2m}{\hbar^2}
+\frac{2m_{\mathrm e}}{\hbar^2}
 \right)^{3/2}
 E^{1/2}.
 \]</span></p>
@@ -727,7 +734,7 @@ U
 =
 \frac{V}{2\pi^2}
 \left(
-\frac{2m}{\hbar^2}
+\frac{2m_{\mathrm e}}{\hbar^2}
 \right)^{3/2}
 \int_0^\infty
 \frac{E^{3/2}}
@@ -902,9 +909,9 @@ D(E_F).
 <p>Electrical conductivity is not itself a thermal property, but it is needed to understand electronic heat transport and the Wiedemann-Franz law.</p>
 <section id="definition" class="level3" data-number="11.5.1">
 <h3 data-number="11.5.1" class="anchored" data-anchor-id="definition"><span class="header-section-number">11.5.1</span> Definition</h3>
-<p>The electrical conductivity <span class="math inline">\(\sigma\)</span> relates the electrical current density <span class="math inline">\(J_q\)</span> to the electric field:</p>
+<p>The electrical conductivity <span class="math inline">\(\sigma\)</span> relates the electrical current density <span class="math inline">\(\mathbf J_{\mathrm e}\)</span> to the electric field:</p>
 <p><span class="math display">\[
-J_q
+\mathbf J_{\mathrm e}
 =
 \sigma \mathbf E
 =
@@ -917,31 +924,31 @@ J_q
 <h3 data-number="11.5.2" class="anchored" data-anchor-id="drude-relaxation-picture"><span class="header-section-number">11.5.2</span> Drude Relaxation Picture</h3>
 <p>In the Drude model, the field accelerates electrons, while scattering relaxes the drift velocity. The equation of motion is</p>
 <p><span class="math display">\[
-m\frac{d\mathbf v}{dt}
+m_{\mathrm e}\frac{d\mathbf v}{dt}
 =
 -e\mathbf E
 =
-m\frac{\mathbf v_D}{\tau}.
+m_{\mathrm e}\frac{\mathbf v_D}{\tau}.
 \]</span></p>
 <p>Here <span class="math inline">\(\mathbf v_D\)</span> is the drift velocity and <span class="math inline">\(\tau\)</span> is the mean relaxation time. In the stationary state,</p>
 <p><span class="math display">\[
 \mathbf v_D
 =
--\frac{e\tau}{m}\mathbf E.
+-\frac{e\tau}{m_{\mathrm e}}\mathbf E.
 \]</span></p>
 <p>The current density is then</p>
 <p><span class="math display">\[
-J_q
+\mathbf J_{\mathrm e}
 =
 -en\mathbf v_D
 =
-\frac{ne^2\tau}{m}\mathbf E,
+\frac{ne^2\tau}{m_{\mathrm e}}\mathbf E,
 \]</span></p>
 <p>so</p>
 <p><span class="math display">\[
 \sigma
 =
-\frac{ne^2\tau}{m}.
+\frac{ne^2\tau}{m_{\mathrm e}}.
 \]</span></p>
 <p>The same algebra survives in the Sommerfeld model, but the interpretation changes.</p>
 <!-- [Gross/Marx, Ch. 7, Sec. 7.3.1.2, pp. 279-280] -->
@@ -951,10 +958,10 @@ J_q
 <p>In thermal equilibrium, every occupied state with wave vector <span class="math inline">\(\mathbf k\)</span> is balanced by an occupied state with wave vector <span class="math inline">\(-\mathbf k\)</span>. The average wave vector is therefore zero, and no current flows.</p>
 <p>In an electric field, the occupied Fermi sphere is displaced by a small amount <span class="math inline">\(\delta\mathbf k\)</span>. The current density becomes</p>
 <p><span class="math display">\[
-J_q
+\mathbf J_{\mathrm e}
 =
 -en
-\frac{\hbar}{m}
+\frac{\hbar}{m_{\mathrm e}}
 \delta\mathbf k.
 \]</span></p>
 <p>The field changes the average wave vector according to</p>
@@ -989,17 +996,17 @@ J_q
 \]</span></p>
 <p>Substitution gives Ohm’s law again:</p>
 <p><span class="math display">\[
-J_q
+\mathbf J_{\mathrm e}
 =
-\frac{ne^2\tau}{m}\mathbf E,
+\frac{ne^2\tau}{m_{\mathrm e}}\mathbf E,
 \]</span></p>
 <p>and therefore</p>
 <p><span class="math display">\[
 \sigma
 =
-\frac{ne^2\tau}{m}
+\frac{ne^2\tau}{m_{\mathrm e}}
 =
-\frac{ne^2\ell}{m v_F}.
+\frac{ne^2\ell}{m_{\mathrm e} v_F}.
 \]</span></p>
 <p>The mean free path is</p>
 <p><span class="math display">\[
@@ -1045,7 +1052,7 @@ Figure&nbsp;11.8: <strong>Figure placeholder.</strong> Pauli blocking of scatter
 <h3 data-number="11.5.4" class="anchored" data-anchor-id="temperature-dependence-of-electrical-resistivity"><span class="header-section-number">11.5.4</span> Temperature Dependence of Electrical Resistivity</h3>
 <p>Since</p>
 <p><span class="math display">\[
-\sigma=\frac{ne^2\tau}{m},
+\sigma=\frac{ne^2\tau}{m_{\mathrm e}},
 \]</span></p>
 <p>the temperature dependence of the resistivity</p>
 <p><span class="math display">\[
@@ -1132,9 +1139,9 @@ Figure&nbsp;11.10: <strong>Figure placeholder.</strong> Experimental resistivity
 <h2 data-number="11.6" class="anchored" data-anchor-id="electronic-thermal-conductivity"><span class="header-section-number">11.6</span> Electronic Thermal Conductivity</h2>
 <section id="definition-1" class="level3" data-number="11.6.1">
 <h3 data-number="11.6.1" class="anchored" data-anchor-id="definition-1"><span class="header-section-number">11.6.1</span> Definition</h3>
-<p>The electronic thermal conductivity <span class="math inline">\(\kappa\)</span> relates the heat-current density <span class="math inline">\(J_h\)</span> to the temperature gradient:</p>
+<p>The electronic thermal conductivity <span class="math inline">\(\kappa\)</span> relates the heat-current density <span class="math inline">\(\mathbf J_h\)</span> to the temperature gradient:</p>
 <p><span class="math display">\[
-J_h
+\mathbf J_h
 =
 -\kappa \nabla T.
 \]</span></p>
@@ -1166,9 +1173,9 @@ n k_B
 <p><span class="math display">\[
 v_F^2
 =
-\frac{2E_F}{m}
+\frac{2E_F}{m_{\mathrm e}}
 =
-\frac{2k_B T_F}{m},
+\frac{2k_B T_F}{m_{\mathrm e}},
 \]</span></p>
 <p>we obtain</p>
 <p><span class="math display">\[
@@ -1181,7 +1188,7 @@ n k_B
 \frac{T}{T_F}
 \right)
 \left(
-\frac{2k_B T_F}{m}
+\frac{2k_B T_F}{m_{\mathrm e}}
 \right)
 \tau.
 \]</span></p>
@@ -1190,7 +1197,7 @@ n k_B
 \kappa
 =
 \frac{\pi^2}{3}
-\frac{n k_B^2 \tau}{m}
+\frac{n k_B^2 \tau}{m_{\mathrm e}}
 T.
 \]</span></p>
 <!-- [Gross/Marx, Ch. 7, Sec. 7.3.2, Eqs. (7.3.22)-(7.3.24), p. 286] -->
@@ -1214,17 +1221,17 @@ T.
 <p><span class="math display">\[
 \sigma
 =
-\frac{ne^2\tau}{m}.
+\frac{ne^2\tau}{m_{\mathrm e}}.
 \]</span></p>
 <p>The electronic thermal conductivity is</p>
 <p><span class="math display">\[
 \kappa
 =
 \frac{\pi^2}{3}
-\frac{n k_B^2\tau}{m}
+\frac{n k_B^2\tau}{m_{\mathrm e}}
 T.
 \]</span></p>
-<p>Taking the ratio eliminates <span class="math inline">\(n\)</span>, <span class="math inline">\(m\)</span>, and <span class="math inline">\(\tau\)</span>:</p>
+<p>Taking the ratio eliminates <span class="math inline">\(n\)</span>, <span class="math inline">\(m_{\mathrm e}\)</span>, and <span class="math inline">\(\tau\)</span>:</p>
 <p><span class="math display">\[
 \frac{\kappa}{\sigma}
 =
@@ -1236,7 +1243,7 @@ T.
 \]</span></p>
 <p>This is the Wiedemann-Franz law. Equivalently,</p>
 <p><span class="math display">\[
-L
+L_0
 \equiv
 \frac{\kappa}{\sigma T}
 =
@@ -1247,7 +1254,7 @@ L
 \]</span></p>
 <p>The Lorenz number is</p>
 <p><span class="math display">\[
-L
+L_0
 =
 2.44\times 10^{-8}\ \mathrm{W\,\Omega\,K^{-2}}.
 \]</span></p>
@@ -1271,7 +1278,7 @@ L
 <h3 data-number="11.6.4" class="anchored" data-anchor-id="temperature-dependence-of-kappa"><span class="header-section-number">11.6.4</span> Temperature Dependence of <span class="math inline">\(\kappa\)</span></h3>
 <p>Using</p>
 <p><span class="math display">\[
-\kappa=L\sigma T=\frac{LT}{\rho},
+\kappa=L_0\sigma T=\frac{L_0T}{\rho},
 \]</span></p>
 <p>we can infer the qualitative temperature dependence from <span class="math inline">\(\rho(T)\)</span>.</p>
 <p>At very low temperature, residual scattering dominates:</p>
@@ -1346,7 +1353,7 @@ S \nabla T.
 <p><span class="math display">\[
 \mathbf v_{\mathrm{drift}}
 =
--\frac{e\tau}{m}\mathbf E.
+-\frac{e\tau}{m_{\mathrm e}}\mathbf E.
 \]</span></p>
 <p>In the stationary open-circuit state,</p>
 <p><span class="math display">\[
@@ -1528,29 +1535,29 @@ A T^3.
 \]</span></p>
 <p>Using</p>
 <p><span class="math display">\[
-J_q
+\mathbf J_{\mathrm e}
 =
--en\frac{\hbar}{m}\delta\mathbf k,
+-en\frac{\hbar}{m_{\mathrm e}}\delta\mathbf k,
 \]</span></p>
 <p>derive</p>
 <p><span class="math display">\[
 \sigma
 =
-\frac{ne^2\tau}{m}.
+\frac{ne^2\tau}{m_{\mathrm e}}.
 \]</span></p></li>
 <li><p><strong>Wiedemann-Franz Law</strong></p>
 <p>Use</p>
 <p><span class="math display">\[
 \sigma
 =
-\frac{ne^2\tau}{m}
+\frac{ne^2\tau}{m_{\mathrm e}}
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
 \kappa
 =
 \frac{\pi^2}{3}
-\frac{n k_B^2\tau}{m}T
+\frac{n k_B^2\tau}{m_{\mathrm e}}T
 \]</span></p>
 <p>to derive the Wiedemann-Franz law and identify the Lorenz number.</p></li>
 <li><p><strong>Thermopower of the Free Electron Gas</strong></p>
@@ -1981,6 +1988,9 @@ S
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./global_notation_table.html" class="pagination-link" aria-label="Notation">
+        <span class="nav-page-text">Notation</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
