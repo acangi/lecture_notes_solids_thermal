@@ -290,7 +290,7 @@ window.Quarto = {
   <li><a href="#beyond-the-harmonic-approximation" id="toc-beyond-the-harmonic-approximation" class="nav-link active" data-scroll-target="#beyond-the-harmonic-approximation"><span class="header-section-number">9.1</span> Beyond the Harmonic Approximation</a></li>
   <li><a href="#anharmonic-lattice-potential" id="toc-anharmonic-lattice-potential" class="nav-link" data-scroll-target="#anharmonic-lattice-potential"><span class="header-section-number">9.2</span> Anharmonic Lattice Potential</a></li>
   <li><a href="#harmonic-motion-and-the-superposition-principle" id="toc-harmonic-motion-and-the-superposition-principle" class="nav-link" data-scroll-target="#harmonic-motion-and-the-superposition-principle"><span class="header-section-number">9.3</span> Harmonic Motion and the Superposition Principle</a></li>
-  <li><a href="#anharmonicity-and-three-phonon-processes" id="toc-anharmonicity-and-three-phonon-processes" class="nav-link" data-scroll-target="#anharmonicity-and-three-phonon-processes"><span class="header-section-number">9.4</span> Anharmonicity and Three-Phonon Processes</a></li>
+  <li><a href="#three-phonon-processes" id="toc-three-phonon-processes" class="nav-link" data-scroll-target="#three-phonon-processes"><span class="header-section-number">9.4</span> Three-phonon processes</a></li>
   <li><a href="#thermal-expansion-definitions" id="toc-thermal-expansion-definitions" class="nav-link" data-scroll-target="#thermal-expansion-definitions"><span class="header-section-number">9.5</span> Thermal Expansion: Definitions</a></li>
   <li><a href="#mean-displacement-in-an-anharmonic-potential" id="toc-mean-displacement-in-an-anharmonic-potential" class="nav-link" data-scroll-target="#mean-displacement-in-an-anharmonic-potential"><span class="header-section-number">9.6</span> Mean Displacement in an Anharmonic Potential</a></li>
   <li><a href="#thermodynamic-view-free-energy-and-pressure" id="toc-thermodynamic-view-free-energy-and-pressure" class="nav-link" data-scroll-target="#thermodynamic-view-free-energy-and-pressure"><span class="header-section-number">9.7</span> Thermodynamic View: Free Energy and Pressure</a></li>
@@ -707,43 +707,202 @@ u
 u=u_0 e^{i(qx-\omega t)}.
 \]</span></p>
 <p>Because the differential equation is linear, the superposition principle applies: if <span class="math inline">\(u_1(x,t)\)</span> and <span class="math inline">\(u_2(x,t)\)</span> are solutions, then any linear combination of them is also a solution.</p>
+<details>
+<summary>
+Example
+</summary>
+<p>Consider two plane-wave trial solutions, <span class="math display">\[
+u_1(x,t)=A e^{i(q_1x-\omega t)}
+\]</span> and <span class="math display">\[
+u_2(x,t)=B e^{i(q_2x-\omega t)}.
+\]</span></p>
+<p>For the local harmonic equation of motion <span class="math display">\[
+m\ddot u=-ku,
+\]</span> only the time dependence matters. Therefore <span class="math display">\[
+\ddot u_1(x,t)=-\omega^2 A e^{i(q_1x-\omega t)}
+=-\omega^2 u_1(x,t),
+\]</span> and similarly <span class="math display">\[
+\ddot u_2(x,t)=-\omega^2 u_2(x,t).
+\]</span></p>
+<p>Substitution into the equation of motion gives <span class="math display">\[
+m\ddot u_1=-m\omega^2 u_1.
+\]</span></p>
+<p>Thus <span class="math inline">\(u_1\)</span> is a solution if <span class="math display">\[
+m\omega^2=k,
+\]</span> or equivalently <span class="math display">\[
+\omega=\sqrt{\frac{k}{m}}.
+\]</span></p>
+<p>The same condition makes <span class="math inline">\(u_2\)</span> a solution.</p>
+<p>Now form a linear combination <span class="math display">\[
+u(x,t)=c_1u_1(x,t)+c_2u_2(x,t),
+\]</span> where <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span> are arbitrary constants. Taking the second time derivative gives <span class="math display">\[
+\ddot u
+=
+c_1\ddot u_1+c_2\ddot u_2.
+\]</span></p>
+<p>Since both <span class="math inline">\(u_1\)</span> and <span class="math inline">\(u_2\)</span> satisfy the same harmonic equation, <span class="math display">\[
+m\ddot u_1=-ku_1,
+\qquad
+m\ddot u_2=-ku_2.
+\]</span></p>
+<p>Therefore <span class="math display">\[
+m\ddot u
+=
+c_1m\ddot u_1+c_2m\ddot u_2
+=
+-c_1ku_1-c_2ku_2.
+\]</span></p>
+<p>Factoring out <span class="math inline">\(-k\)</span> gives <span class="math display">\[
+m\ddot u
+=
+-k(c_1u_1+c_2u_2)
+=
+-ku.
+\]</span></p>
+<p>Hence the superposition <span class="math display">\[
+u(x,t)=c_1 A e^{i(q_1x-\omega t)}
++
+c_2 B e^{i(q_2x-\omega t)}
+\]</span> is again a solution of the harmonic equation of motion, provided the frequency satisfies <span class="math display">\[
+\omega^2=\frac{k}{m}.
+\]</span></p>
+The important point is that the equation of motion is linear in <span class="math inline">\(u\)</span>. No terms such as <span class="math inline">\(u^2\)</span>, <span class="math inline">\(u^3\)</span>, or products of different waves appear. Therefore the two waves do not mix: each component evolves independently.
+</details>
 <p>For a harmonic crystal this has a powerful consequence. The normal modes are independent. Once a mode is excited, it does not exchange energy with other modes. In this idealized limit, phonons have infinite lifetime.</p>
 </section>
-<section id="anharmonicity-and-three-phonon-processes" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="anharmonicity-and-three-phonon-processes"><span class="header-section-number">9.4</span> Anharmonicity and Three-Phonon Processes</h2>
-<p>Anharmonic terms make the equations of motion nonlinear, and nonlinear equations couple different waves.</p>
-<!-- [Gross and Marx, Ch. 6, Sec. 6.2.1.2, Eqs. (6.2.5)-(6.2.11), pp. 235-237] -->
-<p>If the cubic term is included, the equation of motion contains a term proportional to <span class="math inline">\(u^2\)</span>: $$ mu = - . |_{x_0} u -</p>
-<p>. |_{x_0} u^2. $$</p>
-<p>For a linear chain, the nonlinear part contains combinations such as <span class="math display">\[
-(up+1-up)^2,
-\qquad
-(up-up-1)^2.
-\]</span></p>
-<p>Now consider a displacement that is a sum of two plane waves: <span class="math display">\[
-u(x,t)
+<section id="three-phonon-processes" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="three-phonon-processes"><span class="header-section-number">9.4</span> Three-phonon processes</h2>
+<p>Consider the linear monatomic chain from <a href="lecture_06.html" class="quarto-xref">Lecture&nbsp;<span>6</span></a>, but now include a small cubic anharmonic correction to the nearest-neighbor potential. Let <span class="math inline">\(u_p(t)\)</span> be the displacement of atom <span class="math inline">\(p\)</span> from equilibrium. We write the potential energy as</p>
+<p><span class="math display">\[
+U
 =
-u_{01}e^{i(q_1x-\omega_1t)}
+\sum_p
+\left[
+\frac{K}{2}(u_{p+1}-u_p)^2
 +
-u_{02}e^{i(q_2x-\omega_2t)}.
+\frac{\alpha}{3}(u_{p+1}-u_p)^3
+\right].
 \]</span></p>
-<p>When this expression is squared, cross terms appear: <span class="math display">\[
+<p>The first term is harmonic. The second term is cubic and therefore anharmonic. The resulting equation of motion is</p>
+<p><span class="math display">\[
+m\ddot u_p
+=
+K(u_{p+1}+u_{p-1}-2u_p)
++
+\alpha
+\left[
+(u_{p+1}-u_p)^2
+-
+(u_p-u_{p-1})^2
+\right].
+\]</span></p>
+<p>The harmonic part is linear in <span class="math inline">\(u_p\)</span>, while the anharmonic part is quadratic in displacement differences. This quadratic term is the origin of <strong>three-phonon processes</strong>.</p>
+<p>First recall the harmonic plane-wave solution</p>
+<p><span class="math display">\[
+u_p(t)
+=
+u_0 e^{i(qpa-\omega t)}.
+\]</span></p>
+<p>Substitution into the harmonic part gives the usual monatomic-chain dispersion relation</p>
+<p><span class="math display">\[
+\omega^2(q)
+=
+\frac{4K}{m}\sin^2\left(\frac{qa}{2}\right).
+\]</span></p>
+<p>Now consider a displacement that is the sum of two harmonic plane waves,</p>
+<p><span class="math display">\[
+u_p(t)
+=
+u_{01}e^{i(q_1pa-\omega_1t)}
++
+u_{02}e^{i(q_2pa-\omega_2t)}.
+\]</span></p>
+<p>For the first bond difference, we obtain</p>
+<p><span class="math display">\[
+u_{p+1}-u_p
+=
+u_{01}
+\left(e^{iq_1a}-1\right)
+e^{i(q_1pa-\omega_1t)}
++
+u_{02}
+\left(e^{iq_2a}-1\right)
+e^{i(q_2pa-\omega_2t)}.
+\]</span></p>
+<p>Squaring this expression gives</p>
+<p><span class="math display">\[\begin{align}
+(u_{p+1}-u_p)^2
+&amp; =
+u_{01}^2
+\left(e^{iq_1a}-1\right)^2
+e^{i(2q_1pa-2\omega_1t)}\\
+&amp; +
+u_{02}^2
+\left(e^{iq_2a}-1\right)^2
+e^{i(2q_2pa-2\omega_2t)}\\
+&amp; +
+2u_{01}u_{02}
+\left(e^{iq_1a}-1\right)
+\left(e^{iq_2a}-1\right)
+e^{i[(q_1+q_2)pa-(\omega_1+\omega_2)t]}.
+\end{align}\]</span></p>
+<p>The important contribution is the cross term,</p>
+<p><span class="math display">\[
+2u_{01}u_{02}
+\left(e^{iq_1a}-1\right)
+\left(e^{iq_2a}-1\right)
+e^{i[(q_1+q_2)pa-(\omega_1+\omega_2)t]}.
+\]</span></p>
+<p>This term has the form of a new plane wave with wave vector</p>
+<p><span class="math display">\[
+q_3=q_1+q_2
+\]</span></p>
+<p>and angular frequency</p>
+<p><span class="math display">\[
+\omega_3=\omega_1+\omega_2.
+\]</span></p>
+<p>The second bond difference gives an analogous contribution. Since</p>
+<p><span class="math display">\[
+u_p-u_{p-1}
+=
+u_{01}
+\left(1-e^{-iq_1a}\right)
+e^{i(q_1pa-\omega_1t)}
++
+u_{02}
+\left(1-e^{-iq_2a}\right)
+e^{i(q_2pa-\omega_2t)},
+\]</span></p>
+<p>its square also contains a cross term proportional to</p>
+<p><span class="math display">\[
+e^{i[(q_1+q_2)pa-(\omega_1+\omega_2)t]}.
+\]</span></p>
+<p>Therefore, the anharmonic force contains a contribution of the form</p>
+<p><span class="math display">\[
+F_p^{(3)}
+\propto
 u_{01}u_{02}
-e^{i[(q_1+q_2)x-(\omega_1+\omega_2)t]}.
+e^{i[(q_1+q_2)pa-(\omega_1+\omega_2)t]}.
 \]</span></p>
-<p>The nonlinear term therefore generates a new wave with <span class="math display">\[
+<p>This explicitly shows that the cubic anharmonicity couples two waves <span class="math inline">\((q_1,\omega_1)\)</span> and <span class="math inline">\((q_2,\omega_2)\)</span> and generates a third component with</p>
+<p><span class="math display">\[
 q_3=q_1+q_2,
 \qquad
 \omega_3=\omega_1+\omega_2.
 \]</span></p>
-<p>This is the basic origin of a three-phonon process. In quantum language, two phonons can merge into one phonon, or one phonon can decay into two phonons.</p>
-<p>The conservation laws for a three-phonon process are <span class="math display">\[
-\hbar\omega_3=\hbar\omega_1+\hbar\omega_2
-\]</span> and <span class="math display">\[
-q_3+G=q_1+q_2.
+<p>This is the microscopic origin of a <strong>three-phonon combination process</strong>, often written schematically as</p>
+<p><span class="math display">\[
+(q_1,\omega_1)+(q_2,\omega_2)
+\longrightarrow
+(q_3,\omega_3).
 \]</span></p>
-<p>The reciprocal-lattice vector <span class="math inline">\(G\)</span> is chosen so that all wave vectors can be represented inside the first Brillouin zone.</p>
-<p>If <span class="math inline">\(G=0\)</span>, the process is called a <strong>normal process</strong>. If <span class="math inline">\(G\ne 0\)</span>, it is called an <strong>umklapp process</strong>.</p>
+<p>In a crystal, wave vector conservation is understood modulo a reciprocal lattice vector <span class="math inline">\(G\)</span>. More generally,</p>
+<p><span class="math display">\[
+q_3=q_1+q_2+G.
+\]</span></p>
+<p>For <span class="math inline">\(G=0\)</span>, the process is a <strong>normal process</strong>.</p>
+<p>For <span class="math inline">\(G\neq 0\)</span>, it is an <strong>Umklapp process</strong>.</p>
+<p>The essential point is that the harmonic equation of motion is linear and does not mix plane waves. The cubic anharmonic term, however, contains products of displacements. Products of two plane waves generate sum and difference frequencies and wave vectors. Therefore, <strong>anharmonicity couples phonons</strong> and allows <strong>three-phonon processes</strong>.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -803,11 +962,11 @@ Figure&nbsp;9.3: <strong>Figure placeholder.</strong> Three-phonon normal and um
 \langle u\rangle
 =
 \frac{
-\int_{-\infty}^{\infty}du\, u\, e^{-U(u)/(k_BT)}
+\int_{-\infty}^{\infty}du\, u\, e^{-\beta U(u)}
 }{
-\int_{-\infty}^{\infty}du\, e^{-U(u)/(k_BT)}
-}.
-\]</span></p>
+\int_{-\infty}^{\infty}du\, e^{-\beta U(u)}
+},
+\]</span> where <span class="math inline">\(\beta=1/(k_B T)\)</span>.</p>
 <p>Using <span class="math display">\[
 U(u)=U_0+a u^2-bu^3-cu^4,
 \]</span> and assuming that the anharmonic terms are small compared with <span class="math inline">\(a u^2\)</span>, we expand <span class="math display">\[
@@ -848,8 +1007,17 @@ u+\beta b u^4+\beta c u^5+\cdots
 \int_{-\infty}^{\infty}du\, u^4 e^{-\beta a u^2}
 =
 \frac{3\sqrt{\pi}}{4(\beta a)^{5/2}},
-\]</span> we obtain $$ u = =</p>
-<p>k_B T. $$</p>
+\]</span> we obtain <span class="math display">\[
+\langle u\rangle
+=
+\frac{
+\beta b \frac{3\sqrt{\pi}}{4(\beta a)^{5/2}}
+}{
+\sqrt{\frac{\pi}{\beta a}}
+}
+=
+\frac{3b}{4a^2}k_B T.
+\]</span></p>
 <p>Therefore, <span class="math display">\[
 \boxed{
 \langle u\rangle
@@ -861,8 +1029,8 @@ u+\beta b u^4+\beta c u^5+\cdots
 <p>The relative length change is approximately <span class="math display">\[
 \frac{\Delta L}{L}
 \simeq
-\frac{\langle u\rangle}{R_0}.
-\]</span></p>
+\frac{\langle u\rangle}{R_0},
+\]</span> where <span class="math inline">\(R_0\)</span> is the equilibrium distance of the atoms.</p>
 <p>Thus the linear thermal expansion coefficient is <span class="math display">\[
 \alpha_L
 =
@@ -1217,12 +1385,6 @@ a,b&gt;0.
 <li><p><strong>Low-Temperature Expansion.</strong> Assume a cubic insulating crystal has <span class="math display">\[
 c_V(T)=A T^3
 \]</span> at low temperature, while <span class="math inline">\(B\)</span> and <span class="math inline">\(\gamma\)</span> are temperature independent. Use the Grüneisen relation to find the low-temperature dependence of <span class="math inline">\(\alpha_L(T)\)</span>.</p></li>
-<li><p><strong>Heat Capacity Difference.</strong> Starting from <span class="math display">\[
-C_p-C_V=TVB\alpha_V^2,
-\]</span> derive the corresponding expression in terms of the linear expansion coefficient <span class="math inline">\(\alpha_L\)</span> for an isotropic solid. Explain why the difference vanishes in the harmonic approximation.</p></li>
-<li><p><strong>Normal and Umklapp Processes.</strong> For a three-phonon process, explain the meaning of <span class="math display">\[
-q_3+G=q_1+q_2.
-\]</span> What distinguishes a normal process from an umklapp process? Why are umklapp processes important for thermal resistance?</p></li>
 </ol>
 
 
