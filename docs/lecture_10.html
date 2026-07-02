@@ -43,6 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-9c50916d60d090ebff2a56275c345c42.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -260,34 +263,31 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#kinetic-gas-interpretation" id="toc-kinetic-gas-interpretation" class="nav-link" data-scroll-target="#kinetic-gas-interpretation"><span class="header-section-number">10.3.1</span> Kinetic-Gas Interpretation</a></li>
   </ul></li>
-  <li><a href="#what-limits-the-mean-free-path" id="toc-what-limits-the-mean-free-path" class="nav-link" data-scroll-target="#what-limits-the-mean-free-path"><span class="header-section-number">10.4</span> What Limits the Mean Free Path?</a>
+  <li><a href="#scattering-processes" id="toc-scattering-processes" class="nav-link" data-scroll-target="#scattering-processes"><span class="header-section-number">10.4</span> Scattering Processes</a>
   <ul class="collapse">
   <li><a href="#matthiessens-rule" id="toc-matthiessens-rule" class="nav-link" data-scroll-target="#matthiessens-rule"><span class="header-section-number">10.4.1</span> Matthiessen’s Rule</a></li>
   <li><a href="#defect-and-boundary-scattering" id="toc-defect-and-boundary-scattering" class="nav-link" data-scroll-target="#defect-and-boundary-scattering"><span class="header-section-number">10.4.2</span> Defect and Boundary Scattering</a></li>
   <li><a href="#isotope-scattering" id="toc-isotope-scattering" class="nav-link" data-scroll-target="#isotope-scattering"><span class="header-section-number">10.4.3</span> Isotope Scattering</a></li>
+  <li><a href="#normal-and-umklapp-processes" id="toc-normal-and-umklapp-processes" class="nav-link" data-scroll-target="#normal-and-umklapp-processes"><span class="header-section-number">10.4.4</span> Normal and Umklapp Processes</a></li>
   </ul></li>
-  <li><a href="#normal-and-umklapp-processes" id="toc-normal-and-umklapp-processes" class="nav-link" data-scroll-target="#normal-and-umklapp-processes"><span class="header-section-number">10.5</span> Normal and Umklapp Processes</a>
+  <li><a href="#temperature-dependence-of-thermal-conductivity-in-crystals" id="toc-temperature-dependence-of-thermal-conductivity-in-crystals" class="nav-link" data-scroll-target="#temperature-dependence-of-thermal-conductivity-in-crystals"><span class="header-section-number">10.5</span> Temperature Dependence of Thermal Conductivity in Crystals</a>
   <ul class="collapse">
-  <li><a href="#normal-processes" id="toc-normal-processes" class="nav-link" data-scroll-target="#normal-processes"><span class="header-section-number">10.5.1</span> Normal Processes</a></li>
-  <li><a href="#umklapp-processes" id="toc-umklapp-processes" class="nav-link" data-scroll-target="#umklapp-processes"><span class="header-section-number">10.5.2</span> Umklapp Processes</a></li>
+  <li><a href="#overall-behavior" id="toc-overall-behavior" class="nav-link" data-scroll-target="#overall-behavior"><span class="header-section-number">10.5.1</span> Overall behavior</a></li>
+  <li><a href="#high-temperatures" id="toc-high-temperatures" class="nav-link" data-scroll-target="#high-temperatures"><span class="header-section-number">10.5.2</span> High Temperatures</a></li>
+  <li><a href="#intermediate-temperatures" id="toc-intermediate-temperatures" class="nav-link" data-scroll-target="#intermediate-temperatures"><span class="header-section-number">10.5.3</span> Intermediate Temperatures</a></li>
+  <li><a href="#low-temperatures" id="toc-low-temperatures" class="nav-link" data-scroll-target="#low-temperatures"><span class="header-section-number">10.5.4</span> Low Temperatures</a></li>
   </ul></li>
-  <li><a href="#temperature-dependence-of-thermal-conductivity-in-crystals" id="toc-temperature-dependence-of-thermal-conductivity-in-crystals" class="nav-link" data-scroll-target="#temperature-dependence-of-thermal-conductivity-in-crystals"><span class="header-section-number">10.6</span> Temperature Dependence of Thermal Conductivity in Crystals</a>
+  <li><a href="#spontaneous-decay-of-phonons" id="toc-spontaneous-decay-of-phonons" class="nav-link" data-scroll-target="#spontaneous-decay-of-phonons"><span class="header-section-number">10.6</span> Spontaneous Decay of Phonons</a></li>
+  <li><a href="#thermal-conductivity-in-amorphous-solids" id="toc-thermal-conductivity-in-amorphous-solids" class="nav-link" data-scroll-target="#thermal-conductivity-in-amorphous-solids"><span class="header-section-number">10.7</span> Thermal Conductivity in Amorphous Solids</a>
   <ul class="collapse">
-  <li><a href="#high-temperatures" id="toc-high-temperatures" class="nav-link" data-scroll-target="#high-temperatures"><span class="header-section-number">10.6.1</span> High Temperatures</a></li>
-  <li><a href="#intermediate-temperatures" id="toc-intermediate-temperatures" class="nav-link" data-scroll-target="#intermediate-temperatures"><span class="header-section-number">10.6.2</span> Intermediate Temperatures</a></li>
-  <li><a href="#low-temperatures" id="toc-low-temperatures" class="nav-link" data-scroll-target="#low-temperatures"><span class="header-section-number">10.6.3</span> Low Temperatures</a></li>
+  <li><a href="#high-temperature-regime" id="toc-high-temperature-regime" class="nav-link" data-scroll-target="#high-temperature-regime"><span class="header-section-number">10.7.1</span> High-Temperature Regime</a></li>
+  <li><a href="#plateau-regime" id="toc-plateau-regime" class="nav-link" data-scroll-target="#plateau-regime"><span class="header-section-number">10.7.2</span> Plateau Regime</a></li>
+  <li><a href="#very-low-temperatures-and-two-level-systems" id="toc-very-low-temperatures-and-two-level-systems" class="nav-link" data-scroll-target="#very-low-temperatures-and-two-level-systems"><span class="header-section-number">10.7.3</span> Very Low Temperatures and Two-Level Systems</a></li>
   </ul></li>
-  <li><a href="#spontaneous-decay-of-phonons" id="toc-spontaneous-decay-of-phonons" class="nav-link" data-scroll-target="#spontaneous-decay-of-phonons"><span class="header-section-number">10.7</span> Spontaneous Decay of Phonons</a></li>
-  <li><a href="#thermal-conductivity-in-amorphous-solids" id="toc-thermal-conductivity-in-amorphous-solids" class="nav-link" data-scroll-target="#thermal-conductivity-in-amorphous-solids"><span class="header-section-number">10.8</span> Thermal Conductivity in Amorphous Solids</a>
+  <li><a href="#thermal-transport-in-a-one-dimensional-solid" id="toc-thermal-transport-in-a-one-dimensional-solid" class="nav-link" data-scroll-target="#thermal-transport-in-a-one-dimensional-solid"><span class="header-section-number">10.8</span> Thermal Transport in a One-Dimensional Solid</a>
   <ul class="collapse">
-  <li><a href="#high-temperature-regime" id="toc-high-temperature-regime" class="nav-link" data-scroll-target="#high-temperature-regime"><span class="header-section-number">10.8.1</span> High-Temperature Regime</a></li>
-  <li><a href="#plateau-regime" id="toc-plateau-regime" class="nav-link" data-scroll-target="#plateau-regime"><span class="header-section-number">10.8.2</span> Plateau Regime</a></li>
-  <li><a href="#very-low-temperatures-and-two-level-systems" id="toc-very-low-temperatures-and-two-level-systems" class="nav-link" data-scroll-target="#very-low-temperatures-and-two-level-systems"><span class="header-section-number">10.8.3</span> Very Low Temperatures and Two-Level Systems</a></li>
-  </ul></li>
-  <li><a href="#thermal-transport-in-a-one-dimensional-solid" id="toc-thermal-transport-in-a-one-dimensional-solid" class="nav-link" data-scroll-target="#thermal-transport-in-a-one-dimensional-solid"><span class="header-section-number">10.9</span> Thermal Transport in a One-Dimensional Solid</a>
-  <ul class="collapse">
-  <li><a href="#heat-current-in-one-dimension" id="toc-heat-current-in-one-dimension" class="nav-link" data-scroll-target="#heat-current-in-one-dimension"><span class="header-section-number">10.9.1</span> Heat Current in One Dimension</a></li>
-  <li><a href="#quantum-of-thermal-conductance" id="toc-quantum-of-thermal-conductance" class="nav-link" data-scroll-target="#quantum-of-thermal-conductance"><span class="header-section-number">10.9.2</span> Quantum of Thermal Conductance</a></li>
+  <li><a href="#heat-current-in-one-dimension" id="toc-heat-current-in-one-dimension" class="nav-link" data-scroll-target="#heat-current-in-one-dimension"><span class="header-section-number">10.8.1</span> Heat Current in One Dimension</a></li>
+  <li><a href="#quantum-of-thermal-conductance" id="toc-quantum-of-thermal-conductance" class="nav-link" data-scroll-target="#quantum-of-thermal-conductance"><span class="header-section-number">10.8.2</span> Quantum of Thermal Conductance</a></li>
   </ul></li>
   <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set">Problem Set</a></li>
   </ul>
@@ -499,10 +499,20 @@ v_x(q,r).
 <section id="local-equilibrium-and-the-relaxation-time-approximation" class="level3" data-number="10.2.2">
 <h3 data-number="10.2.2" class="anchored" data-anchor-id="local-equilibrium-and-the-relaxation-time-approximation"><span class="header-section-number">10.2.2</span> Local Equilibrium and the Relaxation-Time Approximation</h3>
 <p>We assume that the temperature varies slowly on microscopic length scales. Then each small region of the solid can still be assigned a local temperature <span class="math inline">\(T(x)\)</span> and a local-equilibrium occupation <span class="math inline">\(\langle n\rangle^0[T(x)]\)</span>.</p>
+<div id="fig-heat-current-geometry" class="figure lightbox quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-heat-current-geometry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/lecture_10_LTE.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;10.2: Illustration of local thermal equilibrium in a solid.."><img src="figures/lecture_10_LTE.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-heat-current-geometry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.2: Illustration of local thermal equilibrium in a solid..
+</figcaption>
+</figure>
+</div>
 <p>The occupation number changes by two mechanisms:</p>
 <ol type="1">
-<li>phonons move into and out of the region;</li>
-<li>scattering processes relax the distribution back toward local equilibrium.</li>
+<li><strong>diffusion</strong>: phonons move into and out of the region;</li>
+<li><strong>scattering</strong>: relaxes the occupation distribution back toward local equilibrium.</li>
 </ol>
 <p>This is expressed as <span class="math display">\[
 \frac{d\langle n\rangle}{dt}
@@ -690,8 +700,8 @@ J_{h,x}
 <p>The factor <span class="math inline">\(\frac{1}{3}\)</span> is geometric. In three dimensions only one third of the squared velocity contributes, on average, to transport along a chosen axis.</p>
 </section>
 </section>
-<section id="what-limits-the-mean-free-path" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="what-limits-the-mean-free-path"><span class="header-section-number">10.4</span> What Limits the Mean Free Path?</h2>
+<section id="scattering-processes" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="scattering-processes"><span class="header-section-number">10.4</span> Scattering Processes</h2>
 <p>The temperature dependence of <span class="math inline">\(\kappa\)</span> is controlled mainly by two factors: <span class="math display">\[
 \kappa(T)
 \simeq
@@ -758,7 +768,7 @@ d.
 <!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Figs. 6.15 and 6.16, p. 251] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-si-ge-kappa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.2: <strong>Figure:</strong> Temperature dependence of the thermal conductivity of Si and Ge. The comparison between natural and isotopically purified samples shows how mass disorder suppresses the thermal-conductivity peak.
+Figure&nbsp;10.3: <strong>Figure:</strong> Temperature dependence of the thermal conductivity of Si and Ge. The comparison between natural and isotopically purified samples shows how mass disorder suppresses the thermal-conductivity peak.
 </figcaption>
 </figure>
 </div>
@@ -768,14 +778,13 @@ Figure&nbsp;10.2: <strong>Figure:</strong> Temperature dependence of the thermal
 <!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.17, p. 252] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-naf-defects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.3: <strong>Figure:</strong> Thermal conductivity of NaF with different defect densities produced by irradiation. Increasing the defect density reduces the maximum thermal conductivity by shortening the phonon mean free path.
+Figure&nbsp;10.4: <strong>Figure:</strong> Thermal conductivity of NaF with different defect densities produced by irradiation. Increasing the defect density reduces the maximum thermal conductivity by shortening the phonon mean free path.
 </figcaption>
 </figure>
 </div>
 </section>
-</section>
-<section id="normal-and-umklapp-processes" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="normal-and-umklapp-processes"><span class="header-section-number">10.5</span> Normal and Umklapp Processes</h2>
+<section id="normal-and-umklapp-processes" class="level3" data-number="10.4.4">
+<h3 data-number="10.4.4" class="anchored" data-anchor-id="normal-and-umklapp-processes"><span class="header-section-number">10.4.4</span> Normal and Umklapp Processes</h3>
 <p>Phonon-phonon scattering is caused by anharmonicity. In a perfectly harmonic crystal, normal modes do not interact and phonons would have infinite lifetimes. Real crystals are anharmonic, so phonons can scatter from one another.</p>
 <p>The most important anharmonic scattering events are often three-phonon processes. Two phonons can combine into one, or one phonon can decay into two.</p>
 <p>For a three-phonon process, energy conservation requires <span class="math display">\[
@@ -792,8 +801,8 @@ q_1+q_2,
 \]</span></p>
 <p>where <span class="math inline">\(G\)</span> is a reciprocal-lattice vector chosen so that the resulting phonon wave vector lies in the first Brillouin zone.</p>
 <!-- [Gross-Marx, Ch. 6, Sec. 6.2.1.2, Eqs. (6.2.10)-(6.2.11), p. 236] -->
-<section id="normal-processes" class="level3" data-number="10.5.1">
-<h3 data-number="10.5.1" class="anchored" data-anchor-id="normal-processes"><span class="header-section-number">10.5.1</span> Normal Processes</h3>
+<section id="normal-processes" class="level4" data-number="10.4.4.1">
+<h4 data-number="10.4.4.1" class="anchored" data-anchor-id="normal-processes"><span class="header-section-number">10.4.4.1</span> Normal Processes</h4>
 <p>For a normal process, <span class="math display">\[
 G=0,
 \]</span></p>
@@ -812,8 +821,8 @@ Q
 <!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.1, Eq. (6.4.16), p. 249] -->
 <p>A useful analogy is a crowd moving down a corridor. People may bump into one another and exchange positions, but if the crowd as a whole keeps moving forward, those internal collisions do not stop the flow.</p>
 </section>
-<section id="umklapp-processes" class="level3" data-number="10.5.2">
-<h3 data-number="10.5.2" class="anchored" data-anchor-id="umklapp-processes"><span class="header-section-number">10.5.2</span> Umklapp Processes</h3>
+<section id="umklapp-processes" class="level4" data-number="10.4.4.2">
+<h4 data-number="10.4.4.2" class="anchored" data-anchor-id="umklapp-processes"><span class="header-section-number">10.4.4.2</span> Umklapp Processes</h4>
 <p>For an umklapp process, <span class="math display">\[
 G\ne 0.
 \]</span></p>
@@ -838,84 +847,25 @@ q_1+q_2=q_3+G.
 <!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.11, p. 237] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-normal-umklapp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.4: <strong>Figure:</strong> Normal and umklapp three-phonon processes in a two-dimensional Brillouin zone. In an umklapp process, adding a reciprocal-lattice vector folds the final wave vector back into the first Brillouin zone and can reverse the direction of the group velocity.
+Figure&nbsp;10.5: <strong>Figure:</strong> Normal and umklapp three-phonon processes in a two-dimensional Brillouin zone. In an umklapp process, adding a reciprocal-lattice vector folds the final wave vector back into the first Brillouin zone and can reverse the direction of the group velocity.
 </figcaption>
 </figure>
 </div>
 </section>
 </section>
-<section id="temperature-dependence-of-thermal-conductivity-in-crystals" class="level2" data-number="10.6">
-<h2 data-number="10.6" class="anchored" data-anchor-id="temperature-dependence-of-thermal-conductivity-in-crystals"><span class="header-section-number">10.6</span> Temperature Dependence of Thermal Conductivity in Crystals</h2>
-<section id="high-temperatures" class="level3" data-number="10.6.1">
-<h3 data-number="10.6.1" class="anchored" data-anchor-id="high-temperatures"><span class="header-section-number">10.6.1</span> High Temperatures</h3>
-<p>At high temperature, roughly <span class="math inline">\(T\gg \Theta_D\)</span>, the phonon heat capacity approaches the Dulong-Petit limit and is approximately temperature independent: <span class="math display">\[
-c_V
-\simeq
-\mathrm{const}.
-\]</span></p>
-<p>Umklapp scattering is then frequent. In a simple estimate, <span class="math display">\[
-\ell
-\propto
-\frac{\Theta_D}{T}.
-\]</span></p>
-<p>Therefore <span class="math display">\[
-\kappa
-\propto
-\frac{1}{T}.
-\]</span></p>
-<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.2, Eqs. (6.4.20)-(6.4.22), p. 250] -->
-<p>At high temperature, thermal resistance grows because the phonon gas becomes dense: phonons collide more often, and umklapp events are common.</p>
 </section>
-<section id="intermediate-temperatures" class="level3" data-number="10.6.2">
-<h3 data-number="10.6.2" class="anchored" data-anchor-id="intermediate-temperatures"><span class="header-section-number">10.6.2</span> Intermediate Temperatures</h3>
-<p>Upon cooling from high temperature, umklapp scattering becomes less probable. The mean free path increases rapidly. Over a broad intermediate range, this increase in <span class="math inline">\(\ell\)</span> can dominate over the decrease in <span class="math inline">\(c_V\)</span>.</p>
-<p>As a result, <span class="math inline">\(\kappa(T)\)</span> rises as temperature is lowered.</p>
-<p>The rough condition for umklapp scattering is that the sum of incoming wave vectors must be large enough to reach a Brillouin-zone boundary: <span class="math display">\[
-q_1+q_2
-\gtrsim
-\frac{1}{2}G.
-\]</span></p>
-<p>In the Debye estimate, this requires phonons with energies of order <span class="math inline">\(k_B\Theta_D/2\)</span>. Their occupation is approximately <span class="math display">\[
-\langle n\rangle
-=
-\frac{1}{e^{\Theta_D/(2T)}-1}.
-\]</span></p>
-<p>Thus, for <span class="math inline">\(T\ll\Theta_D\)</span>, <span class="math display">\[
-\langle n\rangle
-\propto
-e^{-\Theta_D/(2T)}.
-\]</span></p>
-<p>Consequently, the mean free path associated with umklapp scattering grows approximately exponentially on cooling.</p>
-<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.2, Eqs. (6.4.18)-(6.4.21), pp. 249-250] -->
-</section>
-<section id="low-temperatures" class="level3" data-number="10.6.3">
-<h3 data-number="10.6.3" class="anchored" data-anchor-id="low-temperatures"><span class="header-section-number">10.6.3</span> Low Temperatures</h3>
-<p>At sufficiently low temperature, umklapp scattering becomes very weak. The mean free path is then limited by defects, isotopes, or boundaries.</p>
-<p>For a clean crystal in the boundary-limited regime, <span class="math display">\[
-\ell
-\simeq
-d
-=
-\mathrm{const}.
-\]</span></p>
-<p>The Debye heat capacity of acoustic phonons behaves as <span class="math display">\[
-c_V
-\propto
-T^3.
-\]</span></p>
-<p>Therefore <span class="math display">\[
-\kappa
-\propto
-T^3.
-\]</span></p>
-<p>The full qualitative behavior of a clean insulating crystal is therefore:</p>
+<section id="temperature-dependence-of-thermal-conductivity-in-crystals" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="temperature-dependence-of-thermal-conductivity-in-crystals"><span class="header-section-number">10.5</span> Temperature Dependence of Thermal Conductivity in Crystals</h2>
+<section id="overall-behavior" class="level3" data-number="10.5.1">
+<h3 data-number="10.5.1" class="anchored" data-anchor-id="overall-behavior"><span class="header-section-number">10.5.1</span> Overall behavior</h3>
+<p>The full qualitative behavior of a clean insulating crystal is:</p>
 <p><span class="math display">\[
 \kappa
 \propto
 \begin{cases}
-T^3, &amp; \text{very low } T \text{ with boundary or defect limitation},\\
-T^n e^{\Theta_D/T}, &amp; \text{low to intermediate } T \text{ with activated umklapp scattering},\\
-1/T, &amp; \text{high } T \text{ with strong phonon-phonon scattering}.
+T^3, &amp; T \llless \Theta_D &amp; \text{very low } T \text{phonon-defect scattering},\\
+T^n e^{\Theta_D/T}, &amp; T \ll \Theta_D &amp; \text{phonon-phonon scattering (Umklapp process)},\\
+1/T, &amp; T \gg \Theta_D &amp; \text{strong phonon-phonon scattering}.
 \end{cases}
 \]</span></p>
 <p>Here <span class="math inline">\(n\)</span> is a model-dependent exponent, typically between <span class="math inline">\(0\)</span> and <span class="math inline">\(3\)</span> in simple estimates.</p>
@@ -936,14 +886,78 @@ T^n e^{\Theta_D/T}, &amp; \text{low to intermediate } T \text{ with activated um
 <!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.15, p. 251] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-crystal-kappa-peak-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.5: <strong>Figure:</strong> Thermal conductivity of high-purity Si. The low-temperature rise, maximum, and high-temperature decrease illustrate the typical behavior of a crystalline insulator.
+Figure&nbsp;10.6: <strong>Figure:</strong> Thermal conductivity of high-purity Si. The low-temperature rise, maximum, and high-temperature decrease illustrate the typical behavior of a crystalline insulator.
 </figcaption>
 </figure>
 </div>
+<p>Note that throughout the kinetic-theory treatment of thermal conductivity, the group velocity is assumed to be essentially independent of temperature at all temperatures. The temperature dependence of the thermal conductivity comes then almost entirely from the heat capacity and the mean free path. Their behavior under high and low temperature is analyzed below.</p>
+</section>
+<section id="high-temperatures" class="level3" data-number="10.5.2">
+<h3 data-number="10.5.2" class="anchored" data-anchor-id="high-temperatures"><span class="header-section-number">10.5.2</span> High Temperatures</h3>
+<p>At high temperature, roughly <span class="math inline">\(T\gg \Theta_D\)</span>, the phonon heat capacity approaches the Dulong-Petit limit and is approximately temperature independent: <span class="math display">\[
+c_V
+\simeq
+\mathrm{const}.
+\]</span></p>
+<p>Umklapp scattering is then frequent. In a simple estimate, <span class="math display">\[
+\ell
+\propto
+\frac{\Theta_D}{T}.
+\]</span></p>
+<p>Therefore <span class="math display">\[
+\kappa
+\propto
+\frac{1}{T}.
+\]</span></p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.2, Eqs. (6.4.20)-(6.4.22), p. 250] -->
+<p>At high temperature, thermal resistance grows because the phonon gas becomes dense: phonons collide more often, and umklapp events are common.</p>
+</section>
+<section id="intermediate-temperatures" class="level3" data-number="10.5.3">
+<h3 data-number="10.5.3" class="anchored" data-anchor-id="intermediate-temperatures"><span class="header-section-number">10.5.3</span> Intermediate Temperatures</h3>
+<p>Upon cooling from high temperature, umklapp scattering becomes less probable. The mean free path increases rapidly. Over a broad intermediate range, this increase in <span class="math inline">\(\ell\)</span> can dominate over the decrease in <span class="math inline">\(c_V\)</span>.</p>
+<p>As a result, <span class="math inline">\(\kappa(T)\)</span> rises as temperature is lowered.</p>
+<p>The rough condition for umklapp scattering is that the sum of incoming wave vectors must be large enough to reach a Brillouin-zone boundary: <span class="math display">\[
+q_1+q_2
+\gtrsim
+\frac{1}{2}G.
+\]</span></p>
+<p>In the Debye estimate, this requires phonons with energies of order <span class="math inline">\(k_B\Theta_D/2\)</span>. Their occupation is approximately <span class="math display">\[
+\langle n\rangle
+=
+\frac{1}{e^{\Theta_D/(2T)}-1}.
+\]</span></p>
+<p>Thus, for <span class="math inline">\(T\ll\Theta_D\)</span>, <span class="math display">\[
+\langle n\rangle
+\propto
+e^{-\Theta_D/(2T)}.
+\]</span></p>
+<p>Consequently, the mean free path associated with umklapp scattering grows approximately exponentially on cooling.</p>
+<!-- [Gross-Marx, Ch. 6, Sec. 6.4.3.2, Eqs. (6.4.18)-(6.4.21), pp. 249-250] -->
+</section>
+<section id="low-temperatures" class="level3" data-number="10.5.4">
+<h3 data-number="10.5.4" class="anchored" data-anchor-id="low-temperatures"><span class="header-section-number">10.5.4</span> Low Temperatures</h3>
+<p>At sufficiently low temperature, umklapp scattering becomes very weak. The mean free path is then limited by defects, isotopes, or boundaries.</p>
+<p>For a clean crystal in the boundary-limited regime, <span class="math display">\[
+\ell
+\simeq
+d
+=
+\mathrm{const}.
+\]</span></p>
+<p>The Debye heat capacity of acoustic phonons behaves as <span class="math display">\[
+c_V
+\propto
+T^3.
+\]</span></p>
+<p>Therefore <span class="math display">\[
+\kappa
+\propto
+T^3.
+\]</span></p>
 </section>
 </section>
-<section id="spontaneous-decay-of-phonons" class="level2" data-number="10.7">
-<h2 data-number="10.7" class="anchored" data-anchor-id="spontaneous-decay-of-phonons"><span class="header-section-number">10.7</span> Spontaneous Decay of Phonons</h2>
+<section id="spontaneous-decay-of-phonons" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="spontaneous-decay-of-phonons"><span class="header-section-number">10.6</span> Spontaneous Decay of Phonons</h2>
 <p>At very low temperature, one might expect phonons to live indefinitely because there are almost no thermally excited phonons left to scatter from. This expectation is not completely correct.</p>
 <p>Zero-point fluctuations remain even at <span class="math inline">\(T=0\)</span>. A phonon can interact with these fluctuations and decay through anharmonic three-phonon processes.</p>
 <p>For spontaneous decay, the scattering cross section scales as <span class="math display">\[
@@ -966,8 +980,8 @@ D(\omega)
 <!-- [Gross-Marx, Ch. 6, Sec. 6.4.4, Eq. (6.4.23), pp. 252-253] -->
 <p>This mechanism is relevant mainly for high-frequency phonons. Long-wavelength, low-frequency acoustic phonons can still have very long lifetimes.</p>
 </section>
-<section id="thermal-conductivity-in-amorphous-solids" class="level2" data-number="10.8">
-<h2 data-number="10.8" class="anchored" data-anchor-id="thermal-conductivity-in-amorphous-solids"><span class="header-section-number">10.8</span> Thermal Conductivity in Amorphous Solids</h2>
+<section id="thermal-conductivity-in-amorphous-solids" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="thermal-conductivity-in-amorphous-solids"><span class="header-section-number">10.7</span> Thermal Conductivity in Amorphous Solids</h2>
 <p>The preceding discussion assumed a crystalline solid, where phonons can be labeled by wave vector and branch. In amorphous solids, long-range translational symmetry is absent. The phonon picture remains useful for long-wavelength vibrations, but it becomes less reliable when the mean free path becomes comparable to the wavelength.</p>
 <p>Experiments on amorphous solids show behavior very different from crystalline solids.</p>
 <!-- [Gross-Marx, Ch. 6, Sec. 6.4.5, p. 253] -->
@@ -977,18 +991,18 @@ D(\omega)
 <!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.18, p. 253] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-glass-vs-crystal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.6: <strong>Figure:</strong> Thermal conductivity of crystalline and amorphous <span class="math inline">\(\mathrm{SiO_2}\)</span>. The crystal shows a pronounced peak, whereas the glass shows a broad plateau and a different low-temperature power law.
+Figure&nbsp;10.7: <strong>Figure:</strong> Thermal conductivity of crystalline and amorphous <span class="math inline">\(\mathrm{SiO_2}\)</span>. The crystal shows a pronounced peak, whereas the glass shows a broad plateau and a different low-temperature power law.
 </figcaption>
 </figure>
 </div>
-<section id="high-temperature-regime" class="level3" data-number="10.8.1">
-<h3 data-number="10.8.1" class="anchored" data-anchor-id="high-temperature-regime"><span class="header-section-number">10.8.1</span> High-Temperature Regime</h3>
+<section id="high-temperature-regime" class="level3" data-number="10.7.1">
+<h3 data-number="10.7.1" class="anchored" data-anchor-id="high-temperature-regime"><span class="header-section-number">10.7.1</span> High-Temperature Regime</h3>
 <p>At high temperature, the dominant vibrational wavelengths in amorphous solids can be of order <span class="math inline">\(1,\mathrm{nm}\)</span>. Estimates from the measured thermal conductivity can give mean free paths below or comparable to this wavelength.</p>
 <p>In that situation, the picture of well-defined weakly scattered phonons becomes questionable. Heat transport is then better viewed as energy diffusion through a disordered vibrational network rather than as transport by long-lived plane-wave phonons.</p>
 <!-- [Gross-Marx, Ch. 6, Sec. 6.4.5, p. 253] -->
 </section>
-<section id="plateau-regime" class="level3" data-number="10.8.2">
-<h3 data-number="10.8.2" class="anchored" data-anchor-id="plateau-regime"><span class="header-section-number">10.8.2</span> Plateau Regime</h3>
+<section id="plateau-regime" class="level3" data-number="10.7.2">
+<h3 data-number="10.7.2" class="anchored" data-anchor-id="plateau-regime"><span class="header-section-number">10.7.2</span> Plateau Regime</h3>
 <p>At intermediate temperatures, many amorphous solids show an approximate plateau in <span class="math inline">\(\kappa(T)\)</span>.</p>
 <p>From <span class="math display">\[
 \kappa
@@ -1005,8 +1019,8 @@ Figure&nbsp;10.6: <strong>Figure:</strong> Thermal conductivity of crystalline a
 <!-- [Gross-Marx, Ch. 6, Sec. 6.4.5, p. 253] -->
 <p>The contrast with crystals is direct. In a clean crystal, cooling can make <span class="math inline">\(\ell\)</span> extremely long. In a glass, disorder keeps <span class="math inline">\(\ell\)</span> short over a wide range of temperatures.</p>
 </section>
-<section id="very-low-temperatures-and-two-level-systems" class="level3" data-number="10.8.3">
-<h3 data-number="10.8.3" class="anchored" data-anchor-id="very-low-temperatures-and-two-level-systems"><span class="header-section-number">10.8.3</span> Very Low Temperatures and Two-Level Systems</h3>
+<section id="very-low-temperatures-and-two-level-systems" class="level3" data-number="10.7.3">
+<h3 data-number="10.7.3" class="anchored" data-anchor-id="very-low-temperatures-and-two-level-systems"><span class="header-section-number">10.7.3</span> Very Low Temperatures and Two-Level Systems</h3>
 <p>At very low temperatures, many amorphous solids show approximately <span class="math display">\[
 \kappa
 \propto
@@ -1054,8 +1068,8 @@ T^2.
 </div>
 </section>
 </section>
-<section id="thermal-transport-in-a-one-dimensional-solid" class="level2" data-number="10.9">
-<h2 data-number="10.9" class="anchored" data-anchor-id="thermal-transport-in-a-one-dimensional-solid"><span class="header-section-number">10.9</span> Thermal Transport in a One-Dimensional Solid</h2>
+<section id="thermal-transport-in-a-one-dimensional-solid" class="level2" data-number="10.8">
+<h2 data-number="10.8" class="anchored" data-anchor-id="thermal-transport-in-a-one-dimensional-solid"><span class="header-section-number">10.8</span> Thermal Transport in a One-Dimensional Solid</h2>
 <p>Modern micro- and nanostructures can confine phonons so strongly that only a small number of transverse modes remain thermally active.</p>
 <p>The relevant length scale is the thermal wavelength <span class="math inline">\(\lambda_{\mathrm{th}}\)</span>, defined by <span class="math display">\[
 \hbar\omega_{\mathrm{th}}
@@ -1081,12 +1095,12 @@ T^\ast
 <!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.19, p. 255] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-one-dimensional-bridge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.7: <strong>Figure:</strong> One-dimensional thermal transport through a narrow bridge connecting a hot reservoir at temperature <span class="math inline">\(T_1\)</span> and a cold reservoir at temperature <span class="math inline">\(T_2&lt;T_1\)</span>.
+Figure&nbsp;10.8: <strong>Figure:</strong> One-dimensional thermal transport through a narrow bridge connecting a hot reservoir at temperature <span class="math inline">\(T_1\)</span> and a cold reservoir at temperature <span class="math inline">\(T_2&lt;T_1\)</span>.
 </figcaption>
 </figure>
 </div>
-<section id="heat-current-in-one-dimension" class="level3" data-number="10.9.1">
-<h3 data-number="10.9.1" class="anchored" data-anchor-id="heat-current-in-one-dimension"><span class="header-section-number">10.9.1</span> Heat Current in One Dimension</h3>
+<section id="heat-current-in-one-dimension" class="level3" data-number="10.8.1">
+<h3 data-number="10.8.1" class="anchored" data-anchor-id="heat-current-in-one-dimension"><span class="header-section-number">10.8.1</span> Heat Current in One Dimension</h3>
 <p>Consider a one-dimensional bridge of length <span class="math inline">\(L\)</span> between two reservoirs at temperatures <span class="math inline">\(T_1\)</span> and <span class="math inline">\(T_2&lt;T_1\)</span>.</p>
 <p>The heat current is <span class="math display">\[
 J_{h,x}
@@ -1136,8 +1150,8 @@ d\omega_r.
 <!-- [Gross-Marx, Ch. 6, Sec. 6.4.6.1, Eqs. (6.4.29)-(6.4.30), p. 255] -->
 <p>The cancellation of velocity is important. A slower mode has a larger density of states, and these two effects compensate in the ballistic one-dimensional limit.</p>
 </section>
-<section id="quantum-of-thermal-conductance" class="level3" data-number="10.9.2">
-<h3 data-number="10.9.2" class="anchored" data-anchor-id="quantum-of-thermal-conductance"><span class="header-section-number">10.9.2</span> Quantum of Thermal Conductance</h3>
+<section id="quantum-of-thermal-conductance" class="level3" data-number="10.8.2">
+<h3 data-number="10.8.2" class="anchored" data-anchor-id="quantum-of-thermal-conductance"><span class="header-section-number">10.8.2</span> Quantum of Thermal Conductance</h3>
 <p>In the ballistic limit, the mean free path exceeds the bridge length: <span class="math display">\[
 \ell &gt; L.
 \]</span></p>
@@ -1190,7 +1204,7 @@ G_{\mathrm{th}}
 <!-- Placeholder: insert figure from [Gross-Marx, Ch. 6, Fig. 6.20, p. 256] -->
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-thermal-conductance-quantum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.8: <strong>Figure:</strong> Measurement of the thermal conductance quantum in a nanostructured one-dimensional phonon system. The conductance approaches the expected value from the number of transmitted vibrational modes.
+Figure&nbsp;10.9: <strong>Figure:</strong> Measurement of the thermal conductance quantum in a nanostructured one-dimensional phonon system. The conductance approaches the expected value from the number of transmitted vibrational modes.
 </figcaption>
 </figure>
 </div>
@@ -1680,6 +1694,38 @@ q_1+q_2=q_3+G.
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
